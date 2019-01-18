@@ -69,7 +69,7 @@ Este curso es de 3 créditos repartidos en 4 horas de trabajo en el aula y 5 hor
 
 Datos de contacto
 ------------------
-* Atención a estudiantes: lunes, martes y miércolos 11am 12m. Bloque 11 (edificio nuevo) piso 3 (sala de atención a estudiantes).
+* Atención a estudiantes: lunes, martes y miércoles 11am 12m. Bloque 11 (edificio nuevo) piso 3 (sala de atención a estudiantes).
 * Sitio web: `https://sistemasoperativos.readthedocs.io <https://sistemasoperativos.readthedocs.io>`__. 
 
 Para la exposición de tópicos de actualidad
