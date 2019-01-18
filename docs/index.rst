@@ -46,12 +46,22 @@ Cronograma
 
 Evaluación
 -----------
-* Práctica de procesos e hilos (15%) 
-* Práctica de comunicación (15%)
-* Práctica de sincronización (15%)
-* Taller sobre manejo de memoria (10%)
-* Exposición Tópicos de actualidad (15%)
+* Práctica de procesos e hilos (10%) 
+* Práctica de comunicación (10%)
+* Práctica de sincronización (10%)
+* Práctica de manejo de memoria (10%)
+* Práctica de E/S - sistemas de archivos (10%)
+* Exposición Tópicos de actualidad en los sistemas operativos (20%) 
 * Evaluación Final (30%) - Semana 17
+
+Texto guía
+-----------
+.. image:: ./_static/osbook.jpeg
+    :scale: 100 %
+
+* `Sitio web y material extra del texto <http://os-book.com/>`__.
+
+* `Guía de estudio <http://codex.cs.yale.edu/avi/os-book/OS10/study-guide/Study-Guide.pdf>`__.
 
 Dedicación
 ----------
@@ -62,9 +72,26 @@ Datos de contacto
 * Atención a estudiantes: lunes, martes y miércolos 11am 12m. Bloque 11 (edificio nuevo) piso 3 (sala de atención a estudiantes).
 * Sitio web: `https://sistemasoperativos.readthedocs.io <https://sistemasoperativos.readthedocs.io>`__. 
 
+Para la exposición de tópicos de actualidad
+--------------------------------------------
+* El trabajo es en parejas.
+* Cada exposición tendrá una duración máxima de 30 minutos que incluyen el montaje, exposición y desmontaje.
+* La exposición debe tener como mínimo los siguientes elementos:
+
+    * Motivación personal para seleccionar el sistema operativo 
+    * Contexto histórico del sistemas operativo: cuándo, por qué, dónde, quién.
+    * Implementar un programa ``interesante`` que ilustre cómo se aplican, en el sistema operativo seleccionado, 
+      conceptos tales como: procesos, tareas, hilos, manejo de memoria, sincronización, comunicación, entrada salida, 
+      almancenamiento.
+    * Se debe entregar un video (formato mp4) de máximo 3 minutos (optimizado en tamaño) donde se muestre y explique 
+      el programa funcionando.
+    * Se debe entregar un documento estilo paper que tengo un tutorial con la explicación paso a paso para reproducir 
+      el programa. El tutorial debe incluir los pasos para instalar y configurar el sistema operativo.
+
 .. toctree::
    :maxdepth: 3
    :caption: Contenidos semanales:
 
    Semana1 <_semana1/semana1>
    Semana2 <_semana2/semana2>
+   Semana3 <_semana3/semana3>  
