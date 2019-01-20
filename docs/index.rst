@@ -46,12 +46,13 @@ Cronograma
 
 Evaluación
 -----------
+* Práctica de programación en C (10%)
 * Práctica de procesos e hilos (10%) 
 * Práctica de comunicación (10%)
 * Práctica de sincronización (10%)
 * Práctica de manejo de memoria (10%)
 * Práctica de E/S - sistemas de archivos (10%)
-* Exposición Tópicos de actualidad en los sistemas operativos (20%) 
+* Exposición Tópicos de actualidad en los sistemas operativos (10%) 
 * Evaluación Final (30%) - Semana 17
 
 Texto guía
