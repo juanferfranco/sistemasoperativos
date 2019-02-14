@@ -6,4 +6,6 @@ los conceptos de entrada-salida formateada, estructuras (struct), arreglos, punt
 Material de clase
 ------------------
 En el siguiente `enlace <https://drive.google.com/open?id=1vN68F_eTPyEK7YmELdXyDT-403aFXBScVgIgBF7XOTk>`__ se puede encontrar 
-la evaluación y a este `enlace <https://www.dropbox.com/request/iV86PdGjGhm0EW5qe26k>`__ podrá subirse la solución.
+la evaluación para el grupo de los lunes-jueves y en este `enlace <https://drive.google.com/open?id=1CxuO4w7jKYNDKz8atdR2R4w75Ufo4yp7St4kawx4Mf0>`__ para el 
+grupo de los miércoles y viernes. En este `enlace <https://www.dropbox.com/request/iV86PdGjGhm0EW5qe26k>`__ podrá subirse 
+la solución.
