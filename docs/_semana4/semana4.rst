@@ -1,7 +1,7 @@
 Semana 4
 ===========
 Esta semana realizaremos la evaluación número 1 del curso realacionada con el manejo del lenguaje c y en particular 
-los conceptos de entrada-salida formateada, estructuras (struct), arreglos, punteros y memoria dinámica. 
+los conceptos de entrada-salida formateada, estructuras (struct), arreglos, punteros y memoria dinámica.
 
 Material de clase
 ------------------
