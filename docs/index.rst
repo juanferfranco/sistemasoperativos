@@ -64,6 +64,8 @@ Texto guía
 
 * `Guía de estudio <http://codex.cs.yale.edu/avi/os-book/OS10/study-guide/Study-Guide.pdf>`__.
 
+* `Desde Rusia con amor <https://drive.google.com/open?id=1fQZRy4UWGrZiTt-YYDlbEtvxxlwLLwlt>`__.
+
 Dedicación
 ----------
 Este curso es de 3 créditos repartidos en 4 horas de trabajo en el aula y 5 horas de trabajo autónomo.
