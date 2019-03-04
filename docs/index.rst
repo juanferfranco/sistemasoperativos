@@ -101,3 +101,4 @@ Para la exposición de tópicos de actualidad
    Semana4 <_semana4/semana4>
    Semana5 <_semana5/semana5>
    Semana6 <_semana6/semana6>
+   Semana7 <_semana7/semana7>
