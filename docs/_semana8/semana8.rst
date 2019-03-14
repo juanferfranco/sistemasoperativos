@@ -10,3 +10,6 @@ Al final de la guía hay ejercicios tipos examen llamados alimento para el pensa
 
 NOTA: tenga presente que para esta semana es importante haber terminado la guía de C relacionada con el manejo de archivos. 
 El enlace está `aquí <https://drive.google.com/file/d/1hBPkoUsGUmatr3tRm5ztr-s3hyc3OLhl/view>`__.
+
+NOTA: en la sesión 1 de esta semana trabajamos `este material <http://www.albahari.com/threading/>`__ para analizar la relación entre clases, 
+objetos, métodos, métodos estáticos, procesos, hilos, stack, heap.
