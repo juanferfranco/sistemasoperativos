@@ -12,4 +12,4 @@ que está disponible en `este enlace <https://drive.google.com/open?id=1Xwed5Qjf
 
 Sesión 2
 ---------
-Evaluación: 
+Evaluación: :)
