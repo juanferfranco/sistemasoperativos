@@ -16,8 +16,5 @@ La evaluación para el grupo del miércoles y viernes se encuentra en
 
 Sesión 2
 ---------
-En `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__ se encuentra el material 
-introductorio.
-
-En este `otro enlace <https://drive.google.com/open?id=1rS2oZ7JwOA82FQcAlpeRfUq1v_2j-rPCij5Vb4Khj0Q>`__ se encuentran los 
-ejercicios de trabajo autónomo y de clase.
+En `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__ se 
+encuentra el material introductorio y los ejercicios propuestos.
