@@ -13,4 +13,5 @@ que está disponible en `este enlace <https://drive.google.com/open?id=1Xwed5Qjf
 Sesión 2
 ---------
 `Evaluación <https://drive.google.com/open?id=1u2uvL67MgTy21FuiiWjVb5apW6hk7FMhSiF-i4W_RjM>`__ grupo miércoles y viernes.
+`Evaluación <https://drive.google.com/open?id=1FizSKy7WCEnx_AKWiEE2NKtPJU3FRE2zN0-QtwZksmo>`__ grupo lunes y jueves.
 
