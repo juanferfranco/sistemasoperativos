@@ -89,6 +89,23 @@ Para la exposición de tópicos de actualidad
     * Se debe entregar un documento estilo paper que tengo un tutorial con la explicación paso a paso para reproducir 
       el programa. El tutorial debe incluir los pasos para instalar y configurar el sistema operativo.
 
+* Los temas para la exposición:
+
+  * https://www.freebsd.org/
+  * https://aws.amazon.com/es/freertos/getting-started/
+  * https://os.mbed.com/docs/mbed-os/v5.9/introduction/index.html
+  * https://www.haiku-os.org/
+  * https://www.qubes-os.org/
+  * https://www.reactos.org/
+  * https://www.redox-os.org/
+  * http://osv.io/
+  * https://www.minocacorp.com/
+  * https://www.zephyrproject.org/
+  * https://www.minix3.org/
+  * https://www.netbsd.org/
+  * http://aquilaos.com/
+
+
 .. toctree::
    :maxdepth: 3
    :caption: Contenidos semanales:
