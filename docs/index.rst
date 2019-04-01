@@ -104,6 +104,11 @@ Para la exposición de tópicos de actualidad
   * https://www.minix3.org/
   * https://www.netbsd.org/
   * http://aquilaos.com/
+  * https://www.android.com/
+  * https://www.apple.com/lae/ios/ios-12/
+
+* En `esta hoja de cálculo <https://docs.google.com/spreadsheets/d/18-iUZ04bKr5F941lNWvs3k32dIu51XejkDBF2MbMgG8/edit?usp=sharing>`__, 
+  cada pareja de inscribir sus nombres seleccionando un tema. Se pueden repetir temas una vez todos esté asignados.
 
 
 .. toctree::
