@@ -1,11 +1,16 @@
 Semana 15
 ===========
-
-Durante esta semana vamos a introducir los conceptos básicos de la programación en red y cómo hace el sistema operativo 
-para comunicar dos procesos que pueden estar en el mismo host o localizados en host remotos, pero concetados por medio de 
-una red de datos.
+Esta semana terminaremos de estudiar los conceptos de sistemas de archivos y realizaremos algunos ejercicios básicos.
 
 Material
 ---------
-En `este enlace <https://drive.google.com/open?id=1uFVuRcPuwvXOGN8u_D7zG9Ngi_LDv6Tk1bX_pSpiTCE>`__ se encuentra el material 
-para esta semana. 
+En `este enlace <https://drive.google.com/open?id=1WDIkSEsGGtZZ5y8CSTa6x1E0XgaAdHMeUzN7QXfKSY8>`__ se encuentra el material 
+para esta semana.
+
+Evaluación
+------------
+En `este <https://drive.google.com/open?id=129TgrJzWxFeUDKb2pZGDM6sBNyUZ1fB04fSmt2rWZ-k>`__ enlace está la evaluación 
+del grupo del lunes y jueves.
+
+En `este <https://drive.google.com/open?id=1h4DyQfJsSDBYfGvhLiaUb1lIQmXZVZI3amDxyp99ifY>`__ enlace está la evaluación 
+del grupo del miércoles y viernes.
