@@ -13,5 +13,8 @@ En esta sesión vamos a introducir los conceptos básicos de la programación en
 para comunicar dos procesos que pueden estar en el mismo host o localizados en hosts remotos, pero concetados por medio de 
 una red de datos.
 
-En `este enlace <https://drive.google.com/open?id=1uFVuRcPuwvXOGN8u_D7zG9Ngi_LDv6Tk1bX_pSpiTCE>`__ se encuentra el material 
-para esta sesión. 
+Para esta sesión vamos a trabajar esta 
+`guía <https://drive.google.com/open?id=1Wba8HBcTiDnJxy5WDJq_xuLRwYe5L_PTQiIeBV2uck0>`__.
+
+En `este enlace <https://drive.google.com/open?id=1uFVuRcPuwvXOGN8u_D7zG9Ngi_LDv6Tk1bX_pSpiTCE>`__ se encuentra un 
+material con más detalles, pero que  no alcanzaremos a trabajar :( .
