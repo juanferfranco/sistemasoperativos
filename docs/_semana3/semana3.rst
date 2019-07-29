@@ -10,6 +10,7 @@ El material que vamos a trabajar esta semana en clase lo pueden encontrar en est
 `enlace <https://drive.google.com/file/d/19NmKVXEYB5Ud0SqbBwAe4HVYMD6LDHKD/view?usp=sharing>`__ 
 Y en este otro `enlace <https://drive.google.com/open?id=1hBPkoUsGUmatr3tRm5ztr-s3hyc3OLhl>`__.
 
+
 .. note::
     ¡Alerta de Spoiler!
 
