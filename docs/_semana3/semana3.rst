@@ -16,3 +16,49 @@ En este `enlace <https://docs.google.com/presentation/d/1eCo1pCzYd0YB1dYhTLJNV8w
 se encuentra la solución a algunos puntos de la primera guía y en este otro 
 `enlace <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__ 
 la solución de algunos puntos para la segunda.
+
+Ejercicio en clase
+-------------------
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #define MAX 100
+
+    void printArray(int *pdata,int n){
+
+        printf("\n The array is: \n");
+
+        for(int i = 0; i< n ;i++) {
+            printf("data[%d]: %d\n",i,  *(pdata+i) );
+        }
+    }
+
+    int main(){
+        int n;
+        int data[MAX];
+        int position;
+
+        printf("Enter the length of the array: ");
+        scanf("%d", &n);
+        printf("Enter %d elements of the array \n",n);
+
+        for(int i = 0; i < n; i++){
+            scanf("%d", &data[i]);
+        }
+        printArray(data, n);
+
+        printf("\n Enter the position where to insert: ");
+        scanf("%d", &position);
+        position--;
+        for(int i = n-1;i >= position; i--){
+            data[i+1] = data[i];
+        }
+        printf("\nEnter the value: ");
+        scanf("%d", &data[position]);
+
+        printArray(data,n+1);
+        return 0;
+    }
+
