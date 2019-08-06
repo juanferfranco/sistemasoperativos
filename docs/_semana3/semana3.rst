@@ -1,6 +1,6 @@
 Semana 3
 ===========
-Durante esta semana continuaremo explorando el lenguaje de programación C. 
+Durante esta semana continuaremos explorando el lenguaje de programación C. 
 En particular arreglos, memoria dinámica y estructuras de datos. 
 
 Material de clase
