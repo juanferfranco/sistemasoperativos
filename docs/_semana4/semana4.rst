@@ -14,6 +14,40 @@ El material que vamos a trabajar esta semana en clase lo pueden encontrar en est
 En este `enlace <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__ 
 se encuentra la solución a algunos puntos de la guía.
 
+Referencias clase
+------------------
+En la segunda sesión de esta semana analizaremos este ejemplo:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    char nombres[3][20] = {"fulano","mengano","perano"};
+
+    int main (void){
+        char *a;
+        char (*b)[20];
+        char *c;
+        char (*d)[3][20];
+
+        a = &nombres[0][0];
+        printf("el nombre es %s \n", a);
+        b = nombres;
+        c = &nombres[0][0];
+        d = &nombres;
+        for(int i = 0; i < 3; i++ ){
+            printf("char (*)[] el nombre[%d] es %s \n", i , (char * ) (b+i));
+            printf("char *: el nombre[%d] es %s \n", i , (char * ) ( c + (i*2) ));
+            printf("char (*)[][]: el nombre[%d] es %s \n", i , (char * ) (d+i));
+            
+        } 
+        return 0;
+    }
+
+También analizaremos el ejemplo que está en 
+`este <https://www.geeksforgeeks.org/pointer-array-array-pointer/>`__ sitio
+
 Ejercicio 1
 -------------
 Considere el problema de encontrar los elementos comunes entre dos arreglos.
@@ -55,6 +89,7 @@ este caso? es simplemente un arreglo de registros.
   siguiente  `enlace <https://www.geeksforgeeks.org/commonly-used-string-functions-in-c-c-with-examples/>`__ 
   se pueden ver algunas funciones típicas para manejar cadenas.
 * Cada registro es así: 
+
 .. code-block:: c
    :linenos:
 
