@@ -14,8 +14,8 @@ El material que vamos a trabajar esta semana en clase lo pueden encontrar en est
 En este `enlace <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__ 
 se encuentra la solución a algunos puntos de la guía.
 
-Referencias clase
-------------------
+Códigos segunda sesión
+------------------------
 En la segunda sesión de esta semana analizaremos este ejemplo:
 
 .. code-block:: c
