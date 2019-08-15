@@ -64,7 +64,123 @@ Ejercicio 5
 * Luego construya un programa que solicite la cadena y el delimitador, aplique su versión de 
   strtok y la versión definida en string.h. Finalmente imprima el resultado de ambas funciones.
 
+Evaluación del semestre pasado
+--------------------------------
+Esta evaluación no incluyó el tema de archivos.
 
+`Aquí <https://drive.google.com/open?id=1CxuO4w7jKYNDKz8atdR2R4w75Ufo4yp7St4kawx4Mf0>`__ está la 
+evaluación.
+
+Una posible solución:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <stdint.h>
+    #include <string.h>
+
+    char command[10];
+
+    char dataBaseName[11];
+    int dataBaseSize;
+    int dataBaseRegisterCounter = 0;
+
+    // Register struct
+    struct registerT{
+        char key[20];
+        float value;
+    };
+    struct registerT *pregisterT;
+
+    void processMDATA(void);
+    void processMREG(void);
+    void processVMDATA(void);
+    void processDREG(void);
+
+    int main(void) {
+        int ret;
+
+        while(1){
+            // get the command
+            scanf("%s", command);
+            ret = strcmp(command, "mdata");
+            if(ret == 0) processMDATA();
+            ret = strcmp(command, "mreg");
+            if(ret == 0) processMREG();
+            ret = strcmp(command, "vmdata");
+            if(ret == 0) processVMDATA();
+            ret = strcmp(command, "dreg");
+            if(ret == 0) processDREG();
+
+        }
+        free(pregisterT);
+        return EXIT_SUCCESS;
+    }
+
+    void processMDATA(void){
+        scanf("%s", dataBaseName);
+        scanf("%d",&dataBaseSize);
+        getc(stdin); //remove \n
+
+        pregisterT = (struct registerT *) malloc(sizeof(struct registerT)*dataBaseSize);
+        dataBaseRegisterCounter = 0;
+        if(pregisterT == NULL) exit(0);
+    }
+
+    void processMREG(void){
+        if(pregisterT != NULL){
+            if(dataBaseRegisterCounter < dataBaseSize){
+                scanf("%s", (pregisterT + dataBaseRegisterCounter)->key);
+                scanf("%f", &((pregisterT + dataBaseRegisterCounter)->value));
+                getc(stdin); //remove \n
+                dataBaseRegisterCounter++;
+                if(dataBaseRegisterCounter == dataBaseSize){
+                    printf("Data Base full\n");
+                }
+            }
+            else printf("Data Base full, register not stored\n");
+        }
+
+    }
+
+
+    void processVMDATA(void){
+        int ret;
+        char dataBaseNameTargte[11];
+        scanf("%s", dataBaseNameTargte);
+        getc(stdin); //remove \n
+
+        ret = strcmp(dataBaseNameTargte, dataBaseName);
+        if(0 == ret){
+            if(pregisterT != NULL){
+                for(int i= 0; i < dataBaseRegisterCounter;i++){
+                    ret = strcmp((pregisterT + i)->key, "");
+                    if(0 != ret) printf("Key: %s Value:%f \n",(pregisterT + i)->key,(pregisterT + i)->value);
+                }
+            }
+        }
+    }
+
+
+    void processDREG(void){
+        int ret;
+        char registerName[11];
+        scanf("%s", registerName);
+        getc(stdin); //remove \n
+
+        if(pregisterT != NULL){
+            for(int i= 0; i < dataBaseRegisterCounter;i++){
+                ret = strcmp(registerName, (pregisterT + i)->key);
+                if(0 == ret){
+                    *((pregisterT + i)->key) = 0;
+                    return;
+                }
+            }
+            printf("Register not Found\n");
+        }
+    }
 
 
 
