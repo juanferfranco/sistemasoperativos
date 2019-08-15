@@ -56,6 +56,15 @@ Modificar el programa anterior adicionado:
 * Adicionar el comando cargar base de datos.
 * Adicionar el comando salvar base de datos.
 
+Ejercicio 5
+-------------
+
+* Como ejercicio final se propone implementar una versión propia de la función 
+  `strtok <https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm>`__.
+* Luego construya un programa que solicite la cadena y el delimitador, aplique su versión de 
+  strtok y la versión definida en string.h. Finalmente imprima el resultado de ambas funciones.
+
+
 
 
 
