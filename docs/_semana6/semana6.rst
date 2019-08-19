@@ -1,12 +1,13 @@
 Semana 6
 ===========
-Esta semana continuaremos con las guías acerca de procesos.
+Esta semana vamos a realizar la evaluación sumativa correspondiento a la primer parte del curso relativa 
+al lenguaje de programación C. Las dos sesiones de esta semana estarán dedicadas a la evaluación y a la 
+retroalimentación de la misma.
 
-Ejercicios
+Evaluación
 ------------
-Este `ejercicio <https://drive.google.com/open?id=1aA9fb5Y11azkH53nmUnoFTztYjW8VI_1jeI7lMyPuaI>`__ busca 
-verificar si se han asimilado los conceptos básicos presentados en las guías.
+En  `este <https://drive.google.com/open?id=1ZR53CsV5jTiwiVaoJ888q-JvHPz4OdGzMhbm9aiLFTE>`__ enlace se 
+encuentra el enunciado de la evaluación. 
 
-Este `otro <https://drive.google.com/open?id=1zIFQAQuGyvsJ8EWjdw6GQCyw5vzmkApX4q71K20l_6A>`__ es un poco (solo un poquito) más avanzado.
 
 
