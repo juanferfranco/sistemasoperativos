@@ -96,8 +96,11 @@ Una salida tentativa se muestra a continuación (esto no quiere decir que el ord
 despliegue sea el mismo):
 
 HIJO1: fact(1) = 1
+
 HIJO2: fact(2) = 1
+
 HIJO2: fact(2) = 2
+
 HIJO1: fact(2) = 2
 
 El proceso padre tiene que esperar a que los hijos terminen utilizando la función waitpid.
