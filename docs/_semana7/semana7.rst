@@ -103,7 +103,7 @@ HIJO2: fact(2) = 2
 
 HIJO1: fact(2) = 2
 
-El proceso padre tiene que esperar a que los hijos terminen utilizando la función waitpid.
+El proceso padre tiene que esperar a que los hijos terminen utilizando la función wait.
 
 * Antes de comenzar ejecute en la línea de comandos: man waitpid
 * ¿Qué es un proceso Zombie?
