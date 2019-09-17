@@ -164,7 +164,7 @@ El código que analizamos en clase hoy:
                    else argvFork[0]= "./mean";
                    execv(argvFork[0],argvFork);
                    printf("HIJO%d:",i);
-                   perror("execv fail");
+                   perror("execv fails");
                    exit(EXIT_FAILURE);
                break;            
                default:
