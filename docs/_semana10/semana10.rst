@@ -180,3 +180,7 @@ El código que analizamos en clase hoy:
 
 Sesión 2
 ---------
+El enlace a la evaluación sumativa 2 está `aquí <https://drive.google.com/open?id=1B7YFKd7ilLqjN3wRX0u5Z8qj14wNrSz_6LUsdJNs3Js>`__.
+
+;)
+
