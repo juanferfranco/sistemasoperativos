@@ -1,9 +1,9 @@
 Semana 12
 ===========
+Durante esta semana y la próxima vamos introducir facilidades que brinda el sistema 
+operativo para comunicar y sincronizar procesos.
 
-Esta semana estudiaremos cómo implementa el sistema operativo la abstracción de memoria virtual
-
-Material
+material
 ---------
-En `este enlace <https://drive.google.com/open?id=1GTKu5sIabILwUBS6cYRrz-HZGoSD80AEux8hnw_x3c0>`__ se encuentra el material 
-para esta semana. 
+En `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__ 
+se encuentra el material introductorio y los ejercicios propuestos. 
