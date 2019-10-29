@@ -11,3 +11,5 @@ se encuentra el material de la sesión.
 Evaluación Final
 -----------------
 El enunciado se encuentra `aquí <https://docs.google.com/document/d/1754rlHr-qlEaJ4sm_q1VJaMNGGJ45_gj6Rt3cqweNfY/edit?usp=sharing>`__
+
+IMPORTANTE: el jueves debemos asistir normal a clase para realizar la sustentación de la evaluación final.
