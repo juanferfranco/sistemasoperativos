@@ -68,8 +68,8 @@ Evaluación
 * Parcial 4: parcial 3 + persistencia y entrada/salida (20%)
 * Parcial 5: parcial 4 + protección, seguridad,  tópicos de actualidad (20%)
 
-Texto teórico complementario
-------------------------------
+Texto Guía
+-----------
 .. image:: ./_static/osbook.jpeg
     :scale: 100 %
 
