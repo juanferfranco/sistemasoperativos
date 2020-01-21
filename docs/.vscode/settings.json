@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\JuanFernandoFrancoHi\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+    "python.pythonPath": "/usr/bin/python3",
+    "restructuredtext.confPath": "${workspaceFolder}",
+    "cSpell.language": "en,es"
 }
