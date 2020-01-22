@@ -73,9 +73,20 @@ Texto Guía
 .. image:: ./_static/osbook.jpeg
     :scale: 100 %
 
-* `Sitio web y material extra del texto <http://os-book.com/>`__.
+Información sobre el texto:
 
+* `Sitio web y material extra del texto <http://os-book.com/>`__.
 * `Guía de estudio <http://codex.cs.yale.edu/avi/os-book/OS10/study-guide/Study-Guide.pdf>`__.
+
+
+Enlaces a otros textos complementarios:
+
+* `The Linux Programming Interface: A Linux and UNIX System Programming Handbook <https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200/ref=zg_bs_291381_6?_encoding=UTF8&psc=1&refRID=PWMW86VR0M3DAQ9VB523>`__
+* `Linux Kernel Development <https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468>`__
+* `C Programming Language, 2nd Edition <https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628?tag=hackr-20>`__
+* `C Programming Absolute Beginner's Guide <https://www.amazon.com/Programming-Absolute-Beginners-Guide-3rd/dp/0789751984/?tag=hackr-20>`__
+* `How Linux Works, 2nd Edition: What Every Superuser Should Know <https://www.amazon.com/How-Linux-Works-2nd-Superuser/dp/1593275676/ref=zg_bs_291381_7?_encoding=UTF8&psc=1&refRID=PWMW86VR0M3DAQ9VB523>`__
+* `Linux System Programming: Talking Directly To The Kernel And C Library <https://www.amazon.com/Linux-System-Programming-Talking-Directly/dp/1449339530/ref=zg_bs_291381_48?_encoding=UTF8&psc=1&refRID=PWMW86VR0M3DAQ9VB523>`__
 
 Dedicación
 -----------
