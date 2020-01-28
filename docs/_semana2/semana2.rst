@@ -21,3 +21,260 @@ La solución a algunos puntos del material sobre arreglos y memoria
 dinámica está `aquí <https://docs.google.com/presentation/d/1eCo1pCzYd0YB1dYhTLJNV8w9lVAQVX6u4LQEq1oHtH0/edit?usp=sharing>`__
 . Para la parte de estructuras de datos y archivos, consultar `aquí <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__
 
+Ejercicios
+------------
+
+En este sección se proponen algunos ejercicios
+relacionados con la guías abordadas hasta ahora.
+
+Ejercicio 1: entrada/salida
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+En la guía introductoria del lenguaje C se discutió la
+función **scanf** para realizar operaciones de entrada en
+C. Al realizar el ejercicios final, la calculadora,
+¿Notó algún comportamiento extraño del
+programa al leer caracteres? Específicamente ``scanf("%c",&var)``.
+
+Tenga presente que al introducir texto en la terminal,
+además de los caracteres visibles, se introduce un ENTER.
+Así, por ejemplo, al introducir el número 325 y luego presionar
+ENTER, se están ingresando 4 bytes: 0x33 0x32 0x35 0x0A. los
+tres primeros bytes corresponden al código ASCII del 325
+respectivamente y el 0x0A corresponde al código ASCII del ENTER
+o nueva línea (NEW LINE).
+
+Considere el siguiente código:
+
+.. code-block:: c
+   :linenos:
+
+   #include <stdio.h>
+
+    int main()
+    {
+        int num;
+        char key;
+        printf("Prueba a scanf. Ingrese el numero 325 y presione ENTER:\n");
+        scanf("%d",&num);
+        printf("Ingrese cualquier tecla para terminar y presione ENTER:\n");
+        scanf("%c",&key);
+        
+        return 0;
+    }  
+
+Ejecute el código anterior. ¿Cuál es el resultado? ¿Por qué?
+
+El primer scanf (``scanf("%d",&num);``) buscará en el flujo de entrada una
+secuencia de bytes que comience con un carácter numérico y parará de leer
+una vez detecte un carácter no numérico, el cual, dejará intacto en el flujo
+de entrada. En este caso, ``scanf("%d",&num);`` sacará del flujo
+los bytes 0x33 0x32 0x35, correspondientes a ``'3'`` ``'2'`` ``'5'``,
+y dejará en el flujo el byte 0x0A (correspondiente al ENTER). Luego
+convertirá los 3 bytes en el número 0x0145, es decir, los dos
+bytes correspondientes al número 325.
+
+El segundo scanf ``scanf("%c",&key);`` leerá un carácter del flujo de entrada.
+En este caso dicho carácter está disponible y corresponde al ENTER dejado
+por el scanf anterior.
+
+¿Cómo solucionar este problema? Una posible solución será (aunque hay otras
+más):
+
+.. code-block:: c
+   :linenos:
+
+   #include <stdio.h>
+
+    int main()
+    {
+        int num;
+        char key;
+        printf("Prueba a scanf. Ingrese el numero 325 y presione ENTER:\n");
+        scanf("%d",&num);
+        scanf("%c",&key); // Saco del flujo el ENTER
+        printf("Ingrese cualquier tecla para terminar y presione ENTER:\n");
+        scanf("%c",&key);
+        return 0;
+    }  
+
+Ejercicio 2: entrada/salida
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Para complementar el ejercicio anterior, se propone analizar otros ejemplos
+(Tomados de este `enlace <http://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html>`__).
+
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int a = 10;
+        printf("enter a number: ");
+        scanf("%d", &a);
+        printf("You entered %d.\n", a);
+    }  
+
+Ingrese un número y ENTER. ¿Qué ocurre? Ahora ingrese una palabra y ENTER.
+¿Qué ocurre? ¿Por qué?
+
+Ejercicio 3: scanf return
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+scanf devuelve la cantidad de conversiones realizadas. Analice
+este ejemplo (ingrese CRTL+C si algo sale mal):
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        int a;
+        printf("enter a number: ");
+        while (scanf("%d", &a) != 1)
+        {
+            // input was not a number, ask again:
+            printf("enter a number: ");
+        }
+        printf("You entered %d.\n", a);
+    }
+
+¿Por qué funciona así el programa? Recuerde el ejercicio 1.
+
+Ejercicio 4: cadenas
+^^^^^^^^^^^^^^^^^^^^^
+Compile el código que se muestra a continuación así:
+``gcc -Wall -fno-stack-protector tmp.c -o tmp``
+
+Ejecute el programa con estos vectores cuando se pregunte
+por el nombre:
+
+* juan
+* juan-fernan
+* juan-fernando-franco
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char name[12];
+        printf("What's your name? ");
+        scanf("%s", name);
+        printf("Hello %s!\n", name);
+    }
+
+Explique cómo funciona en el programa en cada caso.
+
+Ejercicio 5
+^^^^^^^^^^^
+
+Repita el ejercicio anterior pero esta vez compilando
+sin ``-fno-stack-protector``.
+
+Ejercicio 6
+^^^^^^^^^^^^
+
+Finalmente repita el ejercicio anterior, pero esta vez
+usando el siguiente código y compilando sin ``-fno-stack-protector``
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char name[40];
+        printf("What's your name? ");
+        scanf("%39s", name);
+        printf("Hello %s!\n", name);
+    }
+
+Explique por qué en scanf especificamos un 39 sabiendo que en name tenemos
+un 40. Recuerde, de la primera guía, que todas las cadenas en C deben terminar
+con un 0.
+
+Ejercicio 7
+^^^^^^^^^^^^
+Usando el código anterior ingrese:  juan fernado franco.
+¿Cuál es el resultado?
+
+Ejercicio 8
+^^^^^^^^^^^^^
+Ingrese el siguiente código:
+
+.. code-block:: c
+   :linenos:
+
+   #include <stdio.h>
+
+   int main(void)
+   {
+       char name[40];
+       printf("What's your name? ");
+       scanf("%39[^\n]", name);
+       printf("Hello %s!\n", name);
+   }
+
+Note la línea:``scanf("%39[^\n]", name);``. En este caso le estamos diciendo a
+scanf que lea hasta 39 caracteres y hasta que encuentre un ENTER (``\n``). También
+es posible indicarle a scanf que lea mientras que los caracteres estén en una
+lista, por ejemplo: ``scanf("%39[a-z]", name);``.
+
+Ejercicio 9
+^^^^^^^^^^^^
+¿Entonces qué usamos para leer la entrada?
+
+Ahora que conocemos mejor los punteros y los arreglos podemos explorar la
+función fgets: ``char *fgets(char *str, int n, FILE *stream)``. A esta
+función le debemos pasar la dirección del buffer donde queremos colocar
+los caracteres, la cantidad de caracteres y el flujo. fgets termina de leer
+el flujo cuando encuentre un ENTER. Dicho ENTER se saca del flujo
+
+Analizar el funcionamiento de fgets:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(void)
+    {
+        char name[40];
+        printf("What's your name? ");
+        if (fgets(name, 40, stdin))
+        {
+            printf("Hello %s!\n", name);
+        }
+    }
+
+NOTE que en **name** quedará también el ENTER. Entonces para eliminarlo
+simplemente hacemos: 
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <string.h>
+
+    int main(void)
+    {
+        char name[40];
+        printf("What's your name? ");
+        if (fgets(name, 40, stdin))
+        {
+            name[strcspn(name, "\n")] = 0;
+            printf("Hello %s!\n", name);
+        }
+    }
+
+**strcspn** buscará en la cadena **name** el primer *match* con
+``\n`` y devolverá la posición en **name** en la cual fue encontrado
+el *match*. 
+
+
