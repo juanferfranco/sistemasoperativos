@@ -21,8 +21,8 @@ La solución a algunos puntos del material sobre arreglos y memoria
 dinámica está `aquí <https://docs.google.com/presentation/d/1eCo1pCzYd0YB1dYhTLJNV8w9lVAQVX6u4LQEq1oHtH0/edit?usp=sharing>`__
 . Para la parte de estructuras de datos y archivos, consultar `aquí <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__
 
-Ejercicios
-------------
+Ejercicios de entrada/salida
+-----------------------------
 
 En este sección se proponen algunos ejercicios
 relacionados con la guías abordadas hasta ahora.
