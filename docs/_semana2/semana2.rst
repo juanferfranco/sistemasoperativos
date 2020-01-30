@@ -278,3 +278,70 @@ simplemente hacemos:
 el *match*. 
 
 
+Ejercicios con punteros
+------------------------
+
+En esta sección se proponen algunos ejercicios con punteros que
+buscan motivar la reflexión de los conceptos.
+
+Ejercicio 1
+^^^^^^^^^^^
+(Este ejercicio es tomado de `aquí <https://www.geeksforgeeks.org/pointer-array-array-pointer/>`__)
+
+Relación arreglos y punteros
+
+.. code-block:: c
+   :linenos:
+
+   #include<stdio.h> 
+  
+    int main() 
+    { 
+        int *p;  
+        int (*ptr)[5];  
+        int arr[5]; 
+        
+        p = arr; 
+        ptr = &arr;  
+        printf("p = %p, ptr = %p\n", p, ptr); 
+        p++;  
+        ptr++; 
+        printf("p = %p, ptr = %p\n", p, ptr); 
+        return 0; 
+    }
+
+Ejecute el programa anterior. El resultados es:
+
+.. note::
+   p = 0x7fff4f32fd50, ptr = 0x7fff4f32fd50
+
+   p = 0x7fff4f32fd54, ptr = 0x7fff4f32fd64
+
+
+En la expresión `int p*`, p es una variable de tipo `int *`. En
+este tipo de variables se almacenan las direcciones de
+variables de tipo `int`. `*p` es de tipo `int` porque p es
+de tipo int *.
+
+En la expresión `int (*ptr)[5];`, ptr es una variable de tipo
+`int (*)[5]`. En este tipo de variables se almacenan direcciones
+de variables de tipo `int [5]`, es decir, variables de tipo
+arreglo de cinco posiciones. `*ptr` es de tipo `int [5]`
+porque ptr es de tipo `int (*)[5]`.
+
+En la expresión `p = arr;` arr es el nombre del arreglo. El
+nombre del arreglo es un puntero al primer elemento del
+arreglo. `arr` es de tipo `int *` porque el primer elemento
+del arreglo es de tipo `int`. Por tanto `*arr` será tipo `int`.
+
+En la expresión `ptr = &arr;`, `&arr` es la dirección del arreglo.
+`&arr` es tipo `int (*)[5]`.
+
+La expresión `printf("p = %p, ptr = %p\n", p, ptr);` imprime el
+contenido de p y ptr. Según el resultado
+(`p = 0x7fff4f32fd50, ptr = 0x7fff4f32fd50`), la dirección del
+arreglo y del primer elemento del arreglo es la misma; sin embargo,
+como p es tipo `int *`, la expresión `p++` hará que p apunte
+(almacene la dirección) del siguiente entero. En cambio, en la
+expresión `ptr++;` ptr apuntará el siguiente arreglo de 5
+enteros (20 bytes después ya que los enteros ocupan 4 bytes).
