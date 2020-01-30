@@ -320,19 +320,19 @@ Ejecute el programa anterior. El resultados es:
 
 En la expresión `int p*`, p es una variable de tipo `int *`. En
 este tipo de variables se almacenan las direcciones de
-variables de tipo `int`. `*p` es de tipo `int` porque p es
+variables de tipo `int`. Por tanto, `*p` es de tipo `int` porque p es
 de tipo int *.
 
 En la expresión `int (*ptr)[5];`, ptr es una variable de tipo
 `int (*)[5]`. En este tipo de variables se almacenan direcciones
 de variables de tipo `int [5]`, es decir, variables de tipo
-arreglo de cinco posiciones. `*ptr` es de tipo `int [5]`
+arreglo de cinco posiciones. Por tanto, `*ptr` es de tipo `int [5]`
 porque ptr es de tipo `int (*)[5]`.
 
 En la expresión `p = arr;` arr es el nombre del arreglo. El
 nombre del arreglo es un puntero al primer elemento del
-arreglo. `arr` es de tipo `int *` porque el primer elemento
-del arreglo es de tipo `int`. Por tanto `*arr` será tipo `int`.
+arreglo. En este caso `arr` es de tipo `int *` porque el primer elemento
+del arreglo es de tipo `int`. Por tanto, `*arr` será tipo `int`.
 
 En la expresión `ptr = &arr;`, `&arr` es la dirección del arreglo.
 `&arr` es tipo `int (*)[5]`.
