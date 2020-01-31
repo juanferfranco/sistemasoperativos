@@ -285,7 +285,7 @@ En esta sección se proponen algunos ejercicios con punteros que
 buscan motivar la reflexión de los conceptos.
 
 Ejercicio 1
-^^^^^^^^^^^
+^^^^^^^^^^^^
 (Este ejercicio es tomado de `aquí <https://www.geeksforgeeks.org/pointer-array-array-pointer/>`__)
 
 Relación arreglos y punteros
@@ -318,7 +318,7 @@ Ejecute el programa anterior. El resultados es:
    p = 0x7fff4f32fd54, ptr = 0x7fff4f32fd64
 
 
-En la expresión `int p*`, p es una variable de tipo `int *`. En
+En la expresión `int *p;`, p es una variable de tipo `int *`. En
 este tipo de variables se almacenan las direcciones de
 variables de tipo `int`. Por tanto, `*p` es de tipo `int` porque p es
 de tipo int *.
@@ -329,9 +329,9 @@ de variables de tipo `int [5]`, es decir, variables de tipo
 arreglo de cinco posiciones. Por tanto, `*ptr` es de tipo `int [5]`
 porque ptr es de tipo `int (*)[5]`.
 
-En la expresión `p = arr;` arr es el nombre del arreglo. El
-nombre del arreglo es un puntero al primer elemento del
-arreglo. En este caso `arr` es de tipo `int *` porque el primer elemento
+En la expresión `p = arr;` arr es el nombre del arreglo y un puntero
+al primer elemento del arreglo.
+En este caso `arr` es de tipo `int *` porque el primer elemento
 del arreglo es de tipo `int`. Por tanto, `*arr` será tipo `int`.
 
 En la expresión `ptr = &arr;`, `&arr` es la dirección del arreglo.
@@ -345,5 +345,5 @@ como p es tipo `int *`, la expresión `p++` hará que p apunte
 (almacene la dirección) del siguiente entero. En cambio, en la
 expresión `ptr++;` ptr apuntará al siguiente arreglo de 5
 enteros (5 enteros ocupan 20 bytes en memoria considerando
-asumiendo que cada entero ocupa 4 bytes).
-
+asumiendo que cada entero ocupa 4 bytes), ya que ptr es de tipo
+`int (*)[5]`.
