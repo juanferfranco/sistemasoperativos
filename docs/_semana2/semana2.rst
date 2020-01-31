@@ -343,5 +343,7 @@ contenido de p y ptr. Según el resultado
 arreglo y del primer elemento del arreglo es la misma; sin embargo,
 como p es tipo `int *`, la expresión `p++` hará que p apunte
 (almacene la dirección) del siguiente entero. En cambio, en la
-expresión `ptr++;` ptr apuntará el siguiente arreglo de 5
-enteros (20 bytes después ya que los enteros ocupan 4 bytes).
+expresión `ptr++;` ptr apuntará al siguiente arreglo de 5
+enteros (5 enteros ocupan 20 bytes en memoria considerando
+asumiendo que cada entero ocupa 4 bytes).
+
