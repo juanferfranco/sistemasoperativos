@@ -347,3 +347,56 @@ expresión `ptr++;` ptr apuntará al siguiente arreglo de 5
 enteros (5 enteros ocupan 20 bytes en memoria considerando
 asumiendo que cada entero ocupa 4 bytes), ya que ptr es de tipo
 `int (*)[5]`.
+
+
+Ejercicio 2: análisis de una expresión más compleja
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+El siguiente ejercicio es más complejo que el anterior, sin embargo,
+se analiza de igual manera. Considerar el siguiente código:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int arr[3][4] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12} };
+
+    int main(void) {
+        int (*p)[3][4] = &arr;
+        printf("%d\n", ( (*p)[2] )[3] );
+        printf("%d\n", *( *(*p + 2) + 3 ) );
+        return 0;
+    }
+
+
+`arr` es un arreglo de arreglos, es decir, es una arreglo de 3 arreglos
+de 4 enteros cada uno.
+
+`arr` es el nombre del arreglo de arreglos y un puntero al primer elemento
+del arreglo. Por tanto, `arr` es de tipo int (*)[4] ya que el primer elemento
+de arr es un arreglo de tipo int [4].
+
+`p` es un puntero que almacena la dirección de un arreglo de arreglos.
+Por tanto, p es de tipo int (*)[3][4].
+
+Si `p` es de tipo int (*)[3][4] entonces `*p` será de tipo int [3][4] o
+int (*)[4] (un puntero al primer elemento del arreglo de arreglos).
+
+El operador `[]` en la expresión `(*p)[2]` es equivalente a `*( *p + 2)`.
+Como el tipo de `(*p + 2)` es int (*)[4] el tipo de `*( *p + 2)`
+será int [4]. la expresión `(*p)[2]` accede al tercer elemento de arr, es
+decir, a `{9,10,11,12}` que es de tipo int [4].
+
+Por último, como `(*p)[2]` es tipo int [4], entonces `( (*p)[2] )[3] )` es
+tipo int y corresponderá al cuarto elemento del tercer arreglo de arr.
+
+Note que `( (*p)[2] )[3] )` es equivalente a `*( (*p)[2] + 3)` que a su
+vez es equivalente a  `*( * ( *p + 2)+ 3)`
+
+El programa imprimirá el número `12`.
+
+La expresión `printf("%d\n", *( * ( *p + 2)+ 3));` al ser equivalente a
+`printf("%d\n", ( (*p)[2] )[3] );` también mostrará un `12`.
+
+
