@@ -313,15 +313,16 @@ Relación arreglos y punteros
 Ejecute el programa anterior. El resultados es:
 
 .. note::
+
    p = 0x7fff4f32fd50, ptr = 0x7fff4f32fd50
 
    p = 0x7fff4f32fd54, ptr = 0x7fff4f32fd64
 
 
-En la expresión `int *p;`, p es una variable de tipo `int *`. En
-este tipo de variables se almacenan las direcciones de
-variables de tipo `int`. Por tanto, `*p` es de tipo `int` porque p es
-de tipo int *.
+En la expresión `int *p;`, p es una variable de tipo
+`int *`. En este tipo de variables se almacenan las
+direcciones de variables de tipo `int`. Por tanto, `*p`
+es de tipo `int` porque p es de tipo int *.
 
 En la expresión `int (*ptr)[5];`, ptr es una variable de tipo
 `int (*)[5]`. En este tipo de variables se almacenan direcciones
