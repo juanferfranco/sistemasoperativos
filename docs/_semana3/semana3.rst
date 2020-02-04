@@ -94,8 +94,6 @@ en C:
 Ejercicio: analizar 
 --------------------
 
-Códigos segunda sesión
-------------------------
 Analizar el funcionamiento de este ejemplo. Utilizar el *debugger* de eclipse.
 
 .. code-block:: c
