@@ -222,8 +222,6 @@ ingresada por el usuario supera la capacidad de commandBuffer y por
 tanto, **fgets** truncará la cadena. Por ejemplo, si cambiamos la capacidad
 de commandBuffer de 50 a 10:
 
-.. image:: ./_static/fgetsTrunk.gif
-
-
+.. image:: ../_static/fgetsTrunk.gif
 
 
