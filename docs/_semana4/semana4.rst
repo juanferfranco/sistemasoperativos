@@ -1,73 +1,229 @@
 Semana 4
 ===========
-Esta semana continuaremos explorando el lenguaje de programación C. Continuamo con la
-última parte de la guía relacionada con archivos.
 
-Material de clase
-------------------
-El material que vamos a trabajar esta semana en clase lo pueden encontrar en este
-`enlace <https://drive.google.com/open?id=1hBPkoUsGUmatr3tRm5ztr-s3hyc3OLhl>`__.
+Esta semana vamos a realizar las siguientes actividades:
 
-.. note::
-    ¡Alerta de Spoiler!
+1. Discutir en grupo el último ejercicio de la semana pasada.
+2. Evaluación formativa.
+3. Análisis de la evaluación formativa.
 
-En este `enlace <https://drive.google.com/file/d/1FWuPqJNWvEvHp89-ADvKu7XqdAZR6fx2/view?usp=sharing>`__ 
-se encuentra la solución a algunos puntos de la guía.
+Ejercicio: problema
+^^^^^^^^^^^^^^^^^^^^
 
-Códigos segunda sesión
-------------------------
-En la segunda sesión de esta semana analizaremos este ejemplo:
+La semana pasada planteamos este problema para resolver:
+
+Realice un programa que permita crear un base de datos de estudiantes.
+Cada registro de la base de datos estará dado por:
+número de cédula, nombre y semestre. Cada registro corresponde a un estudiante.
+
+Implemente los siguientes comandos:
+
+**mkdb nombre tamaño** : crea una base de datos especificando el nombre
+y la cantidad de registros.
+
+**loaddb nombre** : carga la base de datos en memoria desde el archivo
+especificado. El comando debe indicar si la base de datos se cargó
+correctamente o no existe. La base de datos debe cargarse en memoria
+dinámica antes de poder aplicar los siguientes comandos.
+
+**savedb nombre** : este comando salva la base de datos en el archivo
+especificado.
+
+**readall** : lee todos los registros de la base de datos.
+
+**readsize** : lee la cantidad de registros de la base datos.
+
+**mkreg cedula nombre semestre** : crea un nuevo registro en la base
+de datos.
+
+**readreg cédula** : busca en la base de datos por número de cédula.
+En caso de encontrar la cédula imprime el registro completo.
+
+**exit** : salir del programa. Antes de terminar debe preguntar si se desea
+salvar la base de datos en el archivo especificado con el comando loaddb.
+
+Cada comando deberá implementarse como una función.
+
+Cada registro es así:
+
+.. code-block:: c
+   :linenos:
+
+    struct estudiante
+    {
+        int cedula;
+        char nombre[30];
+        int semestre;
+    };
+
+
+Tips para la solución
+-----------------------
+
+La primera característica que vamos a construir en nuestro programa es la
+capacidad de leer los comandos y los argumentos que el usuario pasará por
+la línea de comandos.
 
 .. code-block:: c
    :linenos:
 
     #include <stdio.h>
-
-    char nombres[3][20] = {"fulano","mengano","perano"};
+    #include <stdint.h>
+    #include <stdlib.h>
 
     int main (void){
-        char *a;
-        char (*b)[20];
-        char *c;
-        char (*d)[3][20];
+        while(1){
 
-        a = &nombres[0][0];
-        printf("el nombre es %s \n", a);
-        b = nombres;
-        c = &nombres[0][0];
-        d = &nombres;
-        for(int i = 0; i < 3; i++ ){
-            printf("char (*)[] el nombre[%d] es %s \n", i , (char * ) (b+i));
-            printf("char *: el nombre[%d] es %s \n", i , (char * ) ( c + (i*2) ));
-            printf("char (*)[][]: el nombre[%d] es %s \n", i , (char * ) (d+i));
-            
-        } 
-        return 0;
+        }
+        return EXIT_SUCCESS;
     }
 
-También analizaremos el ejemplo que está en 
-`este <https://www.geeksforgeeks.org/pointer-array-array-pointer/>`__ sitio
+El programa será un ciclo infinito que procesará continuamente comandos y
+en condiciones normales, solo terminará si se ingresa el
+comando **exit**.
 
-Ejercicio 1
--------------
-Considere el problema de encontrar los elementos comunes entre dos arreglos.
+.. code-block:: c
+   :linenos:
 
-* Se debe crear una función que busque los elementos comunes entre dos arreglos.
-* Cree un programa que solicite el tamaño de los arreglos y los elementos de estos.
-* Los elementos son números enteros.
-* La función debe recibir las direcciones de memoria de los arreglos y debe devolver 1 si
-  encuentra elementos y 0 si no los encuentra.
-* El programa debe mostrar el resultado.
-* Antes de insertar un elemento en el arreglo resultado debe verificar que este no exista 
-  en el arreglo, es decir, el arreglo resultado no debe tener elementos repetidos.
+    #include <stdio.h>
+    #include <stdint.h>
+    #include <stdlib.h>
 
-El flujo del programa será:
+    #define COMMANDBUFFERMAXSIZE 50
 
-* Solcita el tamaño del primer arreglo.
-* Ingresa los elementos del primer arreglo.
-* Solicita el tamaño del segundo arreglo.
-* Ingresa los elementos del segundo arreglo.
-* Si hay elementos comunes muestra la cadena The common elements in the two arrays are
-  y luego los elementos, de lo contrario muestra la cadena There are no 
-  common elements in the two arrays.
+    int main (void){
+        char commandBuffer[COMMANDBUFFERMAXSIZE];
+
+        while(1){
+            printf(">");
+            fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin);
+
+        }
+        return EXIT_SUCCESS;
+    }   
+
+El programa en cada ciclo le mostrará al usuario un prompt (**>**) que
+servirá para indicarle que ya está listo para recibir un nuevo comando.
+Luego utilizamos la función **fgets** para leer una cadena de caracteres
+del flujo de entrada. Se espera que la cadena de caracteres termine en
+con un enter (``\n``) seguido de un carácter **NULL** (0) que indica
+el fin de la cadena.
+
+**fgets** espera que le pasemos la dirección en memoria donde guardaremos
+los caracteres. En este caso, será un arreglo de caracteres alojados en
+el stack y con una capacidad máxima de COMMANDBUFFERMAXSIZE caracteres.
+
+**fgets** retorna NULL si ocurre algún problema con la lectura.
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <stdint.h>
+    #include <stdlib.h>
+
+    #define COMMANDBUFFERMAXSIZE 50
+
+    int main (void){
+        char commandBuffer[COMMANDBUFFERMAXSIZE];
+
+        while(1){
+            printf(">");
+            if ( fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL){
+
+            }
+            else{
+                perror("Error: ");
+                return EXIT_FAILURE;
+            }
+
+        }
+        return EXIT_SUCCESS;
+    }
+
+Podemos leer el valor retornado por **fgets** para decidir si procesamos
+o no la cadena de entrada. Note que en caso de error, estamos usando la
+función **perror** para imprimir un mensaje que describa el error
+producido por **fgets**.
+
+.. note::
+    Cuando ocurre un error fgets coloca información en la variable entera
+    y global errno a la cual podemos acceder con perror, solo que perror además
+    interpreta el valor almacenado en la variable e imprime un texto
+    descriptivo.
+
+    Esta es la documentación de fgets:
+
+    NAME
+
+    fgets - get a string from a stream
+    
+    SYNOPSIS
+
+
+    #include <stdio.h>
+
+    char *fgets(char *s, int n, FILE *stream);
+
+    DESCRIPTION
+    
+    The fgets() function reads bytes from stream into the array pointed to by s, until n-1 bytes are read, or a newline character is read and transferred to s, or an end-of-file condition is encountered. The string is then terminated with a null byte.
+    The fgets() function may mark the st_atime field of the file associated with stream for update. The st_atime field will be marked for update by the first successful execution of fgetc(), fgets(), fgetwc(), fgetws(), fread(), fscanf(), getc(), getchar(), gets() or scanf() using stream that returns data not supplied by a prior call to ungetc() or ungetwc().
+
+    RETURN VALUE
+    
+    Upon successful completion, fgets() returns s. If the stream is at end-of-file, the end-of-file indicator for the stream is set and fgets() returns a null pointer. If a read error occurs, the error indicator for the stream is set, fgets() returns a null pointer and sets errno to indicate the error.
+
+
+Una vez tenemos la cadena en commandBuffer podemos proceder a procesarla.
+Lo primero que haremos será eliminar el ENTER:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <stdint.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    #define COMMANDBUFFERMAXSIZE 50
+
+    int main(void) {
+        char commandBuffer[COMMANDBUFFERMAXSIZE];
+
+        while (1) {
+            printf(">");
+            if (fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL) {
+
+                int commandSize = strlen(commandBuffer);
+
+                if (commandBuffer[commandSize - 1] != '\n') {
+                    printf("Error: command too long \n");
+                    return EXIT_FAILURE;
+                } else {
+                    commandBuffer[commandSize - 1] = 0;
+                }
+
+
+            } else {
+                perror("Error: ");
+                return EXIT_FAILURE;
+            }
+
+        }
+        return EXIT_SUCCESS;
+    }
+
+La función **strlen** (está prototipada en string.h) nos permite encontrar
+el tamaño de la cadena. Recuerde que la cadena incluye el ENTER y en caso
+de estar en la cadena se ubicará en la posición commandSize - 1. Note
+que si en esta posición no está el ENTER, quiere decir que la cadena
+ingresada por el usuario supera la capacidad de commandBuffer y por
+tanto, **fgets** truncará la cadena. Por ejemplo, si cambiamos la capacidad
+de commandBuffer de 50 a 10:
+
+.. image:: ./_static/fgetsTrunk.gif
+
+
+
 
