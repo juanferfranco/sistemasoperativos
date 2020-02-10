@@ -57,8 +57,8 @@ Cada registro es así:
     };
 
 
-Tips para la solución
------------------------
+Ingresar comandos
+------------------
 
 La primera característica que vamos a construir en nuestro programa es la
 capacidad de leer los comandos y los argumentos que el usuario pasará por
@@ -224,4 +224,93 @@ de commandBuffer de 50 a 10:
 
 .. image:: ../_static/fgetsTrunk.gif
 
+Para eliminar el ENTER de la cadena basta con reemplazarlo con un 0,
+indicando así que la cadena termina en este punto.
+
+Implementación del comando mkdb nombre tamaño
+-----------------------------------------------
+
+Las siguientes líneas obtienen los argumentos de **mkdb** y llaman
+la función que realizará la acción.
+
+.. code-block:: c
+    :linenos:
+
+    #include <stdio.h>
+    #include <stdint.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+
+    int makeDatabasefn(int);
+
+    #define COMMANDBUFFERMAXSIZE 50
+
+    const char makeDatabase[] = "mkdb";
+    char currentDataBaseName[COMMANDBUFFERMAXSIZE];
+    int currentDataBaseSize = 0;
+
+    struct estudiante
+    {
+        int cedula;
+        char nombre[30];
+        int semestre;
+    };
+    struct estudiante *pcurrentDataBase;
+
+
+    int main(void) {
+        char commandBuffer[COMMANDBUFFERMAXSIZE];
+
+        while (1) {
+            printf(">");
+            if (fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL) {
+
+                int commandSize = strlen(commandBuffer);
+
+                if (commandBuffer[commandSize - 1] != '\n') {
+                    printf("Error: command too long \n");
+                    return EXIT_FAILURE;
+                } else {
+                    commandBuffer[commandSize - 1] = 0;
+                }
+
+                if (0 == strncmp(makeDatabase, commandBuffer, strlen(makeDatabase)) ) {
+                    int result = sscanf(commandBuffer, "%*s %s %d", currentDataBaseName, &currentDataBaseSize);
+                    if (result != 2) {
+                        currentDataBaseName[0] = 0;
+                        currentDataBaseSize = 0;
+                        printf("Enter valid arguments\n");
+                    }
+                    else {
+                        if (makeDatabasefn(currentDataBaseSize) != 1) {
+                            printf("Database can't be created\n");
+                        }
+                    }
+                }
+
+            } else {
+                perror("Error: ");
+                return EXIT_FAILURE;
+            }
+
+        }
+        return EXIT_SUCCESS;
+    }
+
+    int makeDatabasefn(int size){
+        int success = 0;
+        pcurrentDataBase = malloc( sizeof(struct estudiante)*size );
+        if(pcurrentDataBase != NULL) success = 1;
+        return success;
+    }
+
+
+La función **strncmp** compara los strlen(makeDatabase) primeros bytes del
+arreglo de caracteres makeDatabase con commandBuffer. Si son iguales
+devuelve 0. **sscanf** lee la cadena de entrada y la procesa como **scanf**.
+Finalmente, **makeDatabase** crea la base datos en memoria dinámica.
+
+La línea ``pcurrentDataBase = malloc( sizeof(struct estudiante)*size );`` crea
+tantos registros como lo indique ``size``.
 
