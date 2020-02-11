@@ -314,3 +314,122 @@ Finalmente, **makeDatabase** crea la base datos en memoria dinámica.
 La línea ``pcurrentDataBase = malloc( sizeof(struct estudiante)*size );`` crea
 tantos registros como lo indique ``size``.
 
+Implementación del comando loaddb nombre
+-----------------------------------------
+
+Este comando lee la base de datos desde un archivo y la carga en memoria
+dinámica. Cada archivo contiene en su primera línea el tamaño de la
+base de datos y luego, en las demás líneas, un registro, por línea,
+compuesto por la cédula, nombre y semestre. Cada uno de los campos
+anteriores está separado por un espacio.
+
+Primero añadimos el código que permite leer el comando y los argumentos:
+
+.. code-block:: c
+    :linenos:
+
+    .
+    .
+    .
+
+    // definición del nuevo comando
+    const char loadDatabase[] = "loaddb";
+    .
+    .
+    .
+    // if para leer mkdb
+    .
+    .
+    .
+    else if( 0 == strncmp(loadDatabase, commandBuffer, strlen(loadDatabase) ) ){
+        char name[COMMANDBUFFERMAXSIZE];
+        int result = sscanf(commandBuffer, "%*s %s",name);
+        if(result != 1){
+            printf("Enter a data base name\n");
+        }
+        else{
+            if( loadDatabasefn(name) == 0){
+                printf("Can't load the database\n");
+            }
+            else{
+                strncpy(currentDataBaseName, name, COMMANDBUFFERMAXSIZE);
+            }
+        }
+	}
+
+
+Y la función que leerá el archivo y cargará en memoria dinámica la base
+de datos:
+
+.. code-block:: c
+    :linenos:
+
+    //1. el prototipo
+    int loadDatabasefn(char *);
+    .
+    .
+    .
+    //2. Crear un contador de registros
+    int currentDataBaseRegister = 0;
+    .
+    .
+    .
+    //3. El código
+
+    int loadDatabasefn(char * dataBaseFileName){
+        int currentDataBaseSizeTmp = 0;
+        struct estudiante *pcurrentDataBaseTmp;
+        int currentDataBaseRegisterTmp = 0;
+
+        int result = 0;
+        FILE *fp = fopen(dataBaseFileName, "r");
+        if(fp == NULL){
+            perror("Error: ");
+        }
+        else{
+            int scanfStatus = fscanf(fp,"%d", &currentDataBaseSizeTmp);
+            if(feof(fp) == 0){
+                if(scanfStatus == 1){
+                    pcurrentDataBaseTmp = (struct estudiante *) malloc( sizeof(struct estudiante)*currentDataBaseSizeTmp );
+                    if(pcurrentDataBaseTmp != NULL){
+                        while(1){
+                            int scanfStatus = fscanf(fp,"%d %s %d", &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->cedula),
+                                                    (pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->nombre,
+                                                    &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->semestre) );
+                            if(feof(fp) == 0){
+                                if(scanfStatus != 3){
+                                    free(pcurrentDataBaseTmp);
+                                    break;
+                                }
+                                else{
+                                    currentDataBaseRegisterTmp++;
+                                }
+                            }
+                            else{
+                                result = 1;
+                                pcurrentDataBase = pcurrentDataBaseTmp;
+                                currentDataBaseSize = currentDataBaseSizeTmp;
+                                currentDataBaseRegister = currentDataBaseRegisterTmp;
+                                break;
+                            }
+                        }
+                    }
+                }
+                else{
+                    printf("Can't read database size\n");
+                }
+            }
+            else{
+                printf("Can't read database\n");
+            }
+
+            fclose(fp);
+        }
+        return result;
+    }
+
+Note que la lectura de las líneas del archivo se hace un
+ciclo infinito del cual se sale cuando una lectura al archivo
+retorne EOF. Tenga en cuenta que es necesario leer el archivo
+para poder obtener un EOF. Es por lo anterior que primero se
+hace un **fscanf** y luego se llama feof.
