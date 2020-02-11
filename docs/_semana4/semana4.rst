@@ -428,8 +428,8 @@ de datos:
         return result;
     }
 
-Note que la lectura de las líneas del archivo se hace un
+Note que la lectura de las líneas del archivo se hace en un
 ciclo infinito del cual se sale cuando una lectura al archivo
 retorne EOF. Tenga en cuenta que es necesario leer el archivo
-para poder obtener un EOF. Es por lo anterior que primero se
+para poder obtener un EOF. Es por ello que primero se
 hace un **fscanf** y luego se llama feof.
