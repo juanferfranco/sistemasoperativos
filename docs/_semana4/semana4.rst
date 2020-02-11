@@ -434,8 +434,8 @@ retorne EOF. Tenga en cuenta que es necesario leer el archivo
 para poder obtener un EOF. Es por ello que primero se
 hace un **fscanf** y luego se llama feof.
 
-Implementación del comando loaddb nombre
------------------------------------------
+Implementación de los demás comandos
+-------------------------------------
 
 Se incluye ahora la implementación final al problema con
 algunas variaciones:
