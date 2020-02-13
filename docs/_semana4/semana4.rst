@@ -765,4 +765,86 @@ El programa que desencripta:
   con la cual se encripta y usted debe encontrar la
   función inversa para desencriptar.
 
+Una solución al problema
+-------------------------
+A diferencia de la solución anterior, en esta solución se tratará de
+mantener al mínimo las verificaciones buscando mostrar solo aquellas
+cosas escenciales de la solución.
+
+.. warning:: Este código asumen que la información ingresada está
+             bien formateada y libre de errores. Por tanto, se omiten
+             algunas verificaciones.
+
+.. note:: Para probar los siguientes programas es necesario que cree
+          el archivo de texto que será encriptado.
+
+.. code-block:: c
+    :linenos:
+
+    #include <stdint.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    uint8_t encXorFunction(uint8_t data) { return data ^ 0xFF; }
+
+    int main(int argc, char *argv[]) {
+    char input[50];
+    char inFile[20];
+    char outFile[20];
+    char function[10];
+    uint8_t (*encFuntion)(uint8_t) = NULL;
+
+    printf("Enter in_file out_file function\n");
+    fgets(input, sizeof(input), stdin);
+    sscanf(input, "%s %s %s", inFile, outFile, function);
+
+    FILE *fin = fopen(inFile, "r");
+    if (fin == NULL) {
+        perror("Error: ");
+        return EXIT_FAILURE;
+    }
+
+    if (strncmp("xor", function, 3) == 0) {
+        encFuntion = &encXorFunction;
+    }
+
+    FILE *fout = fopen(outFile, "w");
+    if (fout == NULL) {
+        perror("Error: ");
+        return EXIT_FAILURE;
+    }
+
+    while ( fgets(input, sizeof(input), fin) != NULL) {
+
+        int n = strlen(input);
+
+        for (int i = 0; i < n; i++) {
+        input[i] = (*encFuntion)(input[i]);
+        }
+        fputs(input, fout);
+    }
+
+    fclose(fin);
+    fclose(fout);
+    return EXIT_SUCCESS;
+    }
+
+Problema: modificación al problema anterior
+--------------------------------------------
+Modifique el código anterior para que reciba
+la información desde la línea de comandos.
+
+Ejercicio final
+-----------------
+Si ha llegado a este ejericio, felicidades, buen trabajo.
+Este último ejercicio es tal vez uno de los más importantes,
+se trata de ayudarle y explicarle a los compañeros
+que aún no terminan. En este caso el beneficio será doble,
+usted repasa y refuerza y por otro lado le ayuda a un compañero.
+
+
+
+
+
 
