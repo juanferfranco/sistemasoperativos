@@ -775,8 +775,9 @@ cosas escenciales de la solución.
              bien formateada y libre de errores. Por tanto, se omiten
              algunas verificaciones.
 
-.. note:: Para probar los siguientes programas es necesario que cree
-          el archivo de texto que será encriptado.
+.. note:: Para probar los siguientes programas (es el mismo para encriptar
+          y desencriptar) es necesario que cree el archivo de texto que
+          será encriptado.
 
 .. code-block:: c
     :linenos:
