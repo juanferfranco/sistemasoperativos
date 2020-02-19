@@ -28,3 +28,35 @@ es la acción de mejora para el grupo de 2 p.m. a 4 p.m.
 `Esta <https://docs.google.com/document/d/112L39bDATrBDUCcPD7G6dSqfR_7JsbVpmiKt1LeqmRk/edit?usp=sharing>`__
 es la acción de mejora para el grupo de 4 p.m. a 6 p.m.
 
+Posibles soluciones a los problemas
+-------------------------------------
+
+Evaluación sumativa grupo 2 a 4:
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+
+    int main(int argc, char *argv[]){
+
+        FILE *fin = fopen(argv[1], "r");
+        FILE *fout = fopen(argv[2], "w");
+
+        int data;
+        while(1){
+            data = fgetc(fin);
+            if(data == EOF) break;
+            fprintf(fout, "%.2hhX ",data);
+        }
+        fclose(fin);
+        fclose(fout);
+        return 0;
+    }
+
+Evaluación sumativa grupo 4 a 6:
+
+.. code-block:: c
+   :linenos:
+
+    MUY PRONTO
