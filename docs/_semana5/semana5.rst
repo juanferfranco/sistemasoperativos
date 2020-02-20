@@ -59,4 +59,33 @@ Evaluación sumativa grupo 4 a 6:
 .. code-block:: c
    :linenos:
 
-    MUY PRONTO
+    #include <stdio.h>
+    #include <limits.h>
+
+    int main(int argc, char *argv[]){
+
+        FILE *fin = fopen(argv[1], "r");
+        FILE *fout = fopen(argv[2], "w");
+
+        int data;
+        unsigned int min = UINT_MAX;
+        unsigned int max = 0;
+        unsigned int sum = 0;
+        unsigned int counter = 0;
+
+        while(1){
+            int status = fscanf(fin,"%u",&data);
+            if(status != 1) break;
+            fprintf(fout,"%u ",data );
+            if(data < min) min = data;
+            if(data > max) max = data;
+            sum += data;
+            counter++;
+        }
+        fprintf(fout,"\n%u",max);
+        fprintf(fout,"\n%u",min);
+        fprintf(fout,"\n%u\n",sum/counter);
+        fclose(fin);
+        fclose(fout);
+        return 0;
+    }
