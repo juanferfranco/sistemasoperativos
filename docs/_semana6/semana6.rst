@@ -391,7 +391,7 @@ Realice el siguiente ejemplo tomado del sitio geekforgeeks.
         return 0; 
     } 
 
-* Compile gcc EXEC.c -o EXEC
+* Compile con: gcc -Wall EXEC.c -o EXEC
 
 * Cree el siguiente programa:
 
@@ -420,6 +420,8 @@ Realice el siguiente ejemplo tomado del sitio geekforgeeks.
 
 * Ejecute el programa.
 * Analice detenidamente el código.
+* Analice detenidamente qué está pasando. Entonces cuál es la diferencia entre
+  un proceso y un programa?
 
 Ejercicio 5
 #############
