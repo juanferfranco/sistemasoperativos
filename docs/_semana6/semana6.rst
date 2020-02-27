@@ -421,13 +421,13 @@ Realice el siguiente ejemplo tomado del sitio geekforgeeks.
 * Ejecute el programa.
 * Analice detenidamente el código.
 
-Ejercicio 6
+Ejercicio 5
 #############
 
 * Divida el programa del ejercicio 2 en tres programas. Uno que calcule
   el promedio, otro que calcule el máximo y otro que calcule el mínimo.
 * Compile cada programa y genere un ejecutable, tal como lo hizo en el
-  ejercicio 5.
+  ejercicio 4.
 * Cree un cuarto programa. Este programa recibirá los argumentos y
   realizará 3 fork. Luego cada uno de los hijos cambiará su imagen
   (ejecutable) por los ejecutables de los programas promedio, mínimo y máximo.
