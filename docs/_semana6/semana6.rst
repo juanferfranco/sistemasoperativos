@@ -432,3 +432,4 @@ Ejercicio 5
   realizará 3 fork. Luego cada uno de los hijos cambiará su imagen
   (ejecutable) por los ejecutables de los programas promedio, mínimo y máximo.
 * El programa padre debe esperar que cada hijo termine.
+
