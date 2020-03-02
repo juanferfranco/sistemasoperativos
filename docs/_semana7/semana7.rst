@@ -29,3 +29,16 @@ Realizar el ejercicio 13 de la guía
 
 Tenga en cuenta que la evaluación sumativa incluirá tanto procesos
 como hilos.
+
+Información de interés
+^^^^^^^^^^^^^^^^^^^^^^^
+Conceptos de concurrencia en python:
+
+* `EuroPython 2018 <https://www.youtube.com/watch?v=xOyJiN3yGfU>`__
+* `PyCon India 2019 <https://www.youtube.com/watch?v=Y4Gt3Xjd7G8>`__
+
+
+
+
+
+
