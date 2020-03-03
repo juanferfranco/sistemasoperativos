@@ -11,7 +11,10 @@ Sesión 1
 ---------
 Se introduce el concepto de hilo y la relación entre otros
 conceptos estudiados en la carrera. Para ello vamos a revisar
-partes de `este <http://www.albahari.com/threading/>`__ material.
+partes de `este <http://www.albahari.com/threading/>`__ sitio y
+`esta <https://drive.google.com/file/d/1kYL85ThVU5xJmCiCPDVskS-UI4Y5jDde/view?usp=sharing>`__
+presentación.
+
 Si el tiempo lo permite comenzaremos a trabajar la guía de
 ejercicios cuyo enlace está en la sesión 2. Ver también la guía
 de estudio `aquí <https://www.os-book.com/OS10/study-guide/Study-Guide.pdf>`__
