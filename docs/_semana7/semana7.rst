@@ -16,11 +16,17 @@ partes de `este <http://www.albahari.com/threading/>`__ sitio y
 presentación de Samy Zafrany tomada de `este <https://samyzaf.com/braude/OS/index.html>`__
 sitio.
 
+Para que veamos la relación entre los conceptos estudiados en el curso
+con otros cursos vamos a complementar con el material de estos sitios:
+
+* `¿Qué es el .NET? <https://dotnettutorials.net/lesson/dotnet-framework/>`__
+* `¿Qué es el CLR? <https://dotnettutorials.net/lesson/common-language-runtime-dotnet/>`__
+* `¿Cómo se ejecuta un programa .NET? <https://dotnettutorials.net/lesson/dotnet-program-execution-process/>`__
+
+
 Si el tiempo lo permite comenzaremos a trabajar la guía de
 ejercicios cuyo enlace está en la sesión 2. Ver también la guía
 de estudio `aquí <https://www.os-book.com/OS10/study-guide/Study-Guide.pdf>`__
-
-
 
 Sesión 2
 ----------
