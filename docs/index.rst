@@ -64,9 +64,9 @@ Evaluación
 -----------
 * Parcial 1: programación en C (20%)
 * Parcial 2: parcial 1 + procesos e hilos (20%)
-* Parcial 3: parcial 2 + comunicación, sincronización y memoria (20%)
-* Parcial 4: parcial 3 + persistencia y entrada/salida (20%)
-* Parcial 5: parcial 4 + protección, seguridad,  tópicos de actualidad (20%)
+* Parcial 3: parcial 2 + comunicación, sincronización y memoria (25%)
+* Parcial 4: reto acumulativo (25%)
+* Parcial 5: sistemas de archivos, protección y seguridad (10%)
 
 Texto Guía
 -----------
