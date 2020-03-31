@@ -6,5 +6,5 @@ memoria compartida y cómo sincronizar procesos mediante semáforos.
 
 Material
 ---------
-En `este enlace <https://drive.google.com/open?id=1GTKu5sIabILwUBS6cYRrz-HZGoSD80AEux8hnw_x3c0>`__ se encuentra 
+En `este enlace <https://docs.google.com/presentation/d/1OQFXngzZrypjMPoCikgSmRDZ888-Y8luK2vR9N2Y0dg/edit?usp=sharing>`__ se encuentra 
 el material para esta semana.

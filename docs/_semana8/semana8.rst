@@ -28,7 +28,7 @@ está la evaluación sumativa del grupo de 4 a 6.
 Sesión 2
 ---------
 `Aquí <https://docs.google.com/document/d/1-xW809WxivQpBiHIsB8UWRe03flx7aVNBwd6pH6Jb8I/edit?usp=sharing>`__
-está la evaluación sumativa del grupo de 2 a 4.
+ está la evaluación sumativa del grupo de 2 a 4.
 
 `Aquí <https://docs.google.com/document/d/1LnQ_LYSHASMkBpopCPX2RmRfvfTdgoNTdkjgMGPIrzE/edit?usp=sharing>`__
 está la evaluación sumativa del grupo de 4 a 6.
