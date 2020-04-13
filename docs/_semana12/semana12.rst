@@ -33,6 +33,8 @@ Entrega
       * Segundo, explicar el código.
       * Tercero, indicar qué dificultades tuvo solucionando los retos y cómo las superó.
 
+* Subir el trabajo `aquí <https://www.dropbox.com/request/QBAbvsjxvcR4LJiT3Tr3>`__
+
 Nota Final
 ------------
 La nota final será = La suma de cada reto ponderada con su sustentación Funcionamiento * sustentación y 
