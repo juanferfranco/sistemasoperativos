@@ -10,7 +10,7 @@ Los retos ya fueron asignados desde la semana 9 hasta la 11.
 * De `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__
   los ejercicios 1 y 2.
 * De `este enlace <https://docs.google.com/presentation/d/1EfixM_Svf4z5tO_WYw1K7T2CH7ofUykifvB7b2LTqQk/edit?usp=sharing>`__
-  el ejercicio 4
+  el ejercicio 4: RETO que se encuentra al final de la presentación.
 * De la semana 11 el ejercicio 4.
 
 Entrega
