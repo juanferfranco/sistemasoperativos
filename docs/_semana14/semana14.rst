@@ -1,15 +1,41 @@
 Semana 14
 ===========
 
-Esta semana vamos a analizar cómo sincronizar el acceso 
-a recursos compartidos en un mismo procesos utilizando semáforos. En `este 
-enlace <https://drive.google.com/open?id=14HpUiSg_0a8ZtqjebdryOBDgZkzrdi42RweLJAuYhZY>`__ 
-se encuentra el material de trabajo.
+Hasta es punto en el curso hemos estudiado dos abstracciones
+fundamentales que brinda el sistema operativo: PROCESOS y MEMORIA
+VIRTUAL. La primera abstracción proporciona recursos de procesamiento
+y la segunda de almacenamiento para los datos de las aplicaciones. 
+Ahora, vamos a presentar un nuevo servicio del sistema
+operativo: LA PERSISTENCIA, una abstracción que le permitirá a las
+aplicaciones el almacenamiento de información de manera permanente en
+el sistema de cómputo.
 
-Evaluación sumativa 3
-----------------------
+Sesión 1
+----------
 
-En `este <https://docs.google.com/document/d/13npmbCHk5AztvlLIgc2wFio1CIWlNR1ydAqf9NlcUh8/edit?usp=sharing>`__ 
-enlace se encuentra la evaluación sumantiva número 3.
+Introducción y ejercicios
 
-;)
+Material
+^^^^^^^^^
+
+En `este <https://docs.google.com/presentation/d/1or5HQ9cwZek70PfEYniwkDwiIV4YS0ptaejanL3znIw/edit?usp=sharing>`__
+enlace se encuentra el material introductorio.
+
+Sesión 2
+----------
+
+Durante las horas de trabajo autónomas de esta semana y en el tiempo
+de la sesión 2 vamos a trabajar en este RETO:
+
+RETO 
+^^^^^
+
+El reto consiste en esto:
+
+Realizar un programa que:
+
+* Reciba como argumento la ruta absoluta o relativa de un directorio.
+* Su programa deberá imprimir el nombre de los subdirectorios y de los archivos
+  que contiene el directorio y los subdirectorios.
+* Tenga presente que un subdirectorio internamente tiene subdirectorios y archivos.
+* La idea es recorrer toda la jerarquía imprimiendo los nombres de subdirectorios y archivos.
