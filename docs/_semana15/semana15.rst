@@ -20,26 +20,6 @@ que permitirán comunicar procesos en diferentes computadores.
 El material que estudiaremos será tomado de 
 `este <https://www.packtpub.com/extreme-c>`__ texto.
 
-Las técnicas de comunicaciones estudiadas previamente se
-conocen como pull-based. En estas técnicas, cada procesos debe
-traer los datos de un medio externo al proceso: archivos o 
-memoria compartida por ejemplo. Como el medio es compartido
-entre los procesos, es necesario sincronizar el acceso al medio.
-En contraste, las técnicas que estudiaremos ahora se conocen
-como push-based. Aquí ya no necesitamos sincronizar porque
-los datos son enviados (push) y recibidos.
-
-En las técnicas pull-based los procesos pueden funcionar de manera
-asíncrona, es decir, un proceso puede almacenar los datos en
-el medio compartido y otro puede leerlos del medio cuando quiera.
-
-En las técnicas push-based los procesos funcionan de manera sincrónica.
-En este caso, los procesos que se desean comunicar, deben correr a la
-vez. El sistema operativo mantendrá un buffer temporal por proceso para
-almacenar los bytes que sean enviados. El buffer vivirá en tanto el
-proceso viva y es responsabilidad del sistemas operativo garantizar
-el acceso sincronizado al buffer.
-
 Sesión 1
 ---------
 En `este <https://docs.google.com/presentation/d/132VYF-8-lz38iac9rUAt-vv_0mBfW4P_ckMecR2V-EU/edit?usp=sharing>`__
