@@ -96,7 +96,7 @@ Compilación del proyecto:
 
 Ejercicio 3
 ^^^^^^^^^^^^
-Ejecución de proyecto:
+Ejecución del proyecto:
 
 * Asegúrese de estar en el directorio build.
 * Abra una nueva terminal (tendrá dos y ambas con el
@@ -114,7 +114,6 @@ Ejecución de proyecto:
 .. image:: ../_static/serverRun.png
 
 .. image:: ../_static/clientRun.png
-
 
 Ejercicio 4
 ^^^^^^^^^^^^
@@ -208,10 +207,10 @@ Las características del protocolo serán:
  
 * En el archivo anterior se ven nueve métodos.
 * Los métodos que tienen una M al final permiten
-  sumar los dos operandos con una memoria interna
+  hacer operaciones entre los dos operandos y la memoria interna
   de la calculadora y dejar el resultado en esa
   memoria interna.
-* Por ejemplo: se desea crear una solicitud con ID 1000
+* Ejemplo: se desea crear una solicitud con ID 1000
   para sumar el 1.5 con el 5.6. Para hacerlo se debe crear
   un objeto del tipo calc_proto_req_t así:
 
@@ -567,21 +566,38 @@ tener un singleton service object.
 
 Ejercicio 7: UDS stream server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Llamamos server al proceso que escuchará las conexiones.
+Llamamos server al proceso que escuchará las conexiones,
+es decir, el listening process.
 
 El código se encuentra aquí: server/unix/stream/main.c
 
-// TODO
+Ejercicio 8: UDS stream client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Llamamos client al proceso que se conectará al server,
+es decir, será nuestro connector process.
 
+El código se encuentra aquí: client/unix/stream/main.c
 
+Ejercicio 9: UDS datagram server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: server/unix/datagram/main.c
 
+Ejercicio 10: UDS datagram client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: client/unix/datagram/main.c
 
+Ejercicio 11: TCP server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: server/tcp/main.c
 
+Ejercicio 12: TCP client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: client/tcp/main.c
 
+Ejercicio 13: UDP server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: server/udp/main.c
 
-
-
-
-
-
+Ejercicio 14: UDP client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+El código se encuentra aquí: client/udp/main.c
