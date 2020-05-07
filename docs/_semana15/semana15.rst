@@ -556,13 +556,13 @@ crear un objeto de tipo calc_service_t.
 Como los algunas operaciones dependen de la memoria interna
 de la calculadora, es posible que algunas solicitudes
 dependan de solicitudes anteriores. Es por ello que nuestro
-objeto tipo calc_service_t es un objeto de tipo stateful service objects.
+objeto tipo calc_service_t es un objeto de tipo *stateful service objects*.
 
 Si algunas solicitudes no dependieran de solicitudes
 anteriores entonces nuestro objeto tipo calc_service_t
-sería un stateless service object y por tanto podríamos crear
+sería un *stateless service object* y por tanto podríamos crear
 un solo objeto para todos los clientes, es decir, podríamos
-tener un singleton service object.
+tener un *singleton service object*.
 
 Ejercicio 7: UDS stream server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
