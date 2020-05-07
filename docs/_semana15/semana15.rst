@@ -601,3 +601,14 @@ El código se encuentra aquí: server/udp/main.c
 Ejercicio 14: UDP client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 El código se encuentra aquí: client/udp/main.c
+
+RETO
+------
+Hacer un video donde se explique, en un White Board, la arquitectura
+de funcionamiento de los ejercicios del 7 al 14. Aborde la
+explicación por parejas de ejercicios de tal manera que abarque
+el cliente y el servidor para cada tipo de socket.
+
+
+
+

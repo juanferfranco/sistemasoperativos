@@ -1,23 +1,32 @@
 Semana 16
 ===========
-Esta semana vamos a introducir otra abstracción fundamental ofrecida por un sistema 
-operativo: la persistencia.
 
-Material
----------
-En este `enlace <https://drive.google.com/open?id=1EpsV0pu7EVDvPc2wPjVOteeto_Mx4r-lrQA1Zv3a110>`__ 
-se encuentra el material de la sesión.
+Evaluación acumulativa 5
+--------------------------
+Esta semana se dedicará completamente a la realización del
+parcial 5. Tendra un total de 9 horas para realizarlo.
 
-Evaluación Final
------------------
-El enunciado se encuentra `aquí <https://docs.google.com/document/d/1754rlHr-qlEaJ4sm_q1VJaMNGGJ45_gj6Rt3cqweNfY/edit?usp=sharing>`__
+Enunciado
+^^^^^^^^^^
+Se trata entonces de sustentar los RETOS de la semana 14 y la semana 15.
 
-IMPORTANTE: el jueves debemos asistir normal a clase para realizar la sustentación de la evaluación final.
+Entrega
+^^^^^^^^^^
+* El video sustentación debe tener EN EL SIGUIENTE ÓRDEN estas secciones:
 
-Sustentación 
--------------
-Para la sustentación de la evaluación final siga las instrucciones en 
-`este <https://drive.google.com/open?id=1zYszWk5JuyjWfPZmahcjay8ddkB3tnju2E6ET9b865M>`__ enlace.
+    * INTRODUCCIÓN: hacer un introducción donde diga su nombre, grupo y si implementó completamente TODOS LOS RETOS.
+      En caso contrario, indique claramente qué RETO faltó o que partes de los retos faltaron y POR QUÉ faltaron.
+    * DEMOSTRACIÓN: mostrar cómo se compila el código de la semana 14, mostar cómo se lanza el programa y mostrar funcionando
+      el programa.
+    * EXPLICACIÓN: explicar detalladamente cada RETO. 
+      * Primero explicar en un White Board cuál es la arquitectura de
+        los programas, que partes tienen, qué servicios del sistema operativo usa
+      * Segundo, explicar el código, para el RETO de la semana 14. Para el reto de la semana 15
+        mostrar cómo se configura cada tipo de socket, en el cliente y en el servidor.
+      * Tercero, indicar qué dificultades tuvo haciendo el programa del RETO de la semana 14 y cómo las superó.
 
+* Subir el trabajo `aquí <https://www.dropbox.com/request/Pz5WcfyHemBFgkqg5I2a>`__
+* El plazo es hasta el VIERNES 15 de mayo hasta las 6:00 P.M. VERIFIQUE que el vide se pueda
+  ver y considere el tiempo necesario para que esté disponible a las 6:00 P.M. para el profesor.
 
 
