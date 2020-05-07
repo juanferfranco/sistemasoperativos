@@ -19,6 +19,7 @@ Entrega
     * DEMOSTRACIÓN: mostrar cómo se compilan los códigos, mostar cómo se lanzan los programas y mostrar funcionando
       los programas. Recuerde que los programas de la semana 15 funcionan en parejas: cliente y servidor.
     * EXPLICACIÓN: explicar detalladamente cada RETO. 
+    
       * Primero explicar en un White Board cuál es la arquitectura de
         los programas, que partes tienen, qué servicios del sistema operativo usan.
       * Segundo, explicar el código, para el RETO de la semana 14. Para el reto de la semana 15,
