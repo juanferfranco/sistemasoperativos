@@ -4,7 +4,7 @@ Semana 16
 Evaluación acumulativa 5
 --------------------------
 Esta semana se dedicará completamente a la realización del
-parcial 5. Tendra un total de 9 horas para realizarlo.
+parcial 5. Tendrá un total de 9 horas para completarlo.
 
 Enunciado
 ^^^^^^^^^^
@@ -16,7 +16,7 @@ Entrega
 
     * INTRODUCCIÓN: hacer un introducción donde diga su nombre, grupo y si implementó completamente TODOS LOS RETOS.
       En caso contrario, indique claramente qué RETO faltó o que partes de los retos faltaron y POR QUÉ faltaron.
-    * DEMOSTRACIÓN: mostrar cómo se compilan los códigos, mostar cómo se lanzan los programas y mostrar funcionando
+    * DEMOSTRACIÓN: mostrar cómo se compilan los códigos, mostrar cómo se lanzan los programas y mostrar funcionando
       los programas. Recuerde que los programas de la semana 15 funcionan en parejas: cliente y servidor.
     * EXPLICACIÓN: explicar detalladamente cada RETO. 
     
