@@ -30,5 +30,4 @@ Entrega
 * Subir el trabajo `aquí <https://www.dropbox.com/request/Pz5WcfyHemBFgkqg5I2a>`__
 * El plazo es hasta el VIERNES 15 de mayo hasta las 6:00 P.M. VERIFIQUE que el vide se pueda
   ver y considere el tiempo necesario para que esté disponible a las 6:00 P.M. para el profesor.
-
-
+  
