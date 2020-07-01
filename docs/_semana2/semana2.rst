@@ -17,6 +17,7 @@ Fase 6 (RETO)
   
   * Dos sesiones de 1 hora 40 minutos cada una para solución de dudas en tiempo real.
   * 5 horas de trabajo autónomo
+
 * Forma de trabajo: individual.
 
 .. _ejercicios:

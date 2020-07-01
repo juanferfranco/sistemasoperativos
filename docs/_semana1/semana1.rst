@@ -138,7 +138,7 @@ Fase 4 (ejercicios y discusión)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Fecha: julio 6 al 10 de 2020
 * Descripción: realiza los ejercicios propuestos. Acuerda reuniones con tus 
-  compañeros para trabajar de manera *colaborativa*
+  compañeros para trabajar de manera ``colaborativa``
 * Recursos: realiza estos :ref:`ejercicios`.
 * Duración de la actividad: 2 horas de trabajo autónomo y colaborativo. Acuerda reuniones con tus compañeros.
 * Forma de trabajo: individual y colaborativa.

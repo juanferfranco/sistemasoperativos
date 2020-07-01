@@ -12,8 +12,10 @@ Fase 6 (RETO-continuación)
 * Recursos: observa detenidamente la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
   para este reto.
 * Duración de la actividad: 
+
   * 1 hora 40 minutos con solución de dudas en tiempo real.
   * 3 horas de trabajo autónomo
+
 * Forma de trabajo: individual.
 
 Fase 7 (sustentación):
