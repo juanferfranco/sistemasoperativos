@@ -1,5 +1,47 @@
 Semana 3
 ===========
+Esta semana terminaremos la unidad 1
+
+Trayecto de acciones, tiempos y formas de trabajo
+---------------------------------------------------
+
+Fase 6 (RETO-continuación)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 20 de 2020 - 4 p.m. 
+* Descripción: procede con la solución del reto.
+* Recursos: observa detenidamente la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
+  para este reto.
+* Duración de la actividad: 
+  * 1 hora 40 minutos con solución de dudas en tiempo real.
+  * 3 horas de trabajo autónomo
+* Forma de trabajo: individual.
+
+Fase 7 (sustentación):
+^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 20 a julio 23 de 2020
+* Descripción: realiza el video de sustentación.
+* Recursos: para realizar el video de sustentación te recomiendo los siguientes recursos
+  
+  * Planea el video en base a la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
+    para este reto.
+  * Software para capturar `OBS Studio <https://obsproject.com/>`__.
+  * Ver `este <https://www.youtube.com/watch?time_continue=3&v=1tuJjI7dhw0>`__
+    tutorial para el manejo de OBS Studio.
+
+* Duración de la actividad: 2 horas de trabajo autónomo
+* Forma de trabajo: individual
+
+Fase 8 (retroalimentación): 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 24 de 2020 - 4 p.m.
+* Descripción: encuentro sincrónico para compartir y discutir los resultados del RETO. 
+* Recursos: ingresa al grupo de `Teams <https://teams.microsoft.com/l/team/19%3aec7d6340525b46c4abbaa6d1bd635915%40thread.tacv2/conversations?groupId=4663acce-bac4-4fad-b4fe-fda49031f817&tenantId=618bab0f-20a4-4de3-a10c-e20cee96bb35>`__
+* Duración de la actividad: 
+  
+  * 50 minutos de discusión.
+  * 50 minutos para que hagas las acciones de mejora sobre tu trabajo.
+
+* Forma de trabajo: colaborativo con solución de dudas en tiempo real y trabajo individual en la acción de mejora.
 
 ..
   Durante esta semana continuaremos explorando el lenguaje de programación C.

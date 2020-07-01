@@ -63,7 +63,8 @@ líneas:
 * Guarda allí el archivo reto1.c
 * En la primer línea del archivo reto1.c coloca tu ID así:
   // 000008716
-* En la carpeta una copia de la rúbrica con tu autoevaluación.
+* En la carpeta una copia de la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
+  con tu autoevaluación diligenciada
 * En la carpeta guarda un archivo .pdf donde colocarás tres cosas:
   
   * Muestra la línea de comando con la que compilaste el programa.
@@ -81,7 +82,9 @@ líneas:
 * Máximo 20 minutos: debes planear el video muy bien.
 * Cuida la calidad del audio y del video.
 * Sección 1: introducción. Di tu nombre y si realizaste el RETO
-  completo. Si no terminaste indica claramente qué te faltó y por qué.
+  completo. Si no terminaste indica claramente qué te faltó y por qué. NO OLVIDES
+  diligenciar la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
+  con tu autoevaluación.
 * Sección 2: modelado. Explica detalladamente cómo resolviste el problema, qué utilizaste,
   que alternativas de solución viste, justifica las razones para usar
   una alternativa sobre otras. Usa una aplicación de whiteboard. 
