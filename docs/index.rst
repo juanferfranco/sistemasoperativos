@@ -1,4 +1,4 @@
-Curso Sistemas Operativos 2020-10
+Curso Sistemas Operativos 2020-20
 ========================================
 
 ¿Para qué sirve este curso?
@@ -10,7 +10,6 @@ Curso Sistemas Operativos 2020-10
 
 * El conocimiento anterior nos dará los ¡SUPER PODERES! necesarios
   para construir mejor software y para identificar y corregir errores.
-
 
 .. note::
     * You need to understand your code.
@@ -58,7 +57,7 @@ traer a clase y discutir.
 
 Cronograma
 -----------
-`Tabla de actividades <https://docs.google.com/spreadsheets/d/1g02Vw0V19YTu3Nf_3bJgAax1RCMDpzmdlasN8JGZtOw/edit?usp=sharing>`__.
+`Tabla de actividades <https://docs.google.com/spreadsheets/d/16b6lkkxAS3ST6cD_SqYXwNXTLedlRrDkpcGvVGSxxJw/edit?usp=sharing>`__.
 
 Evaluación
 -----------
@@ -90,7 +89,7 @@ Enlaces a otros textos complementarios:
 
 Dedicación
 -----------
-Este curso es de 3 créditos repartidos en 4 horas de trabajo en el aula
+Este curso es de 3 créditos repartidos en 4 horas de trabajo presencial mediado por TIC
 y 5 horas de trabajo autónomo.
 
 Datos de contacto
@@ -102,19 +101,3 @@ Datos de contacto
    :caption: Contenidos semanales:
 
    Semana1 <_semana1/semana1>
-   Semana2 <_semana2/semana2>
-   Semana3 <_semana3/semana3>
-   Semana4 <_semana4/semana4>
-   Semana5 <_semana5/semana5>
-   Semana6 <_semana6/semana6>
-   Semana7 <_semana7/semana7>
-   Semana8 <_semana8/semana8>
-   Semana9 <_semana9/semana9>
-   Semana10 <_semana10/semana10>
-   Semana11 <_semana11/semana11>
-   Semana12 <_semana12/semana12>
-   Semana13 <_semana13/semana13>
-   Semana14 <_semana14/semana14>
-   Semana15 <_semana15/semana15>
-   Semana16 <_semana16/semana16>
-
