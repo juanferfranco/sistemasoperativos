@@ -14,6 +14,7 @@ Fase 6 (RETO)
 * Descripción: ejercicios para el reto.
 * Recursos: realiza estos :ref:`ejercicios`.
 * Duración de la actividad: 
+  
   * Dos sesiones de 1 hora 40 minutos cada una para solución de dudas en tiempo real.
   * 5 horas de trabajo autónomo
 * Forma de trabajo: individual.
