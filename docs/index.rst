@@ -91,6 +91,10 @@ Unidad 3: procesos e hilos
 Unidad 4: comunicación y sincronización
 Unidad 5: entrada-salida
 
+Cronograma
+-----------
+`Tabla de actividades <https://docs.google.com/spreadsheets/d/16b6lkkxAS3ST6cD_SqYXwNXTLedlRrDkpcGvVGSxxJw/edit?usp=sharing>`__.
+
 Evaluación
 -----------
 Serán 5 evaluaciones del 20% cada una correspondientes a las 5 unidades
