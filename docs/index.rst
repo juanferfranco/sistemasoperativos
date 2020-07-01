@@ -1,6 +1,12 @@
 Curso Sistemas Operativos 2020-20
 ========================================
 
+Docente diseñador del curso: Juan Fernando Franco Higuita
+
+Nombre del docente moderador: Juan Fernando Franco Higuita
+
+Créditos y horas totales del curso: 3 créditos - 144 horas totales
+
 ¿Para qué sirve este curso?
 -----------------------------
 
@@ -49,11 +55,41 @@ Carta Descriptiva del curso
 
 Estructura y metodología del curso
 -----------------------------------
-Las sesiones presenciales se estructuran alrededor de preguntas a través
-de las cuales se abordarán los conceptos. Discutiremos los conceptos más
-importantes y los practicaremos. Para las horas de trabajo autónomo se
-propondrán lecturas y ejercicios que permitan generar preguntas para
-traer a clase y discutir.
+El curso está dividido en 5 unidades que se realizarán en 15
+semanas. En la semana 16 realizaremos acciones de mejora.
+Cada unidad tendrá asociada una actividad de aprendizaje que
+realizaremos en 8 fases.
+
+* Fase 1: motivación. En esta fase se presentará la actividad de aprendizaje
+  de la unidad, su relación con las competencias del curso y la carrera, se
+  presentarán las acciones de aprendizaje, la rúbrica y la evidencia
+  correspondiente a la evaluación sumativa de la unidad.
+* Fase 2: diagnóstico-repaso. En esta fase se presentarán una serie de
+  preguntas y ejercicios que buscan la AUTOEVALUACIÓN de los conocimientos
+  previos necesarios para abordar la actividad de aprendizaje de la unidad.
+* Fase 3: fundamentación. En esta fase se entregará el material teórico-práctico
+  necesario para abordar el RETO de la unidad. 
+* Fase 4: ejercicios y discusión. Esta fase está compuesta por una serie de
+  ejercicios preparatorios para el RETO de la unidad. Estos ejercicios se
+  abordarán de manera individual y colaborativa.
+* Fase 5: retroalimentación. En esta fase se revisará de manera grupal la
+  solución de los ejercicios. El estudiante podrá realizar acciones de mejora
+  a sus ejercicios.
+* Fase 6: RETO. En esta fase se propone el RETO evaluativo de la unidad.
+* Fase 7: sustentación. Una vez realizado el RETO, la fase de sustentación
+  busca realizar un ejercicio metacognitivo y de síntesis. Mediante un video
+  el estudiante presenta su solución y la analiza.
+* Fase 8: retroalimentación. Esta fase presentará la solución del docente y
+  de algunos compañeros. También permiterá realizar acciones de mejora al
+  RETO realizado.
+
+Unidades
+---------
+Unidad 1: lenguaje C parte 1
+Unidad 2: lenguaje C parte 2
+Unidad 3: procesos e hilos
+Unidad 4: comunicación y sincronización
+Unidad 5: entrada-salida
 
 Cronograma
 -----------
@@ -61,11 +97,8 @@ Cronograma
 
 Evaluación
 -----------
-* Parcial 1: programación en C (20%)
-* Parcial 2: parcial 1 + procesos e hilos (20%)
-* Parcial 3: parcial 2 + comunicación, sincronización y memoria (25%)
-* Parcial 4: reto acumulativo (25%)
-* Parcial 5: sistemas de archivos, protección y seguridad (10%)
+Serán 5 evaluaciones del 20% cada una correspondientes a las 5 unidades
+del curso.
 
 Texto Guía
 -----------
@@ -101,3 +134,6 @@ Datos de contacto
    :caption: Contenidos semanales:
 
    Semana1 <_semana1/semana1>
+   Semana2 <_semana2/semana2>
+   Semana3 <_semana3/semana3>
+
