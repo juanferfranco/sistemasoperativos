@@ -85,11 +85,11 @@ realizaremos en 8 fases.
 
 Unidades
 ---------
-Unidad 1: lenguaje C parte 1
-Unidad 2: lenguaje C parte 2
-Unidad 3: procesos e hilos
-Unidad 4: comunicación y sincronización
-Unidad 5: entrada-salida
+#. Unidad 1: lenguaje C parte 1
+#. Unidad 2: lenguaje C parte 2
+#. Unidad 3: procesos e hilos
+#. Unidad 4: comunicación y sincronización
+#. Unidad 5: entrada-salida
 
 Cronograma
 -----------
