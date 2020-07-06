@@ -65,12 +65,13 @@ líneas:
   // 000008716
 * En la carpeta una copia de la `rúbrica <https://docs.google.com/spreadsheets/d/1tkbsx3ZSPIV5rB_66-k7MIVgkRCSo5Kd-x4bONz24g0/edit?usp=sharing>`__
   con tu autoevaluación diligenciada
-* En la carpeta guarda un archivo .pdf donde colocarás tres cosas:
+* En la carpeta guarda un archivo .pdf donde colocarás cuatro cosas:
   
   * Muestra la línea de comando con la que compilaste el programa.
   * Muestra la línea de comando con la que ejecutaste el programa.
   * Una tabla de contenidos que indique el instante de tiempo en el cual se
     pueden encontrar cada una de las secciones solicitadas en el video.
+  * El enlace a tu video. Puedes usar google drive o el one drive que tienes por ser estudiante UPB.
 
 * Comprime la carpeta principal en formato .ZIP, ojo, solo .ZIP no uses otros
   formatos por favor.
