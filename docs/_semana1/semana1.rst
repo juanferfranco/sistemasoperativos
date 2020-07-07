@@ -140,7 +140,7 @@ Fase 4 (ejercicios y discusión)
 * Fecha: julio 6 al 10 de 2020
 * Descripción: realiza los ejercicios propuestos. Acuerda reuniones con tus 
   compañeros para trabajar de manera ``colaborativa``
-* Recursos: realiza estos :ref:`ejercicios`.
+* Recursos: realiza estos :ref:`ejercicios_sem1`.
 * Duración de la actividad: 2 horas de trabajo autónomo y colaborativo. Acuerda reuniones con tus compañeros.
 * Forma de trabajo: individual y colaborativa.
 
@@ -198,7 +198,7 @@ encontrarás una guía básica del lenguaje C.
     , se encuentra la solución a algunos puntos de la guía introductoria a C (ojo, no todos). 
     Te recomiendo hacer los ejercicios sin recurrir a la solución.
 
-.. _ejercicios:
+.. _ejercicios_sem1:
 
 Ejercicios
 ------------
