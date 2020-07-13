@@ -180,7 +180,7 @@ tipo calculadora con las siguientes características:
 Fundamentos conceptuales
 -------------------------
 Para realizar la siguiente guía vas a necesitar un entorno de
-prueba. En la sección :ref:`ejercicios` te he dejado información para
+prueba. En la sección :ref:`ejercicios_sem1` te he dejado información para
 que tengas ese entorno en tu computador local; sin embargo, para que
 puedas comenzar de una vez te voy a recomendar dos sitios donde puedes
 compilar y ejecutar programas online. Usa el que más te guste.
