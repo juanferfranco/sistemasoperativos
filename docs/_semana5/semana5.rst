@@ -53,7 +53,7 @@ Este ejercicio corresponde a un parcial de semestres anteriores:
 .. note::
     ¡Alerta de Spoiler!
 
-Posibles soluciones a algunas ejercicios
+Posibles soluciones 
 ------------------------------------------
 
 ¿Estas serán las soluciones de cuáles ejercicios?
@@ -112,3 +112,188 @@ Posibles soluciones a algunas ejercicios
         fclose(fout);
         return 0;
     }
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    int main(int argc, char * argv[]){
+
+    FILE *fin = fopen(argv[1],"r");
+    FILE *fout = fopen(argv[2],"w");
+    char *pclave = argv[3];
+
+    // Prueba 2
+    fprintf(fout,"%s\n",argv[0]);
+
+    // Prueba 3
+    char * buffer = malloc(sizeof(char)*1000);
+    fgets(buffer, 1000,fin);
+    fprintf(fout,"%s",buffer);
+
+
+    // Prueba 4
+    fgets(buffer, 1000,fin);
+    char *pbufferEnd = buffer + strlen(buffer)  - 2 ;
+    for(; pbufferEnd > buffer;pbufferEnd--){
+        fputc(*pbufferEnd,fout);
+    }
+    fputc(*pbufferEnd,fout);
+
+    // Prueba 5
+
+    while(1){
+        fgets(buffer, 1000,fin);
+        char *pdata = strstr(buffer, pclave);
+        if(pdata != NULL){
+            pdata = pdata + strlen(pclave) + 1;
+
+            char *pop = NULL;
+            pop = pdata;
+            do{
+                pop = strpbrk(pop,"+-%*/");
+                pop++;
+
+            }while( (*pop >= 0x030) &&  (*pop  <= 0x039));
+
+            char op = * (pop-1);
+            *(pop - 2) = 0;
+
+            int num = 0;
+            char *endp = NULL;
+            int res = (int) strtol(pdata,&endp,10);
+            pdata = endp + 1;
+            while(1){
+                num = (int) strtol(pdata,&endp,10);
+                pdata = endp + 1;
+                switch(op){
+                case '+':
+                    res = res + num;
+                    break;
+                case '-':
+                    res = res - num;
+                    break;
+                case '%':
+                    res = res % num;
+                    break;
+                case '*':
+                    res = res*num;
+                    break;
+                case '/':
+                    res = res/num;
+                    break;
+                }
+                if(*endp == 0) break;
+            }
+
+            fprintf(fout,"\n%d\n",res);
+            break;
+        }
+    }
+
+    fclose(fout);
+    fclose(fin);
+    free(buffer);
+    return EXIT_SUCCESS;
+    }
+
+El vector de prueba usado es este:
+
+.. code-block:: html
+    :linenos:
+
+    Esta es la primera linea
+    Esta es la segunda linea del archivo
+    Esta es la tercera linea del archivo de entrada
+    Esta es la cuarta hola 1 2 3 -4 5 6 -7 8 9 + fin de la linea
+    Esta es la quinta linea
+    Esta es la sexta linea
+
+.. code-block:: c
+   :linenos:
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+    #include <ctype.h>
+
+    int main(int argc, char * argv[]){
+
+    FILE *fin = fopen(argv[1],"r");
+    FILE *fout = fopen(argv[2],"w");
+    char *pclave = argv[3];
+
+    // Prueba 2
+    fprintf(fout,"%s\n",argv[2]);
+
+    // Prueba 3
+    char *buffer = malloc(sizeof(char) * 1000);
+    fgets(buffer, 1000,fin);
+    for(char *pbuf = buffer ; *pbuf != '\n'; pbuf++){
+        fputc( toupper(*pbuf), fout);
+    }
+    fputc('\n',fout);
+
+
+        // Prueba 4
+        fgets(buffer, 1000,fin);
+        char *pletter = buffer;
+        int counter = 0;
+
+        while(1){
+            if(*pletter == ' '){
+                fprintf(fout, "%d ", counter);
+                counter = -1;
+            }
+            else if( *pletter == '\n' ){
+                fprintf(fout, "%d ", counter);
+                break;
+            }
+
+            counter++;
+            pletter++;
+        }
+        fputc('\n',fout);
+
+    // Prueba 5
+    while(1){
+        fgets(buffer,1000,fin );
+        char *pdata = strstr(buffer, pclave);
+
+            if(pdata != NULL){
+                char *pLastWord = buffer + strlen(buffer) - 1;
+                *pLastWord = 0;
+                for(; *pLastWord != ' ' ; pLastWord--);
+                char wordNum = strlen(pLastWord  + 1);
+                pdata = pdata + strlen(pclave) + 1;
+
+                char *token = strtok(pdata, " ");
+                while(token != NULL){
+                    if(strlen(token) == wordNum) fprintf(fout, "%s ", token);
+                    token = strtok(NULL, " ");
+                    if(token == (pLastWord  + 1)) break;
+                }
+                break;
+        }
+        }
+
+    fclose(fout);
+    fclose(fin);
+    free(buffer);
+    return EXIT_SUCCESS;
+    }
+
+El vector de prueba usado es este:
+
+.. code-block:: html
+    :linenos:
+
+    Esta es la primera linea
+    Esta es la segunda linea del archivo
+    Esta es la tercera linea del archivo de entrada
+    Esta es la cuarta hola linea casas del archivo de entrada mundo
+    Esta es la quinta linea
+    Esta es la sexta linea
