@@ -1,20 +1,46 @@
-Semana 4
-===========
+Semana 4: Unidad 2
+====================
 
-Esta semana vamos a realizar las siguientes actividades:
+En esta unidad continuares explorando el lenguaje de programación
+C mediante una serie de ejercicios que buscarán iterar por segunda
+vez el material cubierto en la Unidad 1.
 
-1. Discutir en grupo el último ejercicio de la semana pasada.
-2. Evaluación formativa.
-3. Análisis de la evaluación formativa.
+Propósitos de aprendizaje
+--------------------------
 
-Ejercicio: problema
-^^^^^^^^^^^^^^^^^^^^
+Aplicar el lenguaje de programación C en la solución de problemas
+simples profundizando en las técnicas aprendidas en a Unidad 1.
 
-La semana pasada planteamos este problema para resolver:
+Actividad de aprendizaje
+-------------------------
 
-Realice un programa que permita crear un base de datos de estudiantes.
+Se realizará las SEMANAS 4, 5 y 6
+
+Lee con detenimiento el código de honor y luego los pasos que
+debes seguir para evidenciar esta actividad.
+
+Código de honor
+^^^^^^^^^^^^^^^^^
+Para realizar este reto se espera que hagas lo siguiente:
+
+* Colabora con tus compañeros cuando así se indique.
+* Trabaja de manera individual cuando la actividad así te lo
+  proponga.
+* NO DEBES utilizar sitios en Internet con soluciones o ideas para
+  abordar el reto.
+* NO DEBES hacer uso de foros para abordar la solución del reto.
+* ¿Entonces qué hacer si no me funciona algo? te propongo que
+  experimentes, crea hipótesis, experimenta de nuevo, observa y concluye.
+* NO OLVIDES, este curso se trata de pensar y experimentar NO de
+  BUSCAR soluciones en Internet.
+
+Enunciado
+^^^^^^^^^^
+
+Realiza un programa que permita crear un base de datos de estudiantes.
 Cada registro de la base de datos estará dado por:
-número de cédula, nombre y semestre. Cada registro corresponde a un estudiante.
+número de cédula, nombre y semestre. Cada registro corresponde a un 
+estudiante.
 
 Implemente los siguientes comandos:
 
@@ -56,690 +82,244 @@ Cada registro es así:
         int semestre;
     };
 
+¿Qué debes entregar?
+^^^^^^^^^^^^^^^^^^^^^
 
-Ingresar comandos
-------------------
+* Crea una carpeta que llamarás reto2.
+* Guarda allí el archivo reto2.c
+* En la primer línea del archivo reto1.c coloca tu ID así:
+  // 000008716
+* En la carpeta una copia de la `rúbrica <https://docs.google.com/spreadsheets/d/1CwPRiD399AEbcE7WdBN6MsB2n1cFg56U33Fh43OlolA/edit?usp=sharing>`__
+  con tu autoevaluación diligenciada
+* En la carpeta guarda un archivo .pdf donde colocarás cuatro cosas:
+  
+  * Muestra la línea de comando con la que compilaste el programa.
+  * Muestra la línea de comando con la que ejecutaste el programa.
+  * Una tabla de contenidos que indique el instante de tiempo en el cual se
+    pueden encontrar cada una de las secciones solicitadas en el video.
+  * El enlace a tu video. Puedes usar google drive o el one drive que tienes por ser estudiante UPB.
 
-La primera característica que vamos a construir en nuestro programa es la
-capacidad de leer los comandos y los argumentos que el usuario pasará por
-la línea de comandos.
+* Comprime la carpeta principal en formato .ZIP, ojo, solo .ZIP no uses otros
+  formatos por favor.
+* Entrega el archivo .ZIP `aquí <https://upbeduco-my.sharepoint.com/:f:/g/personal/juanf_franco_upb_edu_co/EmrGhwA9S4ZNiiWCUVvmo-sBGTluBmx_fpslpcAykaELjA>`__.
 
-.. code-block:: c
-   :linenos:
+¿Qué deberá tener el video de sustentación?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    #include <stdio.h>
-    #include <stdint.h>
-    #include <stdlib.h>
+* Máximo 20 minutos: debes planear el video muy bien.
+* Cuida la calidad del audio y del video.
+* Sección 1: introducción. Di tu nombre y si realizaste el RETO
+  completo. Si no terminaste indica claramente qué te faltó y por qué. NO OLVIDES
+  diligenciar la rúbrica.
+  con tu autoevaluación.
+* Sección 2: modelado. Explica detalladamente cómo resolviste el problema, qué utilizaste,
+  que alternativas de solución viste, justifica las razones para usar
+  una alternativa sobre otras. Usa una aplicación de whiteboard. 
+  Modela y explica tu programa con un diagrama de flujo. 
+* Sección 3: implementación. Muestra que tu programa compila correctamente y sin errores
+  o advertencias problemáticas. Explica el código fuente tu programa.
+* Sección 4: vectores de prueba. Define y diseña los escanarios de prueba para verificar tu programa.
+  Estos escenarios deben cubrir todas las características solicitadas.
+* Sección 5: pruebas. Muestra claramente que tu programa pasa todos los vectores de prueba
+  definidos.
+* Tus explicaciones deben ser claras, precisas y completas. No olvides planear 
+  bien tu video de sustentación.
 
-    int main (void){
-        while(1){
+Trayecto de acciones, tiempos y formas de trabajo
+---------------------------------------------------
 
-        }
-        return EXIT_SUCCESS;
-    }
+Fase 1 (motivación)
+^^^^^^^^^^^^^^^^^^^^^^
 
-El programa será un ciclo infinito que procesará continuamente comandos y
-en condiciones normales, solo terminará si se ingresa el
-comando **exit**.
+* Fecha: julio 27 de 2020 - 4 p.m.
+* Descripción: asiste al encuentro sincrónico donde se introducirá la actividad de
+  aprendizaje de la unidad 2.
+* Recursos: ingresa al grupo de Teams.
+* Duración de la actividad: 20 minutos sincrónicos.
+* Forma de trabajo: grupal
 
-.. code-block:: c
-   :linenos:
+Fase 2 (diagnóstico-repaso)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 27 de 2020 - 4:30 p.m
+* Descripción: comienza a realizar los ejericios propuestos
+* Recursos: sección de ejercicios
+* Duración de la actividad: 1 hora 10 minutos
+* Forma de trabajo: individual con solución de dudas en tiempo real
 
-    #include <stdio.h>
-    #include <stdint.h>
-    #include <stdlib.h>
+Fase 3 (fundamentación)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 27 al 31 de 2020
+* Descripción: continua con los ejercicios propuestos.
+* Recursos: sección de ejercicios
+* Duración de la actividad: 3 hora de trabajo autónomo 
+* Forma de trabajo: individual
 
-    #define COMMANDBUFFERMAXSIZE 50
+Fase 4 (ejercicios y discusión)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 27 al 31 de 2020
+* Descripción: continua con los ejercicio, pero esta vez acuerda reuniones con tus 
+  compañeros para trabajar de manera ``colaborativa``
+* Recursos: sección de ejercicios.
+* Duración de la actividad: 2 horas de trabajo autónomo y colaborativo. Acuerda reuniones con tus compañeros.
+* Forma de trabajo: individual y colaborativa.
 
-    int main (void){
-        char commandBuffer[COMMANDBUFFERMAXSIZE];
+Fase 5 (retroalimentación): 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Fecha: julio 31 de 2020 - 4 p.m.
+* Descripción: encuentro sincrónico para resolver dudas sobre los ejercicios. 
+* Recursos: ingresa a Teams
+* Duración de la actividad: 1 hora 40 minutos.
+* Forma de trabajo: colaborativo con solución de dudas en tiempo real y 
+  trabajo individual.
 
-        while(1){
-            printf(">");
-            fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin);
+Ejercicios 
+-----------
 
-        }
-        return EXIT_SUCCESS;
-    }   
+Ejercicio 1
+^^^^^^^^^^^^
+Se propone realizar un programa que:
 
-El programa en cada ciclo le mostrará al usuario un prompt (**>**) que
-servirá para indicarle que ya está listo para recibir un nuevo comando.
-Luego utilizamos la función **fgets** para leer una cadena de caracteres
-del flujo de entrada. Se espera que la cadena de caracteres termine en
-con un enter (``\n``) seguido de un carácter **NULL** (0) que indica
-el fin de la cadena.
+* Solicite el tamaño de un arreglo.
+* Solicite uno por uno sus elementos.
+* Realiza una función para imprimir el contenido del arreglo. A esta
+  función deberás pasar la dirección del arreglo y el tamaño.
+* Solicite insertar un nuevo elemento en el
+  arreglo mediante la selección de la posición deseada. La posición
+  será un número de 1 hasta en el tamaño del arreglo.
 
-**fgets** espera que le pasemos la dirección en memoria donde guardaremos
-los caracteres. En este caso, será un arreglo de caracteres alojados en
-el stack y con una capacidad máxima de COMMANDBUFFERMAXSIZE caracteres.
-
-**fgets** retorna NULL si ocurre algún problema con la lectura.
-
-.. code-block:: c
-   :linenos:
-
-    #include <stdio.h>
-    #include <stdint.h>
-    #include <stdlib.h>
-
-    #define COMMANDBUFFERMAXSIZE 50
-
-    int main (void){
-        char commandBuffer[COMMANDBUFFERMAXSIZE];
-
-        while(1){
-            printf(">");
-            if ( fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL){
-
-            }
-            else{
-                perror("Error: ");
-                return EXIT_FAILURE;
-            }
-
-        }
-        return EXIT_SUCCESS;
-    }
-
-Podemos leer el valor retornado por **fgets** para decidir si procesamos
-o no la cadena de entrada. Note que en caso de error, estamos usando la
-función **perror** para imprimir un mensaje que describa el error
-producido por **fgets**.
+Trata de PENSARLE UNOS MINUTOS. Más abajo está la solución.
 
 .. note::
-    Cuando ocurre un error fgets coloca información en la variable entera
-    y global errno a la cual podemos acceder con perror, solo que perror además
-    interpreta el valor almacenado en la variable e imprime un texto
-    descriptivo.
+    ¡Alerta de Spoiler!
 
-    Esta es la documentación de fgets:
-
-    NAME
-
-    fgets - get a string from a stream
-    
-    SYNOPSIS
-
-
-    #include <stdio.h>
-
-    char *fgets(char *s, int n, FILE *stream);
-
-    DESCRIPTION
-    
-    The fgets() function reads bytes from stream into the array pointed to by s, until n-1 bytes are read, or a newline character is read and transferred to s, or an end-of-file condition is encountered. The string is then terminated with a null byte.
-    The fgets() function may mark the st_atime field of the file associated with stream for update. The st_atime field will be marked for update by the first successful execution of fgetc(), fgets(), fgetwc(), fgetws(), fread(), fscanf(), getc(), getchar(), gets() or scanf() using stream that returns data not supplied by a prior call to ungetc() or ungetwc().
-
-    RETURN VALUE
-    
-    Upon successful completion, fgets() returns s. If the stream is at end-of-file, the end-of-file indicator for the stream is set and fgets() returns a null pointer. If a read error occurs, the error indicator for the stream is set, fgets() returns a null pointer and sets errno to indicate the error.
-
-
-Una vez tenemos la cadena en commandBuffer podemos proceder a procesarla.
-Lo primero que haremos será eliminar el ENTER:
+El siguiente código muestra una posible solución:
 
 .. code-block:: c
    :linenos:
 
     #include <stdio.h>
-    #include <stdint.h>
-    #include <stdlib.h>
-    #include <string.h>
+    #define MAX 100
 
-    #define COMMANDBUFFERMAXSIZE 50
+    void printArray(int *pdata,int n){
 
-    int main(void) {
-        char commandBuffer[COMMANDBUFFERMAXSIZE];
+        printf("\n The array is: \n");
 
-        while (1) {
-            printf(">");
-            if (fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL) {
-
-                int commandSize = strlen(commandBuffer);
-
-                if (commandBuffer[commandSize - 1] != '\n') {
-                    printf("Error: command too long \n");
-                    return EXIT_FAILURE;
-                } else {
-                    commandBuffer[commandSize - 1] = 0;
-                }
-
-
-            } else {
-                perror("Error: ");
-                return EXIT_FAILURE;
-            }
-
+        for(int i = 0; i< n ;i++) {
+            printf("data[%d]: %d\n",i,  *(pdata+i) );
         }
-        return EXIT_SUCCESS;
     }
 
-La función **strlen** (está prototipada en string.h) nos permite encontrar
-el tamaño de la cadena. Recuerde que la cadena incluye el ENTER y en caso
-de estar en la cadena se ubicará en la posición commandSize - 1. Note
-que si en esta posición no está el ENTER, quiere decir que la cadena
-ingresada por el usuario supera la capacidad de commandBuffer y por
-tanto, **fgets** truncará la cadena. Por ejemplo, si cambiamos la capacidad
-de commandBuffer de 50 a 10:
+    int main(){
+        int n;
+        int data[MAX];
+        int position;
 
-.. image:: ../_static/fgetsTrunk.gif
+        printf("Enter the length of the array: ");
+        scanf("%d", &n);
+        printf("Enter %d elements of the array \n",n);
 
-Para eliminar el ENTER de la cadena basta con reemplazarlo con un 0,
-indicando así que la cadena termina en este punto.
+        for(int i = 0; i < n; i++){
+            scanf("%d", &data[i]);
+        }
+        printArray(data, n);
 
-Implementación del comando mkdb nombre tamaño
------------------------------------------------
+        printf("\n Enter a position where you want to insert: ");
+        scanf("%d", &position);
+        position--;
+        for(int i = n-1;i >= position; i--){
+            data[i+1] = data[i];
+        }
+        printf("\nEnter the value: ");
+        scanf("%d", &data[position]);
 
-Las siguientes líneas obtienen los argumentos de **mkdb** y llaman
-la función que realizará la acción.
+        printArray(data,n+1);
+        return 0;
+    }
+
+Ejercicio 2
+^^^^^^^^^^^^
+Repasa el manejo de archivos y la gestión de errores. 
+Lee esta información:
+
+* `Manejo básico <https://www.geeksforgeeks.org/basics-file-handling-c/>`__
+* `¿Fin de un archivo o un error? <https://www.geeksforgeeks.org/eof-and-feof-in-c/>`__
+* `¿Cómo vamos a gestionar los errores en C? <https://www.geeksforgeeks.org/error-handling-c-programs/>`__
+
+Ejercicio 3
+^^^^^^^^^^^^
+
+Analiza con detenimiento el siguiente ejemplo:
+
+* Utiliza el *debugger* de eclipse.
+* Mira cómo se guardan las cadenas en memoria.
 
 .. code-block:: c
-    :linenos:
+   :linenos:
 
     #include <stdio.h>
-    #include <stdint.h>
-    #include <stdlib.h>
-    #include <string.h>
 
+    char nombres[3][20] = {"fulano","mengano","perano"};
 
-    int makeDatabasefn(int);
+    int main (void){
 
-    #define COMMANDBUFFERMAXSIZE 50
+        char *a;
+        char (*b)[20];
+        char *c;
+        char (*d)[3][20];
 
-    const char makeDatabase[] = "mkdb";
-    char currentDataBaseName[COMMANDBUFFERMAXSIZE];
-    int currentDataBaseSize = 0;
+        a = &nombres[0][0];
+        printf("el nombre es %s \n", a);
+        b = nombres;
+        c = &nombres[0][0];
+        d = &nombres;
 
-    struct estudiante
-    {
-        int cedula;
-        char nombre[30];
-        int semestre;
-    };
-    struct estudiante *pcurrentDataBase;
-
-
-    int main(void) {
-        char commandBuffer[COMMANDBUFFERMAXSIZE];
-
-        while (1) {
-            printf(">");
-            if (fgets(commandBuffer, COMMANDBUFFERMAXSIZE, stdin) != NULL) {
-
-                int commandSize = strlen(commandBuffer);
-
-                if (commandBuffer[commandSize - 1] != '\n') {
-                    printf("Error: command too long \n");
-                    return EXIT_FAILURE;
-                } else {
-                    commandBuffer[commandSize - 1] = 0;
-                }
-
-                if (0 == strncmp(makeDatabase, commandBuffer, strlen(makeDatabase)) ) {
-                    int result = sscanf(commandBuffer, "%*s %s %d", currentDataBaseName, &currentDataBaseSize);
-                    if (result != 2) {
-                        currentDataBaseName[0] = 0;
-                        currentDataBaseSize = 0;
-                        printf("Enter valid arguments\n");
-                    }
-                    else {
-                        if (makeDatabasefn(currentDataBaseSize) != 1) {
-                            printf("Database can't be created\n");
-                        }
-                    }
-                }
-
-            } else {
-                perror("Error: ");
-                return EXIT_FAILURE;
-            }
-
+        for(int i = 0; i < 3; i++ ){
+            printf("char (*)[] el nombre[%d] es %s \n", i , (char * ) (b+i));
+            printf("char *: el nombre[%d] es %s \n", i , (char * ) ( c + (i*2) ));
+            printf("char (*)[][]: el nombre[%d] es %s \n", i , (char * ) (d+i));
         }
-        return EXIT_SUCCESS;
+        return 0;
     }
 
-    int makeDatabasefn(int size){
-        int success = 0;
-        pcurrentDataBase = malloc( sizeof(struct estudiante)*size );
-        if(pcurrentDataBase != NULL) success = 1;
-        return success;
-    }
+Ejercicio 4
+^^^^^^^^^^^^
 
-
-La función **strncmp** compara los strlen(makeDatabase) primeros bytes del
-arreglo de caracteres makeDatabase con commandBuffer. Si son iguales
-devuelve 0. **sscanf** lee la cadena de entrada y la procesa como **scanf**.
-Finalmente, **makeDatabase** crea la base datos en memoria dinámica.
-
-La línea ``pcurrentDataBase = malloc( sizeof(struct estudiante)*size );`` crea
-tantos registros como lo indique ``size``.
-
-Implementación del comando loaddb nombre
------------------------------------------
-
-Este comando lee la base de datos desde un archivo y la carga en memoria
-dinámica. Cada archivo contiene en su primera línea el tamaño de la
-base de datos y luego, en las demás líneas, un registro, por línea,
-compuesto por la cédula, nombre y semestre. Cada uno de los campos
-anteriores está separado por un espacio.
-
-Primero añadimos el código que permite leer el comando y los argumentos:
+Escribe una función que te permita encontrar los elementos comunes de
+dos arreglos de enteros. El encabezado de la función es:
 
 .. code-block:: c
-    :linenos:
-
-    .
-    .
-    .
-
-    // definición del nuevo comando
-    const char loadDatabase[] = "loaddb";
-    .
-    .
-    .
-    // if para leer mkdb
-    .
-    .
-    .
-    else if( 0 == strncmp(loadDatabase, commandBuffer, strlen(loadDatabase) ) ){
-        char name[COMMANDBUFFERMAXSIZE];
-        int result = sscanf(commandBuffer, "%*s %s",name);
-        if(result != 1){
-            printf("Enter a data base name\n");
-        }
-        else{
-            if( loadDatabasefn(name) == 0){
-                printf("Can't load the database\n");
-            }
-            else{
-                strncpy(currentDataBaseName, name, COMMANDBUFFERMAXSIZE);
-            }
-        }
-	}
+   :linenos:
 
 
-Y la función que leerá el archivo y cargará en memoria dinámica la base
-de datos:
+    uint8_t arrayCommon(int32_t* arr1, int32_t arr1Size,int32_t* arr2, int32_t arr2Size, int32_t* arrRes, int32_t arrResSize)
 
-.. code-block:: c
-    :linenos:
+* La función debe recibir las direcciones de memoria de los dos arreglos
+  a comparar y del arreglo resultado. También debe recibir el tamaño de
+  cada arreglo.
+* Debe devolver la cantidad de elementos comunes encontrados o 0 si no
+  encuentra.
+* Incluye el archivo de cabeceras ``#include <stdint.h>`` para que el
+  compilador encuentra la definición de ``uint8_t``.
+* Crea un programa que solicite el tamaño de los arreglos y sus
+  elementos.
+* El programa debe mostrar el resultado de la función.
+* Antes de insertar un elemento en el arreglo resultado debe verificar
+  que este no exista en el arreglo, es decir, el arreglo resultado
+  no debe tener elementos repetidos.
 
-    //1. el prototipo
-    int loadDatabasefn(char *);
-    .
-    .
-    .
-    //2. Crear un contador de registros
-    int currentDataBaseRegister = 0;
-    .
-    .
-    .
-    //3. El código
+El flujo del programa será:
 
-    int loadDatabasefn(char * dataBaseFileName){
-        int currentDataBaseSizeTmp = 0;
-        struct estudiante *pcurrentDataBaseTmp;
-        int currentDataBaseRegisterTmp = 0;
+* Solicite el tamaño del primer arreglo.
+* Ingrese los elementos del primer arreglo.
+* Solicite el tamaño del segundo arreglo.
+* Ingrese los elementos del segundo arreglo.
+* Indicar cuántos elementos comunes se encontraron y el arreglo
+  con dichos elementos.
 
-        int result = 0;
-        FILE *fp = fopen(dataBaseFileName, "r");
-        if(fp == NULL){
-            perror("Error: ");
-        }
-        else{
-            int scanfStatus = fscanf(fp,"%d", &currentDataBaseSizeTmp);
-            if(feof(fp) == 0){
-                if(scanfStatus == 1){
-                    pcurrentDataBaseTmp = (struct estudiante *) malloc( sizeof(struct estudiante)*currentDataBaseSizeTmp );
-                    if(pcurrentDataBaseTmp != NULL){
-                        while(1){
-                            int scanfStatus = fscanf(fp,"%d %s %d", &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->cedula),
-                                                    (pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->nombre,
-                                                    &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->semestre) );
-                            if(feof(fp) == 0){
-                                if(scanfStatus != 3){
-                                    free(pcurrentDataBaseTmp);
-                                    break;
-                                }
-                                else{
-                                    currentDataBaseRegisterTmp++;
-                                }
-                            }
-                            else{
-                                result = 1;
-                                pcurrentDataBase = pcurrentDataBaseTmp;
-                                currentDataBaseSize = currentDataBaseSizeTmp;
-                                currentDataBaseRegister = currentDataBaseRegisterTmp;
-                                break;
-                            }
-                        }
-                    }
-                }
-                else{
-                    printf("Can't read database size\n");
-                }
-            }
-            else{
-                printf("Can't read database\n");
-            }
+Ejercicio 5
+^^^^^^^^^^^^
 
-            fclose(fp);
-        }
-        return result;
-    }
-
-Note que la lectura de las líneas del archivo se hace en un
-ciclo infinito del cual se sale cuando una lectura al archivo
-retorne EOF. Tenga en cuenta que es necesario leer el archivo
-para poder obtener un EOF. Es por ello que primero se
-hace un **fscanf** y luego se llama feof.
-
-Implementación de los demás comandos
--------------------------------------
-
-Se incluye ahora la implementación final al problema con
-algunas variaciones:
-
-.. code-block:: c
-    :linenos:
-
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <string.h>
-
-    #define COMMANDMAXSIZE 50
-    #define NAMEMAXSIZE 30
-    char commandBuffer[COMMANDMAXSIZE + 1];
-
-    const char makeDatabase[] = "mkdb";
-    const char loadDatabase[] = "loaddb";
-    const char saveDatabase[] = "savedb";
-    const char readAllRegisters[] = "readall";
-    const char readDbSize[] = "readsize";
-    const char readDbCapacity[] = "readcapacity";
-    const char makeRegister[] = "mkreg";
-    const char readRegister[] = "readreg";
-    const char quit[] = "exit";
-
-    int makeDatabasefn(int);
-    int loadDatabasefn(char *);
-    void saveDatabasefn(char *);
-    void readAllRegistersfn(void);
-    int readsizefn(void);
-    int makeRegisterfn(int, char *, int );
-    int readRegisterfn(int);
-    void quitfn(void);
-
-    struct estudiante
-    {
-        int cedula;
-        char nombre[30];
-        int semestre;
-    };
-
-    char currentDataBaseName[50];
-    int currentDataBaseSize = 0;
-    struct estudiante *pcurrentDataBase;
-    int currentDataBaseRegister = 0;
-
-    int main()
-    {
-        while(1){
-            printf(">");
-            if ( fgets(commandBuffer, COMMANDMAXSIZE + 1,stdin) != NULL){
-
-                int commandSize = strlen(commandBuffer);
-
-                if(commandBuffer[commandSize - 1] != '\n'){
-                    printf("Error: command too long \n");
-                    return EXIT_FAILURE;
-                }
-                else{
-                commandBuffer[commandSize - 1] = 0;
-                }
-
-                if( 0 == strncmp(makeDatabase, commandBuffer, strlen(makeDatabase) ) ){
-                    char* token = strchr(commandBuffer, ' ');
-                    if(token != NULL){
-                        int result = sscanf(token + 1, "%s %d", currentDataBaseName, &currentDataBaseSize);
-                        if(result != 2){
-                        currentDataBaseName[0] = 0;
-                        currentDataBaseSize = 0;
-                        printf("Enter a valid arguments\n");
-                        }
-                        else{
-                            if ( makeDatabasefn(currentDataBaseSize) != 1){
-                                printf("Database can't be created\n");
-                            }
-                        }
-                    }
-                    else{
-                        printf("Enter a valid arguments\n");
-                    }
-                }
-                else if ( 0 == strncmp(readAllRegisters, commandBuffer, strlen(readAllRegisters) ) ){
-                    readAllRegistersfn();
-                }
-                else if ( 0 == strncmp(makeRegister, commandBuffer, strlen(makeRegister) ) ){
-                    char* token = strchr(commandBuffer, ' ');
-                    char name[50];
-                    int cedula;
-                    int semestre;
-
-                    if(token != NULL){
-                        int result = sscanf(token + 1, "%d %s %d", &cedula, name,&semestre);
-                        if(result != 3){
-                        printf("Enter a valid register arguments\n");
-                        }
-                        else{
-                            if( makeRegisterfn(cedula, name, semestre) != 1){
-                                printf("Data base is full, register was not created\n");
-                            }
-                        }
-                    }
-                }
-                else if( 0 == strncmp(saveDatabase, commandBuffer, strlen(saveDatabase) ) ){
-                    if(currentDataBaseName[0] == 0){
-                        printf("Load a data base first\n");
-                        continue;
-                    }
-                    char* token = strchr(commandBuffer, ' ');
-                    if(token != NULL){
-                        int result = sscanf(token + 1, "%s", currentDataBaseName);
-                        if(result != 1){
-                        printf("Enter a name\n");
-                        }
-                        else{
-                            saveDatabasefn(currentDataBaseName);
-                        }
-                    }
-                    else{
-                        printf("Enter a name\n");
-                    }
-                }
-                else if( 0 == strncmp(quit, commandBuffer, strlen(quit) ) ){
-                    if(currentDataBaseName[0] == 0){
-                        printf("No active db\n");
-                        continue;
-                    }
-                    printf("save data base with name %s? y/n: ",currentDataBaseName);
-                    if (fgets(commandBuffer, COMMANDMAXSIZE + 1,stdin) != NULL){
-
-                    int commandSize = strlen(commandBuffer);
-                    commandBuffer[commandSize - 1] = 0;
-                    if( 0 == strncmp("y", commandBuffer, 1) ){
-                        saveDatabasefn(currentDataBaseName);
-                    }
-                    }
-                    return EXIT_SUCCESS;
-                }
-                else if( 0 == strncmp(loadDatabase, commandBuffer, strlen(loadDatabase) ) ){
-                    char* token = strchr(commandBuffer, ' ');
-                    char name[50];
-
-                    if(token != NULL){
-                        int result = sscanf(token + 1, "%s",name);
-                        if(result != 1){
-                        printf("Enter a data base name\n");
-                        }
-                        else{
-                            if( loadDatabasefn(name) == 0){
-                                printf("Can't load de database\n");
-                            }
-                            else{
-                                strncpy(currentDataBaseName, name, 50);
-                            }
-                        }
-                    }
-                    else{
-                        printf("Enter a database name\n");
-                    }
-                }
-                else if( 0 == strncmp(readDbSize, commandBuffer, strlen(readDbSize) ) ){
-                    printf("%d\n",currentDataBaseRegister);
-                }
-                else if( 0 == strncmp(readDbCapacity, commandBuffer, strlen(readDbCapacity) ) ){
-                    printf("%d\n",currentDataBaseSize);
-                }
-                else if( 0 == strncmp(readRegister, commandBuffer, strlen(readRegister) ) ){
-                    char* token = strchr(commandBuffer, ' ');
-                    int cedula;
-
-                    if(token != NULL){
-                        int result = sscanf(token + 1, "%d",&cedula);
-                        if(result != 1){
-                        printf("Enter a numeric id number\n");
-                        }
-                        else{
-                            if( readRegisterfn(cedula)  == 0){
-                                printf("Can't find the id number in the database\n");
-                            }
-                        }
-                    }
-                    else{
-                        printf("Enter a id number\n");
-                    }
-                }
-                else{
-                    printf("Not valid command\n");
-                }
-            }
-            else{
-                perror("Error: ");
-                return EXIT_FAILURE;
-            }
-        }
-        return EXIT_SUCCESS;
-    }
-
-
-    int makeDatabasefn(int size){
-        int success = 0;
-        pcurrentDataBase = (struct estudiante *) malloc( sizeof(struct estudiante)*size );
-        if(pcurrentDataBase != NULL) success = 1;
-        return success;
-    }
-
-    void readAllRegistersfn(void){
-        for(int i = 0; i < currentDataBaseRegister; i++){
-            printf("registro %d cedula: %d, nombre: %s, semestre: %d\n", i+1, (pcurrentDataBase + i)->cedula,(pcurrentDataBase + i)->nombre, (pcurrentDataBase + i)->semestre);
-        }
-    }
-
-    int makeRegisterfn(int cedula, char * nombre, int semestre){
-        int result = 0;
-        if(currentDataBaseRegister < currentDataBaseSize){
-            (pcurrentDataBase+ currentDataBaseRegister)->cedula = cedula;
-            strncpy( (pcurrentDataBase+ currentDataBaseRegister) ->nombre, nombre, NAMEMAXSIZE);
-            (pcurrentDataBase+ currentDataBaseRegister)->semestre = semestre;
-            currentDataBaseRegister++;
-            result = 1;
-        }
-        return result;
-    }
-
-    void saveDatabasefn(char * name){
-        FILE *fp = fopen(name, "w+");
-        fprintf(fp,"%d\n",currentDataBaseSize);
-        for(int i = 0; i < currentDataBaseRegister; i++){
-            fprintf(fp, "%d %s %d\n", (pcurrentDataBase + i)->cedula,(pcurrentDataBase + i)->nombre, (pcurrentDataBase + i)->semestre);
-        }
-        fclose(fp);
-    }
-
-
-    int loadDatabasefn(char * dataBaseFileName){
-        int currentDataBaseSizeTmp = 0;
-        struct estudiante *pcurrentDataBaseTmp;
-        int currentDataBaseRegisterTmp = 0;
-
-        int result = 0;
-        FILE *fp = fopen(dataBaseFileName, "r");
-        if(fp == NULL){
-            perror("Error: ");
-        }
-        else{
-            int scanfStatus = fscanf(fp,"%d", &currentDataBaseSizeTmp);
-            if(feof(fp) == 0){
-                if(scanfStatus == 1){
-                    pcurrentDataBaseTmp = (struct estudiante *) malloc( sizeof(struct estudiante)*currentDataBaseSizeTmp );
-                    if(pcurrentDataBaseTmp != NULL){
-                        while(1){
-                            int scanfStatus = fscanf(fp,"%d %s %d", &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->cedula), (pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->nombre, &((pcurrentDataBaseTmp + currentDataBaseRegisterTmp)->semestre) );
-                            if(feof(fp) == 0){
-                                if(scanfStatus != 3){
-                                    free(pcurrentDataBaseTmp);
-                                    break;
-                                }
-                                else{
-                                    currentDataBaseRegisterTmp++;
-                                }
-                            }
-                            else{
-                                result = 1;
-                                pcurrentDataBase = pcurrentDataBaseTmp;
-                                currentDataBaseSize = currentDataBaseSizeTmp;
-                                currentDataBaseRegister = currentDataBaseRegisterTmp;
-                                break;
-                            }
-                        }
-                    }
-                }
-                else{
-                    printf("Can't read database size\n");
-                }
-            }
-            else{
-                printf("Can't read database\n");
-            }
-
-            fclose(fp);
-        }
-        return result;
-    }
-
-
-    int readRegisterfn(int id){
-        int result = 0;
-
-        for(int i = 0; i < currentDataBaseRegister;i++){
-            if( (pcurrentDataBase + i)->cedula == id ){
-                result = 1;
-                printf("registro %d cedula: %d, nombre: %s, semestre: %d\n", i+1, (pcurrentDataBase + i)->cedula,(pcurrentDataBase + i)->nombre, (pcurrentDataBase + i)->semestre);
-                break;
-            }
-        }
-        return result;
-    }
-
-
-Evaluación formativa
-^^^^^^^^^^^^^^^^^^^^
-La evaluación formativa consiste en una serie de problemas que
-buscan aplicar los conceptos estudiados hasta ahora.
-
-Problema: encriptar y desencriptar un archivo
-----------------------------------------------
+En este ejercicio te propongo encriptar y desencriptar un archivo
 
 Se busca realizar dos programas que permitan encriptar
 y desencriptar un archivo.
@@ -765,18 +345,20 @@ El programa que desencripta:
   con la cual se encripta y usted debe encontrar la
   función inversa para desencriptar.
 
-Una solución al problema
--------------------------
-A diferencia de la solución anterior, en esta solución se tratará de
-mantener al mínimo las verificaciones buscando mostrar solo aquellas
-cosas escenciales de la solución.
+.. note::
+    ¡Alerta de Spoiler!
+
+Te dejo una posible solución al ejercicio. Ten en cuenta, que voy
+a obviar todas las verificaciones de error para mantener
+el código compacto y te puedas concentrar justo en la
+funcionalidad solicitada.
 
 .. warning:: Este código asumen que la información ingresada está
              bien formateada y libre de errores. Por tanto, se omiten
              algunas verificaciones.
 
 .. note:: Para probar los siguientes programas (es el mismo para encriptar
-          y desencriptar) es necesario que cree el archivo de texto que
+          y desencriptar) es necesario que crees el archivo de texto que
           será encriptado.
 
 .. code-block:: c
@@ -831,21 +413,10 @@ cosas escenciales de la solución.
     return EXIT_SUCCESS;
     }
 
-Problema: modificación al problema anterior
---------------------------------------------
-Modifique el código anterior para que reciba
-la información desde la línea de comandos.
-
-Ejercicio final
------------------
-Si ha llegado a este ejericio, felicidades, buen trabajo.
-Este último ejercicio es tal vez uno de los más importantes,
-se trata de ayudarle y explicarle a los compañeros
-que aún no terminan. En este caso el beneficio será doble,
-usted repasa y refuerza y por otro lado le ayuda a un compañero.
-
-
-
-
-
-
+Ejercicio 6
+^^^^^^^^^^^^
+Modifica el código anterior para que reciba
+la información como argumentos de la función main,
+al ejecutar el programa. NO DEBES SOLICITAR información
+al usuario, todas la información será pasada cuando
+se invoque el ejecutable en línea de comandos.
