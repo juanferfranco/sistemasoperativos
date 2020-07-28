@@ -124,6 +124,8 @@ Cada registro es así:
   definidos.
 * Tus explicaciones deben ser claras, precisas y completas. No olvides planear 
   bien tu video de sustentación.
+* La fecha límite para entrega de esta actividad es antes de la sesión del
+  14 de agosto de 2020. En esa sesión realizaremos la retroalimentación.
 
 Trayecto de acciones, tiempos y formas de trabajo
 ---------------------------------------------------
