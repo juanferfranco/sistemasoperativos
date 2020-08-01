@@ -101,7 +101,7 @@ Cada registro es así:
 
 * Comprime la carpeta principal en formato .ZIP, ojo, solo .ZIP no uses otros
   formatos por favor.
-* Entrega el archivo .ZIP `aquí <https://upbeduco-my.sharepoint.com/:f:/g/personal/juanf_franco_upb_edu_co/EmrGhwA9S4ZNiiWCUVvmo-sBGTluBmx_fpslpcAykaELjA>`__.
+* Entrega el archivo .ZIP `aquí <https://auladigital.upb.edu.co/mod/assign/view.php?id=615947>`__.
 
 ¿Qué deberá tener el video de sustentación?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

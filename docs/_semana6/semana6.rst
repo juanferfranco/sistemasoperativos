@@ -34,7 +34,7 @@ Fase 7 (sustentación):
 
 Fase 8 (retroalimentación): 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Fecha: agosto 15 de 2020.
+* Fecha: agosto 14 de 2020.
 * Descripción: publicación de la solución del reto. 
 * Recursos: se publicará la solución del RETO.
 * Duración de la actividad: 40 minutos faltantes de la
