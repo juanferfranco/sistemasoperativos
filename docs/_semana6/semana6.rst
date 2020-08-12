@@ -8,7 +8,7 @@ Trayecto de acciones, tiempos y formas de trabajo
 
 Fase 6 (RETO-continuación)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Fecha: julio 10 al 14 de 2020.
+* Fecha: agosto 10 al 14 de 2020.
 * Descripción: procede con la solución del reto.
 * Recursos: lee el enunciado en la semana 4 y la RÚBRICA
 * Duración de la actividad: 
@@ -20,7 +20,7 @@ Fase 6 (RETO-continuación)
 
 Fase 7 (sustentación):
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-* Fecha: julio 10 al 14.
+* Fecha: agosto 10 al 14.
 * Descripción: realiza el video de sustentación.
 * Recursos: para realizar el video de sustentación te recomiendo los siguientes recursos
   
