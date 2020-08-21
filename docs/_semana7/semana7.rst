@@ -115,7 +115,7 @@ que edad representa valores numéricos. Se tendrán máximo 100 líneas y
 ¿Cómo será la sustentación?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Máximo 5 minutos po estudiante.
+* Máximo 5 minutos por estudiante.
 * En la última sesión de la semana 9 se habilitará la reunión por Teams. Solo ingresará
   un estudiante a la vez que será llamado por el docente siempre que su trabajo se encuentre
   en el aula digital.
