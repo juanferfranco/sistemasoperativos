@@ -7,10 +7,27 @@ Trayecto de acciones, tiempos y formas de trabajo
 Actividad 2 
 ^^^^^^^^^^^^^
 * Fecha: agosto 24 de 2020 - 4:00 p.m
-* Descripción: realiza en la sesión sincrónica los ejercicios propuestos
+* Descripción: introducción al concepto de hilos
 * Recursos: ejercicios
 * Duración de la actividad: 1 hora 40 minutos
 * Forma de trabajo: individual con solución de dudas en tiempo real
+
+Vamos a revisar partes de `este <http://www.albahari.com/threading/>`__ sitio.
+
+
+
+
+
+
+
+
+Actividad 3
+^^^^^^^^^^^^^
+* Fecha: agosto 28 de 2020 - 4:00 p.m
+* Descripción: realiza en la sesión sincrónica los ejercicios propuestos
+* Recursos: ejercicios
+* Duración de la actividad: 1 hora 40 minutos
+* Forma de trabajo: individual con solución de dudas en tiempo real  
 
 Ejercicio 1
 **************
@@ -225,3 +242,11 @@ Ejercicio 6
   (ejecutable) por los ejecutables de los programas promedio, mínimo y máximo.
 * El programa padre debe LANZAR los procesos en paralelo y esperar que cada
   hijo termine.
+
+
+Ejercicio 7
+**************
+En `este <https://drive.google.com/open?id=1I5G4rRNEzmAuOgpEtgDra8TPUTpIPHTXCTwzHF93wHE>`__
+enlace encontrarás 4 ejercicios que te mostrarán cómo crear hilos en C, cómo compilar
+un programa que tiene hilos, esperar a qué los hilos terminen, cómo lanzar varios hilos
+a la vez y esperar a que terminen.
