@@ -15,12 +15,6 @@ Actividad 2
 Vamos a revisar partes de `este <http://www.albahari.com/threading/>`__ sitio.
 
 
-
-
-
-
-
-
 Actividad 3
 ^^^^^^^^^^^^^
 * Fecha: agosto 28 de 2020 - 4:00 p.m

@@ -1,21 +1,30 @@
-Semana 9
-===========
+Semana 9: Unidad 3
+====================
 
-Esta semana vamos a abordar las estrategias para comunicar procesos.
+Trayecto de acciones, tiempos y formas de trabajo
+---------------------------------------------------
 
+Actividad 4
+^^^^^^^^^^^^^
+* Fecha: agosto 31 de 2020 - 4:00 p.m
+* Descripción: solución de dudas en tiempo real: reto y ejercicios
+* Recursos: ingresa a Teams
+* Duración de la actividad: 1 hora 40 minutos
+* Forma de trabajo: individual con solución de dudas en tiempo real
 
-Sesión 1
----------
-Vamos a discutir de manera grupal algunos conceptos y ejemplos.
+Actividad 5
+^^^^^^^^^^^^^
+* Fecha: agosto 31 a septiembre 4 de 2020 
+* Descripción: terminación y estudio del reto para sustentación
+* Recursos: material semanas 7, 8.
+* Duración de la actividad: 5 horas
+* Forma de trabajo: trabajo individual para la solución del RETO.
 
-
-Sesión 2
----------
-Vamos a elaborar algunos ejercicios propuestos y a resolver dudas.
-
-
-Material
----------
-En `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__ 
-se encuentra el material introductorio y los ejercicios propuestos. 
+Actividad 6
+^^^^^^^^^^^^^
+* Fecha: septiembre 4 de 2020 - 4:00 p.m
+* Descripción: sustentación del proyecto (RETO) de la unidad
+* Recursos: ingresa a Teams
+* Duración de la actividad: 1 hora 40 minutos
+* Forma de trabajo: sustentación individual con cada estudiante.
 
