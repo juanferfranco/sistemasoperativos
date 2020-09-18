@@ -35,6 +35,5 @@ Actividad 6
 * Forma de trabajo: sustentación individual con cada estudiante.
 
 Esta semana aprendidos tres mecanismos para comunicar procesos. Ahora vamos
-a analizar cómo sincronizar el acceso a recursos compartidos en un mismo procesos 
-utilizando semáforos. En `este enlace <https://docs.google.com/presentation/d/1EfixM_Svf4z5tO_WYw1K7T2CH7ofUykifvB7b2LTqQk/edit?usp=sharing>`__
+a analizar cómo sincronizar el acceso a recursos compartidos utilizando semáforos. En `este enlace <https://docs.google.com/presentation/d/1EfixM_Svf4z5tO_WYw1K7T2CH7ofUykifvB7b2LTqQk/edit?usp=sharing>`__
 se encuentra el material de trabajo.
