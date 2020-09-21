@@ -26,7 +26,7 @@ Actividad 4
 * Duración de la actividad: 5 horas
 * Forma de trabajo: trabajo individual en la solución del reto
 
-Actividad 6
+Actividad 5
 ^^^^^^^^^^^^^
 * Fecha: septiembre 18 de 2020 - 4:00 p.m
 * Descripción: sustentación y retroalimentación del trabajo de la semana

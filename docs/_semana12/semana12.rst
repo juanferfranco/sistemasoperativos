@@ -1,53 +1,30 @@
-Semana 12
-===========
-Esta semana realizaremos la evaluación número 3. Esta evaluación es acumulativa y se
-enfoca en retos relacionados con la comunicación, sincronización y memoria.
+Semana 12: Unidad 4
+====================
 
-Retos
-------
-Los retos ya fueron asignados desde la semana 9 hasta la 11.
+Trayecto de acciones, tiempos y formas de trabajo
+---------------------------------------------------
 
-* De `este enlace <https://drive.google.com/open?id=1Xwed5QjfMS0zGVsQG8tVgL7aXQ8jxwZZUKN4tDurTDQ>`__
-  los ejercicios 1 y 2.
-* De `este enlace <https://docs.google.com/presentation/d/1EfixM_Svf4z5tO_WYw1K7T2CH7ofUykifvB7b2LTqQk/edit?usp=sharing>`__
-  el ejercicio 4: RETO que se encuentra al final de la presentación.
-* De la semana 11 el ejercicio 4.
+Actividad 6
+^^^^^^^^^^^^^
+* Fecha: septiembre 21 de 2020 - 4:00 p.m
+* Descripción: discutir grupalmente las técnicas de comunicación
+  entre procesos y dudas sobre el reto.
+* Recursos: ingresa a Teams
+* Duración de la actividad: 1 hora 40 minutos
+* Forma de trabajo: individual con solución de dudas en tiempo real
 
-Entrega
---------
-* Crear una carpeta. En esa carpeta crear 4 más así: semana9_ej1, semanana9_ej2, semana10, semana11.
-* En cada carpeta guardar solo los archivos .c y los archivos de prueba utilizados.
-* Incluir un archivo .pdf que contenga un enlace a un video-sustentación.
-* El video sustentación debe tener los siguientes elementos por RETO:
+Actividad 7
+^^^^^^^^^^^^^
+* Fecha: septiembre 21 a septiembre 25 de 2020 
+* Descripción: solución del reto
+* Recursos: material teórico de la unidad
+* Duración de la actividad: 5 horas
+* Forma de trabajo: trabajo individual en la solución del reto
 
-    * Hacer un introducción donde diga su nombre, grupo y cuántos retos pudo realizar correctamente y cuáles no.
-    * Mostrar cómo se compila cada código.
-    * Mostar cómo se lanza cada programa.
-    * Hacer un demo de funcionamiento de cada reto.
-    * Explicar detalladamente cada programa. OJO: no se trata de mostar solo las partes del programa,
-      se trata de explicar detalladamente cómo funciona así:
-
-      * Primero explicar en un tablero cuál es la arquitectura de los programas, que partes tiene,
-        qué servicios del sistema operativo usa, cómo es el concepto de su solución y por qué lo solucionó
-        de esta manera.
-      * Segundo, explicar el código.
-      * Tercero, indicar qué dificultades tuvo solucionando los retos y cómo las superó.
-
-* Subir el trabajo `aquí <https://www.dropbox.com/request/QBAbvsjxvcR4LJiT3Tr3>`__
-* El plazo es hasta el viernes 17 de abril hasta las 11:59 p.m.
-
-Nota Final
-------------
-La nota final será = La suma de cada reto ponderada con su sustentación Funcionamiento * sustentación y 
-luego dividida por 4. 
-
-El funcionamiento se califica como 0 o 5. Es decir, funciona o no funciona. La sustentación es un factor que
-va de 0 a 1. 
-
-El factor será:
-
-* 1 si incluye todos los elementos solicitados en el video.
-* 0.8 se incluye todo lo solicitado pero hay uno o dos errores conceptuales leves que no afectan el planteamiento
-* 0.6 se incluye todo lo solicitado pero hay vacíos en las explicaciones
-* 0.4 se incluye todo lo solicitado pero hay errores y vacíos conceptuales.
-* 0 No se incluye todo lo pedido o hay errores conceptuales graves.
+Actividad 8
+^^^^^^^^^^^^^
+* Fecha: septiembre 25 de 2020 - 4:00 p.m
+* Descripción: sustentación
+* Recursos: ingresa a Teams
+* Duración de la actividad: 1 hora 40 minutos
+* Forma de trabajo: sustentación individual con cada estudiante.
