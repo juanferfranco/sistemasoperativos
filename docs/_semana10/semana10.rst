@@ -2,7 +2,7 @@ Semana 10: Unidad 4
 ====================
 
 Hasta ahora hemos aprendido a crear flujos de instrucciones independientes,
-ya sea con utilizando procesos o utilizando hilos. ¿Y si queremos
+ya sea con procesos o utilizando hilos. ¿Y si queremos
 comunicar estos flujos?
 
 Propósitos de aprendizaje
