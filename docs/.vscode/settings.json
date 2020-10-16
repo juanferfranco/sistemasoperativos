@@ -18,5 +18,8 @@
         "sincronizaci",
         "sincronización",
         "sumativa"
-    ]
+    ],
+    "files.associations": {
+        "cstdlib": "c"
+    }
 }

@@ -1,614 +1,348 @@
 Semana 15
 ===========
 
-La semana 9 comenzamos a estudiar algunas estrategias
-de comunicación entre procesos o IPC, por sus siglas
-en inglés.
+Trayecto de acciones, tiempos y formas de trabajo
+---------------------------------------------------
 
-Recordemos que habían dos estrategias:
+Actividad 1
+^^^^^^^^^^^^
+* Fecha: octubre 16 de 2020 - 4 p.m.
+* Descripción: introducción a la comunicación mediante sockets.
+* Recursos: ingresa al grupo de Teams.
+* Duración de la actividad: 1 hora 20 minutos.
+* Forma de trabajo: grupal
 
-* Transferencia de datos: 
-    
-    * byte streams: pipes, FIFO, stream socket
-    * messages: Queue, datagram sockets.
-
-* Memoria compartida
-
-Durante las semanas 15 y 16 veremos algunas técnicas
-que permitirán comunicar procesos en diferentes computadores.
+Material
+#########
 
 El material que estudiaremos será tomado de 
 `este <https://www.packtpub.com/extreme-c>`__ texto.
 
-Sesión 1
----------
-En `este <https://docs.google.com/presentation/d/132VYF-8-lz38iac9rUAt-vv_0mBfW4P_ckMecR2V-EU/edit?usp=sharing>`__
+En `este <https://docs.google.com/presentation/d/19aRuRgFksgXz1vvCpDOU97Hf9RYKZ968w-HuUlBvZB8/edit?usp=sharing>`__
 enlace está el material teórico para esta semana.
 
-
-Sesión 2
----------
-En esta sesión vamos a abordar la programación de sockets de manera
-práctica. Para ello vamos a realizar un proyecto que permita ilustrar
-los diferentes tipos de sockets.
-
-Veremos en total 4 posibilidades:
+No olvides entonces que tenemos estas opciones:
 
 * *Socket UDS* (*Unix domain socket*) sobre un *stream channel*.
 * *Socket UDS* sobre un *datagram channel*.
 * *Socket network* sobre un *stream channel*. 
 * *Socket network* sobre un *datagram channel*.
 
-El proyecto tendrá un servidor y múltiples clientes.
+Ejemplo
+##########
+En este ejemplo verás como comunicar dos procesos utilizando
+sockets TCP.
 
-En `este <https://github.com/PacktPublishing/Extreme-C/tree/master/ch20-socket-programming>`__
-enlace está el código fuente del proyecto completo.
-
-Ejercicio 1
-^^^^^^^^^^^^
-
-Descargar el proyecto:
-
-* Cree un directorio llamado ExtremeC
-* Clone el repositorio:  
-  
-  git clone https://github.com/PacktPublishing/Extreme-C
-
-* Cambiase al directorio donde está el proyecto:
-
-  cd Extreme-C/ch20-socket-programming
-
-* Ejecute el comando tree para ver la jerarquía de directorios
-  del proyecto.
-
-Las siguientes figuras muestran la estructura del código
-del cliente y el server. Note que hay varios archivos
-main.c, uno para cada tipo de socket: tcp, udp y unix
-(en sus dos sabores, stream y datagram):
-
-.. image:: ../_static/client_sem15.png
-
-.. image:: ../_static/server_sem15.png
-
-
-Ejercicio 2
-^^^^^^^^^^^^
-Antes de compilar el proyecto debemos instalar un
-biblioteca llamada `cmocka <https://cmocka.org/>`__:
+Server.c:
 
 .. code-block:: c
    :linenos:
 
-    sudo apt-get install libcmocka-dev
+    #include <stdio.h>
+    #include <string.h>
+    #include <errno.h>
+    #include <unistd.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <signal.h>
 
-Compilación del proyecto:
+    #define PORT 6666
+    #define BUF_SIZE 128
 
-.. code-block:: c
-   :linenos:
-
-   $ mkdir -p build
-   $ cd build
-   $ cmake ..
-   ...
-   $ make
-   ...
-   $
-
-Ejercicio 3
-^^^^^^^^^^^^
-Ejecución del proyecto:
-
-* Asegúrese de estar en el directorio build.
-* Abra una nueva terminal (tendrá dos y ambas con el
-  directorio build activo).
-* Ejecute el server UDS
-  
-  ./server/unix/stream/unix_stream_calc_server
-
-* Ejecute el cliente UDS:
-
-  ./client/unix/stream/unix_stream_calc_client
-
-* Escriba en el cliente la operación 3++4
-
-.. image:: ../_static/serverRun.png
-
-.. image:: ../_static/clientRun.png
-
-Ejercicio 4
-^^^^^^^^^^^^
-
-El contenido de cada subdirectorio es el siguiente:
-
-* /calcser: biblioteca (libcalcser.a) para hacer marshalling y unmarshalling
-  a los datos que serán transmitidos y recibidos. En este
-  código estará como tal el protocolo de la aplicación.
-
-* /calcsvc: biblioteca (libcalcsvc.a) que contiene el código
-  fuente del servicio de calculadora.
-  
-* /server/srvcore: biblioteca (libsrvcore.a) que contendrá
-  la funcionalidad común del servidor independiente del tipo
-  de socket.
-
-* /server/unix/stream: código del servidor usando un socket
-  tipo UDS stream.
-
-* /server/unix/datagram: código del servidor usando un socket
-  tipo UDS datagram
-
-* /server/tcp: código del servidor usando un socket stream
-
-* /server/udp: código del servidor usando un socket datagram
-
-* /client/clicore: biblioteca (libclicore.a) con toda la funcionalidad común
-  del cliente independiente del tipo de socket.
-
-* /client/unix/stream: código del cliente usando un
-  stream UDS socket.
-
-* /client/unix/datagram: código del cliente usando un
-  datagram UDS socket.
-
-* /client/tcp: código del cliente usando un stream socket.
-
-* /client/udp: código del cliente usando un datagram socket.
-
-Ejercicio 5
-^^^^^^^^^^^^
-Este ejercicio analiza el protocolo de comunicación.
-
-Las características del protocolo serán:
-
-* Cada mensaje será de longitud variable.
-* Cada mensaje tendrá un separador para indicar el fin
-  del mensaje.
-* Solo se utilizarán caracteres alfanuméricos más otros
-  de control bien definidos.
-* Tiene dos tipos de mensajes: solicitudes y respuestas.
-* Las solicitudes tienen cuatro campos:
-  Identificador de la solicitud + método + primer operando
-  + segundo operando.
-* Cada mensaje tiene un identificador que es usado por
-  el servidor para generar su respectiva respuesta.
-* El campo método es una operación que deberá realizar la
-  calculadora.
-* En el archivo calcser/calc_proto_req.h se puede ver
-  la definición del objeto para realizar las solicitudes:
-
-  .. code-block:: c
-    :linenos:
-
-      #ifndef CALC_PROTO_REQ_H
-      #define CALC_PROTO_REQ_H
-
-      #include <stdint.h>
-
-      typedef enum {
-        NONE,
-        GETMEM, RESMEM,
-        ADD, ADDM,
-        SUB, SUBM,
-        MUL, MULM,
-        DIV
-      } method_t;
-
-      struct calc_proto_req_t {
-        int32_t id;
-        method_t method;
-        double operand1;
-        double operand2;
-      };
-
-      method_t str_to_method(const char*);
-      const char* method_to_str(method_t);
-
-      #endif   
- 
-* En el archivo anterior se ven nueve métodos.
-* Los métodos que tienen una M al final permiten
-  hacer operaciones entre los dos operandos y la memoria interna
-  de la calculadora y dejar el resultado en esa
-  memoria interna.
-* Ejemplo: se desea crear una solicitud con ID 1000
-  para sumar el 1.5 con el 5.6. Para hacerlo se debe crear
-  un objeto del tipo calc_proto_req_t así:
-
-  .. code-block:: c
-    :linenos:
-
-    struct calc_proto_req_t req;
-    req.id = 1000;
-    req.method = ADD;
-    req.operand1 = 1.5;
-    req.operand2 = 5.6;
-
-* Para poder transmitir este objeto, se debe serializar
-  o hacer un marshalling así:
-
-.. code-block:: c
-   :linenos:
-
-   1000#ADD#1.5#5.6$
-
-* Note que el carácter # se utiliza para separar
-  los campos y el carácter $ para indicar el fin del mensaje
-  o separador de mensaje.
-
-* Los mensajes de respuesta tienen tres campos
-  ID de la solicitud + estado + resultado. 
-
-* El objeto para responder es está aquí
-  calcser/calc_proto_resp.h:
-
-  .. code-block:: c
-    :linenos:
-
-    #ifndef CALC_PROTO_RESP_H
-    #define CALC_PROTO_RESP_H
-
-    #include <stdint.h>
-
-    #define STATUS_OK              0
-    #define STATUS_INVALID_REQUEST 1
-    #define STATUS_INVALID_METHOD  2
-    #define STATUS_INVALID_OPERAND 3
-    #define STATUS_DIV_BY_ZERO     4
-    #define STATUS_INTERNAL_ERROR  20
-
-    typedef int status_t;
-
-    struct calc_proto_resp_t {
-      int32_t req_id;
-      status_t status;
-      double result;
+    struct client_t{
+        int socket;
+        int rxState;
     };
 
-    #endif
+    void * readThread(void *arg){
+        struct client_t *client = ((struct client_t *)arg);
+        ssize_t numOfBytes;
+        char buf[BUF_SIZE];
 
-* Por ejemplo:
+        while(1){
+            numOfBytes = read(client->socket, buf, BUF_SIZE);
+            if(0 == numOfBytes){
+                printf("client closed the socket end\n");
+                break;
+            }
+            else if(-1 == numOfBytes){
+                perror("ReadThread read() fails: ");
+                break;
+            }
+            else{
+                printf("from client: %s\n",buf);
+            }
+        }
+        printf("Terminate Pthread for reading\n");
+        client->rxState = 0;
+        return NULL;
+    }
 
-  .. code-block:: c
-    :linenos:
+    int main(int argc, char *argv[]){
 
-    struct calc_proto_resp_t resp;
-    resp.req_id = 1000;
-    resp.status = STATUS_OK;
-    resp.result = 7.1;
+        char buf[BUF_SIZE];
+        int status;
+        int enable = 1;
+        int server_sd;
+        int client_sd;
+        pthread_t rxThreadId;
+        struct client_t client;
 
-* Y será serializado así:
+        // 1. Ignore SIGPIPE 
+        signal(SIGPIPE, SIG_IGN);
 
-  .. code-block:: c
-    :linenos:
+        // 2. Create socket
+        server_sd = socket(AF_INET, SOCK_STREAM, 0);
+        if (server_sd == -1) {
+            perror("Socket creation fails\n");
+            exit(EXIT_FAILURE);
+        }
+        printf("Socket created\n");
+        
+        // 3. turn off bind address checking
+        status = setsockopt(server_sd, SOL_SOCKET, SO_REUSEADDR,(int *) &enable, sizeof(enable));
+        if (-1 == status){
+            perror("setsockopt error: ");
+        }
 
-    1000#0#7.1$
+        //4. BIND the socket to an address
+        // Prepare the address
+        struct sockaddr_in addr;
+        memset(&addr, 0, sizeof(addr));
+        addr.sin_family = AF_INET;
+        addr.sin_addr.s_addr = INADDR_ANY;
+        addr.sin_port = htons(PORT);
 
-Ejercicio 5
-^^^^^^^^^^^^
+        status = bind(server_sd, (struct sockaddr*)&addr, sizeof(addr));
+        if (-1 == status) {
+            perror("Bind fails: ");
+            close(server_sd);
+            exit(EXIT_FAILURE);
+        }
+        printf("Socket binded\n");
 
-Ahora se analiza el API de la biblioteca para hacer
-el marshalling y unmarshalling de los objetos
-correspondientes a las solicitudes y a las respuestas.
+        // 5. Set backlog 
 
-El API de la biblioteca está aquí: calcser/calc_proto_ser.h
+        status = listen(server_sd, 1);
+    
+        if (-1 == status) {
+            perror("Listen fails: ");
+            close(server_sd);
+            exit(EXIT_FAILURE);
+        }
 
-.. code-block:: c
-   :linenos:
+        printf("Server listening\n");
 
-    #ifndef CALC_PROTO_SER_H
-    #define CALC_PROTO_SER_H
+        while(1){
+            // 6. Accept:
+            printf("Waiting for a client\n");
+            client_sd = accept(server_sd, NULL, NULL);
 
-    #include <types.h>
-
-    #include "calc_proto_req.h"
-    #include "calc_proto_resp.h"
-
-    #define ERROR_INVALID_REQUEST          101
-    #define ERROR_INVALID_REQUEST_ID       102
-    #define ERROR_INVALID_REQUEST_METHOD   103
-    #define ERROR_INVALID_REQUEST_OPERAND1 104
-    #define ERROR_INVALID_REQUEST_OPERAND2 105
-
-    #define ERROR_INVALID_RESPONSE         201
-    #define ERROR_INVALID_RESPONSE_REQ_ID  202
-    #define ERROR_INVALID_RESPONSE_STATUS  203
-    #define ERROR_INVALID_RESPONSE_RESULT  204
-
-    #define ERROR_UNKNOWN  220
-
-    struct buffer_t {
-      char* data;
-      int len;
-    };
-
-    struct calc_proto_ser_t;
-
-    typedef void (*req_cb_t)(
-            void* owner_obj,
-            struct calc_proto_req_t);
-
-    typedef void (*resp_cb_t)(
-            void* owner_obj,
-            struct calc_proto_resp_t);
-
-    typedef void (*error_cb_t)(
-            void* owner_obj,
-            const int req_id,
-            const int error_code);
-
-    struct calc_proto_ser_t* calc_proto_ser_new();
-    void calc_proto_ser_delete(
-            struct calc_proto_ser_t* ser);
-
-    void calc_proto_ser_ctor(
-            struct calc_proto_ser_t* ser,
-            void* owner_obj,
-            int ring_buffer_size);
-
-    void calc_proto_ser_dtor(
-            struct calc_proto_ser_t* ser);
-
-    void* calc_proto_ser_get_context(
-            struct calc_proto_ser_t* ser);
-
-    void calc_proto_ser_set_req_callback(
-            struct calc_proto_ser_t* ser,
-            req_cb_t cb);
-
-    void calc_proto_ser_set_resp_callback(
-            struct calc_proto_ser_t* ser,
-            resp_cb_t cb);
-
-    void calc_proto_ser_set_error_callback(
-            struct calc_proto_ser_t* ser,
-            error_cb_t cb);
-
-    void calc_proto_ser_server_deserialize(
-            struct calc_proto_ser_t* ser,
-            struct buffer_t buffer,
-            bool_t* req_found);
-
-    struct buffer_t calc_proto_ser_server_serialize(
-            struct calc_proto_ser_t* ser,
-            const struct calc_proto_resp_t* resp);
-
-    void calc_proto_ser_client_deserialize(
-            struct calc_proto_ser_t* ser,
-            struct buffer_t buffer,
-            bool_t* resp_found);
-
-    struct buffer_t calc_proto_ser_client_serialize(
-            struct calc_proto_ser_t* ser,
-            const struct calc_proto_req_t* req);
-
-    #endif
-
-
-El API tiene funciones para construir y destruir el
-objeto usado para serializar:
-
-
-.. code-block:: c
-   :linenos:
-
-    void calc_proto_ser_ctor(
-            struct calc_proto_ser_t* ser,
-            void* owner_obj,
-            int ring_buffer_size);
-
-    void calc_proto_ser_dtor(
-            struct calc_proto_ser_t* ser);
-
-
-Dos funciones para serializar y deserializar en el
-server y dos para hacer los propio en el cliente:
-
-.. code-block:: c
-   :linenos:
-
-    void calc_proto_ser_server_deserialize(
-            struct calc_proto_ser_t* ser,
-            struct buffer_t buffer,
-            bool_t* req_found);
-
-    struct buffer_t calc_proto_ser_server_serialize(
-            struct calc_proto_ser_t* ser,
-            const struct calc_proto_resp_t* resp);
-
-    void calc_proto_ser_client_deserialize(
-            struct calc_proto_ser_t* ser,
-            struct buffer_t buffer,
-            bool_t* resp_found);
-
-    struct buffer_t calc_proto_ser_client_serialize(
-            struct calc_proto_ser_t* ser,
-            const struct calc_proto_req_t* req);
-
-Tres funciones callback:
-
-.. code-block:: c
-   :linenos:
-
-    void calc_proto_ser_set_req_callback(
-            struct calc_proto_ser_t* ser,
-            req_cb_t cb);
-
-    void calc_proto_ser_set_resp_callback(
-            struct calc_proto_ser_t* ser,
-            resp_cb_t cb);
+            printf("Client connected\n");
+            if(-1 == client_sd){
+                perror("Accept fails: ");
+                close(server_sd);
+                exit(EXIT_FAILURE);
+            }
+            // 7. Create a thread for receiving messages from client
+            client.socket = client_sd;
+            client.rxState = 1;
             
-    void calc_proto_ser_set_error_callback(
-            struct calc_proto_ser_t* ser,
-            error_cb_t cb);
-
-* calc_proto_ser_set_req_callback: será llamado
-  cuando se deserialice una solicitud
-
-* calc_proto_ser_set_resp_callback: será llamado
-  cuando se deserialice una respuesta
-
-* calc_proto_ser_set_error_callback: será llamado
-  cuando ocurra un error en el proceso de serialización
-  o deserialización
+            printf("Create Pthread for reading\n");
+            status = pthread_create(&rxThreadId,NULL,&readThread,&client);
+            if(-1 == status){
+                perror("Pthread read fails: ");
+                close(server_sd);
+                exit(EXIT_FAILURE);
+            }
 
 
-El código de la función del lado del servidor
-para serializar es este:
+            while(1){
+                if(0 == client.rxState){
+                    printf("Client closed the socket\n");
+                    break;
+                }
+                
+                if ( fgets(buf,BUF_SIZE,stdin) == NULL){
+                    printf("Fgets NULL\n");
+                }
 
-.. code-block:: c
-   :linenos:
+                if( buf[ strlen(buf)-1 ] == '\n') buf[ strlen(buf) - 1 ] = 0;
+                
+                status = write(client.socket, buf, strlen(buf)+1);
+                if(-1 == status){
+                    perror("Server write to client fails: ");
+                    break;
+                }
+            }
+            close(client.socket);
+        }
 
-    struct buffer_t calc_proto_ser_server_serialize(
-        struct calc_proto_ser_t* ser,
-        const struct calc_proto_resp_t* resp) {
-
-      struct buffer_t buff;
-      char resp_result_str[64];
-      _serialize_double(resp_result_str, resp->result);
-      buff.data = (char*)malloc(64 * sizeof(char));
-      sprintf(buff.data, "%d%c%d%c%s%c", resp->req_id,
-              FIELD_DELIMITER, (int)resp->status, FIELD_DELIMITER,
-          resp_result_str, MESSAGE_DELIMITER);
-      buff.len = strlen(buff.data);
-
-      return buff;
-
+        exit(EXIT_SUCCESS);
     }
 
-resp es un puntero al objeto de solicitud que se
-desea serializar. La función retorna un objeto
-de tipo buffer_t que contendrá el solicitud serializada
+
+Client.c:
 
 .. code-block:: c
    :linenos:
 
-    struct buffer_t {
-      char* data;
-      int len;
+    #include <stdio.h>
+    #include <string.h>
+    #include <errno.h>
+    #include <unistd.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <signal.h>
+    #include <arpa/inet.h>
+
+    #define PORT 6666
+    #define BUF_SIZE 128
+
+    struct client_t{
+        int socket;
+        int rxState;
     };
 
+    void * readThread(void *arg){
+        struct client_t *client = ((struct client_t *)arg);
+        ssize_t numOfBytes;
+        char buf[BUF_SIZE];
 
-El código de la función del lado del servidor
-para deserializar es este:
-
-.. code-block:: c
-   :linenos:
-
-    void calc_proto_ser_server_deserialize(
-        struct calc_proto_ser_t* ser,
-        struct buffer_t buff,
-        bool_t* req_found) {
-      if (req_found) {
-        *req_found = FALSE;
-      }
-      _deserialize(ser, buff, _parse_req_and_notify,
-              ERROR_INVALID_REQUEST, req_found);
+        while(1){
+            numOfBytes = read(client->socket, buf, BUF_SIZE);
+            if(0 == numOfBytes){
+                printf("Server closed the socket end\n");
+                break;
+            }
+            else if(-1 == numOfBytes){
+                perror("ReadThread read() fails: ");
+                break;
+            }
+            else{
+                printf("from server: %s\n",buf);
+            }
+        }
+        printf("Terminate Pthread for reading\n");
+        client->rxState = 0;
+        return NULL;
     }
 
-Un análisis similar se puede hacer para las funciones
-correspondientes para el cliente.
+    int main(int argc, char *argv[]){
 
+        char buf[BUF_SIZE];
+        int status;
+        int server_sd;
+        pthread_t rxThreadId;
+        struct client_t client;
 
-Ejercicio 6
+        // 1. Ignore SIGPIPE 
+        signal(SIGPIPE, SIG_IGN);
+
+        // 2. Create socket
+        server_sd = socket(AF_INET, SOCK_STREAM, 0);
+        if (server_sd == -1) {
+            perror("Socket creation fails\n");
+            exit(EXIT_FAILURE);
+        }
+        printf("Socket created\n");
+        
+        //3. Connect to the server 127.0.0.1:PORT
+        // Prepare the address
+        struct sockaddr_in addr;
+        memset(&addr, 0, sizeof(addr));
+        addr.sin_family = AF_INET;
+        addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+        addr.sin_port = htons(PORT);
+
+        status = connect(server_sd, (struct sockaddr*)&addr, sizeof(addr));
+        if(-1 == status){
+            perror("Connect fails\n");
+            close(server_sd);
+            exit(EXIT_FAILURE);
+        }
+
+        printf("Server connected\n");
+
+        // 4. Create a thread for receiving messages from client
+        client.socket = server_sd;
+        client.rxState = 1;
+        printf("Create Pthread for reading\n");
+        
+        status = pthread_create(&rxThreadId,NULL,&readThread,&client);
+        if(-1 == status){
+            perror("Pthread read fails: ");
+            close(server_sd);
+            exit(EXIT_FAILURE);
+        }
+
+        while(1){
+            if(0 == client.rxState){
+                printf("Server closed the socket\n");
+                break;
+            }
+                
+            if ( fgets(buf,BUF_SIZE,stdin) == NULL){
+                printf("Fgets NULL\n");
+            }
+            if( 0 == strncmp(buf,":exit",strlen(":exit")) ){
+                printf("Clinet exit\n");
+                break;
+            }
+
+            if( buf[ strlen(buf)-1 ] == '\n') buf[ strlen(buf) - 1 ] = 0;
+                
+            status = write(client.socket, buf, strlen(buf)+1);
+            if(-1 == status){
+                perror("Server write to client fails: ");
+                break;
+            }
+        }
+        close(client.socket);
+        exit(EXIT_SUCCESS);
+    }
+
+Actividad 2
 ^^^^^^^^^^^^
-
-Servicio de la calculadora.
-
-El api está aquí: calcsvc/calc_service.h
-
-.. code-block:: c
-   :linenos:
-
-
-    #ifndef CALC_SERVICE_H
-    #define CALC_SERVICE_H
-
-    #include <types.h>
-
-    static const int CALC_SVC_OK = 0;
-    static const int CALC_SVC_ERROR_DIV_BY_ZERO = -1;
-
-    struct calc_service_t;
-
-    struct calc_service_t* calc_service_new();
-    void calc_service_delete(struct calc_service_t*);
-
-    void calc_service_ctor(struct calc_service_t*);
-    void calc_service_dtor(struct calc_service_t*);
-
-    void calc_service_reset_mem(struct calc_service_t*);
-    double calc_service_get_mem(struct calc_service_t*);
-    double calc_service_add(struct calc_service_t*, double, double b,
-        bool_t mem);
-    double calc_service_sub(struct calc_service_t*, double, double b,
-        bool_t mem);
-    double calc_service_mul(struct calc_service_t*, double, double b,
-        bool_t mem);
-    int calc_service_div(struct calc_service_t*, double,
-            double, double*);
-
-    #endif
-
-
-Para cada cliente que se conecte al servidor es necesario
-crear un objeto de tipo calc_service_t.
-
-Como los algunas operaciones dependen de la memoria interna
-de la calculadora, es posible que algunas solicitudes
-dependan de solicitudes anteriores. Es por ello que nuestro
-objeto tipo calc_service_t es un objeto de tipo *stateful service objects*.
-
-Si algunas solicitudes no dependieran de solicitudes
-anteriores entonces nuestro objeto tipo calc_service_t
-sería un *stateless service object* y por tanto podríamos crear
-un solo objeto para todos los clientes, es decir, podríamos
-tener un *singleton service object*.
-
-Ejercicio 7: UDS stream server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Llamamos server al proceso que escuchará las conexiones,
-es decir, el listening process.
-
-El código se encuentra aquí: server/unix/stream/main.c
-
-Ejercicio 8: UDS stream client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Llamamos client al proceso que se conectará al server,
-es decir, será nuestro connector process.
-
-El código se encuentra aquí: client/unix/stream/main.c
-
-Ejercicio 9: UDS datagram server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: server/unix/datagram/main.c
-
-Ejercicio 10: UDS datagram client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: client/unix/datagram/main.c
-
-Ejercicio 11: TCP server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: server/tcp/main.c
-
-Ejercicio 12: TCP client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: client/tcp/main.c
-
-Ejercicio 13: UDP server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: server/udp/main.c
-
-Ejercicio 14: UDP client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-El código se encuentra aquí: client/udp/main.c
+* Fecha: octubre 16 a octubre 19 de 2020 - 4 p.m.
+* Descripción: trabajo en el RETO. 
+* Recursos: observa el material
+* Duración de la actividad: 5 horas
+* Forma de trabajo: individual
 
 RETO
-------
-Hacer un video donde se explique, en un White Board, la arquitectura
-de funcionamiento de los ejercicios del 7 al 14. Aborde la
-explicación por parejas de ejercicios de tal manera que abarque
-el cliente y el servidor para cada tipo de socket.
+#####
 
+El último reto se trata de crear una aplicación tipo GRUPO de whatsapp así:
 
+#. Crea un programa servidor que sea capaz de atender hasta 10 clientes.
+#. Crea un programa cliente que se conecte al servidor.
+#. Cualquier mensaje que envíes al servidor será replicado a todos
+   los clientes que estén conectados.
+#. Ten presente que los cliente deberán ser capaces de enviar y recibir
+   mensajes a la vez.
+#. Permite que el servidor pueda recibir comandos a la vez que atiende a
+   todos los clientes. Los comandos serían: mostrar los clientes conectados,
+   desconectar un cliente.
+#. Cuando un cliente detecte que el servidor lo desconectó debe terminar
+   adecuadamente el programa gestionando los errores que se puedan presentar
+   al intentar leer o escribir el socket.
 
+¿Qué debes entregar?
+^^^^^^^^^^^^^^^^^^^^^^^
 
+* Crea una carpeta que llamarás unidad5.
+* Guarda en la carpeta los códigos fuente del RETO.
+* Guarda en la carpeta un diagrama y un texto que explique
+  la arquitectura de la solución: OJO no es explicar el código, se trata
+  de explicar qué partes tiene la solución y cómo se relacionan entre ellas,
+  es decir, la arquitectura de la solución.
+* No olvides incluir la rúbrica.
+  Aquí está la `rúbrica <https://docs.google.com/spreadsheets/d/1ptF-HuMpvYpmy-7lATj3n0kJupDPn5NvgCCzcdHNZGM/edit?usp=sharing>`__
+* Comprime la carpeta formato .ZIP, ojo, solo .ZIP no uses otros
+  formatos por favor.
+* Entrega el archivo .ZIP del RETO 2: sockets `aquí <https://auladigital.upb.edu.co/mod/assign/view.php?id=652941>`__.
