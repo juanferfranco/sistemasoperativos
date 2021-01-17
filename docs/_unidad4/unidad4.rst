@@ -1,35 +1,58 @@
-Semana 15
-===========
+Unidad 4: Entrada-Salida
+===========================
 
-Trayecto de acciones, tiempos y formas de trabajo
----------------------------------------------------
+Introducción
+--------------
 
-Actividad 1
+Hasta es punto en el curso hemos estudiado dos abstracciones
+fundamentales que brinda el sistema operativo: PROCESOS y MEMORIA
+VIRTUAL. La primera permite utilizar los recursos de procesamiento y
+la segunda memoria temporal para los programas. Ahora, vamos a presentar
+un nuevo servicio del sistema operativo: ENTRADA-SALIDA. Los servicios 
+de entrada-salida le permiten al sistemas operativo comunicarse con el 
+mundo exterior, ya sea para adquirir información o para producirla. 
+En particular, en esta unidad, vamos a abordar los servicios de persistencia y 
+de comunicación de procesos utilizando sockets.
+
+Propósito de aprendizaje
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Comprender y aplicar los conceptos de entrada-salida para persistir información
+y para comunicar procesos que no necesariamente se encuentra en la misma máquina.
+
+
+Trayecto de actividades
+------------------------
+
+Ejericio 1
+^^^^^^^^^^^
+
+En `este <https://docs.google.com/presentation/d/1or5HQ9cwZek70PfEYniwkDwiIV4YS0ptaejanL3znIw/edit?usp=sharing>`__
+enlace se encuentra el material sobre los servicios de persistencia.
+
+Ejercicio 2
 ^^^^^^^^^^^^
-* Fecha: octubre 16 de 2020 - 4 p.m.
-* Descripción: introducción a la comunicación mediante sockets.
-* Recursos: ingresa al grupo de Teams.
-* Duración de la actividad: 1 hora 20 minutos.
-* Forma de trabajo: grupal
 
-Material
-#########
-
-El material que estudiaremos será tomado de 
+El material que estudiaremos en este ejercicio es tomado de 
 `este <https://www.packtpub.com/extreme-c>`__ texto.
 
 En `este <https://docs.google.com/presentation/d/19aRuRgFksgXz1vvCpDOU97Hf9RYKZ968w-HuUlBvZB8/edit?usp=sharing>`__
-enlace está el material teórico para esta semana.
+enlace encontrarás un material teórico FUNDAMENTAL para entender
+los ejercicios que sigue.
 
-No olvides entonces que tenemos estas opciones:
+Ejercicio 3
+^^^^^^^^^^^^^^^
+
+Repaso rápido: no olvides, que al hablar de sockets, tenemos estas opciones:
 
 * *Socket UDS* (*Unix domain socket*) sobre un *stream channel*.
 * *Socket UDS* sobre un *datagram channel*.
 * *Socket network* sobre un *stream channel*. 
 * *Socket network* sobre un *datagram channel*.
 
-Ejemplo
-##########
+Ejercicio 4
+^^^^^^^^^^^^^^^^^^
+
 En este ejemplo verás como comunicar dos procesos utilizando
 sockets TCP.
 
@@ -306,18 +329,23 @@ Client.c:
         exit(EXIT_SUCCESS);
     }
 
-Actividad 2
+PROYECTO 1 
 ^^^^^^^^^^^^
-* Fecha: octubre 16 a octubre 19 de 2020 - 4 p.m.
-* Descripción: trabajo en el RETO. 
-* Recursos: observa el material
-* Duración de la actividad: 5 horas
-* Forma de trabajo: individual
 
-RETO
-#####
+Realizar un programa que:
 
-El último reto se trata de crear una aplicación tipo GRUPO de whatsapp así:
+* Reciba como argumento la ruta absoluta o relativa de un directorio.
+* El programa deberá imprimir el nombre de todos los archivos y subdirectorios que contenga
+  el directorio y los subdirectorios.
+* La idea es recorrer toda la jerarquía imprimiendo los nombres de subdirectorios y archivos.
+
+
+PROYECTO 2
+^^^^^^^^^^^
+
+ANTES de comenzar asegurate de trabajar a FONDO el ejercicio 4
+
+Crear una aplicación tipo GRUPO de whatsapp así:
 
 #. Crea un programa servidor que sea capaz de atender hasta 10 clientes.
 #. Crea un programa cliente que se conecte al servidor.
@@ -331,18 +359,3 @@ El último reto se trata de crear una aplicación tipo GRUPO de whatsapp así:
 #. Cuando un cliente detecte que el servidor lo desconectó debe terminar
    adecuadamente el programa gestionando los errores que se puedan presentar
    al intentar leer o escribir el socket.
-
-¿Qué debes entregar?
-^^^^^^^^^^^^^^^^^^^^^^^
-
-* Crea una carpeta que llamarás unidad5.
-* Guarda en la carpeta los códigos fuente del RETO.
-* Guarda en la carpeta un diagrama y un texto que explique
-  la arquitectura de la solución: OJO no es explicar el código, se trata
-  de explicar qué partes tiene la solución y cómo se relacionan entre ellas,
-  es decir, la arquitectura de la solución.
-* No olvides incluir la rúbrica.
-  Aquí está la `rúbrica <https://docs.google.com/spreadsheets/d/1ptF-HuMpvYpmy-7lATj3n0kJupDPn5NvgCCzcdHNZGM/edit?usp=sharing>`__
-* Comprime la carpeta formato .ZIP, ojo, solo .ZIP no uses otros
-  formatos por favor.
-* Entrega el archivo .ZIP del RETO 2: sockets `aquí <https://auladigital.upb.edu.co/mod/assign/view.php?id=652941>`__.

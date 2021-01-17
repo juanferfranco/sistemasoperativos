@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sistemas Operativos'
-copyright = '2020, Juan Franco'
+copyright = '2021, Juan Franco'
 author = 'Juan Franco'
 
 # The short X.Y version

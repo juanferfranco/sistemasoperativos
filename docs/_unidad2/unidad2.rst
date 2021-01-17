@@ -1,30 +1,47 @@
-Semana 8: Unidad 3
-====================
+Unidad 2: Procesos e hilos
+=============================
 
-Trayecto de acciones, tiempos y formas de trabajo
----------------------------------------------------
+Introducción
+--------------
 
-Actividad 2 
-^^^^^^^^^^^^^
-* Fecha: agosto 24 de 2020 - 4:00 p.m
-* Descripción: introducción al concepto de hilos
-* Recursos: ejercicios
-* Duración de la actividad: 1 hora 40 minutos
-* Forma de trabajo: individual con solución de dudas en tiempo real
+En esta unidad vamos a estudiar en detalle algunas
+abstracciones que ofrece el sistema operativo para hacer
+uso de los recursos de procesamiento: los procesos y los hilos.
 
-Vamos a revisar partes de `este <http://www.albahari.com/threading/>`__ sitio.
+Propósito de aprendizaje
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Comprender el concepto de proceso, programa, hilo y su diferencia.
 
 
-Actividad 3
-^^^^^^^^^^^^^
-* Fecha: agosto 28 de 2020 - 4:00 p.m
-* Descripción: realiza en la sesión sincrónica los ejercicios propuestos
-* Recursos: ejercicios
-* Duración de la actividad: 1 hora 40 minutos
-* Forma de trabajo: individual con solución de dudas en tiempo real  
+Trayecto de actividades
+------------------------
 
 Ejercicio 1
-**************
+^^^^^^^^^^^^^^
+
+Lee la presentación que está en este `enlace <https://drive.google.com/open?id=1xojM0NJibnQdIT_UzzrnlS1Fj5NSNtkVNfCnJNBIBYs>`__.
+
+* ¿Cuál es la diferencia entre un programa y un proceso?
+* ¿Puedo tener múltiples procesos corriendo el mismo programa?
+* Repasa: ¿Para qué sirve el stack de un proceso?
+* Repasa: ¿Para qué sirve el heap de un proceso?
+* Repasa: ¿Qué es la zona de texto de un proceso?
+* Repasa: ¿Dónde se almacenan las variables globales inicializadas?
+* Repasa: ¿Dónde se almacenan las variables globales no inicializadas?
+* ¿Cuáles son los posibles estados de un proceso en general? Ten en cuenta
+  que esto varía entre sistemas operativos.
+
+Ejercicio 2
+^^^^^^^^^^^^^
+
+En este `otro enlace <https://drive.google.com/file/d/1t_MhYGFmN7ti6U4TYNcpgigJESFgb7_H/view>`_
+puedes leer una explicación detallada de los pasos que ocurren al hacer un llamado al sistema.
+
+Explica en tus propias palabras cómo funciona un llamado al sistema. 
+
+Ejercicio 3
+^^^^^^^^^^^^^
 
 * Escribe en la terminal el comando man syscall y lee la descripción.
 * El siguiente código muestra dos formas de llamar servicios del sistema,
@@ -45,10 +62,8 @@ Ejercicio 1
         long ID1, ID2;
         /*-----------------------------*/
         /* direct system call */
-        /* SYS_getpid (func no. is 20) */
-        /*-----------------------------*/
-        ID1 = syscall(SYS_getpid);
-        printf ("syscall(SYS_getpid)=%ld\n", ID1);
+        /* SYS
+************* ("syscall(SYS_getpid)=%ld\n", ID1);
 
         /*-----------------------------*/
         /* "libc" wrapped system call */
@@ -95,8 +110,9 @@ Ejercicio 1
         exit(EXIT_SUCCESS);
     }
 
-Ejercicio 2: repaso
-*********************
+Ejercicio 4: repaso
+^^^^^^^^^^^^^^^^^^^^
+
 Lectura de argumentos de la línea de comandos. Analiza el siguiente programa:
 
 .. code-block:: c
@@ -118,8 +134,9 @@ Lectura de argumentos de la línea de comandos. Analiza el siguiente programa:
 * ¿Para qué sirve argc?
 * ¿Qué es argv?
 
-Ejercicio 3
-*******************
+Ejercicio 5
+^^^^^^^^^^^^^^^
+
 Construye un programa así:
 
 * ./programa arg1 arg2 arg3 ... argn
@@ -132,8 +149,8 @@ El programa debe almacenar en un arreglo DE ENTEROS los argumentos y calcular:
 * El mínimo entero.
 * El máximo entero.
 
-Ejercicio 4
-*************
+Ejercicio 6
+^^^^^^^^^^^^^^^^
 
 Realiza programa que cree tres procesos. Cada uno de los procesos hijos
 calculará el factorial de los enteros entre 1 y 10 comenzando por 1.
@@ -161,8 +178,8 @@ la función wait.
 * ¿Cuando wait retorna cómo sabe el proceso padre cuál de los hijos terminó?
 * ¿Cuántos wait tendría que llamar el padre para este programa?
 
-Ejercicio 5
-*************
+Ejercicio 7
+^^^^^^^^^^^^^
 
 Ejecuta en la línea de comandos: man exec
 
@@ -224,8 +241,8 @@ Escribe el siguiente ejemplo tomado del sitio geekforgeeks.
 * Analiza detenidamente qué está pasando. Entonces cuál es la diferencia entre
   un proceso y un programa?
 
-Ejercicio 6
-*************
+Ejercicio 8
+^^^^^^^^^^^^^
 
 * Divide el programa del ejercicio 3 en tres programas. Uno que calcule
   el promedio, otro que calcule el máximo y otro que calcule el mínimo.
@@ -237,10 +254,88 @@ Ejercicio 6
 * El programa padre debe LANZAR los procesos en paralelo y esperar que cada
   hijo termine.
 
+Ejercicio 9 
+^^^^^^^^^^^^
 
-Ejercicio 7
-**************
+Ahora vamos a familiarizarnos con el concepto de hilo. Ingresa 
+a `este <http://www.albahari.com/threading/>`__ sitio y lee detalladamente
+su contenido hasta la sección Creating and Starting Threads (sin incluirla,
+claro, a menos que quieras).
+
+* ¿Qué es un hilo?
+* ¿Cuál es la diferencia entre un método y un hilo?
+* ¿La ejecución de los hilos es determinística?
+* ¿Cuál es la diferencia entre un método estático y un
+  método no estático?
+* ¿Cuál es la diferencia entre un hilo y un método estático?
+* ¿Para qué sirve un lock?
+
+Ejercicio 10
+^^^^^^^^^^^^^^^
+
 En `este <https://drive.google.com/open?id=1I5G4rRNEzmAuOgpEtgDra8TPUTpIPHTXCTwzHF93wHE>`__
 enlace encontrarás 4 ejercicios que te mostrarán cómo crear hilos en C, cómo compilar
 un programa que tiene hilos, esperar a qué los hilos terminen, cómo lanzar varios hilos
 a la vez y esperar a que terminen.
+
+PROYECTO 1
+^^^^^^^^^^^^
+
+Se tiene un archivo de entrada que tiene en cada línea dos cadenas de texto
+separadas por un espacio. A la primera cadena la llamaremos clave y a la segunda
+valor. Clave es una cadena de caracteres y valor es un número entero. 
+El archivo tendrá máximo 100 líneas, clave será máximo de 20 caracteres y valor
+será menor a 1000 y mayor a -1000.
+
+* Crea un programa llamado p1.c que lea el archivo de entrada y genere un archivo
+  de salida con las parejas ordenadas por VALOR de mayor a menor. Una pareja por línea.
+
+* Crea un programa llamado p2.c que lea el archivo de entrada y escriba en un archivo de 
+  salida cada pareja comenzando por la última y terminando por la primera, es decir,
+  en orden contrario al que aparecen en el archivo de entrada.
+
+* Crea un programa llamado p3.c que cree dos procesos para ejecutar los programas anteriores.
+  Los procesos deben lanzarse para que se ejecuten en paralelo. Una vez los dos procesos
+  sean lanzados, p3 debe esperar a que terminen. Debe leer los archivos de salida generados
+  por p1 y p2 e imprimir en pantalla los resultados.
+
+* TEN EN CUENTA QUE al final, en la terminal, solo lanzarás un proceso, el que corre a p3. p3
+  se encarga del resto. Lanza el proceso así: ./p3 In Out1 Out2
+
+* p3 es el nombre del ejecutable principal, el proceso que crea los otros procesos. In es
+  el archivo con la información de entrada y Out1 es el archivo de salida para p1 y Out2
+  el archivo de salida para p2. Ten en cuenta que In, Out1 y Out2 son parámetros, es decir,
+  puedes colocar cualquier nombre en ellos equivalente al nombre de los archivos.
+
+
+PROYECTO 2
+^^^^^^^^^^^^
+
+Se tiene un archivo de entrada que posee por línea 3 cadenas de caracteres
+separadas por espacios:  nombre ocupación edad. 
+Nombre y ocupación son cadenas de caracteres que representan texto mientras 
+que edad representa valores numéricos. Se tendrán máximo 100 líneas y 
+20 caracteres máximo por cadena.
+
+
+* Crea un programa llamado prog.c que lea el archivo de entrada, luego debe organizar la información
+  en una estructura de datos, luego debe IMPRIMA en pantalla el contenido de la estructura de datos.
+  OJO no del archivo, sino de la información cargada en la estructura de datos proveniente del archivo.
+  
+* Crea 2 hilos para procesar de diferente manera la información y finalmente imprima el contenido
+  de los archivos de salida que producirá cada hilo. Los hilos deben lanzarse para que se ejecuten
+  en paralelo, OJO, NO DE MANERA SECUENCIAL, SI EN PARALELO.
+
+* El Hilo 1 escribe en el archivo de salida1 los registros del archivo de entrada, pero en orden
+  inverso, es decir, primero el último y de último el primero.
+
+* El Hilo 2 escribe en el archivo de salida 2 los registros ordenados por ocupación en orden alfabético.
+
+* NO OLVIDES Hilo 1 e Hilo 2 deben lanzarse a la vez. Una vez Hilo 1 e Hilo 2 finalicen se debe mostrar
+  en pantalla el resultado de los archivos de salida.
+
+* El programa se ejecutará así: ./prog In Out1 Out2
+
+* prog es el nombre del ejecutable, In especifica el nombre del archivo de entrada
+  Out1 y Out2 especifican el nombre de los los archivos de salida 1 y 2 respectivamente. RECUERDA que
+  In, Out1 y Out2 son parámetros.
