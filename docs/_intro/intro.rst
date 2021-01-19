@@ -219,8 +219,8 @@ Control de versión
   solicita, por medio de tu cuenta de GitHub, el paquete de herramientas
   para estudiantes. Este proceso requiere aprobación, así que te recomiendo
   que lo hagas YA.
-* Ingresa a `este <https://www.youtube.com/c/Gitkraken/playlists>`__ canal
-  de youtube y observa la lista de reproducción Learn Git with GitKraken.
+* Ingresa a `este <https://www.gitkraken.com/learn/git/tutorials>`__ sitio
+  y realiza el curso corto sobre Git.
 * Finalmente, observa el siguiente `video <https://www.youtube.com/watch?v=lYAHmthUO1M>`__
   para que analices un posible flujo de trabajo típico con una herramienta de
   control de versión y de productividad (puedes emplear notion para la creación
