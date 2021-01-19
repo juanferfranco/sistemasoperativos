@@ -57,9 +57,9 @@ Estructura y metodología del curso
 El curso está divido en 4 unidades:
 
 #. Unidad 1: lenguaje C
-#. Unidad 3: procesos e hilos
-#. Unidad 4: comunicación y sincronización
-#. Unidad 5: entrada-salida
+#. Unidad 2: procesos e hilos
+#. Unidad 3: comunicación y sincronización
+#. Unidad 4: entrada-salida
 
 Cada unidad estará constituida por tres fases:
 
