@@ -193,6 +193,8 @@ En Notion vas a presentar la documentación de la fundamentación y
 del proyecto o proyectos de cada unidad. El formato de tu documentación es 
 libre, pero deberás incluir al menos lo siguiente:
 
+* Documentar el avance de cada ejercicio de la unidad. 
+
 * ¿De qué se trataba el proyecto? ¿Cuál era el problema a resolver?
 
 * Presenta tus resultados: muestra un video del proyecto funcionando.
