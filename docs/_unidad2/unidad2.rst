@@ -278,12 +278,6 @@ enlace encontrarás 4 ejercicios que te mostrarán cómo crear hilos en C, cómo
 un programa que tiene hilos, esperar a qué los hilos terminen, cómo lanzar varios hilos
 a la vez y esperar a que terminen.
 
-Ejercicio 11
-^^^^^^^^^^^^^^^
-asdkhjasdlkakdhjsad
-sasdlkjasdlkasj
-
-
 
 PROYECTO 1
 ^^^^^^^^^^^^
