@@ -2563,20 +2563,7 @@ Los pasos desde el programa hasta la generación del AST se conocen como FRONTEN
 Los pasos desde el generador de código, pasando por las representaciones
 intermedias y el código de máquina se conocen como BACKEND.
 
-Actualmente, motores de videojuegos como Unity trabajan intensamente para lograr
-optimizar todos los pasos anteriores. Para ello usan las ideas desarrolladas
-en el proyecto LLVM (low level virtual machine). Si quieres profundizar más
-en el asunto te recomiendo  `esta conferencia <https://youtu.be/LKpyaVrby04>`__. 
-Te dejo también la presentación de la misma `aquí <https://drive.google.com/file/d/1w6A02OlnDS1ILXB56l4DlZ_ntFUrlirX/view?usp=sharing>`__.
-Te he hablado un par de veces del nuevo stack de Unity llamado DOTs. Pues bien,
-una de las tecnologías en DOTs es el burst compiler. La idea de del burst
-compiler es permitir que un subconjunto de C# pueda producir ejecutables,
-con un desempeño incluso superior al que se podría lograr con C++. ¿Te suena
-interesante no? A mi también :)
-
-¿Quieres dar un vistazo rápido de las posibilidades que vienen con DOTS?
-Te recomiendo que hagas `este tutorial <https://youtu.be/C56bbgtPr_w>`__ 
-corto para que lo ves con tus propios ojos.
+Un última cosita:
 
 ¿Qué es el proyecto LLVM? Es una infraestructura de compilación compuesta
 por un conjunto de compiladores y herramientas que permiten desarrollar
