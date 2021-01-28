@@ -305,7 +305,7 @@ Ejercicio 13
 ^^^^^^^^^^^^^^^^
 
 Usando el código anterior ingresa:  juan fernado franco.
-¿Cuál es el resultado?
+¿Cuál es el resultado? ¿Por qué?
 
 Ejercicio 14
 ^^^^^^^^^^^^^^^^
