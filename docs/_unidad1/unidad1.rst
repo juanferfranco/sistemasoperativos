@@ -2183,7 +2183,7 @@ quedarán símbolos sin definir. Estos símbolos tendrán que definirse al momen
 de ejecutar el programa. En este caso, cuando se ejecute el programa, será necesario
 que el sistema operativo cargue de manera dinámica (dynamic linker) los símbolos
 pendientes que estarán en la biblioteca dinámica. El dynamic linker se encargará
-entonces de cargar a memoria la biblitoca y mapear esta a una región de memoria
+entonces de cargar a memoria la biblioteca y mapear esta a una región de memoria
 del proceso (recuerda, un proceso es la abstracción que usa el sistema operativo
 para poder correr y controlar la ejecución de un programa).
 
