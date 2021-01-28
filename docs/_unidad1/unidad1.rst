@@ -758,7 +758,7 @@ Con este ejercicio vamos a responder una pregunta
 El preprocesamiento es una característica muy propia de
 C que no es común a otros lenguajes de programación. Esta
 característica permite MODIFICAR el programa ANTES de pasárselo
-a compilador para que lo convierta en lenguaje ensamblador.
+al compilador para que lo convierta en lenguaje ensamblador.
 
 Lo que debes hacer para usar el preprocesador es introducir en
 el código DIRECTIVAS, es decir, instrucciones que le das al
