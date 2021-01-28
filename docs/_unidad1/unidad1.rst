@@ -242,7 +242,7 @@ este ejemplo (ingresa CRTL+C si algo sale mal):
         printf("You entered %d.\n", a);
     }
 
-¿Por qué funciona así el programa? Recuerda el ejercicio 1.
+¿Por qué funciona así el programa? Recuerda el ejercicio 6.
 
 Ejercicio 10: cadenas
 ^^^^^^^^^^^^^^^^^^^^^^
