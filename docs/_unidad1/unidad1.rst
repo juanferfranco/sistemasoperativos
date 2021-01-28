@@ -2403,8 +2403,8 @@ de recorrer el programa y se tendrá un control más granular de la ejecución.
 Recuerda que a este tipo de intérprete lo llamamos también virtual machine. Usualmente,
 estas virtual machines son de dos tipos: stack-based y register-based.
 
-¿Recuerdas el computador Hack? si consideramos la CPU implementada como un intérprete
-de las instrucciones Hack, podríamos decir que la CPU es una virtual machine register-based.
+Si consideramos a una CPU como un intérprete
+de las instrucciones de máquina, podríamos decir que la CPU es una virtual machine register-based.
 
 ¿Cómo serán las VM stack-based? Imagina el stack, como un pila de platos.
 Estas VM apilan (stack) los operandos y luego aplican las operaciones. Por tanto, 
