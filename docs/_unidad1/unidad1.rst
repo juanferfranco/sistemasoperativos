@@ -814,15 +814,15 @@ Mira este otro ejemplo:
 .. code-block:: c
    :linenos:
 
-	#define M 5
-	#define C 5
-	#define MAP(val,m,c) val*m+c
+        #define M 5
+        #define C 5
+        #define MAP(val,m,c) val*m+c
 
-    int main(int argc, char* argv[]) {
-        int x = 2;
-        int y = MAP(x,M,C);
-        return 0;
-    }
+        int main(int argc, char* argv[]) {
+            int x = 2;
+            int y = MAP(x,M,C);
+            return 0;
+        }
 
 ¿Qué crees que genere el preprocesador luego de procesar este
 archivo? 
