@@ -1145,10 +1145,7 @@ Vamos a utilizar otro compilador, clang. Compila así:
 
 ``clang -Xclang -ast-dump -fsyntax-only main.c``
 
-observa el resultado. Esa será el AST generado. ¿Por qué te hablo de clang en este ejercicio? porque
-cuando estés estudiando el nuevo framework de Unity conocido como ``DOTs`` te darás cuanta que ellos
-están utilizando clang como frontend. Estudiar en detalle estos asuntos desborda las posibilidades
-de este curso; sin embargo, al menos tendrás los conceptos básicos para no estar perdido.
+observa el resultado. Esa será el AST generado.
 
 Ejercicio 30
 ^^^^^^^^^^^^^
