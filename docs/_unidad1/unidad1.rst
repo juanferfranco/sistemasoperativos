@@ -868,7 +868,7 @@ Ejercicio 26
 Otro uso interesante del preprocesador es para las DIRECTIVAS
 de compilación condicional. 
 
-Esta directivas te permiten incluir un código u otro, dependiendo
+Estas directivas te permiten incluir un código u otro, dependiendo
 de una condición:
 
 .. code-block:: c
