@@ -848,18 +848,17 @@ Por último prueba el comando anterior con este programa:
 .. code-block:: c
    :linenos:
 
-	#include <stdio.h>
-    
-    #define M 5
-	#define C 5
-	#define MAP(val,m,c) x*m+c
+        #include <stdio.h>
+        #define M 5
+        #define C 5
+        #define MAP(val,m,c) x*m+c
 
-    int main(int argc, char* argv[]) {
-        int x = 2;
-        int y = MAP(x,M,C);
-        printf("y: %d", y);
-        return 0;
-    }
+        int main(int argc, char* argv[]) {
+            int x = 2;
+            int y = MAP(x,M,C);
+            printf("y: %d", y);
+            return 0;
+        }
 
 ¿Qué puedes concluir de la directiva ``#include`` 
 
