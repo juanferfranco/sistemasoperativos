@@ -1086,7 +1086,7 @@ Compilamos primero ``min.c``:
 
 Este resultado indica que no fue posible generar el ejecutable 
 (`` main.c:(.text+0x31): undefined reference to printf``). Pero ¿Por qué?
-la razón es que nos falta el archivo con el código de máquina de la función ``printf``.
+La razón es que nos falta el archivo con el código de máquina de la función ``printf``.
 Esta función está prototipada en el archivo de cabecera (``stdio.h``), pero el archivo
 no contiene el código fuente de ``printf``. ¿Y dónde está el código entonces? este
 código hace parte de la biblioteca `glibc <https://www.gnu.org/software/libc/>`__ 
