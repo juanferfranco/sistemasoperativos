@@ -1217,7 +1217,7 @@ Ejercicio 35
 ^^^^^^^^^^^^^^
 
 ¿Y cómo funciona un enlazador? ya sabes que un enlazador toma varios relocatable object files
-y los combina para generar un ejecutable. pero ¿Cómo los combina? para responder esta pregunta
+y los combina para generar un ejecutable. ¿Cómo los combina? Para responder esta pregunta
 debemos indagar al interior de un relocatable object file. Ya sabes que estos archivos tienen
 instrucciones de máquina, pero organizadas en secciones denominadas SÍMBOLOS. Para entender mejor
 hagamos un ejemplo. Escribo los siguientes códigos:
