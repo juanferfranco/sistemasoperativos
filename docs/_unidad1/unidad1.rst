@@ -1220,7 +1220,7 @@ Ejercicio 35
 y los combina para generar un ejecutable. ¿Cómo los combina? Para responder esta pregunta
 debemos indagar al interior de un relocatable object file. Ya sabes que estos archivos tienen
 instrucciones de máquina, pero organizadas en secciones denominadas SÍMBOLOS. Para entender mejor
-hagamos un ejemplo. Escribo los siguientes códigos:
+hagamos un ejemplo. Escribe los siguientes códigos:
 
 
 functions.c:
