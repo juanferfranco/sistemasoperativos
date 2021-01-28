@@ -1005,7 +1005,8 @@ archivos .h no se compilan, solo los archivos ``.c``.
 Compilamos primero ``min.c``:
 
 * Preprocesamiento:  ``gcc -E min.c``. Al ejecutar este comando nota como
-   el preprocesador incluye la información de min.h a min.c
+  el preprocesador incluye la información de min.h a min.c
+
 * Compilación: ejecuta el comando ``gcc -S min.c``. La opción ``-S`` le indica 
   al comando ``gcc`` que debe hacer el proceso anterior (preprocesador) y con la
   salida de este paso alimentar al compilador y detenerse en ese punto. El archivo
