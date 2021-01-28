@@ -1163,7 +1163,7 @@ Ejercicio 31
 ^^^^^^^^^^^^^^
 
 No te lo dije, pero cuando compilas un programa en C la única salida del programa no tiene que ser
-un ejecutable. Te cuento que tienes más posibilidades:
+un ejecutable. Te cuento qué otras posibilidades tienes:
 
 * Puedes generar un ejecutable, usualmente con extensión ``.out`` equivalente al ``.exe`` de Windows.
 * Puedes generar una biblioteca estática con extensión ``.a`` equivalente a los archivos ``.lib``
