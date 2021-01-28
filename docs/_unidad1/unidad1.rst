@@ -1338,8 +1338,8 @@ el código de máquina del programa. Lo puedes observar con el siguientes comand
         5f:	5d                   	pop    %rbp
         60:	c3                   	retq 
 
-Recuerdas cuando programaste en ensamblador el computador Hack? pues bueno
-aquí tienes código ensamblador y su equivalente código de máquina para
+Recuerdas cuando programaste en ensamblador? Mira de nuevo el código anterior.
+Ahí tienes código ensamblador y su equivalente código de máquina para
 el procesador de tu computador.
 
 Ahora vamos a realizar otro ejemplo donde verás cómo se combinan varios
