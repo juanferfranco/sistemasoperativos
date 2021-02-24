@@ -52,7 +52,6 @@ Ejercicio 3
 .. code-block:: c
    :linenos:
 
-
     #include <syscall.h>
     #include <unistd.h>
     #include <stdio.h>
@@ -62,8 +61,10 @@ Ejercicio 3
         long ID1, ID2;
         /*-----------------------------*/
         /* direct system call */
-        /* SYS
-************* ("syscall(SYS_getpid)=%ld\n", ID1);
+        /* SYS_getpid (func no. is 20) */
+        /*-----------------------------*/
+        ID1 = syscall(SYS_getpid);
+        printf ("syscall(SYS_getpid)=%ld\n", ID1);
 
         /*-----------------------------*/
         /* "libc" wrapped system call */
