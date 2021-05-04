@@ -3457,9 +3457,9 @@ El comando es ``x`` pero además puedas indicar la cantidad de bytes (16) y el f
     0x7fffffffdb92:	0x64	0x6f	0x72	0x65	0x73	0x00	0x00	0xcd
     (gdb)
 
-Puedes ver el interpretados en ASCII de los valores:
+Puedes ver el contenido interpretado en ASCII así:
 
-.. code-block:: c
+.. code-block:: bash
 
     (gdb) x/16c arr
     0x7fffffffdb8a:	67 'C'	111 'o'	110 'n'	116 't'	114 'r'	111 'o'	108 'l'	97 'a'
