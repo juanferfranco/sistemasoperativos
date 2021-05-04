@@ -3461,10 +3461,10 @@ Puedes ver el interpretados en ASCII de los valores:
 
 .. code-block:: c
 
-(gdb) x/16c arr
-0x7fffffffdb8a:	67 'C'	111 'o'	110 'n'	116 't'	114 'r'	111 'o'	108 'l'	97 'a'
-0x7fffffffdb92:	100 'd'	111 'o'	114 'r'	101 'e'	115 's'	0 '\000'	0 '\000'	-51 '\315'
-(gdb) 
+    (gdb) x/16c arr
+    0x7fffffffdb8a:	67 'C'	111 'o'	110 'n'	116 't'	114 'r'	111 'o'	108 'l'	97 'a'
+    0x7fffffffdb92:	100 'd'	111 'o'	114 'r'	101 'e'	115 's'	0 '\000'	0 '\000'	-51 '\315'
+    (gdb) 
 
 Cambia el contenido del stack:
 
