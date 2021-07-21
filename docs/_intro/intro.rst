@@ -11,14 +11,14 @@ Introducción al Curso
 * El conocimiento anterior nos dará los ¡SUPER PODERES! necesarios
   para construir mejor software y para identificar y corregir errores.
 
-.. note::
+.. note:: 
+
+    Brian Will
+    
     * You need to understand your code.
     * You need to understand your tools.
     * You need to understand your platform.
-    * When we give up on understanding what we are actually doing
-      when you write code, it just leads to bad software.
-
-      Brian Will.
+    * When we give up on understanding what we are actually doing when you write code, it just leads to bad software.
 
 Descripción del curso
 ----------------------
@@ -66,13 +66,13 @@ Cada unidad estará constituida por tres fases:
 #. Fase 1: fundamentación. En esta fase se estudiarán los conceptos teóricos más relevantes de
    cada unidad. Así mismo se complementarán con lecturas. En esta fase, el estudiante
    debe repasar los conceptos olvidados de los semestres anteriores.
-#. Fase 2: proyecto. En esta fase se realizarán uno o más proyecto.
+#. Fase 2: proyecto. En esta fase se realizará un proyecto para evidenciar los aprendizajes 
+   de la unidad.
 #. Fase 3: evaluación. En esta fase se discute el resultado de los proyectos de la unidad.
+
 
 Cronograma
 -----------
-
-Te sugiero completar cada unidad en los siguientes tiempos:
 
 * Unidad 1: semanas 1 a 6
 * Unidad 2: semanas 7 a 9
@@ -82,24 +82,12 @@ Te sugiero completar cada unidad en los siguientes tiempos:
 Evaluación
 -----------
 
-Cada unidad tiene un peso del 25% en la nota final. 
+* Evaluación unidad 1: 25%. Semana de agosto 23. Plazo máximo agosto 27 de 2021. 
+* Evaluación unidad 2: 25%. Semana de septiembre 13. Plazo máximo septiembre 17 de 2021.
+* Evaluación unidad 3: 25%. Semana de octubre 11. Plazo máximo octubre 15 de 2021.
+* Evaluación unidad 4: 25%. Semana de noviembre 1. Plazo máximo noviembre 6 de 2021. 
 
-La unidad solo se considera terminada cuando termines todos los ejercicios y
-los proyectos que están en ella al 100%. Por tanto, la nota de cada unidad, 
-una vez la termines, será 5.
-
-Puedes entregar cada unidad cuando quieras, pero considera lo siguiente:
-
-En la semana 9 se hará un primer corte del 50% y se reportarán al sistema
-las unidades terminadas. Ten presente que la evaluación se realiza
-mediante una entrevista con el profesor en la cual discutirán los resultados
-de tu trabajo y recibirás retroalimentación personalizada. Para la semana 9
-deberías tener terminadas las unidades 1 y 2. Si no alcanzas, cuando las termines
-se actualizará tu nota.
-
-En la semana 17 se reportarán al sistema todas las unidades terminadas. ES MUY
-IMPORTANTE que tengas en cuenta que una unidad se considera terminada SI y SOLO
-si la completaste al 100% y realizaste el proceso de evaluación con el docente.
+Luego del plazo máximo la nota de la evaluación será 0.
 
 Textos de referencia
 ---------------------
@@ -108,6 +96,8 @@ El curso no tiene un texto guía, porque encontrarás todo el material
 disponible en este sitio web; sin embargo, te recomiendo completar
 el material práctico que se presenta en el curso con la información de 
 un libro de texto.
+
+
 
 El texto recomendado es `este <http://pages.cs.wisc.edu/~remzi/OSTEP/>`__.
 
@@ -129,36 +119,16 @@ y 5 horas de trabajo autónomo.
 Actividades de cada unidad
 ----------------------------
 
-Actividad 1: encuentros sincrónicos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Sesión 1 de la semana: discusión de conceptos, ejercicios, dudas.
+* Sesión 2 de la semana: asesoría, discusión de ejercicios.
 
-* Fechas: grupo 1 martes y jueves a las 4 p.m.y el grupo 2
-  miércoles y viernes a las 8 a.m.
-* Descripción: asesorías en tiempo real y evaluación.
-* Recursos: ingresa a `Discord <https://discord.gg/vC5RaagNcE>`__
-* Duración de la actividad: sesiones de 1:40. 
-* Forma de trabajo: individual-colaborativo/sincrónico
-
-Actividad 2: fundamentación
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Descripción: realiza los ejercicios, retos y preguntas
-  propuestas.
-* Recursos: trayecto de actividades en cada unidad.
-* Duración de la actividad: depende de ti.
-* Forma de trabajo: individual-colaborativo
-
-Actividad 3: proyecto y sustentación
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Descripción: realiza el proyecto, usa las herramientas
-  de control de versión y productividad y actualiza
-  tu portafolio.
-* Duración de la actividad: depende de ti.
-* Forma de trabajo: individual.
 
 Evidencias de evaluación
 -------------------------
+
+En cada unidad verás el enunciado de un proyecto y las consideraciones para 
+entregarlo solucionado. Ten en cuenta SIEMPRE el siguiente código honor:
+
 
 Código de honor
 ^^^^^^^^^^^^^^^^
@@ -168,7 +138,7 @@ Para realizar el trabajo de cada unidad se espera que hagas lo siguiente:
 * Colabora con tus compañeros cuando así se indique.
 * Trabaja de manera individual cuando la actividad así te lo
   proponga.
-* No busques la solución a los ejercicios y proyectos porque DAÑARÍAS tu
+* No busques la solución a los proyectos porque DAÑARÍAS tu
   proceso de aprendizaje. Recuerda, se trata de seguir un camino
   y aprender en el recorrido.
 * ¿Entonces qué hacer si no me funciona algo? Te propongo que
@@ -176,55 +146,22 @@ Para realizar el trabajo de cada unidad se espera que hagas lo siguiente:
 * NO OLVIDES, este curso se trata de pensar y experimentar NO de
   BUSCAR soluciones en Internet.
 
-Detalle de las evidencias  
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bitácora  
+------------------------------
 
-Vamos a utilizar dos herramientas para la presentación de evidencias, tanto
-para los ejercicios de fundamentación como para los proyecto.
+Vamos a utilizar dos herramientas para documentes y organices tu trabajo:
 
 * GitHub
 * `Notion <https://www.notion.so>`__
 
-En GitHub mantendrás todo tu código bajo control de versión y
-debe reflejar un flujo de trabajo. Debes evidenciar el flujo
-de trabajo.
+En GitHub mantendrás todo tu código bajo control de versión.
 
-En Notion vas a presentar la documentación de la fundamentación y 
-del proyecto o proyectos de cada unidad. El formato de tu documentación es 
-libre, pero deberás incluir al menos lo siguiente:
-
-* Documentar el avance de cada ejercicio de la unidad. 
-
-* ¿De qué se trataba el proyecto? ¿Cuál era el problema a resolver?
-
-* Presenta tus resultados: muestra un video del proyecto funcionando.
-
-* Explica cómo resolviste el problema.
-
-* No olvides dejar un enlace a tu repositorio público en GitHub.
-
-* Tu repositorio público debe reflejar un PROCESO por tanto debes tener
-  commits muy frecuentes. Conserva la rama principal de tu repositorio
-  estable, es decir, cada que implementes características nuevas en tu
-  código crea una rama y luego realiza merges a la rama principal. No 
-  es necesario que borres las ramas que crees.
-
-¿Cómo inicio con Notion? Te dejo `aquí <https://www.youtube.com/watch?v=0iS_E9tN8nk>`__
-un enlace.
+En Notion llevarás tu bitácora electrónica.
 
 Control de versión
 --------------------
 
 * Crea una cuenta en GitHub con tu correo institucional de la UPB. Si
   tienes la cuenta, tanto mejor.
-* Explora `este <https://www.gitkraken.com/student-resources>`__ sitio y 
-  solicita, por medio de tu cuenta de GitHub, el paquete de herramientas
-  para estudiantes. Este proceso requiere aprobación, así que te recomiendo
-  que lo hagas YA.
-* Ingresa a `este <https://www.gitkraken.com/learn/git/tutorials>`__ sitio
-  y realiza el curso corto sobre Git.
-* Finalmente, observa el siguiente `video <https://www.youtube.com/watch?v=lYAHmthUO1M>`__
-  para que analices un posible flujo de trabajo típico con una herramienta de
-  control de versión y de productividad (puedes emplear notion para la creación
-  de tus boards de tareas)
-  
+* Explora los tutoriales de `este <https://www.gitkraken.com/learn/git/tutorials>`__.
+
