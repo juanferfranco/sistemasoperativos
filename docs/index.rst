@@ -9,7 +9,7 @@ Créditos y horas totales del curso: 3 créditos - 144 horas totales
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contenidos semanales:
+   :caption: Unidades:
 
    Introducción al curso <_intro/intro>
    Unidad 1: Lenguaje C <_unidad1/unidad1>
