@@ -1399,7 +1399,7 @@ Otra de las virtudes de ``strtol`` es que puedes saber si resultado de la conver
 al máximo como al mínimo. Puedes ver un poco más en la documentación de ``strtol`` escribiendo en la terminal 
 ``man strtol``.
 
-Se ve complicado usar ``strtol``, cierto? Tienes razón. Intentemos una ``recete`` en este punto, PERO lo importante 
+Se ve complicado usar ``strtol``, cierto? Tienes razón. Intentemos una ``receta`` en este punto, PERO lo importante 
 es que ya comprendes. 
 
 .. code-block::c 
