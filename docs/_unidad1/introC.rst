@@ -1402,7 +1402,7 @@ al máximo como al mínimo. Puedes ver un poco más en la documentación de ``st
 Se ve complicado usar ``strtol``, cierto? Tienes razón. Intentemos una ``receta`` en este punto, PERO lo importante 
 es que ya comprendes. 
 
-.. code-block::c 
+.. code-block:: c
 
     #include <stdlib.h>
     #include <stdio.h>
