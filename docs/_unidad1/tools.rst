@@ -514,7 +514,7 @@ Puedes ver que en la tabla de símbolos de main.o, suma y multiplicacion
 se marcan como GLOBAL y muestra que no están definidos (UND), es decir, no
 sabemos dónde está el código de ambas funciones.
 
-Ahora necesitamos pasar estos tres archivo ``.o`` al enlazador para
+Ahora necesitamos pasar estos tres archivos ``.o`` al enlazador para
 unirlos y generar el ejecutable:
 
 ``gcc -Wall file2.o file3.o main.o -o exe``
@@ -535,7 +535,7 @@ tendrá definidas las instrucciones necesarias para preparar el llamado a main.
 Observarás que nuestro ejecutable exe dependerá de una biblioteca dinámica
 llamada ``libc``. El enlazado con esta biblioteca lo hace por nosotros gcc
 y como ya te habrás dado cuenta esta biblioteca incluye el código de entrada
-que prepará el entorno del programa para poder llamar a la función main.
+que preparará el entorno del programa para poder llamar a la función main.
 
 Modifica el archivo main.c:
 
