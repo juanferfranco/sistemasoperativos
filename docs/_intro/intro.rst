@@ -82,10 +82,10 @@ Cronograma
 Evaluación
 -----------
 
-* Evaluación unidad 1: 25%. Semana de agosto 23. Plazo máximo agosto 27 de 2021. 
-* Evaluación unidad 2: 25%. Semana de septiembre 13. Plazo máximo septiembre 17 de 2021.
-* Evaluación unidad 3: 25%. Semana de octubre 11. Plazo máximo octubre 15 de 2021.
-* Evaluación unidad 4: 25%. Semana de noviembre 1. Plazo máximo noviembre 6 de 2021. 
+* Evaluación unidad 1: 25%. Semana de agosto 23. Plazo máximo agosto 29 de 2021. 
+* Evaluación unidad 2: 25%. Semana de septiembre 13. Plazo máximo septiembre 19 de 2021.
+* Evaluación unidad 3: 25%. Semana de octubre 11. Plazo máximo octubre 17 de 2021.
+* Evaluación unidad 4: 25%. Semana de noviembre 1. Plazo máximo noviembre 7 de 2021. 
 
 Luego del plazo máximo la nota de la evaluación será 0.
 
