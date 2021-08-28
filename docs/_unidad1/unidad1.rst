@@ -241,7 +241,7 @@ Implementa las siguientes características:
 Entregables
 ##############
 
-Sube a `este <https://upbeduco-my.sharepoint.com/:f:/g/personal/juanf_franco_upb_edu_co/EjAnDzLprxVOjOqfZ5W2290BO02bbvjsA07KUerGVCVNWg>`__ 
+Sube a `este <https://www.dropbox.com/request/00FNXAYWLqVG5dkCQoRr>`__ 
 enlace un archivo pdf nombrado con los nueve dígitos que componen tu ID. 
 Por ejemplo: 000008716.pdf. El archivo debe tener lo siguiente:
 
