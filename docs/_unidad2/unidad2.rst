@@ -17,8 +17,8 @@ Comprender el concepto de proceso, programa, hilo y su diferencia.
 Lecturas y ejercicios
 ------------------------
 
-Sesión 1
-***********
+Sesión 1: concepto de proceso
+********************************
 
 Ejercicio 1: concepto de proceso
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,8 +81,8 @@ puedes crear procesos:
         exit(EXIT_SUCCESS);
     }
 
-Trabajo autónomo 1
-*******************
+Trabajo autónomo 1: crear procesos
+***********************************
 
 Realiza los siguientes ejercicios para la próxima sesión:
 
@@ -127,8 +127,8 @@ el llamado al sistema `WAIT <https://man7.org/linux/man-pages/man2/wait.2.html>`
 
 (Tiempo estimado 1 hora 25 minutos)
 
-Sesión 2
-**********
+Sesión 2: imagen de un proceso
+*********************************
 
 Ejercicio 6: imagen de un proceso
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -204,8 +204,8 @@ Ejercicio 8: analiza el ejercicio anterior
   un proceso y un programa? En el ejercicio ¿Cuál es el programa? ¿Cuál es el proceso?
   ¿Cuáles son las imágenes que el proceso ejecutó?
 
-Trabajo autónomo 2
-**********************
+Trabajo autónomo 2: familia exec
+************************************
 
 Ejercicio 9: reto procesos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -230,167 +230,259 @@ el máximo entero.
 
 (Tiempo estimado: 2 horas 50 minutos)
 
+Sesión 3: concepto de hilo
+****************************
 
-..
-  Ejercicio X
-  ^^^^^^^^^^^^^
+Ejercicio 10 
+^^^^^^^^^^^^^
 
-  En este `otro enlace <https://drive.google.com/file/d/1t_MhYGFmN7ti6U4TYNcpgigJESFgb7_H/view>`_
-  puedes leer una explicación detallada de los pasos que ocurren al hacer un llamado al sistema.
+Ahora vamos a familiarizarnos con el concepto de hilo. Ingresa 
+a `este <http://www.albahari.com/threading/>`__ sitio y lee detalladamente
+su contenido hasta la sección Creating and Starting Threads (sin incluirla,
+claro, a menos que quieras).
 
-  Explica en tus propias palabras cómo funciona un llamado al sistema. 
+* ¿Qué es un hilo?
+* ¿Cuál es la diferencia entre un método y un hilo?
+* ¿La ejecución de los hilos es determinística?
+* ¿Cuál es la diferencia entre un método estático y un
+  método no estático?
+* ¿Cuál es la diferencia entre un hilo y un método estático?
+* ¿Para qué sirve un lock?
 
-  Ejercicio X
-  ^^^^^^^^^^^^^
+Ejercicio 11
+^^^^^^^^^^^^^^
 
-  * Escribe en la terminal el comando man syscall y lee la descripción.
-  * El siguiente código muestra dos formas de llamar servicios del sistema,
-    directamente con la función syscall o por medio de una biblioteca, en este
-    caso libc. Considera que el uso de la biblioteca es la forma como usualmente
-    llamaremos servicios del sistema operativo.
+Ahora si, vamos a crear un hilo en Linux:
 
-  .. code-block:: c
-    :linenos:
+.. code-block:: c
 
-      #include <syscall.h>
-      #include <unistd.h>
-      #include <stdio.h>
-      #include <sys/types.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <pthread.h>
 
-      int main(void) {
-          long ID1, ID2;
-          /*-----------------------------*/
-          /* direct system call */
-          /* SYS_getpid (func no. is 20) */
-          /*-----------------------------*/
-          ID1 = syscall(SYS_getpid);
-          printf ("syscall(SYS_getpid)=%ld\n", ID1);
-
-          /*-----------------------------*/
-          /* "libc" wrapped system call */
-          /* SYS_getpid (Func No. is 20) */
-          /*-----------------------------*/
-          ID2 = getpid();
-          printf ("getpid()=%ld\n", ID2);
-          return(0);
-      }
+    void* imprime_x(void *param){
+        while(1) printf("x");
+        return NULL;
+    }
 
 
-  Ejercicio X
-  ^^^^^^^^^^^^
-  En `este <https://drive.google.com/file/d/1Z5mewc5DJ6hQqpYUL7nkp4k8WNA9i1JQ/view>`__
-  pdf se pueden observar algunos llamados al sistema operativo. Analiza de nuevo
-  el siguiente ejemplo, PERO usando eclipse y depurando el programa de tal manera
-  que puedas controlar la ejecución de ambos procesos.
+    int main(int argc, char *argv[]){
+        pthread_t threadID;
+        pthread_create(&threadID,NULL,&imprime_x,NULL);
+        while(1) printf("o");
+        exit(EXIT_SUCCESS);
+    }
 
-  Ejercicio X: repaso
-  ^^^^^^^^^^^^^^^^^^^^
+Compila el código así:
 
-  Lectura de argumentos de la línea de comandos. Analiza el siguiente programa:
+.. code-block:: bash
 
-  .. code-block:: c
-    :linenos:
+    gcc -Wall main.c -o main -lpthread
 
-      #include <stdio.h>
-      #include <stdlib.h>
+Ejecuta el código como siempre, pero esta vez para terminar el programa debes enviar 
+la señal ``CRTL+C`` a la terminal.
 
-      int main(int argc, char *argv[]) {
-          printf("argc =  %d\n",argc);
-          for(int i = 0; i< argc; i++){
-              printf("argv[%d] = %s\n", i,argv[i]);
-          }
-          exit(EXIT_SUCCESS); // exit(EXIT_FAILURE) en caso de error
-      }
+Ejecuta en la terminal: 
 
-  * Compila y ejecuta el programa
-  * Ejecuta el programa así: ./nombre_que_le _puso_usted hola mundo cruel
-  * ¿Para qué sirve argc?
-  * ¿Qué es argv?
+.. code-block:: bash
 
+  man pthread_create
 
-  Ejercicio 10 
-  ^^^^^^^^^^^^
+* ¿Cuáles son los argumentos y para qué sirven?
 
-  Ahora vamos a familiarizarnos con el concepto de hilo. Ingresa 
-  a `este <http://www.albahari.com/threading/>`__ sitio y lee detalladamente
-  su contenido hasta la sección Creating and Starting Threads (sin incluirla,
-  claro, a menos que quieras).
+Ejercicio 12
+^^^^^^^^^^^^^^
 
-  * ¿Qué es un hilo?
-  * ¿Cuál es la diferencia entre un método y un hilo?
-  * ¿La ejecución de los hilos es determinística?
-  * ¿Cuál es la diferencia entre un método estático y un
-    método no estático?
-  * ¿Cuál es la diferencia entre un hilo y un método estático?
-  * ¿Para qué sirve un lock?
+* Modifica el ejercicio anterior de tal manera que cada hilo ejecute 1000 veces la impresión 
+  en pantalla.
+* Observa la ejecución y repite varias. ¿Notas algún cambio? ¿Podrías intentar explicar qué 
+  está pasando?
 
-  Ejercicio 10
-  ^^^^^^^^^^^^^^^
+Ejercicio 13
+^^^^^^^^^^^^^^
 
-  En `este <https://drive.google.com/open?id=1I5G4rRNEzmAuOgpEtgDra8TPUTpIPHTXCTwzHF93wHE>`__
-  enlace encontrarás 4 ejercicios que te mostrarán cómo crear hilos en C, cómo compilar
-  un programa que tiene hilos, esperar a qué los hilos terminen, cómo lanzar varios hilos
-  a la vez y esperar a que terminen.
+Ahora vas a escribir este código, compilarlo y ejecutarlo:
+
+.. code-block:: c
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+
+    struct threadParam_t
+    {
+        char character;
+        int counter;
+    };
 
 
-  PROYECTO 1
-  ^^^^^^^^^^^^
-
-  Se tiene un archivo de entrada que tiene en cada línea dos cadenas de texto
-  separadas por un espacio. A la primera cadena la llamaremos clave y a la segunda
-  valor. Clave es una cadena de caracteres y valor es un número entero. 
-  El archivo tendrá máximo 100 líneas, clave será máximo de 20 caracteres y valor
-  será menor a 1000 y mayor a -1000.
-
-  * Crea un programa llamado p1.c que lea el archivo de entrada y genere un archivo
-    de salida con las parejas ordenadas por VALOR de mayor a menor. Una pareja por línea.
-
-  * Crea un programa llamado p2.c que lea el archivo de entrada y escriba en un archivo de 
-    salida cada pareja comenzando por la última y terminando por la primera, es decir,
-    en orden contrario al que aparecen en el archivo de entrada.
-
-  * Crea un programa llamado p3.c que cree dos procesos para ejecutar los programas anteriores.
-    Los procesos deben lanzarse para que se ejecuten en paralelo. Una vez los dos procesos
-    sean lanzados, p3 debe esperar a que terminen. Debe leer los archivos de salida generados
-    por p1 y p2 e imprimir en pantalla los resultados.
-
-  * TEN EN CUENTA QUE al final, en la terminal, solo lanzarás un proceso, el que corre a p3. p3
-    se encarga del resto. Lanza el proceso así: ./p3 In Out1 Out2
-
-  * p3 es el nombre del ejecutable principal, el proceso que crea los otros procesos. In es
-    el archivo con la información de entrada y Out1 es el archivo de salida para p1 y Out2
-    el archivo de salida para p2. Ten en cuenta que In, Out1 y Out2 son parámetros, es decir,
-    puedes colocar cualquier nombre en ellos equivalente al nombre de los archivos.
+    void* imprime(void *parg){
+        struct threadParam_t *pargTmp = (struct threadParam_t *)parg;
+        for(int i = 0; i < pargTmp->counter;i++){
+            printf("%c",pargTmp->character);
+        }
+        return NULL;
+    }
 
 
-  PROYECTO 2
-  ^^^^^^^^^^^^
+    int main(int argc, char *argv[]){
+        pthread_t threadID1;
+        pthread_t threadID2;
 
-  Se tiene un archivo de entrada que posee por línea 3 cadenas de caracteres
-  separadas por espacios:  nombre ocupación edad. 
-  Nombre y ocupación son cadenas de caracteres que representan texto mientras 
-  que edad representa valores numéricos. Se tendrán máximo 100 líneas y 
-  20 caracteres máximo por cadena.
+        struct threadParam_t threadParam1 = {'a',30000};
+        struct threadParam_t threadParam2 = {'b',20000};
+
+        pthread_create(&threadID1,NULL,&imprime, &threadParam1);
+        pthread_create(&threadID2,NULL,&imprime, &threadParam2);
+
+        exit(EXIT_SUCCESS);
+    }
+
+* ¿Qué pasó al ejecutarlo? 
+* Notaste que el programa no hace nada, te animas a proponer un hipótesis 
+  al respecto de lo que puede estar ocurriendo?
+
+Ejercicio 14
+^^^^^^^^^^^^^^
+
+El problema con el código anterior es que el proceso está terminando antes 
+que los hilos puedan comenzar incluso a funcionar. Por tanto, será necesario 
+que el hilo principal espere a que los dos hilos creados terminen antes de 
+que el terminar. 
+
+.. code-block:: c
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+
+    struct threadParam_t
+    {
+        char character;
+        int counter;
+    };
 
 
-  * Crea un programa llamado prog.c que lea el archivo de entrada, luego debe organizar la información
-    en una estructura de datos, luego debe IMPRIMA en pantalla el contenido de la estructura de datos.
-    OJO no del archivo, sino de la información cargada en la estructura de datos proveniente del archivo.
-    
-  * Crea 2 hilos para procesar de diferente manera la información y finalmente imprima el contenido
-    de los archivos de salida que producirá cada hilo. Los hilos deben lanzarse para que se ejecuten
-    en paralelo, OJO, NO DE MANERA SECUENCIAL, SI EN PARALELO.
+    void* imprime(void *parg){
+        struct threadParam_t *pargTmp = (struct threadParam_t *)parg;
+        for(int i = 0; i < pargTmp->counter;i++){
+            printf("%c",pargTmp->character);
+        }
+        return NULL;
+    }
 
-  * El Hilo 1 escribe en el archivo de salida1 los registros del archivo de entrada, pero en orden
-    inverso, es decir, primero el último y de último el primero.
 
-  * El Hilo 2 escribe en el archivo de salida 2 los registros ordenados por ocupación en orden alfabético.
+    int main(int argc, char *argv[]){
+        pthread_t threadID1;
+        pthread_t threadID2;
 
-  * NO OLVIDES Hilo 1 e Hilo 2 deben lanzarse a la vez. Una vez Hilo 1 e Hilo 2 finalicen se debe mostrar
-    en pantalla el resultado de los archivos de salida.
+        struct threadParam_t threadParam1 = {'a',30000};
+        struct threadParam_t threadParam2 = {'b',20000};
 
-  * El programa se ejecutará así: ./prog In Out1 Out2
+        pthread_create(&threadID1,NULL,&imprime, &threadParam1);
+        pthread_create(&threadID2,NULL,&imprime, &threadParam2);
 
-  * prog es el nombre del ejecutable, In especifica el nombre del archivo de entrada
-    Out1 y Out2 especifican el nombre de los los archivos de salida 1 y 2 respectivamente. RECUERDA que
-    In, Out1 y Out2 son parámetros.
+        pthread_join(threadID1,NULL);
+        pthread_join(threadID2,NULL);
+
+        exit(EXIT_SUCCESS);
+    }
+
+* ¿Qué debes hacer para esperara a que un hilo en particular termine?
+* Considera los siguientes fragmentos de código y piensa cuál puede ser la 
+  diferencia entre ambos:
+
+.. code-block:: c
+
+    pthread_create(&threadID1,NULL,&imprime, &threadParam1);
+    pthread_join(threadID1,NULL);
+    pthread_create(&threadID2,NULL,&imprime, &threadParam2);
+    pthread_join(threadID2,NULL);
+
+
+.. code-block:: c
+
+    pthread_create(&threadID1,NULL,&imprime, &threadParam1);
+    pthread_create(&threadID2,NULL,&imprime, &threadParam2);
+    pthread_join(threadID1,NULL);
+    pthread_join(threadID2,NULL);
+
+Trabajo autónomo 3: hilos
+************************************
+
+Ejercicio 15: condiciones de carrera
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Escribe y ejecuta el siguiente código:
+
+.. code-block:: c
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+
+    int x = 0;
+
+    void* function(void *parg){
+        for(int i = 0; i< 100; i++)x++;
+        return NULL;
+    }
+
+
+    int main(int argc, char *argv[]){
+        pthread_t threadsID[4];
+
+        for(int i = 0; i < 4; i++){
+            pthread_create(&threadsID[i],NULL,&function, NULL);
+        }
+
+        for(int i = 0; i < 4; i++){
+            pthread_join(threadsID[i],NULL);
+        }
+
+        printf("x value: %d\n",x);
+
+        exit(EXIT_SUCCESS);
+    }
+
+* ¿El resultado era el esperado?
+* Aumenta el número de iteraciones a 1000, luego a 10000, luego a 100000. ¿Qué pasa 
+  cuando ejecutas el código varias veces?
+* Te animas a explicar qué está ocurriendo? (no te preocupes, si no te lo imaginas está 
+  bien porque ese será una de los temas de la próxima unidad).
+* ¿Qué propones para solucionar el problema anterior?
+
+(Tiempo estimado: 20 minutos)
+
+Ejercicio 16: RETO
+^^^^^^^^^^^^^^^^^^^^
+
+Se tiene un archivo de entrada que posee por línea 3 cadenas de caracteres
+separadas por espacios así:  nombre ocupación edad. 
+Nombre y ocupación son cadenas de caracteres que representan texto mientras 
+que edad representa valores numéricos. Se tendrán máximo 100 líneas y 
+20 caracteres máximo por cadena.
+
+* Crea un programa llamado prog.c que lea el archivo de entrada, luego debe organizar la información
+  en una estructura de datos, luego debe IMPRIMIR en pantalla el contenido de la estructura de datos.
+  OJO no del archivo, sino de la información cargada en la estructura de datos proveniente del archivo.
+  
+* Crea 2 hilos para procesar de diferente manera la información. Los hilos deben lanzarse para que se ejecuten
+  en paralelo, OJO, NO DE MANERA SECUENCIAL, SI EN PARALELO.
+
+* El Hilo 1 escribe en el archivo de salida1 los registros del archivo de entrada, pero en orden
+  inverso, es decir, primero el último y de último el primero.
+
+* El Hilo 2 escribe en el archivo de salida 2 los registros ordenados por ocupación en orden alfabético.
+
+* NO OLVIDES Hilo 1 e Hilo 2 deben lanzarse a la vez. Una vez Hilo 1 e Hilo 2 finalicen, el hilo 
+  principal debe abrir los archivos de salida e imprimir el resultado, primero del Hilo 1 y luego del 
+  Hilo 2
+
+* El programa se ejecutará así: ./prog In Out1 Out2
+
+* prog es el nombre del ejecutable, In especifica el nombre del archivo de entrada
+  Out1 y Out2 especifican el nombre de los los archivos de salida 1 y 2 respectivamente. RECUERDA que
+  In, Out1 y Out2 son parámetros.
+
+(Tiempo estimado: 2 horas 30 minutos)
