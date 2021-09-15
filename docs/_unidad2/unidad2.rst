@@ -236,18 +236,7 @@ Sesión 3: concepto de hilo
 Ejercicio 10 
 ^^^^^^^^^^^^^
 
-Ahora vamos a familiarizarnos con el concepto de hilo. Ingresa 
-a `este <http://www.albahari.com/threading/>`__ sitio y lee detalladamente
-su contenido hasta la sección Creating and Starting Threads (sin incluirla,
-claro, a menos que quieras).
-
-* ¿Qué es un hilo?
-* ¿Cuál es la diferencia entre un método y un hilo?
-* ¿La ejecución de los hilos es determinística?
-* ¿Cuál es la diferencia entre un método estático y un
-  método no estático?
-* ¿Cuál es la diferencia entre un hilo y un método estático?
-* ¿Para qué sirve un lock?
+Vamos al tablero para introducir el concepto general de hilo.
 
 Ejercicio 11
 ^^^^^^^^^^^^^^
@@ -410,8 +399,10 @@ que el terminar.
 Trabajo autónomo 3: hilos
 ************************************
 
+
 Ejercicio 15: condiciones de carrera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(Tiempo estimado: 20 minutos)
 
 Escribe y ejecuta el siguiente código:
 
@@ -452,10 +443,11 @@ Escribe y ejecuta el siguiente código:
   bien porque ese será una de los temas de la próxima unidad).
 * ¿Qué propones para solucionar el problema anterior?
 
-(Tiempo estimado: 20 minutos)
+
 
 Ejercicio 16: RETO
 ^^^^^^^^^^^^^^^^^^^^
+(Tiempo estimado: 2 horas 30 minutos)
 
 Se tiene un archivo de entrada que posee por línea 3 cadenas de caracteres
 separadas por espacios así:  nombre ocupación edad. 
@@ -485,4 +477,131 @@ que edad representa valores numéricos. Se tendrán máximo 100 líneas y
   Out1 y Out2 especifican el nombre de los los archivos de salida 1 y 2 respectivamente. RECUERDA que
   In, Out1 y Out2 son parámetros.
 
-(Tiempo estimado: 2 horas 30 minutos)
+
+
+
+Sesión 4: concepto de hilo en C# y temas relacionados
+********************************************************
+
+En esta sesión vamos a revisar el concepto de hilo en otro lenguaje de 
+programación popular: C#. Adicionalmente vamos refinar un poco más 
+algunos conceptos asociados.
+
+Ejercicio 17
+^^^^^^^^^^^^^^
+
+Vamos a calentar motores analizando previamente este código entre todos:
+
+.. code-block:: csharp
+
+    using System;
+
+    namespace typeValueVsReference
+    {
+        internal struct VectorValue
+        {
+            public int X { get; set; }
+            public int Y { get; set; }
+
+            public VectorValue(int x, int y)
+            {
+                X = x;
+                Y = y;
+            }
+            
+            public void Print()
+            {
+                Console.WriteLine($"VectorValue: {X},{Y}");
+            }
+        }
+
+        internal class VectorReference
+        {
+            public int X { get; set; }
+            public int Y { get; set; }
+
+            public VectorReference(int x, int y)
+            {
+                X = x;
+                Y = y;
+            }
+
+            public void Print()
+            {
+                Console.WriteLine($"VectorReference: {this.X},{this.Y}");
+            }
+        }
+
+
+        internal static class Program
+        {
+            private static void Main(string[] args)
+            {
+                var vectorValue = new VectorValue(1, 2);
+                var vectorReference = new VectorReference(3, 4);
+                
+                Console.WriteLine("Vectors before:");
+                vectorValue.Print();
+                vectorReference.Print();
+                
+                ChangeVector(vectorValue);
+                ChangeVector(vectorReference);
+                
+                Console.WriteLine("Vectors after: ");
+                vectorValue.Print();
+                vectorReference.Print();
+            }
+
+            private static void ChangeVector(VectorValue vector)
+            {
+                vector.X = vector.X * 10;
+                vector.Y = vector.Y * 10;
+            }
+
+            private static void ChangeVector(VectorReference vector)
+            {
+                vector.X = vector.X * 10;
+                vector.Y = vector.Y * 10;
+            }
+        }
+    }
+
+Ejercicio 18
+^^^^^^^^^^^^^
+
+Ahora vamos a familiarizarnos con el concepto de hilo en C#. Ingresa 
+a `este <http://www.albahari.com/threading/>`__ sitio y lee detalladamente
+su contenido hasta la sección Creating and Starting Threads (sin incluirla,
+claro, a menos que quieras).
+
+* ¿Qué es un hilo?
+* ¿Cuál es la diferencia entre un método y un hilo?
+* ¿La ejecución de los hilos es determinística?
+* ¿Cuál es la diferencia entre un método estático y un
+  método no estático?
+* ¿Cuál es la diferencia entre un hilo y un método estático?
+* ¿Para qué sirve un lock?
+
+Trabajo autónomo 4: REPASO
+****************************
+(Tiempo estimado: 2 horas 50 minutos)
+
+En este bloque de trabajo autónomo te voy a pedir que le des una 
+nueva iteración a esta unidad, mira de nuevo cada ejercicio y las 
+notas que tomaste y revisa de nuevo la solución a ejercicios y RETOS.
+
+
+Evaluación de la Unidad
+***************************************
+(Tiempo total estimado: 9 horas).
+
+Para elaborar la evaluación de la unidad haremos lo siguiente:
+
+* Las dos sesiones sincrónicas serán destinadas para resolver dudas 
+  individuales. Puedes conectarte a la reunión o aprovechar para 
+  realizar la evaluación si no tienes dudas y por tanto no tienes que 
+  conectarte.
+* Recuerda que cuentas con las 9 horas para realizar la evaluación; 
+  sin embargo, la evaluación estará diseñada para que puedas elaborarla 
+  en mucho menos tiempo ¿Que tanto? Depende de ti y del compromiso asumido 
+  con la elaboración del material de la unidad.

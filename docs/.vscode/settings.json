@@ -3,10 +3,11 @@
     "restructuredtext.confPath": "${workspaceFolder}",
     "cSpell.language": "en,es",
     "cSpell.words": [
-        "Entregables",
         "deseralización",
         "deserializar",
+        "determinística",
         "encriptado",
+        "Entregables",
         "evaluativo",
         "grupalmente",
         "inicializadas",
