@@ -600,14 +600,14 @@ Enunciado
 Te voy a proponer una serie de problemas para que evidencies 
 en su solución lo que aprendiste en esta unidad.
 
-Para darle variedad a las formas de evaluar de voy a proponer que 
+Para darle variedad a las formas de evaluar te voy a proponer que 
 ``armes un equipo de trabajo de 2 o 3 persona incluyéndote``. La idea es 
 que entre todos construyan la solución a cada uno de los problemas.
 
 Problema 1: analisis y relación 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Lo que has aprendido en este curso está relacionado con otras áreas 
-del conocimiento de tu carrera. En este problema te voy que analices 
+del conocimiento de tu carrera. En este problema te voy a pedir que analices 
 y luego relaciones. 
 
 Considera el siguiente programa:
