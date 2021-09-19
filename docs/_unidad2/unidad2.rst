@@ -742,7 +742,7 @@ Criterios de evaluación
 ****************************
 
 Cada problema se evalua completo, es decir, no se reciben problemas 
-con solución incompleta. Un problema se soluciona completa si tiene TODO lo 
+con solución incompleta. Un problema se soluciona completamente si tiene TODO lo 
 solicitado incluyendo el video con la demostración y la explicación de su solución.
 
 * Calidad y duración máxima del video y repositorio en Github: 0.5
