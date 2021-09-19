@@ -745,7 +745,7 @@ Cada problema se evalua completo, es decir, no se reciben problemas
 con solución incompleta. Un problema se soluciona completa si tiene TODO lo 
 solicitado incluyendo el video con la demostración y la explicación de su solución.
 
-* Calidad y duración máxima del video: 0.5
+* Calidad y duración máxima del video y repositorio en Github: 0.5
 * Problema 1: 1 unidad.
 * Problema 2: 1.75 unidades.
 * Problema 3: 1.75 unidades.
