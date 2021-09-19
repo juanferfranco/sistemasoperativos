@@ -492,7 +492,7 @@ Ejercicio 17
 
 Vamos a calentar motores analizando previamente este código entre todos:
 
-.. code-block:: csharp
+.. code-block:: c
 
     using System;
 
@@ -592,16 +592,159 @@ notas que tomaste y revisa de nuevo la solución a ejercicios y RETOS.
 
 
 Evaluación de la Unidad
-***************************************
+---------------------------
 (Tiempo total estimado: 9 horas).
 
-Para elaborar la evaluación de la unidad haremos lo siguiente:
+Enunciado
+*************
+Te voy a proponer una serie de problemas para que evidencies 
+en su solución lo que aprendiste en esta unidad.
 
-* Las dos sesiones sincrónicas serán destinadas para resolver dudas 
-  individuales. Puedes conectarte a la reunión o aprovechar para 
-  realizar la evaluación si no tienes dudas y por tanto no tienes que 
-  conectarte.
-* Recuerda que cuentas con las 9 horas para realizar la evaluación; 
-  sin embargo, la evaluación estará diseñada para que puedas elaborarla 
-  en mucho menos tiempo ¿Que tanto? Depende de ti y del compromiso asumido 
-  con la elaboración del material de la unidad.
+Para darle variedad a las formas de evaluar de voy a proponer que 
+``armes un equipo de trabajo de 2 o 3 persona incluyéndote``. La idea es 
+que entre todos construyan la solución a cada uno de los problemas.
+
+Problema 1: analisis y relación 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lo que has aprendido en este curso está relacionado con otras áreas 
+del conocimiento de tu carrera. En este problema te voy que analices 
+y luego relaciones. 
+
+Considera el siguiente programa:
+
+.. code-block:: c 
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
+
+    typedef struct IntArray{
+        int *parr;
+        int length;
+    }IntArray;
+
+
+    IntArray *createIntArray(int size);
+    void initIntArray(IntArray *);
+    void destroyIntArray(IntArray *);
+    void printArray(IntArray *);
+
+    int main(){
+        IntArray * pIntArray = createIntArray(100);
+        initIntArray(pIntArray);
+        printArray(pIntArray);
+        destroyIntArray(pIntArray);
+    }
+
+    IntArray *createIntArray(int size){
+            IntArray *pIntArray = malloc(sizeof(IntArray));
+            pIntArray->parr =   malloc( sizeof(int) * size);      
+            pIntArray->length = size;
+            return pIntArray;
+    }
+
+    void initIntArray(IntArray *this){
+        for(int i = 0; i < 100; i++){
+            this->parr[i] = i;
+        }
+    }
+
+    void printArray(IntArray *this){
+        for(int i = 0; i < this->length; i++){
+            printf("parr[%d]: %d\n", i, this->parr[i]);
+        }
+    }
+
+    void destroyIntArray(IntArray *this){
+        free(this->parr);
+        free(this);
+    }
+
+* Explica cómo funciona el programa.
+* Explica en que parte del MAPA DE MEMORIA del proceso se 
+  almacena CADA variable usada.
+* Construye una programa similar a este usando Java o C#. 
+* Explica en qué parte de la memoria se almacena cada 
+  variable de tu programa.
+* Compara ambos programas e indica qué conceptos del programa 
+  propuesto se ven reflejados en tu programa.
+
+Problema 2: procesos
+^^^^^^^^^^^^^^^^^^^^^
+Piensa con tus compañeros y construye una aplicación con las siguientes 
+consideraciones:
+
+* La aplicación DEBE recibir argumentos por la línea de comandos usando 
+  los argumentos de ``main argc y argv``.
+* El proceso inicial debe crear un segundo proceso.
+* El proceso inicial debe comunicar al segundo proceso los argumentos 
+  pasados por línea de comandos.
+* El primer proceso debe cambiar su imagen inicial.
+* Una vez cambie la imagen inicial debe esperar a que el segundo 
+  proceso termine.
+* El primer proceso debe mostrar el resultado del procesamiento realizado 
+  por el segundo.
+
+Problema 3: hilos
+^^^^^^^^^^^^^^^^^^
+
+Resuelve el siguiente problema usando ``HILOS``:
+
+* Construye o consigue un archivo de texto que tenga al menos 100 líneas y con 
+  frases completas.
+* Realiza un programa al cual le pasarás por medio de los argumentos de main 
+  el nombre del archivo anterior.
+* Cada segundo el programa debe imprimir en la terminal una línea del archivo y 
+  su versión procesada: EL PROGRAMA debe correr fluido a 1 frame por segundo, 
+  la impresión no se debe bloquear. Usada el llamado al sistema ``sleep``.
+* Tu programa debe ser capaz de recibir comandos mientras procesa cada línea.
+* Todas las líneas serán procesadas con el último comando recibido.
+* Los comandos a recibir son
+
+  * "upper": todas las letras en mayúscula.
+  * "words": contar palabras.
+  * "vowels": contar cuántas vocales aparecen en la línea.
+  * "none": no procesa la línea
+
+* Para este programa debes apagar el ECHO de caracteres al escribir en terminal.
+  Usa como referencia `este código <https://man7.org/tlpi/code/online/book/tty/no_echo.c.html>`__ 
+  (PERO úsalo con sabiduría, es decir, toma solo lo que necesites). 
+
+¿Qué debes entregar?
+***************************
+
+* Subir a `este <https://www.dropbox.com/request/K1mHBImEESXF9Fq6ceo5>`__ 
+  enlace un ``.pdf`` con:
+
+  #. Los nombres y IDs.
+  #. Enlace al repositorio GitHub con la solución a los problemas 
+  #. La URL del video en youtube.
+  #. Reportar si algún compañero del equipo no trabajó. 
+
+* El video DEBE TENER una duración ``MÁXIMA`` de 15 minutos.
+* El video debe tener los siguientes capítulos en este mismo orden:
+
+  * Integrantes y las tareas que realizó cada uno.
+  * Demostrar la solución del problema.
+  * Explica primero cómo solucionaste el problema.
+  * Explica cómo implementaste la solución en el código. 
+
+* En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
+  capítulos a tu video.
+
+Criterios de evaluación
+****************************
+
+Cada problema se evalua completo, es decir, no se reciben problemas 
+con solución incompleta. Un problema se soluciona completa si tiene TODO lo 
+solicitado incluyendo el video con la demostración y la explicación de su solución.
+
+* Calidad y duración máxima del video: 0.5
+* Problema 1: 1 unidad.
+* Problema 2: 1.75 unidades.
+* Problema 3: 1.75 unidades.
+
+.. note:: Sobre las personas reportadas en el pdf
+
+    Las personas que aparezcan reportadas en el pdf obtendrán automáticamente 
+    una calificación de 0.
