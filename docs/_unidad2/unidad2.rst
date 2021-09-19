@@ -725,9 +725,15 @@ Resuelve el siguiente problema usando ``HILOS``:
 * El video debe tener los siguientes capítulos en este mismo orden:
 
   * Integrantes y las tareas que realizó cada uno.
-  * Demostrar la solución del problema.
-  * Explica primero cómo solucionaste el problema.
-  * Explica cómo implementaste la solución en el código. 
+  * Problema 1: demostración de la solución.
+  * Problema 1: explicación de la solución.
+  * Problema 1: explicación de la implementación en código de la solución.
+  * Problema 2: demostración de la solución.
+  * Problema 2: explicación de la solución.
+  * Problema 2: explicación de la implementación en código de la solución.
+  * Problema 3: demostración de la solución.
+  * Problema 3: explicación de la solución.
+  * Problema 3: explicación de la implementación en código de la solución.
 
 * En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
   capítulos a tu video.
