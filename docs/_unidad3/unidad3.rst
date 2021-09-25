@@ -9,17 +9,20 @@ ya sea con procesos o utilizando hilos. ¿Y si queremos
 comunicar estos flujos?
 
 Propósito de aprendizaje
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+***************************
 
 Comprender y aplicar estrategias de comunicación y sincronización
 entre diferentes flujos de instrucciones.
 
 
-Trayecto de actividades
+Lecturas y ejercicios
 ------------------------
 
-Ejercicio 1
-^^^^^^^^^^^^
+Sesión 1: sincronización y comunicación (introducción)
+***********************************************************************
+
+Ejercicio 1: taxonomía de servicios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 La comunicación entre procesos se conoce por sus siglas en inglés 
 IPC o interprocess communication. Observa en la siguiente figura 
@@ -41,16 +44,16 @@ Observa que hay tres tipos de facilidades:
 En estos primeros ejercicios nos vamos a concentrar en las facilidades
 de comunicación.
 
-Ejercicio 2
-^^^^^^^^^^^^^
+Ejercicio 2: pregunta para reflexionar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Las facilidades de comunicación permiten intercambiar datos a dos o más
 procesos.
 
 ¿Qué harías si tienes que intercambiar datos entre hilos?
 
-Ejercicio 3
-^^^^^^^^^^^^^
+Ejercicio 3: concepto de comunicación por transferencia de datos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En las facilidades de comunicación por transferencia de datos, 
 la comunicación en general ocurre así: un proceso A desea comunicarse
@@ -62,12 +65,12 @@ provenientes de A serán copiados del sistema operativo al proceso B.
 Analiza la siguiente figura:
 
 .. image:: ../_static/dataTransfer.png
-   :scale: 100%
+   :scale: 80%
    :align: center
    :alt: taxonomía de IPC en Unix.
 
-Ejercicio 4
-^^^^^^^^^^^^^
+Ejercicio 4: concepto de comunicación por memoria compartida
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En las facilidades de comunicación por memoria compartida, el sistema 
 operativo hará que dos o más procesos compartan la misma zona de memoria RAM. 
@@ -78,8 +81,8 @@ se verán reflejados inmediatamente en el proceso B.
   de datos y por memoria compartida?
 * ¿Cuál de los dos mecanismos crees que puede ser más rápido?
 
-Ejercicio 5
-^^^^^^^^^^^^^
+Ejercicio 5: características de los mecanismos transferencia de datos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En el curso vamos a practicar dos mecanismos de comunicación por transferencia 
 de datos denominados los flujos de bytes (byte stream) y los mensajes (messages).
@@ -94,8 +97,8 @@ En la transferencia por flujo de mensajes:
 * SOLO los sockets permiten la comunicación entre dos procesos corriendo 
   en dos computadores diferentes conectados por una red de datos.
 * Las lecturas son destructivas → los datos se consumen.
-* La sincronización entre procesos es automática → Si no hay datos para leer, 
-  el proceso se bloquea (por defecto).
+* ``La sincronización entre procesos es automática → Si no hay datos para leer, 
+  el proceso se bloquea (por defecto)``.
 
 En la transferencia por mensajes:
 
@@ -108,15 +111,15 @@ En la transferencia por mensajes:
 de bytes y por intercambio de mensajes?
 
 ¿Un proceso puede leer de un mensaje solo unos cuantos bytes y dejar
-el resteo de el sistema operativo?
+el resto de el sistema operativo?
 
 ¿Qué pasa si dos procesos están leyendo al mismo tiempo un flujo 
 de bytes?
 
 ¿Es posible comunicar procesos que estén corriendo en diferentes computadores?
 
-Ejercicio 6
-^^^^^^^^^^^^
+Ejercicio 6: pipes
+^^^^^^^^^^^^^^^^^^^^
 
 Vamos a estudiar nuestro primer mecanismos: pipes o tuberías
 
@@ -125,7 +128,7 @@ al proceso, uno para leer y otro para escribir. Observa la siguiente
 figura:
 
 .. image:: ../_static/pipeInit.png
-   :scale: 100%
+   :scale: 80%
    :align: center
    :alt: pipe
 
@@ -192,8 +195,8 @@ Con el conocimiento que tiene ahora, analiza este ejemplo tomado de
     
 ¿Cuántos procesos estás comunicando en este caso? 
 
-Ejercicio 7
-^^^^^^^^^^^^
+Ejercicio 7: comunicación entre procesos con pipes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Y si quieres comunicar dos procesos utilizando tuberías?
 
@@ -235,9 +238,8 @@ Analiza el segundo ejemplo de `este <https://www.geeksforgeeks.org/pipe-system-c
 sitio. Observa que en el segundo ejemplo hay unas líneas comentadas. TE ESTÁN invitando 
 a experimentar. NO DEJES DE HACERLO!!!
 
-
-Ejercicio 8
-^^^^^^^^^^^^
+Ejercicio 8: comunicación entre procesos con pipes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Analiza con detenimiento el siguiente ejemplo:
 
@@ -332,8 +334,17 @@ hasta asegurar de entender cómo funciona. EXPERIMENTA. Realiza
 cambios, trata de predecir qué pasará, EXPERIMENTA, explica tus 
 resultados.
 
-Ejercicio 9
-^^^^^^^^^^^^^
+Trabajo autónomo 1: experimenta y practica con pipes
+**********************************************************
+(Tiempo estimado: 2 horas 50 minutos)
+
+
+Antes de realizar el siguiente ejercicio te invito a que leas de nuevo 
+todo el material hasta este punto. Analiza una vez más los ejemplos, 
+EXPERIMENTA.
+
+Ejercicio 9: comunicación bidireccional con pipes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Realiza un programa que le permita a dos procesos comunicarse de manera 
 bidireccional utilizando pipes.
@@ -349,8 +360,11 @@ El proceso padre debe enviar al hijo el contenido de la cadena
 “mensaje_desde_el_hijo”. Nota que el contenido de ambas cadenas 
 lo pasas desde la línea de comandos.
 
-Ejercicio 10
-^^^^^^^^^^^^^
+Sesión 2: comunicación mediante FIFOs
+*****************************************
+
+Ejercicio 10: FIFOs
+^^^^^^^^^^^^^^^^^^^^^
 
 Te voy a mostrar ahora otro mecanismo de comunicación: FIFOs
 
@@ -429,8 +443,8 @@ que está en octal? Porque el número inicia con ``0``.
 
 ¿Cuál sería el modo de una FIFO cuyo valor sea 0666?
 
-Ejercicio 11
-^^^^^^^^^^^^^
+Ejercicio 11: ejemplo de comunicación con FIFOs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora analiza con detenimiento el ejemplo en 
 `este <https://www.geeksforgeeks.org/named-pipe-fifo-example-c-program/>`__ sitio.
@@ -464,16 +478,35 @@ abierto?
 ¿Qué pasa si el proceso lector abre (open) la fifo sin que el proceso escritor la haya
 abierto?
 
-Ejercicio 12
-^^^^^^^^^^^^^
+Ejercicio 12: pregunta para reflexionar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Considera que debes escribir un programa que esté ATENTO AL MISMO TIEMPO 
 de los datos que le llegan por una FIFO y por la interfaz de usuario (la terminal)
 
 ¿Qué tendrías que hacer?
 
-Ejercicio 13
-^^^^^^^^^^^^^
+
+Trabajo autónomo 2: experimenta con FIFOs
+********************************************
+(Tiempo estimado 2 horas 50 minutos)
+
+Vas a leer de nuevo el material de la sesión 2. Analiza nuevamente los 
+ejemplos y EXPERIMENTA.
+
+RETO 1: chat usando FIFOs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vas a realizar un chat entre dos procesos, usando FIFOs, que te permitan intercambiar 
+mensajes entre ellos. La COMUNICACIÓN NO DEBE ser por turnos, es decir, 
+puedes enviar cuantos mensajes desees desde un proceso y desde otro. 
+Por tanto, debes usar HILOS!
+
+Sesión 3: comunicación usando colas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ejercicio 13: características 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Viene otro mecanismo de comunicación: System V message queues (Colas 
 de mensajes System V).
@@ -492,8 +525,8 @@ está clasificado este mecanismo?
 
 * Las colas de mensajes existen a nivel de sistema, no son de un proceso en particular. 
 
-Ejercicio 14
-^^^^^^^^^^^^^
+Ejercicio 14: creación de colas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para crear una cola de mensajes utilizas el siguiente llamado al sistema:
 
@@ -530,8 +563,8 @@ DESCRIPTION:
 
 * Si paso msgflg con IPC_CREAT y la cola ya está creada ¿Qué pasa?
 
-Ejercicio 15
-^^^^^^^^^^^^^
+Ejercicio 15: más sobre la creación 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ten presente que además debes colocar en msgflag los permisos 
 mediante una operación OR a nivel de bits y con esta tabla que ya conoces:
@@ -562,8 +595,8 @@ S_ISVTX      01000      On directories, restricted deletion flag.
 ¿Cómo sería msgflg si quiere crear una cola con permisos de lectura 
 y escritura para el dueño de la cola?
 
-Ejercicio 16
-^^^^^^^^^^^^^
+Ejercicio 16: creación de claves únicas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Cómo puedes hacer para generar una key única para poder 
 crear la cola?
@@ -595,8 +628,8 @@ DESCRIPTION:
        should be different  when  the  (simultaneously existing) files or 
        the project IDs differ.
 
-Ejercicio 17
-^^^^^^^^^^^^^
+Ejercicio 17: destrucción de colas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Una vez termines de utilizar la cola puedes destruirla del sistema operativo 
 con la función ``msgctl``:
@@ -617,8 +650,8 @@ Ejecuta en la línea de comandos: man msgctl.
 
 ¿Qué pasa si hay datos o procesos esperando en la cola?
 
-Ejercicio 18
-^^^^^^^^^^^^^
+Ejercicio 18: enviar y recibir mensajes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora que ya sabes crear la cola, obtener el identificador de ella y destruirla, 
 vas a aprender a enviar y leer mensajes.
@@ -629,15 +662,34 @@ la información allí.
 Ten presente que el argumento msgflg lo dejaremos por defecto en 0; sin embargo, 
 puedes experimentar, quién te puede decir que no :) !!!
 
-Ejercicio 19
-^^^^^^^^^^^^^^^
+Ejercicio 19: ejemplo
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Analiza la documentación y el ejemplo de 
 `este <https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm>`__ 
 sitio.
 
-Ejercicio 20
-^^^^^^^^^^^^^^^
+
+Trabajo autónomo 3: Colas
+*******************************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Lee de nuevo el material de la sesión 3 y analiza y experienta con 
+el ejemplo.
+
+RETO 2: chat usando mensajes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vas a realizar un chat entre dos procesos, usando colas, que te permitan intercambiar 
+mensajes entre ellos. La COMUNICACIÓN NO DEBE ser por turnos, es decir, 
+puedes enviar cuantos mensajes desees desde un proceso y desde otro. 
+Por tanto, debes usar HILOS!
+
+Sesión 4: memoria compartida
+********************************
+
+Ejercicio 20: sincronización 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vamos a estudiar otro mencanismos de comunicación, pero esta vez lo haremos por memoria 
 compartida; Sin embargo, antes de estudiar este mencanismo tendremos que aprender a 
@@ -648,8 +700,8 @@ sincronizar el acceso a la memoria para evitar que los datos compartidos se corr
 En `este enlace <https://docs.google.com/presentation/d/1EfixM_Svf4z5tO_WYw1K7T2CH7ofUykifvB7b2LTqQk/edit?usp=sharing>`__
 se encuentra el material de trabajo.
 
-Ejercicio 21
-^^^^^^^^^^^^^^^
+Ejercicio 21: memoria compartida
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora si, vamos a aprender la estrategia de comunicación entre procesos por  
 memoria compartida.
@@ -657,8 +709,8 @@ memoria compartida.
 En `este enlace <https://docs.google.com/presentation/d/11FcbOrPy48FIgEZu1YsAye_bYe4uNe7V6d5KxO_IeGU/edit?usp=sharing>`__
 se encuentra el material para este ejercicio.
 
-Ejercicio 22
-^^^^^^^^^^^^^^
+Ejercicio 22: ejemplo
+^^^^^^^^^^^^^^^^^^^^^^^
 
 El siguiente ejemplo muestra cómo dos procesos pueden comunicarse utilizando 
 memoria compartida.
@@ -810,8 +862,8 @@ Ahora compile y ejecute el proceso 2.
     gcc -Wall p2.c -o p2 -lrt
     ./p2
 
-Ejercicio 23
-^^^^^^^^^^^^^^
+Ejercicio 23: condiciones de carrera
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El siguiente ejemplo muestra la necesidad de incluir mecanismos de sincronización 
 para evitar condiciones de carrera.
@@ -935,8 +987,8 @@ El resultado esperado es que siempre el contador
 quede en 2, pero a veces queda en uno.
 
 
-Ejercicio 24
-^^^^^^^^^^^^^^
+Ejercicio 24: solución a la condición de carrera
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Este ejercicio muestra cómo corregir el error
 del ejercicio anterior debido a los problemas de sincronización
@@ -1063,35 +1115,22 @@ del ejercicio anterior debido a los problemas de sincronización
         exit(EXIT_SUCCESS);
     }
 
+Trabajo autónomo 4: chat usando memoria compartida
+****************************************************
 
-PROYECTO 1
-^^^^^^^^^^^^^
+Vas a leer de nuevo el material y a experimentar con los ejemplos.
 
-Escriba un programa que utilice dos tuberías (pipes) para comunicar un proceso
-padre con su hijo. El padre debe quedarse leyendo la entrada estándar y utilizar una 
-tubería para enviar el texto, escrito en minúscula al hijo. El hijo por su parte, 
-debe convertir el texto a letra mayúscula y devolverlo al padre utilizando la otra 
-tubería. El padre debe leer el texto enviado por el hijo y luego mostrarlo en 
-la salida estándar. El proceso se repite infinitamente.
+Vas a realizar un chat entre dos procesos, usando memoria, que te permitan 
+intercambiar mensajes entre ellos. La COMUNICACIÓN NO DEBE ser por turnos, es decir, 
+puedes enviar cuantos mensajes desees desde un proceso y desde otro. 
+Por tanto, debes usar HILOS! No olvides que al usar memoria compartida es 
+necesario sincronizar el acceso a la memoria compartida. NO OLVIDES HACERLO, 
+aunque tu aplicación funcione es posible que se pueda presentar una condición 
+de carrera.
 
-PROYECTO 2
-^^^^^^^^^^^^^
+Evaluación de la Unidad 3
+---------------------------
 
-Escriba una aplicación que implemente un chat entre dos procesos utilizando colas de mensajes. 
-Los procesos deben ser capaz de recibir mensajes en cualquier momento, por tanto, 
-piensa cómo hacer para atender la entrada estándar y ser capaz de recibir mensajes al 
-mismo tiempo (¿Te suena a que necesitas dos flujos independientes de instrucciones
-en cada proceso?
+Regresa aquí la semana de evaluación para leer el enunciado.
 
-
-PROYECTO 3
-^^^^^^^^^^^^^
-
-Crear un chat entre dos procesos utilizando memoria compartida,
-hilos y semáforos. Cada proceso deberá esperar por la entrada de
-su usuario y al mismo tiempo mostrar los mensajes enviados por el
-otro usuario (es por ello que se requiere tener dos hilos por proceso).
-
-El intercambio de mensajes se debe realizar utilizando memoria
-compartida y semáforos para la sincronización.
-
+NO OLVIDES presionar F5 para actualizar la página.
