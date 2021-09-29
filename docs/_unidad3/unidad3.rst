@@ -503,7 +503,7 @@ puedes enviar cuantos mensajes desees desde un proceso y desde otro.
 Por tanto, debes usar HILOS!
 
 Sesión 3: comunicación usando colas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+********************************************
 
 Ejercicio 13: características 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
