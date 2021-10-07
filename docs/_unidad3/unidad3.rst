@@ -737,7 +737,7 @@ Proceso 1:
 
     int main(int argc, char * argv[]){
 
-        int shm_fd = shm_open("shm0", O_CREAT | O_RDWR, 0600);
+        int shm_fd = shm_open("/shm0", O_CREAT | O_RDWR, 0600);
         if (shm_fd < 0) {
             perror("shm memory error: ");
             exit(EXIT_FAILURE);
@@ -799,7 +799,7 @@ Proceso 2:
 
     int main(int argc, char * argv[]){
 
-        int shm_fd = shm_open("shm0", O_RDONLY, 0600);
+        int shm_fd = shm_open("/shm0", O_RDONLY, 0600);
         if (shm_fd < 0) {
             perror("shm memory error: ");
             exit(EXIT_FAILURE);
@@ -828,7 +828,7 @@ Proceso 2:
             exit(EXIT_FAILURE);
         }  
     
-        if (shm_unlink("shm0") < 0) {
+        if (shm_unlink("/shm0") < 0) {
             perror("Unlink failed: ");
             exit(EXIT_FAILURE);
         }
