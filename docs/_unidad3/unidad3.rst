@@ -978,7 +978,7 @@ estas preguntas:
 * ¿Qué mecanismo de comunicación estás utilizando y por qué?
 * ¿Qué ventaja tiene el mecanismo de comunicación seleccionado sobre otras 
   opciones?
-* Cuando el cliente ejecuta el cómando ask ¿Cómo haces para preguntarle 
+* Cuando el cliente ejecuta el comando ask ¿Cómo haces para preguntarle 
   al server? 
 
 
