@@ -889,9 +889,9 @@ resolver en equipo máximo de 3 de personas.
 Problema 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vas a constuir dos aplicaciones que llamaremos servidor y cliente. Solo 
+Vas a construir dos aplicaciones que llamaremos servidor y cliente. Solo 
 tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
-El seridor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
+El servidor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
 al servidor su interés en algunos eventos específicos; sin embargo, en un momento dado,
 también podrán indicarle que ya no están interesados en algunos en particular. 
 Por cada evento, el servidor mantendrá una lista de interesados que irá cambiando 
@@ -901,7 +901,7 @@ este publicará a todos los interesados.
 Para desplegar las aplicaciones, lanzarás el servidor y cada cliente en una terminal 
 para cada uno. No olvides hacer pruebas con VARIOS clientes.
 
-Estas son las caracterísitcas a implementar en el servidor:
+Estas son las características a implementar en el servidor:
 
 El servidor :
 
@@ -954,7 +954,7 @@ Con respecto al video:
 Con respecto a la demostración:
 
 * Demostrar add event_name.
-* Demosrar remove event_name.
+* Demostrar remove event_name.
 * Demostrar trigger event_name.
 * Demostrar list event_name.
 * Demostrar sub event_name.
