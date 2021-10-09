@@ -879,6 +879,121 @@ de carrera.
 Evaluación de la Unidad 3
 ---------------------------
 
-Regresa aquí la semana de evaluación para leer el enunciado.
+(Tiempo total estimado: 9 horas).
 
-NO OLVIDES presionar F5 para actualizar la página.
+Enunciado
+*************
+Te voy a proponer un RETO interesante para esta evaluación que podrás 
+resolver en equipo máximo de 3 de personas.
+
+Problema 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vas a constuir dos aplicaciones que llamaremos servidor y cliente. Solo 
+tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
+El seridor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
+al servidor su interés en algunos eventos específicos; sin embargo, en un momento dado,
+también podrán indicarle que ya no están interesados en algunos en particular. 
+Por cada evento, el servidor mantendrá una lista de interesados que irá cambiando 
+a medida que entran y salen interesados. Al generarse un evento en el servidor, 
+este publicará a todos los interesados. 
+
+Para desplegar las aplicaciones, lanzarás el servidor y cada cliente en una terminal 
+para cada uno. No olvides hacer pruebas con VARIOS clientes.
+
+Estas son las caracterísitcas a implementar en el servidor:
+
+El servidor :
+
+* Debe recibir commandos desde la línea de comandos y al mismo tiempo debe 
+  ser capaz de escuchar las peticiones de los clientes.
+* Cada petición de un cliente será visualizada con un mensaje 
+  en la terminal.
+* Los comandos que recibirá el servidor son: 
+
+  * exit: termina el servidor y deberá publicar este evento a TODOS los clientes.
+  * add event_name: adiciona el evento event_name.
+  * remove event_name: elimina el evento event_name.
+  * trigger event_name: publica el evento event_name.
+  * list event_name: lista todos los clientes suscritos a event_name.
+
+Estas son las características a implementar en el cliente:
+
+* El cliente debe visualizar en la terminal cada que sea notificado de un evento.
+* El cliente debe soportar los siguientes comandos:
+
+  * sub event_name: se suscribe al evento event_name
+  * unsub event_name: se desuscribe del evento event_name
+  * list: lista todos los eventos a los cuales está suscrito.
+  * ask: le pregunta al servidor cuáles eventos hay disponibles.
+
+¿Qué debes entregar?
+***************************
+
+Diligencia y entrega en este `enlace <https://forms.office.com/r/Bib1V63rB6>`__.
+
+En el formulario anterior te voy a solicitar evidenciar el código con la solución 
+y un video con la sustentación.
+
+Con respecto al código:
+  
+#. Debe estar bajo control de versión en GitHub
+#. SOLO debes tener tres archivos: server.c, client.c, readme.txt.
+#. El archivo readme.txt debe indicar cómo compilar cada archivo y
+   cómo se debe lanzar cada programa.
+
+Con respecto al video:
+
+#. El video DEBE TENER una duración ``MÁXIMA`` de 15 minutos.
+#. El video debe tener los siguientes capítulos en este mismo orden:
+   * Imagen con los integrantes y qué aportes realizó cada uno.
+   * Demostración de la solución.
+   * Explicación conceptual de la solución.
+   * Explicación del código con la implementación.
+
+Con respecto a la demostración:
+
+* Demostrar add event_name.
+* Demosrar remove event_name.
+* Demostrar trigger event_name.
+* Demostrar list event_name.
+* Demostrar sub event_name.
+* Demostrar unsub event_name.
+* Demostrar list
+* Demostrar ask
+* Demostrar exit. 
+
+Con respecto a la explicación conceptual responde 
+estas preguntas:
+
+* ¿Cómo es la arquitectura de cada aplicación?
+* ¿Cómo resolviste el problema de escuchar comandos y a la vez estar 
+  pendiente de las comunicaciones en cada proceso?
+* ¿Cómo le comunicas a cada cliente interesado acerca de un evento?
+* ¿Cómo solucionaste el problema de tener una cantidad arbitraria de clientes 
+  que se suscriben y desuscriben a un evento?
+* ¿Qué estructura de datos usaste para mantener la lista de interesados? ¿Por qué?
+* Si en el servidor remueve un evento y el cliente ejecuta el comando list 
+  ¿Cómo soluciones una posible inconsistencia?
+* ¿Qué mecanismo de comunicación estás utilizando y por qué?
+* ¿Qué ventaja tiene el mecanismo de comunicación seleccionado sobre otras 
+  opciones?
+* Cuando el cliente ejecuta el cómando ask ¿Cómo haces para preguntarle 
+  al server? 
+
+
+* En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
+  capítulos a tu video.
+
+Criterios de evaluación
+****************************
+
+* Calidad y duración máxima del video y repositorio en Github: 0.5
+* Demostración del funcionamiento solicitado: 0.5
+* Explicación conceptual de la solución: 2
+* Explicación del código con la solución: 2
+
+.. note:: Sobre las personas reportadas
+
+    Las personas que aparezcan reportadas indicando que no trabajaron obtendrán automáticamente 
+    una calificación de 0.
