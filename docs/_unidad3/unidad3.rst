@@ -945,7 +945,10 @@ Con respecto al código:
 Con respecto al video:
 
 #. El video DEBE TENER una duración ``MÁXIMA`` de 15 minutos.
+#. En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
+   capítulos a tu video.
 #. El video debe tener los siguientes capítulos en este mismo orden:
+
    * Imagen con los integrantes y qué aportes realizó cada uno.
    * Demostración de la solución.
    * Explicación conceptual de la solución.
@@ -981,9 +984,6 @@ estas preguntas:
 * Cuando el cliente ejecuta el comando ask ¿Cómo haces para preguntarle 
   al server? 
 
-
-* En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
-  capítulos a tu video.
 
 Criterios de evaluación
 ****************************
