@@ -366,6 +366,8 @@ Consideraciones
 * Antes de la presentación, sube a `este <https://forms.office.com/r/KPmfnvFpfn>`__ 
   enlace la información necesaria para entregar tu trabajo.
 * Para la comunicación entre los diferentes procesos ES OBLIGATORIO utilizar sockets TCP.
+* En la presentación realizarás la demostración y explicación de cada uno de los Criterios
+  de evaluación señalados.
 
 Problema
 ************
