@@ -15,23 +15,44 @@ En particular, en esta unidad, vamos a abordar los servicios de persistencia y
 de comunicación de procesos utilizando sockets.
 
 Propósito de aprendizaje
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+***************************
 
 Comprender y aplicar los conceptos de entrada-salida para persistir información
 y para comunicar procesos que no necesariamente se encuentra en la misma máquina.
 
 
-Trayecto de actividades
+Lecturas y ejercicios
 ------------------------
 
-Ejericio 1
-^^^^^^^^^^^
+Sesión 1: persistencia
+***************************
+
+Ejercicio 1: persistencia 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En `este <https://docs.google.com/presentation/d/1or5HQ9cwZek70PfEYniwkDwiIV4YS0ptaejanL3znIw/edit?usp=sharing>`__
 enlace se encuentra el material sobre los servicios de persistencia.
 
-Ejercicio 2
-^^^^^^^^^^^^
+
+Trabajo autónomo sesión 1: reto persistencia
+***********************************************
+(Tiempo estimado 2 horas 50 minutos)
+
+Realizar un programa que:
+
+* Reciba como argumento la ruta absoluta o relativa de un directorio.
+* El programa deberá imprimir el nombre de todos los archivos y subdirectorios que contenga
+  el directorio y los subdirectorios.
+* La idea es recorrer toda la jerarquía imprimiendo los nombres de subdirectorios y archivos.
+
+Sesión 2: introducción a los sockets
+***************************************
+
+En esta sesión vamos a resolver dudas del RETO anterior y a introducir el mecanismo 
+de sockets para comunicar procesos.
+
+Ejercicio 2: sockets
+^^^^^^^^^^^^^^^^^^^^^
 
 El material que estudiaremos en este ejercicio es tomado de 
 `este <https://www.packtpub.com/extreme-c>`__ texto.
@@ -40,18 +61,14 @@ En `este <https://docs.google.com/presentation/d/19aRuRgFksgXz1vvCpDOU97Hf9RYKZ9
 enlace encontrarás un material teórico FUNDAMENTAL para entender
 los ejercicios que sigue.
 
-Ejercicio 3
-^^^^^^^^^^^^^^^
+Trabajo autónomo sesión 2: análisis
+***********************************************
+(Tiempo estimado: 2 horas 50 minutos)
 
-Repaso rápido: no olvides, que al hablar de sockets, tenemos estas opciones:
+Vas a analizar detenidamente el código que te presento en el ejercicio 3.
 
-* *Socket UDS* (*Unix domain socket*) sobre un *stream channel*.
-* *Socket UDS* sobre un *datagram channel*.
-* *Socket network* sobre un *stream channel*. 
-* *Socket network* sobre un *datagram channel*.
-
-Ejercicio 4
-^^^^^^^^^^^^^^^^^^
+Ejercicio 3: análisis de un ejemplo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En este ejemplo verás como comunicar dos procesos utilizando
 sockets TCP.
@@ -329,33 +346,103 @@ Client.c:
         exit(EXIT_SUCCESS);
     }
 
-PROYECTO 1 
-^^^^^^^^^^^^
+Sesión 3: análisis del ejercicio anterior
+**********************************************
 
-Realizar un programa que:
-
-* Reciba como argumento la ruta absoluta o relativa de un directorio.
-* El programa deberá imprimir el nombre de todos los archivos y subdirectorios que contenga
-  el directorio y los subdirectorios.
-* La idea es recorrer toda la jerarquía imprimiendo los nombres de subdirectorios y archivos.
+En esta sesión vamos a analizar juntos el ejercicio anterior.
 
 
-PROYECTO 2
-^^^^^^^^^^^
+Evaluación de la Unidad 4
+---------------------------
 
-ANTES de comenzar asegurate de trabajar a FONDO el ejercicio 4
+Consideraciones
+****************
 
-Crear una aplicación tipo GRUPO de whatsapp así:
+* Conforma un equipo de mínimo de 2 personas y máximo de 3 personas.
+* Vas a dedicar 14 horas 40 minutos para solucionar 
+  el problema y elaborar una presentación.
+* Tendrás un espacio de 10 minutos para presentar, con tu equipo, en la última 
+  sesión de clase en la semana 16.
+* Antes de la presentación, sube a `este <https://forms.office.com/r/KPmfnvFpfn>`__ 
+  enlace la información necesaria para entregar tu trabajo.
+* Para la comunicación entre los diferentes procesos ES OBLIGATORIO utilizar sockets TCP.
 
-#. Crea un programa servidor que sea capaz de atender hasta 10 clientes.
-#. Crea un programa cliente que se conecte al servidor.
-#. Cualquier mensaje que envíes al servidor será replicado a todos
-   los clientes que estén conectados.
-#. Ten presente que los cliente deberán ser capaces de enviar y recibir
-   mensajes a la vez.
-#. Permite que el servidor pueda recibir comandos a la vez que atiende a
-   todos los clientes. Los comandos serían: mostrar los clientes conectados,
-   desconectar un cliente.
-#. Cuando un cliente detecte que el servidor lo desconectó debe terminar
-   adecuadamente el programa gestionando los errores que se puedan presentar
-   al intentar leer o escribir el socket.
+Problema
+************
+
+Vas a construir dos aplicaciones que llamaremos servidor y cliente. Solo 
+tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
+El servidor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
+al servidor su interés en algunos eventos específicos; sin embargo, en un momento dado,
+también podrán indicarle que ya no están interesados en algunos en particular. 
+Por cada evento, el servidor mantendrá una lista de interesados que irá cambiando 
+a medida que entran y salen interesados. Al generarse un evento en el servidor, 
+este publicará a todos los interesados. 
+
+Para desplegar las aplicaciones, lanzarás el servidor y cada cliente en una terminal 
+para cada uno. No olvides hacer pruebas con VARIOS clientes.
+
+Estas son las características a implementar en el servidor:
+
+El servidor :
+
+* Debe recibir commandos desde la línea de comandos y al mismo tiempo debe 
+  ser capaz de escuchar las peticiones de los clientes.
+* Cada petición de un cliente será visualizada con un mensaje 
+  en la terminal.
+* Los comandos que recibirá el servidor son: 
+
+  * exit: termina el servidor y deberá publicar este evento a TODOS los clientes.
+  * add event_name: adiciona el evento event_name.
+  * remove event_name: elimina el evento event_name.
+  * trigger event_name: publica el evento event_name.
+  * list event_name: lista todos los clientes suscritos a event_name.
+  * all: visualiza todos los eventos y clientes de cada evento.
+  * save file_name: salva en file_name todos los eventos.
+  * load file_name: carga todos los eventos almacenados en file_name.
+
+* El servidor debe ser capaz de detectar si un cliente se desconecta y 
+  en consecuencia debe purgar los eventos a los cuales este estaba suscrito.
+
+Estas son las características a implementar en el cliente:
+
+* El cliente debe visualizar en la terminal cada que sea notificado de un evento.
+* El cliente debe soportar los siguientes comandos:
+
+  * sub event_name: se suscribe al evento event_name
+  * unsub event_name: se desuscribe del evento event_name
+  * list: lista todos los eventos a los cuales está suscrito.
+  * ask: le pregunta al servidor cuáles eventos hay disponibles.
+  * save file_name: salva en file_name todos los eventos.
+  * load file_name: carga todos los eventos almacenados en file_name.
+
+Criterios de evaluación
+*************************
+
+#. Orden y coherencia en la presentación: 0.5
+#. Implementación del mecanismo de comunicación: 1
+#. Implementación de la concurrencia: 0.5
+#. Comando exit en el server: 0.1
+#. Comando add en el server: 0.1
+#. Comando remove en el server: 0.2
+#. Comando trigger en el server: 0.4
+#. Comando list en el server: 0.2
+#. Comando all en el server: 0.2
+#. Comando save en el server: 0.2
+#. Comando load en el server: 0.2
+#. Comando sub en el cliente: 0.3
+#. Comando unsub en el cliente: 0.3
+#. Comando list en el cliente: 0.2
+#. Comando ask en el cliente: 0.2
+#. Comando save en el cliente: 0.2
+#. Comando load en el cliente: 0.2
+
+ 
+
+
+
+
+
+
+
+
