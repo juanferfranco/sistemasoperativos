@@ -54,27 +54,20 @@ Carta Descriptiva del curso
 Estructura y metodología del curso
 -----------------------------------
 
-El curso está divido en 4 unidades:
+El curso está divido en 5 unidades:
 
-#. Unidad 1: lenguaje C
-#. Unidad 2: procesos e hilos
-#. Unidad 3: comunicación y sincronización
-#. Unidad 4: entrada-salida
-
-Cada unidad estará constituida por tres fases:
-
-#. Fase 1: fundamentación. En esta fase se estudiarán los conceptos teóricos más relevantes de
-   cada unidad. Así mismo se complementarán con lecturas. En esta fase, el estudiante
-   debe repasar los conceptos olvidados de los semestres anteriores.
-#. Fase 2: proyecto. En esta fase se realizará un proyecto para evidenciar los aprendizajes 
-   de la unidad.
-#. Fase 3: evaluación. En esta fase se discute el resultado de los proyectos de la unidad.
-
+#. Unidad 1: lenguaje C - parte 1
+#. Unidad 2: lenguaje C - parte 2
+#. Unidad 3: procesos e hilos
+#. Unidad 4: comunicación y sincronización
+#. Unidad 5: entrada-salida
 
 Cronograma
 -----------
 
-* Unidad 1: semanas 1 a 7
+* Introducción al curso
+* Unidad 1: semanas 2 a 4
+* Unidad 2: semanas 5 a 7
 * Unidad 2: semanas 8 a 10
 * Unidad 3: semanas 11 a 13
 * Unidad 4: semanas 14 a 16
@@ -82,12 +75,11 @@ Cronograma
 Evaluación
 -----------
 
-* Evaluación unidad 1: 25%. Semana de agosto 23. Plazo máximo agosto 29 de 2021. 
-* Evaluación unidad 2: 25%. Semana de septiembre 20. Plazo máximo septiembre 26 de 2021.
-* Evaluación unidad 3: 25%. Semana de octubre 11. Plazo máximo octubre 17 de 2021.
-* Evaluación unidad 4: 25%. Semana de noviembre 1. Plazo máximo noviembre 7 de 2021. 
-
-Luego del plazo máximo la nota de la evaluación será 0.
+* Evaluación unidad 1: 20%.  
+* Evaluación unidad 2: 20%.  
+* Evaluación unidad 3: 20%. 
+* Evaluación unidad 4: 20%.
+* Evaluación unidad 5: 20%. 
 
 Textos de referencia
 ---------------------
@@ -96,8 +88,6 @@ El curso no tiene un texto guía, porque encontrarás todo el material
 disponible en este sitio web; sin embargo, te recomiendo completar
 el material práctico que se presenta en el curso con la información de 
 un libro de texto.
-
-
 
 El texto recomendado es `este <http://pages.cs.wisc.edu/~remzi/OSTEP/>`__.
 
@@ -113,14 +103,14 @@ Hay otros textos que pueden serte de mucha utilidad:
 Dedicación
 -----------
 
-Este curso es de 3 créditos repartidos en 4 horas de trabajo presencial mediado por TIC
-y 5 horas de trabajo autónomo.
+Este curso es de 3 créditos. Dedicamos 3:20 minutos para trabajo presencial 
+y 5 horas 40 minutos para trabajo autónomo.
 
 Actividades de cada unidad
 ----------------------------
 
-* Sesión 1 de la semana: discusión de conceptos, ejercicios, dudas.
-* Sesión 2 de la semana: asesoría, discusión de ejercicios.
+Cada unidad está conformada por 3 semanas. En las dos primeras semanas de cada unidad realizaremos 
+la preparación para la evaluación de la semana 3. Al finalizar la semana 3 se deberá entregar la evaluación.
 
 
 Evidencias de evaluación
@@ -161,7 +151,4 @@ En Notion llevarás tu bitácora electrónica.
 Control de versión
 --------------------
 
-* Crea una cuenta en GitHub con tu correo institucional de la UPB. Si
-  tienes la cuenta, tanto mejor.
-* Explora los tutoriales de `este <https://www.gitkraken.com/learn/git/tutorials>`__.
-
+* Crea una cuenta en GitHub en caso de que no la tengas.

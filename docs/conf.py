@@ -20,11 +20,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Sistemas Operativos'
-copyright = '2021, Juan Franco'
+copyright = '2022, Juan Franco'
 author = 'Juan Franco'
 
 # The short X.Y version
-version = '1.0.0'
+version = '1.1.0'
 # The full version, including alpha/beta/rc tags
 release = 'rc'
 

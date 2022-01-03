@@ -1,4 +1,4 @@
-Curso Sistemas Operativos 2021-20
+Curso Sistemas Operativos 2022-10
 ========================================
 
 Docente diseñador del curso: Juan Fernando Franco Higuita
@@ -12,6 +12,7 @@ Créditos y horas totales del curso: 3 créditos - 144 horas totales
    :caption: Unidades:
 
    Introducción al curso <_intro/intro>
+..
    Unidad 1: Lenguaje C <_unidad1/unidad1>
    Unidad 2: Procesos e hilos <_unidad2/unidad2>
    Unidad 3: Comunicación y sincronización <_unidad3/unidad3>
