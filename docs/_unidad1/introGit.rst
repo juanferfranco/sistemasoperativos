@@ -201,7 +201,7 @@ De nuevo tómate unos minutos para:
 #. ¿Qué es una ruta absoluta?
 #. ¿QUé es una ruta relativa?
 
-Ejercicio 5: ahora si a lo que vinimos
+Ejercicio 5: configura Git
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para hacer tus primeros experimentos con Git vas a realizar unas configuraciones 
@@ -217,3 +217,78 @@ Escribe los siguientes comandos:
     git config --global user.email "tu correo electrónico"
 
 
+Ejercicio 6: crea un repositorio
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Cámbiate al directorio demo1 de antes. Más adelante vas a simular la creación 
+de un proyecto de software en este directorio. Antes de comenzar a realizar 
+el proyecto vas a crear en el directorio un ``REPOSITORIO DE GIT``. 
+En este repositorio Git guardará toda la información relacionada con los cambios e historia 
+de los archivos de tu proyecto necesarios para realizar el proceso 
+de control de versión. Puedes pensar que el repositorio es una especie de base de 
+datos donde Git lleva la cuenta de qué está pasando con cada uno de los archivos 
+de tu proyecto.
+
+Escribe el siguiente comando:
+
+.. code-block:: bash
+
+    git init
+
+El resultado será similar a esto:
+
+.. code-block:: bash
+
+    hint: Using 'master' as the name for the initial branch. This default branch name
+    hint: is subject to change. To configure the initial branch name to use in all
+    hint: of your new repositories, which will suppress this warning, call:
+    hint: 
+    hint: 	git config --global init.defaultBranch <name>
+    hint: 
+    hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+    hint: 'development'. The just-created branch can be renamed via this command:
+    hint: 
+    hint: 	git branch -m <name>
+    Initialized empty Git repository in /home/jfupb/demo1/.git/
+
+Ahora observa el contenido del directorio:
+
+.. code-block:: bash
+
+    ls -al
+    total 12
+    drwxrwxr-x  3 jfupb jfupb 4096 Jan 11 17:14 .
+    drwxr-x--- 37 jfupb jfupb 4096 Jan 11 17:15 ..
+    drwxrwxr-x  7 jfupb jfupb 4096 Jan 11 17:14 .git
+
+Se creará una carpeta oculta ``.git``. Si quieres ver esta carpeta en el modo
+gráfico de tu sistema operativo, por ejemplo Windows Explorer en Windows, debes 
+habilitar la posibilidad de ver archivos y directorio ocultos. Busca en Internet 
+cómo hacer eso en tu sistema operativo.
+
+Ejercicio 7: para pensar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+¿Qué crees qué pase si borras el directorio ``.git`` en relación con el historial
+de cambios de tus archivos?
+
+Ejercicio 8: reconocer el estado del repositorio 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ahora ejecuta el siguiente comando:
+
+.. code-block:: bash 
+
+    git status
+
+Verás algo así:
+
+.. code-block:: bash 
+
+    On branch master
+
+    No commits yet
+
+    nothing to commit (create/copy files and use "git add" to track)
+
+El resultado por ahora es muy interesante. 
