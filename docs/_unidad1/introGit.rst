@@ -104,7 +104,7 @@ Ejercicio 2: la terminal
 Es posible que esta sea tu primera experiencia con la terminal. La terminal 
 es un programa que te permite interactuar con el sistema operativo y los programas 
 que tienes instalados por medio de comandos. Es por ello que a la terminal 
-también la conocemos como interfaz de líneas de comandos.
+también la conocemos como interfaz de línea de comandos.
 
 Si cerraste la aplicación Git Bash o la terminal ábrele de nuevo. Escribe el 
 siguiente comando:
@@ -116,14 +116,10 @@ siguiente comando:
 En mi caso (en tu caso será distinto) el resultado es:
 
 .. code-block:: bash 
-
-    /home/jfupb
-
-El resultado de este comando será la RUTA (o PATH) absoluta donde te encuentras 
-ubicado en este momento en tu sistema de archivos. Nota que en mi caso estoy 
-en el directorio jfupb que a su vez se encuentra en el directorio home que a su 
+Ejercicio 2: la terminal
+^^^^^^^^^^^^^^^^^^^^^^^^^en el directorio home que a su 
 vez está ubicado en la raiz del sistema de archivos. La raiz es el punto de partida. 
-Si estás usando Windows, la raiz será ``C:\``. 
+Si estás usando Windows, la raiz será, posiblemente, ``C:\``. 
 
 Conocer la Ruta en la cual estás posicionado en el sistema de archivos es muy 
 importante porque muchos de los comandos que ejecutarás dependerán de dicha posición. 
@@ -134,13 +130,13 @@ ese punto. Escribe el siguiente comando para crear un directorio:
 
     mkdir demo1
 
-Ahora te vas a cambiar al interior de ese nuevo directorio, así:
+Ahora te vas a cambiar a ese nuevo directorio, así:
 
 .. code-block:: bash 
 
     cd demo1
 
-Para observar el resultado deberás escribir un nuevo comando:
+Para observar el contenido del nuevo directorio deberás escribir el comando:
 
 .. code-block:: bash
 
@@ -153,5 +149,51 @@ Verás algo como esto:
     total 8
     drwxrwxr-x  2 jfupb jfupb 4096 Jan 11 15:40 .
     drwxr-x--- 37 jfupb jfupb 4096 Jan 11 15:43 ..
+
+Te estarás preguntando, qué es es ``.`` y ``..``. Lo primero es que son directorios. ``.``
+se refiere al directorio actual y ``..`` se refiere al directorio padre. Entonces, si 
+escribes este comando:
+
+.. code-block:: bash 
+
+    cd ..
+
+¿Cuál crees que sea el resultado?
+
+Mira, antes de ejecutar el comando, la posición actual es:
+
+.. code-block:: bash 
+
+    pwd
+    /home/jfupb/demo1
+
+Luego de ejecutar el comando:
+
+.. code-block:: bash 
+
+    pwd
+    /home/jfupb
+
+Ahora vuelve a cambiarte al directorio demo1:
+
+.. code-block:: bash 
+
+    cd ./demo1
+
+¿Te diste cuenta? Al salirte de demo1 quedas en el directorio padre de este. Una 
+vez en este directorio ``.`` se refiere al directorio padre. Por tanto, ``./demo1``
+será la ruta RELATIVA de demo1 con respecto a su padre, siempre que estés posicionado 
+en el padre.
+
+Ejercicio 3: experimenta
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ahora tómate unos minutos para experimentar. ¿Cómo? trata de ejecutar los comandos, 
+pero antes de hacerlo ESCRIBE cuál será el resultado. Si el resultado es como 
+te lo imaginaste, en hora buena, vas bien. Si no es así, MUCHO mejor, tienes una 
+oportunidad de oro para aprender. Entonces trata de explicar qué está mal, discute 
+con otros compañeros y si quieres habla con el profe.
+
+
 
 
