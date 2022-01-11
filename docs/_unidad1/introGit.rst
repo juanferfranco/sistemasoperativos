@@ -116,10 +116,8 @@ siguiente comando:
 En mi caso (en tu caso será distinto) el resultado es:
 
 .. code-block:: bash 
-Ejercicio 2: la terminal
-^^^^^^^^^^^^^^^^^^^^^^^^^en el directorio home que a su 
-vez está ubicado en la raiz del sistema de archivos. La raiz es el punto de partida. 
-Si estás usando Windows, la raiz será, posiblemente, ``C:\``. 
+
+    /home/jfupb
 
 Conocer la Ruta en la cual estás posicionado en el sistema de archivos es muy 
 importante porque muchos de los comandos que ejecutarás dependerán de dicha posición. 
@@ -181,9 +179,8 @@ Ahora vuelve a cambiarte al directorio demo1:
     cd ./demo1
 
 ¿Te diste cuenta? Al salirte de demo1 quedas en el directorio padre de este. Una 
-vez en este directorio ``.`` se refiere al directorio padre. Por tanto, ``./demo1``
-será la ruta RELATIVA de demo1 con respecto a su padre, siempre que estés posicionado 
-en el padre.
+vez allí, ``.`` se refiere al directorio padre de ``demo1``. 
+Por tanto, ``./demo1`` será la ruta RELATIVA de demo1 con respecto a su padre. 
 
 Ejercicio 3: experimenta
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,6 +191,29 @@ te lo imaginaste, en hora buena, vas bien. Si no es así, MUCHO mejor, tienes un
 oportunidad de oro para aprender. Entonces trata de explicar qué está mal, discute 
 con otros compañeros y si quieres habla con el profe.
 
+Ejercicio 4: recuerda (evaluación formativa)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+De nuevo tómate unos minutos para:
+
+#. Listar cada uno de los comandos que has aprendido hasta ahora y escribir al 
+   frete de este qué hace.
+#. ¿Qué es una ruta absoluta?
+#. ¿QUé es una ruta relativa?
+
+Ejercicio 5: ahora si a lo que vinimos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para hacer tus primeros experimentos con Git vas a realizar unas configuraciones 
+mínimas para informarle a Git un nombre de usuario y un correo. Esta información
+permite que Git identifique a la persona responsable de realizar los cambios 
+a un archivo. Recuerda que Git está diseñado para que puedas trabajar en equipo.
+
+Escribe los siguientes comandos:
+
+.. code-block:: bash 
+
+    git config --global user.name "Coloca tu nombre"
+    git config --global user.email "tu correo electrónico"
 
 
