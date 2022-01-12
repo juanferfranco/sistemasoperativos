@@ -321,3 +321,144 @@ quieres mantener la historia de todos los archivos o simplemente algunos archivo
 son generados en procesos de compilación de código fuente a código ejecutable. En 
 esos casos solo vas a querer mantener bajo control de versión los archivos de código fuente.
 
+Ejercicio 9: adicionar un archivo al repositorio 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para hacer las cosas más simples por el momento vas a simular 
+la creación de un proyecto de software usando archivos de texto 
+simples.
+
+Crea un archivo de texto así:
+
+.. code-block:: bash 
+
+    touch f1.txt 
+
+Luego de este comando deberías tener el directorio demo1 así:
+
+.. code-block:: bash 
+
+    ls -al
+
+    total 12
+    drwxrwxr-x  3 jfupb jfupb 4096 Jan 12 15:52 .
+    drwxr-x--- 22 jfupb jfupb 4096 Jan 12 15:52 ..
+    -rw-rw-r--  1 jfupb jfupb    0 Jan 12 15:52 f1.txt
+    drwxrwxr-x  7 jfupb jfupb 4096 Jan 12 15:32 .git
+
+Ahora ejecuta el comando:
+
+..  code-block:: bash 
+
+    git status
+
+Verás esto:
+
+.. code-block:: bash 
+
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        f1.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+Nota entonces que ya tienes en el directorio tu primer archivo, pero aún no 
+le has pedido a Git que te haga ``tracking`` de ese archivo. Entonces ejecuta el 
+comando:
+
+.. code-block:: bash 
+
+    git add f1.txt 
+
+Y de nuevo observa el estado del repositorio:
+
+.. code-block:: bash 
+
+    git status
+
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+        new file:   f1.txt
+
+Te explico con una metáfora lo que está pasando. Imagina que Git 
+le toma fotos al estado de tu proyecto cada que se lo solicitas; sin embargo, 
+antes de tomar la foto tienes que decirle a Git (``con add``) a qué archivos 
+le tomarás la foto. Todos los archivos que serán tenidos en cuenta para la 
+próxima foto se ubican en zona lógica denominada el STAGE. Mira el mensaje 
+``(use "git rm --cached <file>..." to unstage)``. Observa que Git te está diciendo
+que f1.txt ya está listo para la foto, pero si quieres sacarlo de la foto puedes 
+ejecutar el comando sugerido. Prueba sacar de la foto a f1.txt:
+
+.. code-block:: bash 
+
+    git rm --cached f1.txt
+
+Mira el estado del repositorio:
+
+.. code-block:: bash 
+
+    git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        f1.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+¿Te das cuenta? Hemos sacado de la foto (DEL STAGE) a f1.txt. Volvamos a invitar 
+a f1.txt a la foto:
+
+.. code-block:: bash 
+
+    git add f1.txt 
+
+Ahora ``TOMA LA FOTO``:
+
+.. code-block:: bash 
+
+    git commit -m "adicionamos f1.txt al repositorio"
+
+Consulta el estado del repositorio:
+
+.. code-block:: bash 
+
+    On branch master
+    nothing to commit, working tree clean
+
+Puedes ver que Git está observando todo lo que pasa en el directorio de tu 
+proyecto. Por ahora Git sabe que no has hecho nada más, por eso te dice 
+``nothing to commit, working tree clean``.
+
+Lo último que te voy a pedir que hagas con este ejercicio es que le preguntes 
+a Git qué fotos (``COMMITS``) se han tomado en el repositorio:
+
+.. code-block:: bash 
+
+    git log 
+
+El resultado es:
+
+.. code-block:: bash 
+
+    commit c14b43cde2ebac63a56377ba1f6faa67316d48ff (HEAD -> master)
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 16:10:17 2022 -0500
+
+        adicionamos f1.txt al repositorio
+    (END)
+
+Nota que el commit está identificado con el hash ``c14b43cde2ebac63a56377ba1f6faa67316d48ff``, 
+el autor, correo, fecha, hora y la descripción del commit.
+
+
