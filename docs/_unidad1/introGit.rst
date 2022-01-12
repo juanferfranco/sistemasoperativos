@@ -61,7 +61,7 @@ en Internet con la información del control de versión que tienes en tu computa
 para mostrar tus habilidades y portafolio y SOBRE TODO para trabajar en EQUIPO. 
 
 Por medio de Github, las aportaciones de cada miembro del equipo se pueden 
-sincronizar y compartir. De esta manera es posible construir productos de software 
+sincronizar y compartir. De esta manera, es posible construir productos de software 
 muy complejos en los cuales participen MUCHOS desarrolladores.
 
 Ejercicio 1: instala Git
