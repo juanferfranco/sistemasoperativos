@@ -311,12 +311,12 @@ seguirá como lo habías dejado antes de crear la rama. Pero si el resultado te 
 entonces podrás hacer un MERGE e incorporar las ideas de la nueva rama a la rama 
 inicial. Más adelante te propondré algunos ejercicios para que practiques lo anterior.
 
-Ahora observa el mensaje ``No commits yet``. Quiere decir que aún no has guardado 
+Ahora observa el mensaje ``No commits yet``. Este mensaje quiere decir que aún no has guardado 
 nada en el repositorio. Finalmente, ``nothing to commit`` te está diciendo que no 
 hay nada para guardar en el repositorio porque no has hecho nada hasta ahora; sin embargo,
 observa que git te da pistas de lo que puedes hacer: ``(create/copy files and use "git add" to track)``. 
-Te propone usar el comando ``git add``. Con este comando le puedes decir a Git a 
-qué archivos quieres hacerle seguimiento o ``TRACK``. Es lógico, ¿Cierto? No siempre 
+Te propone usar el comando ``git add``. Con este comando le puedes decir a Git  
+qué archivos quieres observar o hacerles ``TRACK``. Es lógico, ¿Cierto? No siempre 
 quieres mantener la historia de todos los archivos o simplemente algunos archivos 
 son generados en procesos de compilación de código fuente a código ejecutable. En 
 esos casos solo vas a querer mantener bajo control de versión los archivos de código fuente.
