@@ -505,3 +505,43 @@ Al finalizar este ejercicio deberías ver algo así:
     On branch master
     nothing to commit, working tree clean
 
+Ejercicio 11: modificar el contenido de un archivo 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Modifica el contenido del archivo f1.txt añadiendo tres líneas de texto 
+(escribe lo que tu corazón te dicte). Salva el archivo.
+
+Al verificar el estado del repositorio verás:
+
+.. code-block:: bash 
+
+    git status
+
+    On branch master
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+        modified:   f1.txt
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+Ves alguna comparada con el momento en el que creaste el archivo? Déjame recordarte 
+el mensaje:
+
+.. code-block:: bash 
+
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        f1.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+Nota que al crear el archivo Git te dice que no le está haciendo seguimiento (untracked); 
+sin embargo, una vez está creado el archivo y lo modificas ahora Git te dice 
+``Changes not staged for commit``. Git le hace tracking a tu archivo, pero tu 
+no has decidido pasar el archivo a STAGE para poderle tomar la foto con los cambios 
+que tiene ahora. ¿Cómo lo haces? Mira que en el mensaje Git te dice: ``git add``.
