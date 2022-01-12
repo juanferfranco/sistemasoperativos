@@ -461,4 +461,41 @@ El resultado es:
 Nota que el commit está identificado con el hash ``c14b43cde2ebac63a56377ba1f6faa67316d48ff``, 
 el autor, correo, fecha, hora y la descripción del commit.
 
+Ejercicio 10: retos 
+^^^^^^^^^^^^^^^^^^^^^
+
+Para un momento. Repasa los ejercicios anteriores, actualiza tu lista 
+de comandos con la explicación de qué hacen. Una vez estés en este punto 
+realiza los siguientes retos:
+
+#. Crea un nuevo commit con el archivo f2.txt
+#. Crea un nuevo commit que incluya los archivos f3.txt y f4.txt
+
+NOTA: no olvides escribir ``git status`` entre cada comando que ejecutes 
+para que puedas ir leyendo qué va ocurriendo con el repositorio.
+
+Al finalizar este ejercicio deberías ver algo así:
+
+.. code-block:: bash 
+
+    git log 
+
+    commit 7ec66fb9215999518fe5907c8c1360036906476e (HEAD -> master)
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 17:19:14 2022 -0500
+
+        Add f3.txt and f4.txt
+
+    commit 11950128c3d3dc6cc7b3cfda7a3e5a8ed566c235
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 17:16:59 2022 -0500
+
+        add f2.txt
+
+    commit c14b43cde2ebac63a56377ba1f6faa67316d48ff
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 16:10:17 2022 -0500
+
+        adicionamos f1.txt al repositorio
+    (END)
 
