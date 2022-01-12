@@ -204,8 +204,8 @@ Ejercicio 4: recuerda (evaluación formativa)
 
 De nuevo tómate unos minutos para:
 
-#. Listar cada uno de los comandos que has aprendido hasta ahora y escribir al 
-   frete de este qué hace.
+#. Listar cada uno de los comandos que has aprendido hasta ahora y escribe al 
+   frete de cada uno qué hace.
 #. ¿Qué es una ruta absoluta?
 #. ¿QUé es una ruta relativa?
 
