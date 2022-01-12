@@ -499,3 +499,9 @@ Al finalizar este ejercicio deberías ver algo así:
         adicionamos f1.txt al repositorio
     (END)
 
+
+    git status  
+
+    On branch master
+    nothing to commit, working tree clean
+
