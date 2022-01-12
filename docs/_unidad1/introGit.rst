@@ -7,7 +7,7 @@ todos los proyectos y ejercicios del curso bajo control de versión.
 Prerrequisitos
 -----------------
 
-Instala un cliente de git apropiado para tu sistema operativo.
+Instala un cliente de Git apropiado para tu sistema operativo.
 Si tu sistema operativo es Windows podrás descargarlo en 
 `este <https://git-scm.com/downloads>`__ sitio.
 
@@ -17,24 +17,27 @@ Lecturas, ejercicios y retos
 Lectura 1: ¿Qué es un sistema de control versión?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Cuando estás desarrollando software alguna vez te ha pasado  tu y tus compañeros de equipo podrán mantener sincronizado el 
-software en sus computadores personales enviando y recibiendo información a Github 
-a medida que cada uno va aportando al proyecto.
+Cuando estás desarrollando software, alguna vez te ha pasado que terminas 
+con nombres de archivos marcados con frases tales como:
 
+* Versión buena con un error
+* Versión casi lista con un bug
 * Versión para compartir con Camila
 * Versión para enviar al profesor
 * Esta versión si está bien
+* Versión 1, versión 1.1, versión 2, versión 3
+* versión enero 11 de 2022.
   
-Es muy posible que esto te pase si no usas un sistema de control 
-de versión.
+Lo anterior es muy posible que te pase si no usas un sistema de control 
+de versión. 
 
-Cuando construyes software, usualmente, debes modificar archivos. 
-Un sistema de control de versión te ayuda a evitar la necesidad de  
-guardar tus archivos con nombres diferentes a medida que realizas cambios, 
-incluyes nuevas características o tienes alguna nueva receta de archivos 
-para producir tu programa. El sistema de control de versión te ayudará 
-a gestionar la versión de los archivos de manera automática, 
-evitando procesos manuales tediosos y susceptibles al error.
+Pero entonces ¿Qué haces si quieres mantener la historia de cambios de tus 
+archivos? ¡Fácil! usas un sistema de control de versión. Un sistema de control 
+de versión te ayuda a evitar la necesidad de guardar tus archivos con nombres 
+diferentes a medida que realizas cambios, incluyes nuevas características 
+o tienes alguna nueva receta de archivos para producir tu programa. El sistema 
+de control de versión te ayudará a gestionar la versión de los archivos 
+de manera automática evitando procesos manuales tediosos y susceptibles al error.
 
 El sistema de control de versión ES UN PROGRAMA (que instalas en tu computador)
 que te permitirá trazar y guardar información de los cambios que haces a tus 
