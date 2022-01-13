@@ -865,6 +865,107 @@ Actualiza tu lista de comandos y escribe al frente de cada uno, con tus palabras
 qué hace. En este punto ya deberías tener más claridades. Por tanto, revisa de nuevo 
 la redacción de los comandos que ya tenías.
 
+Ejercicio 19: entrega de evaluaciones usando GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Te voy a proponer un ejercicio que será muy importante para el curso 
+porque será la manera típica como entregarás las evaluaciones.
+
+Para la entrega de las evaluaciones utilizaremos GitHub. Para cada evaluación 
+te enviaré un enlace con una invitación para la evaluación. Cuando aceptes la 
+invitación automáticamente se creará un repositorio para ti con la estructura 
+de directorios y archivos necesarios para comenzar a realizar la evaluación. Ten 
+en cuenta que tu tendrás permisos para editar el nuevo repositorio. Podrás aplicar 
+todo lo que trabajaste en esta guía.
+
+Entonces vamos a simular una invitación a una evaluación en la cual tendrás que 
+escribir un programa. En este caso deberás completar el programa wcat.c al cual 
+se le aplicarán automáticamente unos vectores de prueba para verificar que es 
+correcto.
+
+Por ahora, los detalles del programa y las pruebas no importan. Lo importante es 
+que puedas practicar.
+
+Sigue estos pasos:
+
+* Abre un browser e ingresa a tu cuenta de GitHub. ASEGÚRATE POR FAVOR que estás 
+  en tu cuenta.
+* Abre una nueva pestaña e ingresa a `este <https://classroom.github.com/a/G99gifiF>`__ sitio.
+* Busca y selecciona tu nombre y ID. Esta operación ENLAZARÁ tu cuenta de GitHub con tu nombre 
+  y ID.
+* Por último acepta la tarea.
+* Espera un momento y refresca (con F5) el browser.
+* Abre tu nuevo repositorio en otra pestaña.
+* Descarga el repositorio en tu computador.
+* Ingresa al directorio ``dirTest/project``.
+* Lee el archivo ``README.md``. Lo puedes hacer en tu computador y en en Internet. Cuando 
+  lo leas en tu computador verás que está escrito en un lenguaje llamado 
+  `Markdown <https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`__. 
+  Ve mirando este lenguaje porque lo usarás para escribir la documentación de las evaluaciones. PERO 
+  no te preocupes es muy fácil. Además, en un rato te propondré un ejercicio para que practiques. Por 
+  otro lado, cuando leas el archivo en Internet notarás que GitHub lo renderiza para que se 
+  vea bonito.
+* Observa el archivo wcat.c inicial. 
+
+  .. code-block:: c 
+
+        #include <stdio.h>
+        #include <stdlib.h>
+
+
+        int main(int argc, char *argv[]){
+            exit(EXIT_SUCCESS);
+        }
+
+
+
+
+.. 
+    Ejercicio para las wiki
+
+    Ejercicio simulando una tarea
+
+    
+
+    .. code-block:: c 
+
+        #include <stdio.h>
+        #include <stdlib.h>
+
+
+        int main(int argc, char *argv[]){
+
+            //printf("arc: %d\n",argc);
+
+            if(argc <= 1){
+                exit(EXIT_SUCCESS);
+            }
+
+            FILE *inFile = NULL;
+            char buffer[256];
+            char *status =  NULL;
+
+
+            for(int i = 1 ; i < argc; i++){
+
+                inFile = fopen(argv[i],"r");
+                if (inFile == NULL){
+                    printf("wcat: cannot open file");
+                    printf("\n");
+                    exit(EXIT_FAILURE);
+                }
+                do{
+                    status = fgets(buffer, sizeof(buffer),inFile);
+                    if(status != NULL){
+                        printf("%s",buffer);
+                        //printf("hola mundo cruel");
+                    }
+                }while (status !=NULL);
+
+                fclose(inFile);
+            }
+            
+            exit(EXIT_SUCCESS);
+        }
 
 
