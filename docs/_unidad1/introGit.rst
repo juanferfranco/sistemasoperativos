@@ -796,7 +796,10 @@ En este punto te pediré que descanses un momento. En este
 ejercicio vas a repasar el material que has trabajo. Te pediré 
 que hagas lo siguiente:
 
-#. Crea un directorio llamado demo3.
+#. Crea un directorio llamado demo3. Ten presente cambiarte 
+   primero al directorio padre de demo2. NO DEBES tener un repositorio 
+   en otro repositorio (se puede hacer, pero aprenderás la manera adecuada
+   de hacerlo luego).
 #. Inicia un repositorio allí.
 #. Crea unos cuantos archivos.
 #. Dile a Git que haga tracking de esos archivos.
@@ -806,4 +809,54 @@ que hagas lo siguiente:
 #. Modifica los archivos creados.
 #. Realiza un par de commits más.
 #. Sincroniza los cambios con el repositorio remoto.
+
+Ejercicio 17: clona un repositorio de GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ahora vas a descargar un repositorio de GitHub. Cámbiate al directorio padre 
+de demo3. Escribe el comando:
+
+.. code-block:: bash 
+
+    gh repo clone juanferfrancoudea/demo4
+
+.. note::
+
+    También puedes usar el comando git clone https://github.com/juanferfrancoudea/demo4.git
+
+Cámbiate al repositorio demo4.
+
+#. Verifica el estado del repositorio (status).
+#. Verifica el historial (log).
+#. Realiza un cambio a f1.txt.
+#. Realiza un commit al repositorio local.
+
+Ahora trata de actualizar el repositorio remoto con:
+
+.. code-block:: bash 
+
+    git push
+    
+Deberías obtener un mensaje similar a este:
+
+.. code-block:: bash 
+
+    remote: Permission to juanferfrancoudea/demo4.git denied to juanferfranco.
+    fatal: unable to access 'https://github.com/juanferfrancoudea/demo4.git/': The requested URL returned error: 403
+
+¿Qué está pasando? Lo que ocurre es que el repositorio que clonaste NO ES DE TU PROPIEDAD y por 
+tanto NO TIENES permiso de actualizarlo. Para poderlo modificar, el dueño del repositorio te 
+debe dar acceso.
+
+.. note::
+
+    Más de una persona puede trabajar en un repositorio siguiendo una serie de pasos 
+    y consideraciones. Para aprender más al respecto tendrías que leer sobre Git Workflows. 
+    De todas maneras no te preocupes, por ahora hay otras cosas que debes entender y practicar 
+    antes de abordar el TRABAJO EN EQUIPO usando Git. PERO OJO, TE RUEGO que más adelante 
+    lo aprendas porque será tu día a día cuando estés trabajando en la industria.
+
+
+
+
 
