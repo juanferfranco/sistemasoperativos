@@ -60,10 +60,19 @@ muy complejos en los cuales participen MUCHOS desarrolladores.
 Ejercicio 1: instala Git
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Recuerda seleccionar la versión correcta según tu sistema operativo. 
+Recuerda seleccionar la versión correcta según tu sistema operativo.
 
-Una vez esté instalado Git vas a abrir Git Bash si estás en Windows o una terminal si 
-estás usando Linux o MacOS. Escribe el comando:
+Si estás utilizando Windows, al momento de instalar te recomiendo que ajustes 
+el PATH con la opción: ``Git from the command line and also from 3rd-party software``.
+Esta opción te permitirá usar Git con varias aplicaciones.
+
+Una vez esté instalado Git vas a abrir una terminal en Linux o MacOS. En windows 
+puedes abrir varias opciones: Git bash (que es instalada con Git), 
+el símbolo del sistema (Command Prompt o CMD) o PowerShell. Verifica 
+cuál de las opciones que te da Windows funciona mejor para ti. Para los ejercicios 
+que siguen puedes usar Git bash; sin embargo, puedes explorar los comandos de 
+Windows equivalentes `aquí <https://www.lemoda.net/windows/windows2unix/windows2unix.html>`__ 
+que puedes emplear en Command Prompt o PowerShell. 
 
 .. code-block:: bash
 
