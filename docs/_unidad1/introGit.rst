@@ -525,7 +525,7 @@ Al verificar el estado del repositorio verás:
 
     no changes added to commit (use "git add" and/or "git commit -a")
 
-Ves alguna comparada con el momento en el que creaste el archivo? Déjame recordarte 
+¿Ves la diferencia con respecto al momento en el que creaste el archivo? Déjame recordarte 
 el mensaje:
 
 .. code-block:: bash 
@@ -540,8 +540,72 @@ el mensaje:
 
     nothing added to commit but untracked files present (use "git add" to track)
 
-Nota que al crear el archivo Git te dice que no le está haciendo seguimiento (untracked); 
-sin embargo, una vez está creado el archivo y lo modificas ahora Git te dice 
-``Changes not staged for commit``. Git le hace tracking a tu archivo, pero tu 
-no has decidido pasar el archivo a STAGE para poderle tomar la foto con los cambios 
-que tiene ahora. ¿Cómo lo haces? Mira que en el mensaje Git te dice: ``git add``.
+Nota que al crear el archivo, Git te dice que no le está haciendo seguimiento (untracked); 
+sin embargo, una vez está creado el archivo y lo modificas, Git te dice 
+``Changes not staged for commit``. 
+
+En este caso, Git le hace tracking a tu archivo, pero tu no has decidido pasar el 
+archivo a STAGE para poderle tomar la foto con los cambios que tiene ahora. 
+¿Cómo lo haces? Mira que en el mensaje Git te dice: ``git add f1.txt``. Nota que Git 
+también te dice que puedes descartar los cambios en el archivo con 
+``git restore f1.txt``. ¿Por qué no haces la prueba?
+
+Escribe:
+
+.. code-block:: bash 
+
+    git restore f1.txt
+
+Luego para ver en la terminal el contenido del archivo:
+
+.. code-block:: bash
+
+    cat f1.txt
+
+¿Ya no hay nada, cierto? Mira el estado del repositorio:
+
+.. code-block:: bash 
+
+    git status
+
+    On branch master
+    nothing to commit, working tree clean
+
+Vuelve a modificar f1.txt, pero esta vez si guardarás los cambios 
+en el repositorio. Recuerda los pasos:
+
+#. Cambias el archivo
+#. Verifica el estado del repositorio (status)
+#. Adiciona los cambios en el STAGE (add) 
+#. Toma la foto (commit)
+#. Verifica de nuevo el estado del repositorio (status)
+#. Verifica el historial del repositorio (log)
+
+Te debe quedar algo así:
+
+.. code-block:: bash 
+
+    commit 3c8fee79d84b5e1bee87eebd67d06db821168951 (HEAD -> master)
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Thu Jan 13 08:15:26 2022 -0500
+
+        update f1.txt
+
+    commit 7ec66fb9215999518fe5907c8c1360036906476e
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 17:19:14 2022 -0500
+
+        Add f3.txt and f4.txt
+
+    commit 11950128c3d3dc6cc7b3cfda7a3e5a8ed566c235
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 17:16:59 2022 -0500
+
+        add f2.txt
+
+    commit c14b43cde2ebac63a56377ba1f6faa67316d48ff
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Wed Jan 12 16:10:17 2022 -0500
+
+        adicionamos f1.txt al repositorio
+
