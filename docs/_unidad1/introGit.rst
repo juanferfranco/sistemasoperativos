@@ -609,3 +609,82 @@ Te debe quedar algo así:
 
         adicionamos f1.txt al repositorio
 
+
+Ejercicio 12: ¿Y si ya tienes un proyecto creado? 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Supón que ya tienes un proyecto creado o justo acabas de crear un 
+proyecto y quieres iniciar desde ese punto el control de versión.
+
+Vamos a simular esta situación. Abre la terminal. Si la tenías abierta 
+cámbiate al directorio padre de demo1. Crea lo que te mostraré ahora:
+
+.. code-block:: bash 
+
+    ./demo2
+    ├── f1.txt
+    ├── f2.txt
+    └── f3.txt
+
+Adiciona algunas líneas de texto a cada archivo. Piensa entonces 
+que esto que acabas de hacer es el resultado de la reciente creación 
+de un proyecto de software, pero aún sin control de versión.
+
+Para adicionar control de versión al proyecto:
+
+#. Cámbiate al directorio ``demo2`` (cd)
+#. Inicia un nuevo repositorio (init)
+#. Verifica el estado del repositorio (status)
+
+El resultado esperado es este:
+
+.. code-block:: bash 
+
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        f1.txt
+        f2.txt
+        f3.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+¿Te parece familiar lo que ves? Ahora solo es que le digas a Git que haga 
+tracking a los archivos que quieras. Para este ejercicio dile que todos los archivos.
+
+.. code-block:: bash 
+
+    git add .
+
+Y el resultado cuando verifiques el estado del repositorio (status) será:
+
+.. code-block:: bash 
+
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+        new file:   f1.txt
+        new file:   f2.txt
+        new file:   f3.txt
+
+Entonces recuerda. Lo que acabas de hacer es decirle a Git que haga tracking a 
+f1.txt, f2.txt y f3.txt. Además acabas de preparar en el STAGE los archivos 
+que entrarán en la foto (commit). Realiza el commit y verifica el estado.
+
+Si verificas el historial en este punto, verás que acabas de iniciar el control 
+de versión.
+
+.. code-block:: bash 
+
+    commit 6c2e0fc824981b406c68dccc9ef34ad86f9ea8e4 (HEAD -> master)
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Thu Jan 13 09:11:27 2022 -0500
+
+        init repo
+
