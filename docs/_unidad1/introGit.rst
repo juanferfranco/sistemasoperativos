@@ -896,6 +896,8 @@ Sigue estos pasos:
 * Por último acepta la tarea.
 * Espera un momento y refresca (con F5) el browser.
 * Abre tu nuevo repositorio en otra pestaña.
+* Selecciona el menú Actions y dale click al botón Enable Actions on this 
+  repository. Si ya está habilitado mejor aún.
 * Descarga el repositorio en tu computador.
 * Ingresa al directorio ``dirTest/project``.
 * Lee el archivo ``README.md``. Lo puedes hacer en tu computador y en en Internet. Cuando 
@@ -905,7 +907,7 @@ Sigue estos pasos:
   no te preocupes es muy fácil. Además, en un rato te propondré un ejercicio para que practiques. Por 
   otro lado, cuando leas el archivo en Internet notarás que GitHub lo renderiza para que se 
   vea bonito.
-* Observa el archivo wcat.c inicial. 
+* Observa el archivo wcat.c inicial:
 
   .. code-block:: c 
 
@@ -917,55 +919,54 @@ Sigue estos pasos:
             exit(EXIT_SUCCESS);
         }
 
+* Modifica wcat.c con este código:
+
+  .. code-block:: c 
+
+    #include <stdio.h>
+    #include <stdlib.h>
 
 
+    int main(int argc, char *argv[]){
 
-.. 
-    Ejercicio para las wiki
+        //printf("arc: %d\n",argc);
 
-    Ejercicio simulando una tarea
-
-    
-
-    .. code-block:: c 
-
-        #include <stdio.h>
-        #include <stdlib.h>
-
-
-        int main(int argc, char *argv[]){
-
-            //printf("arc: %d\n",argc);
-
-            if(argc <= 1){
-                exit(EXIT_SUCCESS);
-            }
-
-            FILE *inFile = NULL;
-            char buffer[256];
-            char *status =  NULL;
-
-
-            for(int i = 1 ; i < argc; i++){
-
-                inFile = fopen(argv[i],"r");
-                if (inFile == NULL){
-                    printf("wcat: cannot open file");
-                    printf("\n");
-                    exit(EXIT_FAILURE);
-                }
-                do{
-                    status = fgets(buffer, sizeof(buffer),inFile);
-                    if(status != NULL){
-                        printf("%s",buffer);
-                        //printf("hola mundo cruel");
-                    }
-                }while (status !=NULL);
-
-                fclose(inFile);
-            }
-            
+        if(argc <= 1){
             exit(EXIT_SUCCESS);
         }
+
+        FILE *inFile = NULL;
+        char buffer[256];
+        char *status =  NULL;
+
+
+        for(int i = 1 ; i < argc; i++){
+
+            inFile = fopen(argv[i],"r");
+            if (inFile == NULL){
+                printf("wcat: cannot open file");
+                printf("\n");
+                exit(EXIT_FAILURE);
+            }
+            do{
+                status = fgets(buffer, sizeof(buffer),inFile);
+                if(status != NULL){
+                    printf("%s",buffer);
+                    //printf("hola mundo cruel");
+                }
+            }while (status !=NULL);
+
+            fclose(inFile);
+        }
+        
+            exit(EXIT_SUCCESS);
+        }
+
+* Salva wcat.c y realiza un commit.
+* Luego sincroniza con el repositorio remoto (push).
+* Ingresa de nuevo al repositorio en GitHub. Ingresa al menú Actions. 
+  Espera un minuto y refresca la página. Si todo está bien verás 
+  una marca verde al lado izquierdo del commit que enviaste.
+
 
 
