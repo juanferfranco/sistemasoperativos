@@ -1,4 +1,4 @@
-Introducción al control de versión con git y Github
+Introducción al control de versión con git y GitHub
 ====================================================
 
 Con esta guía aprenderás los herramientas básicas para realizar 
@@ -50,17 +50,17 @@ Quiero contarte además que hoy en día prácticamente es impensable una
 empresa que desarrolle cualquier producto de software que NO TENGA control 
 de versión.
 
-Lectura 2: ¿Qué es Git y Github?
+Lectura 2: ¿Qué es Git y GitHub?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Git es un sistema de control de versión libre y de código abierto que instalas 
 en tu computador para realizar el control de versión de tus proyectos. 
-Por su parte Github te permite guardar tus proyectos de software en un servidor 
+Por su parte GitHub te permite guardar tus proyectos de software en un servidor 
 en Internet con la información del control de versión que tienes en tu computador. 
 ¿Para qué quieres esto? Para compartir tu código, para hacer copias de seguridad, 
 para mostrar tus habilidades y portafolio y SOBRE TODO para trabajar en EQUIPO. 
 
-Por medio de Github, las aportaciones de cada miembro del equipo se pueden 
+Por medio de GitHub, las aportaciones de cada miembro del equipo se pueden 
 sincronizar y compartir. De esta manera, es posible construir productos de software 
 muy complejos en los cuales participen MUCHOS desarrolladores.
 
@@ -687,4 +687,15 @@ de versión.
     Date:   Thu Jan 13 09:11:27 2022 -0500
 
         init repo
+
+Ejercicio 13: comparte tu trabajo usando GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ahora te pediré que compartas el repositorio local ``demo2`` con el mundo. 
+Para hacerlo necesitarás usar GitHub.
+
+#. Crea una cuenta en GitHub o usa la que ya tienes.
+#. Descarga e instala la `consola <https://cli.github.com/>`__ de GitHub 
+   `aquí <https://github.com/cli/cli#installation>`__. Recuerda seleccionar 
+   la opción adecuada según tu sistema operativo y plataforma de hardware.
 
