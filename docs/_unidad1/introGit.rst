@@ -690,7 +690,7 @@ de versión.
 
         init repo
 
-Ejercicio 13: comparte tu trabajo usando GitHub
+Ejercicio 13: configura GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora te pediré que compartas el repositorio local ``demo2`` con el mundo. 
@@ -710,4 +710,6 @@ Para hacerlo necesitarás usar GitHub.
    a tu cuenta en GitHub por medio de un proceso interactivo entre la terminal 
    y el browser.
 
+Ejercicio 14: comparte tu trabajo usando GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
