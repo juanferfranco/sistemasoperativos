@@ -729,3 +729,62 @@ al servidor remoto, en este caso upstream.
 Ingresa al sitio: https://github.com/TU_USUARIO/demo2 para observar tu repositorio 
 en GitHub. NO OLVIDES modificar la cadena ``TU_USUARIO`` con tu nombre de usuario 
 en GitHub.
+
+Ejercicio 15: actualiza tu repositorio remoto
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Realiza los siguientes pasos:
+
+#. Modifica f1.txt
+#. Realiza un commit con los cambios
+
+Verifica el estado del repositorio:
+
+.. code-block:: bash 
+
+    git status
+
+    On branch master
+    Your branch is ahead of 'upstream/master' by 1 commit.
+    (use "git push" to publish your local commits)
+
+    nothing to commit, working tree clean
+
+Observa el mensaje ``Your branch is ahead of 'upstream/master' by 1 commit.`` 
+Git detecta que tu repositorio local está adelantado un commit con respecto 
+al repositorio remoto. Observa que el propio Git te dice cómo actualizar 
+el repositorio remoto:
+
+.. code-block:: bash 
+
+    git push 
+
+Vuelve el verificar el estado:
+
+.. code-block:: bash 
+
+    git status
+
+    On branch master
+    Your branch is up to date with 'upstream/master'.
+
+    nothing to commit, working tree clean
+
+Y finalmente el historial:
+
+.. code-block:: bash 
+
+    commit 74f273a64864279df506e95ba496dc2a521cb876 (HEAD -> master, upstream/master)
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Thu Jan 13 11:31:50 2022 -0500
+
+        add LINEA 14 to test my remote
+
+    commit 6c2e0fc824981b406c68dccc9ef34ad86f9ea8e4
+    Author: jfupb <juanf.franco@upb.edu.co>
+    Date:   Thu Jan 13 09:11:27 2022 -0500
+
+        init repo
+
+Mira el texto ``(HEAD -> master, upstream/master)``. Indica que tu repositorio 
+local y remoto apuntan al mismo commit.
