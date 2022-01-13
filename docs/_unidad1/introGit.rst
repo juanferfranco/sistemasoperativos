@@ -788,3 +788,22 @@ Y finalmente el historial:
 
 Mira el texto ``(HEAD -> master, upstream/master)``. Indica que tu repositorio 
 local y remoto apuntan al mismo commit.
+
+Ejercicio 16: repasa (evaluación formativa)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+En este punto te pediré que descanses un momento. En este 
+ejercicio vas a repasar el material que has trabajo. Te pediré 
+que hagas lo siguiente:
+
+#. Crea un directorio llamado demo3.
+#. Inicia un repositorio allí.
+#. Crea unos cuantos archivos.
+#. Dile a Git que haga tracking de esos archivos.
+#. Realiza un primer commit.
+#. Crea un repositorio remoto en GitHub que esté sincronizado con 
+   tu repositorio local. No olvides comprobar su creación.
+#. Modifica los archivos creados.
+#. Realiza un par de commits más.
+#. Sincroniza los cambios con el repositorio remoto.
+
