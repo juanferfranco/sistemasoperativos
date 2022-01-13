@@ -4,13 +4,6 @@ Introducción al control de versión con git y GitHub
 Con esta guía aprenderás los herramientas básicas para realizar 
 todos los proyectos y ejercicios del curso bajo control de versión.
 
-Prerrequisitos
------------------
-
-Instala un cliente de Git apropiado para tu sistema operativo.
-Si tu sistema operativo es Windows podrás descargarlo en 
-`este <https://git-scm.com/downloads>`__ sitio.
-
 Lecturas, ejercicios y retos
 ---------------------------------
 
@@ -695,7 +688,7 @@ Ahora te pediré que compartas el repositorio local ``demo2`` con el mundo.
 Para hacerlo necesitarás usar GitHub.
 
 #. Crea una cuenta en GitHub o usa la que ya tienes.
-#. Descarga e instala la `consola <https://cli.github.com/>`__ de GitHub 
+#. Descarga e instala la `GitHub cli <https://cli.github.com/>`__ de GitHub 
    `aquí <https://github.com/cli/cli#installation>`__. Recuerda seleccionar 
    la opción adecuada según tu sistema operativo y plataforma de hardware.
-
+#. Una vez termines
