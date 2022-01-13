@@ -857,7 +857,7 @@ debe dar acceso.
     lo aprendas porque será tu día a día cuando estés trabajando en la industria.
 
 
-Ejercicio 18: repaso (evaluación formativa)
+Ejercicio 18: repasa (evaluación formativa)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ha llegado la hora de volver a repasar TODOS los comandos que has aprendido. 
