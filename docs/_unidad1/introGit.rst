@@ -700,4 +700,14 @@ Para hacerlo necesitarás usar GitHub.
 #. Descarga e instala la `GitHub cli <https://cli.github.com/>`__ de GitHub 
    `aquí <https://github.com/cli/cli#installation>`__. Recuerda seleccionar 
    la opción adecuada según tu sistema operativo y plataforma de hardware.
-#. Una vez termines
+#. Abre una terminal y ejecuta el comando:
+
+   .. code-block:: bash 
+
+       gh auth login
+
+   El comando anterior te permitirá autorizar el acceso de tu computador 
+   a tu cuenta en GitHub por medio de un proceso interactivo entre la terminal 
+   y el browser.
+
+
