@@ -713,3 +713,19 @@ Para hacerlo necesitarás usar GitHub.
 Ejercicio 14: comparte tu trabajo usando GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Abre la terminal y cámbiate al directorio demo2. Ejecuta el siguiente comando:
+
+.. code-block:: bash 
+
+    gh repo create demo2 --public --source=. --push --remote=upstream
+
+``gh repo create demo2`` te permiten crear el repositorio remoto demo2 en 
+GitHub. ``--public`` hace que el repositorio sea público y lo puedas compartir 
+con cualquier persona. ``--source=.`` especifica en dónde está el 
+repositorio. ``--push`` permite enviar todos los commits locales al repositorio 
+remoto. Finalmente, ``--remote=upstream`` permite asignarle un nombre corto 
+al servidor remoto, en este caso upstream.
+
+Ingresa al sitio: https://github.com/TU_USUARIO/demo2 para observar tu repositorio 
+en GitHub. NO OLVIDES modificar la cadena ``TU_USUARIO`` con tu nombre de usuario 
+en GitHub.
