@@ -873,7 +873,7 @@ porque será la manera típica como entregarás las evaluaciones.
 
 Para la entrega de las evaluaciones utilizaremos GitHub. Para cada evaluación 
 te enviaré un enlace con una invitación para la evaluación. Cuando aceptes la 
-invitación automáticamente se creará un repositorio para ti con la estructura 
+invitación, automáticamente se creará un repositorio para ti con la estructura 
 de directorios y archivos necesarios para comenzar a realizar la evaluación. Ten 
 en cuenta que tu tendrás permisos para editar el nuevo repositorio. Podrás aplicar 
 todo lo que trabajaste en esta guía.
@@ -884,28 +884,28 @@ se le aplicarán automáticamente unos vectores de prueba para verificar que es
 correcto.
 
 Por ahora, los detalles del programa y las pruebas no importan. Lo importante es 
-que puedas practicar.
+que puedas practicar el flujo de trabajo usando Git y GitHub.
 
 Sigue estos pasos:
 
 * Abre un browser e ingresa a tu cuenta de GitHub. ASEGÚRATE POR FAVOR que estás 
   en tu cuenta.
-* Abre una nueva pestaña e ingresa a `este <https://classroom.github.com/a/G99gifiF>`__ sitio.
+* Abre una nueva pestaña e ingresa a `este <https://classroom.github.com/a/CbKKrXPN>`__ sitio.
 * Busca y selecciona tu nombre y ID. Esta operación ENLAZARÁ tu cuenta de GitHub con tu nombre 
   y ID.
 * Por último acepta la tarea.
 * Espera un momento y refresca (con F5) el browser.
 * Abre tu nuevo repositorio en otra pestaña.
-* Selecciona el menú Actions y dale click al botón Enable Actions on this 
-  repository. Si ya está habilitado mejor aún.
-* Descarga el repositorio en tu computador.
+* Selecciona el menú Actions y dale click al botón ``Enable Actions on this 
+  repository``. Si no aparece el botón es porque ya están habilitadas las acciones.
+* Descarga el repositorio a tu computador.
 * Ingresa al directorio ``dirTest/project``.
 * Lee el archivo ``README.md``. Lo puedes hacer en tu computador y en en Internet. Cuando 
   lo leas en tu computador verás que está escrito en un lenguaje llamado 
   `Markdown <https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`__. 
   Ve mirando este lenguaje porque lo usarás para escribir la documentación de las evaluaciones. PERO 
   no te preocupes es muy fácil. Además, en un rato te propondré un ejercicio para que practiques. Por 
-  otro lado, cuando leas el archivo en Internet notarás que GitHub lo renderiza para que se 
+  otro lado, cuando leas el archivo README.md en GitHub notarás que este lo renderiza para que se 
   vea bonito.
 * Observa el archivo wcat.c inicial:
 
@@ -963,10 +963,16 @@ Sigue estos pasos:
         }
 
 * Salva wcat.c y realiza un commit.
-* Luego sincroniza con el repositorio remoto (push).
+* Luego sincroniza con el repositorio remoto (push). Esto hará que se disparen 
+  las pruebas (acciones) en GitHub.
 * Ingresa de nuevo al repositorio en GitHub. Ingresa al menú Actions. 
   Espera un minuto y refresca la página. Si todo está bien verás 
   una marca verde al lado izquierdo del commit que enviaste.
+* Dale click al mensaje al lado de la marca verde. Luego dale click a 
+  Autograding para observar todos los pasos que se realizaron para verificar 
+  tu trabajo.
+
+
 
 
 
