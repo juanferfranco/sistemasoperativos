@@ -972,7 +972,72 @@ Sigue estos pasos:
   Autograding para observar todos los pasos que se realizaron para verificar 
   tu trabajo.
 
+Ejercicio 20: documentación de las evaluaciones
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Todas las entregas que realices deben estar acompañadas de una documentación 
+que explique los aspectos técnicos (y otros que te pediré) de la solución que 
+propongas a los problemas que te plantearé para las evaluaciones. Lo interesante 
+de GitHub es que te permite almacenar repositorios no solo para el código, sino 
+también para la documentación. En el ejercicio anterior te hablé del lenguaje con el 
+cual se escribió el archivo README.md. Se trata del lenguaje Markdown que será 
+el mismo que utilizarás para escribir la documentación de tus entregas. Como 
+te comenté antes, no tienes de qué preocuparte, realmente es muy fácil.
 
+#. Crea un directorio llamado demo6. Ten presente cambiarte 
+   primero al directorio padre donde están almacenados los demos anteriores.
+#. Ahora crea un directorio llamado code y cámbiate a ese directorio.
+#. Inicia un repositorio allí.
+#. Crea unos cuantos archivos.
+#. Dile a Git que haga tracking de esos archivos.
+#. Realiza un primer commit.
+#. Crea un repositorio remoto en GitHub que esté sincronizado con 
+   tu repositorio local. No olvides comprobar su creación.
+
+   .. note:: RECUERDA cómo crear el repositorio
+
+       .. code-block:: bash 
+
+          gh repo create NOMBRE --public --source=. --push --remote=upstream
+
+#. Modifica los archivos creados.
+#. Realiza un par de commits más.
+#. Sincroniza los cambios con el repositorio remoto.
+
+Hasta aquí nada nuevo, ¿Verdad? 
+
+#. Ingresa a GitHub y selecciona el menú Wiki.
+#. Click en el botón Create the first page.
+#. Verás que se abre un editor en el cual podrás añadir tu documentación. Además 
+   podrás formatearlo en lenguaje Markdown utilizando las ayudas gráficas.
+#. Cambia el título del documento por ``DOCUMENTACIÓN DEL DEMO 6``.
+#. Indica que ese texto tendrá formato ``h1``.
+#. Puede dar click en el menú ``preview`` para que puedas ver cómo te va quedando el 
+   documento.
+#. Ahora te pediré que explores las demás ayudas gráficas para insertar imágenes, 
+   hipervínculos, títulos de tipo h2 y h3, negrita, itálica, resaltado y listas ordenadas 
+   y no ordenadas.
+#. A medida que experimentas ve observando en preview cómo te queda.
+#. Una vez termines, dale click al botón ``save page``.
+#. Ahora copia la URL que aparece en ``Clone this wiki locally``.
+#. Cámbiate al directorio demo6.
+#. Clona el repositorio con la documentación así:
+
+   .. code-block:: bash 
+
+       git clone https://github.com/juanferfranco/demo6.wiki.git
+
+Notarás que se ha creado el directorio ``demo6.wiki`` y en el interior un archivo 
+llamado Home.md. Si lo abres podrás ver el código de tu documentación. En este punto 
+puedes elegir si quieres seguir editando tu documentación localmente o en GitHub; sin 
+embargo, para terminar el ejercicio y practicar un poco más te voy a pedir que 
+modifiques localmente el documento Home.md y añadas lo siguiente, pero ten en cuenta 
+que por cada paso puedes ir realizando un commit local y luego sincronizando con 
+el repositorio remoto.
+
+#. Un subtítulo h2.
+#. Un texto. En el cuerpo del texto coloca algo en negrita, en itálica y resaltado.
+#. Agrega una imagen.
+#. Agrega una lista ordenada y no ordenada que contengan hipervínculos.
 
 
