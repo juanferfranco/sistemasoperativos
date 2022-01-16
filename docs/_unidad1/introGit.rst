@@ -1021,7 +1021,7 @@ Hasta aquí nada nuevo, ¿Verdad?
    podrás formatearlo en lenguaje Markdown utilizando las ayudas gráficas.
 #. Cambia el título del documento por ``DOCUMENTACIÓN DEL DEMO 6``.
 #. Indica que ese texto tendrá formato ``h1``.
-#. Puede dar click en el menú ``preview`` para que puedas ver cómo te va quedando el 
+#. Puedes hacer click en el menú ``preview`` para que puedas ver cómo te va quedando el 
    documento.
 #. Ahora te pediré que explores las demás ayudas gráficas para insertar imágenes, 
    hipervínculos, títulos de tipo h2 y h3, negrita, itálica, resaltado y listas ordenadas 
