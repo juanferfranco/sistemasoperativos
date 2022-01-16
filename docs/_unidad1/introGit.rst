@@ -60,7 +60,8 @@ muy complejos en los cuales participen MUCHOS desarrolladores.
 Ejercicio 1: instala Git
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Recuerda seleccionar la versión correcta según tu sistema operativo.
+Ingresa a `este <https://git-scm.com/downloads>`__ sitio y descarga Git. Recuerda seleccionar 
+la versión correcta según tu sistema operativo.
 
 Si estás utilizando Windows, al momento de instalar te recomiendo que ajustes 
 el PATH con la opción: ``Git from the command line and also from 3rd-party software``.
