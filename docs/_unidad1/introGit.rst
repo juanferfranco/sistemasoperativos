@@ -312,10 +312,12 @@ Supón que estás trabajando en tu proyecto y se te ocurre una idea, algo nuevo
 para implementar; sin embargo, no quieres dañar tu proyecto principal. Entonces 
 lo que haces es que te creas una rama que tomará como punto de partida el estado 
 actual de tu proyecto. En esa nueva rama realizas los ensayos que quieras. Si 
-al final no te gusta el resultado simplemente destruyes la rama y tu proyecto 
+al final no te gusta el resultado, simplemente destruyes la rama y tu proyecto 
 seguirá como lo habías dejado antes de crear la rama. Pero si el resultado te gusta 
 entonces podrás hacer un MERGE e incorporar las ideas de la nueva rama a la rama 
-inicial. Más adelante te propondré algunos ejercicios para que practiques lo anterior.
+inicial. Ten presente que si no quieres trabajar en la nueva rama y deseas retomar el 
+trabajo en la rama principal lo puedes hacer, te puedes cambiar de ramas. Incluso puedes 
+crear muchas más y probar varias ideas en simultáneo.
 
 Ahora observa el mensaje ``No commits yet``. Este mensaje quiere decir que aún no has guardado 
 nada en el repositorio. Finalmente, ``nothing to commit`` te está diciendo que no 
