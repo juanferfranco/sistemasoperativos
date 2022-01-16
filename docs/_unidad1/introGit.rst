@@ -332,7 +332,7 @@ esos casos solo vas a querer mantener bajo control de versión los archivos de c
 Ejercicio 9: adicionar un archivo al repositorio 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Para hacer las cosas más simples por el momento vas a simular 
+Para hacer las cosas más simples, por ahora solo vas a simular 
 la creación de un proyecto de software usando archivos de texto 
 simples.
 
@@ -400,10 +400,10 @@ Te explico con una metáfora lo que está pasando. Imagina que Git
 le toma fotos al estado de tu proyecto cada que se lo solicitas; sin embargo, 
 antes de tomar la foto tienes que decirle a Git (``con add``) a qué archivos 
 le tomarás la foto. Todos los archivos que serán tenidos en cuenta para la 
-próxima foto se ubican en zona lógica denominada el STAGE. Mira el mensaje 
+próxima foto se ubican en una zona lógica denominada el STAGE. Mira el mensaje 
 ``(use "git rm --cached <file>..." to unstage)``. Observa que Git te está diciendo
-que f1.txt ya está listo para la foto, pero si quieres sacarlo de la foto puedes 
-ejecutar el comando sugerido. Prueba sacar de la foto a f1.txt:
+que f1.txt ya está listo para la foto, pero si te arrepientes de incluir el archivo 
+en la foto puedes ejecutar el comando sugerido. Prueba sacar de la foto a f1.txt:
 
 .. code-block:: bash 
 
@@ -445,7 +445,7 @@ Consulta el estado del repositorio:
     nothing to commit, working tree clean
 
 Puedes ver que Git está observando todo lo que pasa en el directorio de tu 
-proyecto. Por ahora Git sabe que no has hecho nada más, por eso te dice 
+proyecto. Por ahora Git sabe que no has hecho nada más y por eso que te dice 
 ``nothing to commit, working tree clean``.
 
 Lo último que te voy a pedir que hagas con este ejercicio es que le preguntes 
