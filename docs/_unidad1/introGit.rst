@@ -703,7 +703,7 @@ Ahora te pediré que compartas el repositorio local ``demo2`` con el mundo.
 Para hacerlo necesitarás usar GitHub.
 
 #. Crea una cuenta en GitHub o usa la que ya tienes.
-#. Descarga e instala la `GitHub cli <https://cli.github.com/>`__ de GitHub 
+#. Descarga e instala la `GitHub cli <https://cli.github.com/>`__ de 
    `aquí <https://github.com/cli/cli#installation>`__. Recuerda seleccionar 
    la opción adecuada según tu sistema operativo y plataforma de hardware.
 #. Abre una terminal y ejecuta el comando:
@@ -830,7 +830,7 @@ de demo3. Escribe el comando:
 
     También puedes usar el comando git clone https://github.com/juanferfrancoudea/demo4.git
 
-Cámbiate al repositorio demo4.
+Cámbiate al directorio demo4.
 
 #. Verifica el estado del repositorio (status).
 #. Verifica el historial (log).
