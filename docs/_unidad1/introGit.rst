@@ -867,7 +867,7 @@ Ejercicio 18: repasa (evaluación formativa)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ha llegado la hora de volver a repasar TODOS los comandos que has aprendido. 
-Actualiza tu lista de comandos y escribe al frente de cada uno, con tus palabras 
+Actualiza tu lista de comandos y escribe al frente de cada uno con tus palabras 
 qué hace. En este punto ya deberías tener más claridades. Por tanto, revisa de nuevo 
 la redacción de los comandos que ya tenías.
 
