@@ -54,32 +54,32 @@ Carta Descriptiva del curso
 Estructura y metodología del curso
 -----------------------------------
 
-El curso está divido en 5 unidades:
+El curso está divido en 4 unidades:
 
-#. Unidad 1: lenguaje C - parte 1
-#. Unidad 2: lenguaje C - parte 2
-#. Unidad 3: procesos e hilos
-#. Unidad 4: comunicación y sincronización
-#. Unidad 5: entrada-salida
+#. Unidad 1-1: lenguaje C - parte 1
+#. Unidad 1-2: lenguaje C - parte 2
+#. Unidad 2: procesos e hilos
+#. Unidad 3: comunicación y sincronización
+#. Unidad 4: entrada-salida
 
 Cronograma
 -----------
 
 * Introducción al curso
-* Unidad 1: semanas 2 a 4
-* Unidad 2: semanas 5 a 7
-* Unidad 3: semanas 8 a 10
-* Unidad 4: semanas 11 a 13
-* Unidad 5: semanas 14 a 16
+* Unidad 1-1: semanas 2 a 4
+* Unidad 1-2: semanas 5 a 7
+* Unidad 2: semanas 8 a 10
+* Unidad 3: semanas 11 a 13
+* Unidad 4: semanas 14 a 16
 
 Evaluación
 -----------
 
-* Evaluación unidad 1: 20%. Semana 4
-* Evaluación unidad 2: 20%. Semana 7 
-* Evaluación unidad 3: 20%. Semana 10
-* Evaluación unidad 4: 20%. Semana 13
-* Evaluación unidad 5: 20%. Semana 16
+* Evaluación unidad 1-1: 20%. Semana 4
+* Evaluación unidad 1-2: 20%. Semana 7 
+* Evaluación unidad 2: 20%. Semana 10
+* Evaluación unidad 3: 20%. Semana 13
+* Evaluación unidad 4: 20%. Semana 16
 
 Textos de referencia
 ---------------------
