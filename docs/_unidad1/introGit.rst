@@ -283,6 +283,9 @@ Ejercicio 7: para pensar
 ¿Qué crees qué pase si borras el directorio ``.git`` en relación con el historial
 de cambios de tus archivos?
 
+¿Qué crees qué pase si creas un directorio vacío y mueves allí todo los archivos 
+de tu proyecto incluyendo el directorio .git?
+
 Ejercicio 8: reconocer el estado del repositorio 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
