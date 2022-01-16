@@ -12,6 +12,7 @@ Créditos y horas totales del curso: 3 créditos - 144 horas totales
    :caption: UNIDADES
 
    Introducción al curso <_intro/intro>
+   Introducción a Git y GitHub <_unidad1/introGit>
 ..
    Unidad 1: Lenguaje C <_unidad1/unidad1>
    Unidad 2: Procesos e hilos <_unidad2/unidad2>
