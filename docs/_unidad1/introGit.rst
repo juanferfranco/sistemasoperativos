@@ -880,7 +880,7 @@ Ejercicio 19: entrega de evaluaciones usando GitHub
 Te voy a proponer un ejercicio que será muy importante para el curso 
 porque será la manera típica como entregarás las evaluaciones.
 
-Para la entrega de las evaluaciones utilizaremos GitHub. Para cada evaluación 
+Para la entrega de las evaluaciones utilizarás GitHub. Para cada evaluación 
 te enviaré un enlace con una invitación para la evaluación. Cuando aceptes la 
 invitación, automáticamente se creará un repositorio para ti con la estructura 
 de directorios y archivos necesarios para comenzar a realizar la evaluación. Ten 
@@ -889,8 +889,8 @@ todo lo que trabajaste en esta guía.
 
 Entonces vamos a simular una invitación a una evaluación en la cual tendrás que 
 escribir un programa. En este caso deberás completar el programa wcat.c al cual 
-se le aplicarán automáticamente unos vectores de prueba para verificar que es 
-correcto.
+se le aplicarán automáticamente unos vectores de prueba para verificar si es 
+correcta la implementación.
 
 Por ahora, los detalles del programa y las pruebas no importan. Lo importante es 
 que puedas practicar el flujo de trabajo usando Git y GitHub.
@@ -909,7 +909,7 @@ Sigue estos pasos:
   repository``. Si no aparece el botón es porque ya están habilitadas las acciones.
 * Descarga el repositorio a tu computador.
 * Ingresa al directorio ``dirTest/project``.
-* Lee el archivo ``README.md``. Lo puedes hacer en tu computador y en en Internet. Cuando 
+* Lee el archivo ``README.md``. Lo puedes hacer en tu computador y en Internet. Cuando 
   lo leas en tu computador verás que está escrito en un lenguaje llamado 
   `Markdown <https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`__. 
   Ve mirando este lenguaje porque lo usarás para escribir la documentación de las evaluaciones. PERO 
