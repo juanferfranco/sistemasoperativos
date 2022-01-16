@@ -868,6 +868,9 @@ la redacción de los comandos que ya tenías.
 Ejercicio 19: entrega de evaluaciones usando GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+(El framework de pruebas para este ejercicio está tomado de 
+`aquí <https://github.com/remzi-arpacidusseau/ostep-projects>`__)
+
 Te voy a proponer un ejercicio que será muy importante para el curso 
 porque será la manera típica como entregarás las evaluaciones.
 
