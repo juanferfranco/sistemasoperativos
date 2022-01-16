@@ -154,7 +154,7 @@ Verás algo como esto:
     drwxrwxr-x  2 jfupb jfupb 4096 Jan 11 15:40 .
     drwxr-x--- 37 jfupb jfupb 4096 Jan 11 15:43 ..
 
-Te estarás preguntando, qué es ``.`` y ``..``. Lo primero es que son directorios. ``.``
+Te estarás preguntando, qué es ``.`` y ``..``. Se trata de referencias a dos directorios. ``.``
 se refiere al directorio actual y ``..`` se refiere al directorio padre. Entonces, si 
 escribes este comando:
 
