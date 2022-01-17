@@ -27,5 +27,7 @@
     ],
     "files.associations": {
         "cstdlib": "c"
-    }
+    },
+    "snooty.trace.server": "off",
+    "restructuredtext.languageServer.disabled": true
 }

@@ -36,84 +36,82 @@ Trabajo autónomo 1: terminar y darle una segunda pasada a la sesión 1
 ************************************************************************
 (Tiempo estima: 2 horas 50 minutos)
 
+* Termina la guía de introducción a Git y GitHub y dale una segunda pasada. 
+* Comienza con las Lecturas y ejercicios.
+
+Lecturas y ejercicios
+------------------------
+
+Trabajo autónomo 1: ejercicios 1 a 3
+**************************************
+
+Ejercicio 1: entorno de trabajo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para poder trabajar en los ejercicios vas a necesitar un ambiente de trabajo basado en Linux.
+
+Te voy a pedir que le des una mirada a  `este video <https://youtu.be/ZPpo-uViT_o>`__ para 
+que te hagas una idea de qué es Linux.
+
+Hay varias opciones para tener Linux funcionando en tu computador: lo puedes instalar en una 
+memoria, en una partición de tu computador, en una máquina virtual o incluso en 
+`WSL2 <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`__.
+
+La opción que te voy a recomendar es instalar el sistema operativo en una memoria USB externa.
+
+Vas a necesitar dos memorias USB. Una grande (> 16GB), donde instalarás tu sistema operativo
+y otra más pequeña (8GB) donde grabaras el instalador. Trata de utilizar la USB más rápida y
+más grande para instalar tu sistema operativo.
+
+Te voy a dejar unos videos de ayuda:
+
+* Este `video <https://www.youtube.com/watch?v=zSGZe8NSEAc>`__ 
+  te muestra como grabar en la USB pequeña el instalador. En este caso la distribución es PopOS,
+  es la misma que yo uso; sin embargo, puedes grabar la que más te guste, por ejemplo Ubuntu.
+  Ten presente que la versión del video no será la última. También, debes investigar
+  cómo entrar al menú de configuración de tu BIOS para que ajustes el orden de boot. 
+  Nota que debes darle prioridad a la USB para que al tenerla conectada arranques el 
+  instalador del sistema operativo.
+
+* Ahora, este video `video <https://www.youtube.com/watch?v=RR9Vgytjj24>`__ te mostrará
+  cómo instalar, usando la USB pequeña con el instalador, tu sistema operativo en la USB grande.
+  Te recomiendo iniciar a ver el video en el minuto 6:29, donde comienza en si el proceso
+  de instalación. Una vez termines de instalar Linux en la USB grande, NO OLVIDES desconectar la USB
+  pequeña para que tu computador inicie con la versión instalada de Linux en la USB grande.
+
+* Si tu computador no arranca en Linux debes reiniciarlo y entrar el menu de boot (debes indagar 
+  cómo hacerlo en tu computador) y seleccionar Linux.
+
+Si lo anterior no te funciona, prueba con una `máquina virtual <https://youtu.be/tNUgLsXD7xg>`__ o con WSL2.
+Ten presente que las versiones de los videos pueden no coincidir con las versiones actuales.
+
+Ejercicio 2: instala las herramientas 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Una vez tengas Linux funcionando debes instalar unas cuentas herramientas:
+
+Abren la terminal y ejecuta los comandos:
+
+.. code-block:: bash
+
+    $ sudo apt update
+    $ sudo apt install build-essential
+    $ sudo apt install gdb
+
+Ejercicio 3: instala un par de entornos de desarrollo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Para el curso te recomiendo que instales dos entornos de desarrollo:
+
+#. `Eclipse <https://www.eclipse.org/downloads/packages/>`__
+#. `Visual Studio Code <https://code.visualstudio.com/>`__
+
+Eclipse te permitirá tener un depurador visual de código, pero la verdad
+es un poco lento. Visual Studio, no tiene un depurador visual tan rico, pero es
+muy liviano. Yo uso ambos. Normalmente trabajo con Visual Studio Code y cuando
+algo no me funciona lo pruebo con Eclipse.
 
 ..
-  Lecturas y ejercicios
-  ------------------------
-
-  Sesión 2
-  *************
-  (Tiempo estimado 1 hora 40 minutos)
-
-  * Revisión de dudas de la sesión anterior.
-
-
-  Ejercicio 1: entorno de trabajo
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Para poder trabajar en los ejercicios vas a necesitar un ambiente de trabajo basado en Linux.
-
-  Te voy a pedir que le des una mirada a  `este video <https://youtu.be/ZPpo-uViT_o>`__ para 
-  que te hagas una idea de qué es Linux.
-
-  Hay varias opciones para tener Linux funcionando en tu computador: lo puedes instalar en una 
-  memoria, en una partición de tu computador, en una máquina virtual o incluso en 
-  `WSL2 <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`__.
-
-  La opción que te voy a recomendar es instalar el sistema operativo en una memoria USB externa.
-
-  Vas a necesitar dos memorias USB. Una grande (> 16GB), donde instalarás tu sistema operativo
-  y otra más pequeña (8GB) donde grabaras el instalador. Trata de utilizar la USB más rápida y
-  más grande para instalar tu sistema operativo.
-
-  Te voy a dejar unos videos de ayuda:
-
-  * Este `video <https://www.youtube.com/watch?v=zSGZe8NSEAc>`__ 
-    te muestra como grabar en la USB pequeña el instalador. En este caso la distribución es PopOS,
-    es la misma que yo uso; sin embargo, puedes grabar la que más te guste, por ejemplo Ubuntu.
-    Ten presente que la versión del video no será la última. También, debes investigar
-    cómo entrar al menú de configuración de tu BIOS para que ajustes el orden de boot. 
-    Nota que debes darle prioridad a la USB para que al tenerla conectada arranques el 
-    instalador del sistema operativo.
-
-  * Ahora, este video `video <https://www.youtube.com/watch?v=RR9Vgytjj24>`__ te mostrará
-    cómo instalar, usando la USB pequeña con el instalador, tu sistema operativo en la USB grande.
-    Te recomiendo iniciar a ver el video en el minuto 6:29, donde comienza en si el proceso
-    de instalación. Una vez termines de instalar Linux en la USB grande, NO OLVIDES desconectar la USB
-    pequeña para que tu computador inicie con la versión instalada de Linux en la USB grande.
-
-  * Si tu computador no arranca en Linux debes reiniciarlo y entrar el menu de boot (debes indagar 
-    cómo hacerlo en tu computador) y seleccionar Linux.
-
-  Si lo anterior no te funciona, prueba con una `máquina virtual <https://youtu.be/tNUgLsXD7xg>`__ o con WSL2.
-  Ten presente que las versiones de los videos pueden no coincidir con las versiones actuales.
-
-  Ejercicio 2: instala las herramientas 
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Una vez tengas Linux funcionando debes instalar unas cuentas herramientas:
-
-  Abren la terminal y ejecuta los comandos:
-
-  .. code-block:: bash
-
-      $ sudo apt update
-      $ sudo apt install build-essential
-      $ sudo apt install gdb
-
-  Ejercicio 3: instala un par de entornos de desarrollo
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Para el curso te recomiendo que instales dos entornos de desarrollo:
-
-  #. `Eclipse <https://www.eclipse.org/downloads/packages/>`__
-  #. `Visual Studio Code <https://code.visualstudio.com/>`__
-
-  Eclipse te permitirá tener un depurador visual de código, pero la verdad
-  es un poco lento. Visual Studio, no tiene un depurador visual tan rico, pero es
-  muy liviano. Yo uso ambos. Normalmente trabajo con Visual Studio Code y cuando
-  algo no me funciona lo pruebo con Eclipse.
-
   Ejercicio 4: línea de comandos
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
