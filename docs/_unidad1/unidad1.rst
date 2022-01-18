@@ -19,33 +19,31 @@ Aplicar el lenguaje de programación C en la solución de problemas
 simples haciendo uso de variables, estructuras de control, punteros,
 estructuras de datos, funciones y archivo.
 
-
-Introducción a Git y GitHub 
-------------------------------
+Trayecto de actividades
+----------------------------
 
 Sesión 1
 *************
 (Tiempo estimado: 1 hora 40 minutos)
+
+Ejercicio 1: Introducción a Git y GitHub 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 1
 
     Introducción a Git y GitHub <./introGit>
 
-Trabajo autónomo 1: terminar y darle una segunda pasada a la sesión 1
-************************************************************************
+Trabajo autónomo 1
+*********************
 (Tiempo estima: 2 horas 50 minutos)
 
-* Termina la guía de introducción a Git y GitHub y dale una segunda pasada. 
-* Comienza con las Lecturas y ejercicios.
+Ejercicio 2: terminar y darle una segunda pasada a la sesión 1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lecturas y ejercicios
-------------------------
+Termina la guía de introducción a Git y GitHub y dale una segunda pasada. 
 
-Trabajo autónomo 1: ejercicios 1 a 3
-**************************************
-
-Ejercicio 1: entorno de trabajo
+Ejercicio 3: entorno de trabajo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para poder trabajar en los ejercicios vas a necesitar un ambiente de trabajo basado en Linux.
@@ -85,7 +83,7 @@ Te voy a dejar unos videos de ayuda:
 Si lo anterior no te funciona, prueba con una `máquina virtual <https://youtu.be/tNUgLsXD7xg>`__ o con WSL2.
 Ten presente que las versiones de los videos pueden no coincidir con las versiones actuales.
 
-Ejercicio 2: instala las herramientas 
+Ejercicio 4: instala las herramientas 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Una vez tengas Linux funcionando debes instalar unas cuentas herramientas:
@@ -98,7 +96,7 @@ Abren la terminal y ejecuta los comandos:
     $ sudo apt install build-essential
     $ sudo apt install gdb
 
-Ejercicio 3: instala un par de entornos de desarrollo
+Ejercicio 5: instala un par de entornos de desarrollo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para el curso te recomiendo que instales dos entornos de desarrollo:
