@@ -36,7 +36,7 @@ Ejercicio 1: Introducción a Git y GitHub
 
 Trabajo autónomo 1
 *********************
-(Tiempo estima: 2 horas 50 minutos)
+(Tiempo estimado: 2 horas 50 minutos)
 
 Ejercicio 2: terminar y darle una segunda pasada a la sesión 1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -109,6 +109,44 @@ es un poco lento. Visual Studio, no tiene un depurador visual tan rico, pero es
 muy liviano. Yo uso ambos. Normalmente trabajo con Visual Studio Code y cuando
 algo no me funciona lo pruebo con Eclipse.
 
+Sesión 2
+*************
+(Tiempo estimado: 1 hora 40 minutos)
+
+En esta sesión vas a trabajar con el profe en un taller guiado 
+introductorio al lenguaje de programación. Aprenderás a compilar programas y 
+explorarás el concepto de puntero.
+
+
+Trabajo autónomo 2
+*********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Ejercicio 6: lenguaje de programación C
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Este será uno de los ejercicios más largos de la unidad porque vamos a introducir 
+el lenguaje de programación con el cual estudiaremos todos los conceptos del curso: ``C``.
+
+.. toctree::
+    :maxdepth: 3
+
+    Introducción a C <./introC>
+
+Sesión 3
+*************
+(Tiempo estimado: 1 hora 40 minutos)
+
+En esta sesión vas a continuar trabajando con el ejercicio 6.
+
+
+Trabajo autónomo 3
+*********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Continuarás avanzando con el ejercicio 6.
+
+
 ..
   Ejercicio 4: línea de comandos
   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -122,16 +160,7 @@ algo no me funciona lo pruebo con Eclipse.
   Ten presente que en los comentarios de la guía podrás consultar la solución a las preguntas; 
   sin embargo, trata de pensar primero en la respuesta y luego compara con la explicación.
 
-  Ejercicio 5: lenguaje de programación C
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Este será uno de los ejercicios más largos de la unidad porque vamos a introducir 
-  el lenguaje de programación con el cual estudiaremos todos los conceptos del curso: ``C``.
-
-  .. toctree::
-      :maxdepth: 3
-
-      Introducción a C <./introC>
 
   Ejercicio 6: herramientas
   ^^^^^^^^^^^^^^^^^^^^^^^^^^
