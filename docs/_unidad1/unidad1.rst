@@ -146,6 +146,18 @@ Trabajo autónomo 3
 
 Continuarás avanzando con el ejercicio 6.
 
+Sesión 4
+*************
+(Tiempo estimado: 1 hora 40 minutos)
+
+En esta sesión vas a continuar trabajando con el ejercicio 6.
+
+
+Trabajo autónomo 4
+*********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Continuarás avanzando con el ejercicio 6.
 
 ..
   Ejercicio 4: línea de comandos
