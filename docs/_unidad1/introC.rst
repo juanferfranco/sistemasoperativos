@@ -1226,7 +1226,7 @@ Lo interesante viene con ``hexdump -C out.txt`` que te permite observar realment
 escritos por ``printf("Hello %s!\n", name);``. Nota la secuencia de caracteres 
 ``6a 75 61 6e 20 66 72 61 6e 63 6f 0a 21 0a`` los primeros ``6a 75 61 6e 20 66 72 61 6e 63 6f`` 
 corresponden a ``juan franco``, luego ``0a`` al ENTER ingresado por el usuario y ``21 0a`` a ``!\n``. Por tanto, 
-para eliminar el ENTER debes buscarlo en el buffer el ENTER y cambiarlo por ``0``.  
+para eliminar el ENTER debes buscarlo en el buffer y cambiarlo por ``0``.  
 
 Esto se puede hacer de muchas maneras. Te propongo la siguiente:
 
