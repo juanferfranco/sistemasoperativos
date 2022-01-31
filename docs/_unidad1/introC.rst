@@ -1478,7 +1478,7 @@ Entonces ¿Se pueden hacer varias conversiones a la vez? Si!
         exit(EXIT_SUCCESS);
     }
 
-Observa que la cadena ``format`` es ``"%d"`` que indica convertir la seecuencia de caracteres apuntada 
+Observa que la cadena ``format`` es ``"%d"`` que indica convertir la secuencia de caracteres apuntada 
 por ``number`` a un entero. Luego ``&val`` informa la dirección de memoria donde quieres que queda la conversión.
 Si todo sale bien (aunque recuerda que no hay verificación de desbordamiento), ``sscanf`` te devolverá la cantidad 
 de conversiones exitosamente realizadas. Es por ello que en este ejemplo verificamos si ``successItems == 1``.
