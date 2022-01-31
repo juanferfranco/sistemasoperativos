@@ -1300,7 +1300,7 @@ hacer es convertir la secuencia de caracteres '4' '2' en el número ``42``.
     :scale: 100%
     :alt: lectura de números
 
-Ejercicio 6: convertir caracteres a números forma 1
+Ejercicio 6: convertir caracteres a números (forma 1)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 No creiste que te dejaría sin saber cómo hacer la conversión de caracteres a números ¿Cierto?
@@ -1427,7 +1427,7 @@ es que ya comprendes.
     }
 
 
-Ejercicio 7: convertir caracteres a números forma 2
+Ejercicio 7: convertir caracteres a números (forma 2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Puedes utilizar esta segunda manera que te voy a mostrar, pero tiene un defecto. No tienes manera de saber 
