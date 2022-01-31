@@ -1431,7 +1431,7 @@ Ejercicio 7: convertir caracteres a números (forma 2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Puedes utilizar esta segunda manera que te voy a mostrar, pero tiene un defecto. No tienes manera de saber 
-si la conversión desbordó. Si requieres este varificación te debes quedar strtol.
+si la conversión desbordó. Si requieres este varificación te debes quedar con strtol.
 
 La función será ``sscanf`` definida así (puedes leer más con ``man sscanf``):
 
