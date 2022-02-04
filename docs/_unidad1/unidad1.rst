@@ -258,7 +258,7 @@ En los archivos que clonaste implementa las siguientes características:
       curso,créditos,nota
       promedio ponderado: valor_calculado
 
-* feature10: libera correctamente TODA la memoria reservada y cerrar todos 
+* feature10: libera correctamente TODA la memoria reservada y cierra todos 
   los archivos abiertos.
 
 Trabajo autónomo 6
