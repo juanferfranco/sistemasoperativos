@@ -171,175 +171,99 @@ Trabajo autónomo 5
 
 Prepárate para la sesión de RETOS antes de la evaluación. Revisa 
 el material que llevamos hasta hoy, insiste con los ejercicios 
-que más dificultad de dieron.
+que más dificultad te dieron.
 
 Sesión 6
 *************
 (Tiempo estimado: 1 hora 40 minutos)
 
-PENDIENTE....
+Ejercicio 7: RETO 
+^^^^^^^^^^^^^^^^^^
 
-..
-  Realiza un fork de `este <https://github.com/juanferfranco/evaluacionUnidad1-2021-20>`__ repositorio en 
-  tu cuenta y realiza un clon para trabajar en un tu equipo local.
+Clona este `este <https://github.com/juanferfranco/evaluacionUnidad1-2021-20>`__ 
+repositorio.
 
-  Debes hacer al menos un commit por feature implementada y probada.
+Crea un programa que lea información de un archivo de entrada 
+la procese y luego almacene el resultado en un archivo de salida. 
 
-  Crea un programa que lea información de un archivo de entrada 
-  la procese y luego la almacene en un archivo de salida. El programa se debe ejecutar 
-  en la línea de comandos así:
+El programa se debe ejecutar en la línea de comandos así:
+
+.. code-block:: bash
+
+    $ ./main pathInFileName pathOutFileName
+
+* ``main`` es el nombre del archivo ejecutable.
+* pathInFileName y pathOutFileName son dos cadenas con el path absoluto o 
+  relativo a los archivos de entrada y de salida respectivamente.
+
+En los archivos que clonaste implementa las siguientes características:
+
+* feature1: lee la primer línea del archivo de entrada y la escribe en 
+  la primer línea del archivo de salida.
+* feature2: lee la segunda línea del archivo de entrada, invierte su orden y 
+  la escribe en la segunda línea del archivo de salida.
+* feature3: lee el arreglo de enteros de la tercera línea del archivo de entrada, calcula la suma y 
+  almacena el resultado en la tercera línea del archivo de salida.
+* feature4: lee el arreglo de enteros de la cuarta línea del archivo de entrada así como la operación 
+  especificada luego del arreglo.
+* feature5: recibe la dirección del arreglo y de la operación leída en la feature anterior 
+  realiza la operación y guarda el resultado en la cuarta línea del archivo de salida. 
+  La operación puede ser avg, max, min correspondientes al promedio, 
+  máximo o mínimo. TODOS los resultados deben ser ENTEROS, NO en punto flotante.
+* feature6: lee la quinta línea del archivo de entrada y con esta información debes configurar los valores 
+  de la siguiente estructura de datos cuya dirección se pasará a la función.
+
+  .. code-block:: c 
+
+      struct Obj_t{
+        char *nombre;
+        int cedula;
+      };
+
+* feature7: recibe la dirección en memoria de la estructura anterior y la guarda en la quinta línea del 
+  archivo de salida primero la cédula, seguido por una coma y finalizando con el nombre.
+* feature8: lee la sexta línea del archivo de entrada que contiene un número entero positivo que especifica 
+  la cantidad de cursos que un estudiante cursó en un semestre. Luego solicita al usuario ingresar el nombre 
+  del curso, los créditos y la nota así:
 
   .. code-block:: bash
 
-      $ ./main pathInFileName pathOutFileName
+    ingresa el curso 1: curso,créditos,nota
+    ingresa el curso 2: curso,créditos,nota
+    .
+    .
+    .
+    ingresa el curso n: curso, créditos,nota
 
-  * ``main`` es el nombre del archivo ejecutable.
-  * pathInFileName y pathOutFileName son dos cadenas con el path absoluto o relativo a los archivos 
-    de entrada y de salida respectivamente.
+  La función debe devolver la dirección en memoria de una arreglo de estructuras de datos con la información 
+  de cada curso y la el tamaño del arreglo.
 
-  Para entender cómo leer el path de los archivos de entrada y de salida vas a analizar el 
-  siguiente programa:
-
-  .. code-block:: c
-
-    #include <stdio.h>
-    #include <stdlib.h>
-
-    int main(int argc, char *argv[]){
-
-        for(int i = 0; i < argc; i++){
-            printf("argv[%d]: %s\n",i,argv[i]);
-        }
-        return EXIT_SUCCESS;
-    }
-
-  Ahora ejecuta el programa así:
+* feature9: finalmente, calcula el `promedio ponderado <https://en.wikipedia.org/wiki/Weighted_arithmetic_mean>`__ 
+  del semestre. Pregunta al usuario si desea almacenar la información la información en el archivo de salida así:
 
   .. code-block:: bash
 
-      $ ./main
-
-  y así:
-
+    deseas almacenar la información (s) o (n):
+  
+  Si el usuario contesta n, debes guardar en la línea 6 del archivo de salida el promedio ponderado. Si el usuario 
+  contesta y, debes guardar, desde la línea 6 del archivo de salida, la información ingresada así:
+  
   .. code-block:: bash
 
-      $ ./main arg1 arg2 arg3
-
-  Implementa las siguientes características:
-
-
-  * feature1: lee la primer línea del archivo de entrada y la escribe en la primer línea del archivo 
-    de salida.
-  * feature2: lee la segunda línea del archivo de entrada, invierte su orden y la escribe en la segunda 
-    línea del archivo de salida.
-  * feature3: lee el arreglo de enteros de la tercera línea del archivo de entrada, calcula la suma y 
-    almacena el resultado en la tercera línea del archivo de salida.
-  * feature4: lee el arreglo de enteros de la cuarta línea del archivo de entrada así como la operación 
-    especificada luego del arreglo, separada por un espacio.
-  * feature5: recibe la dirección del arreglo y de la operación leída en la feature anterior 
-    realiza la operación y guarda el resultado en la cuarta línea del archivo de salida. 
-    La operación puede ser avg, max, min correspondientes al promedio, 
-    máximo o mínimo. TODOS los resultados deben ser ENTEROS, NO en punto flotante.
-  * feature6: lee la quinta línea del archivo de entrada y con esta información debes configurar los valores 
-    de la siguiente estructura de datos cuya dirección se pasará a la función.
-
-    .. code-block:: c 
-
-        struct Obj_t{
-          char *nombre;
-          int cedula;
-        };
-
-  * feature7: recibe la dirección en memoria de la estructura anterior y la guarda en la quinta línea del 
-    archivo de salida primero la cédula, seguido por una coma y finalizando con el nombre.
-  * feature8: lee la sexta línea del archivo de entrada que contiene un número entero positivo que especifica 
-    la cantidad de cursos que un estudiante cursó en un semestre. Luego solicita al usuario ingresar el nombre 
-    del curso, los créditos y la nota así:
-
-    .. code-block:: bash
-
-      ingresa el curso 1: curso,créditos,nota
-      ingresa el curso 2: curso,créditos,nota
+      curso,créditos,nota
+      curso,créditos,nota
       .
       .
       .
-      ingresa el curso n: curso, créditos,nota
+      curso,créditos,nota
+      promedio ponderado: valor_calculado
 
-    La función debe devolver la dirección en memoria de una arreglo de estructuras de datos con la información 
-    de cada curso y la el tamaño del arreglo.
-
-  * feature9: finalmente, calcula el `promedio ponderado <https://en.wikipedia.org/wiki/Weighted_arithmetic_mean>`__ 
-    del semestre. Pregunta al usuario si desea almacenar la información la información en el archivo de salida así:
-
-    .. code-block:: bash
-
-      deseas almacenar la información (s) o (n):
-    
-    Si el usuario contesta n, debes guardar en la línea 6 del archivo de salida el promedio ponderado. Si el usuario 
-    contesta y, debes guardar, desde la línea 6 del archivo de salida, la información ingresada así:
-    
-    .. code-block:: bash
-
-        curso,créditos,nota
-        curso,créditos,nota
-        .
-        .
-        .
-        curso,créditos,nota
-        promedio ponderado: valor_calculado
-
-  Entregables
-  ##############
-
-  Sube a `este <https://www.dropbox.com/request/00FNXAYWLqVG5dkCQoRr>`__ 
-  enlace un archivo pdf nombrado con los nueve dígitos que componen tu ID. 
-  Por ejemplo: 000008716.pdf. El archivo debe tener lo siguiente:
-
-  * Tu nombre completo.
-  * Evaluación de la unidad 1 y la fecha en la cual vas subir el archivo.
-  * Sección 1: la dirección https de tu repositorio en GitHub para poder clonar el proyecto. La URL 
-    debe comenzar con ``https`` y terminar con ``.git``.
-  * Sección 2: el enlace a un video que muestre todas las features solicitadas funcionando.
-
-  Criterios de evaluación
-  ##########################
-
-  Cada feature completa y con TODOS los requisitos solicitados te da los puntos que se muestran. Ten presenta 
-  que no se darán puntos intermedios por una feature incompleta o que no cumpla todos los requisitos.
-
-  * feature1: 0.5 
-  * feature2: 0.5
-  * feature3: 0.5
-  * feature4: 0.5
-  * feature5: 0.5
-  * feature6: 0.5
-  * feature7: 0.5
-  * feature8: 0.5
-  * feature9: 0.5
-  * Liberar correctamente TODA la memoria reservada y cerrar todos los archivos abiertos: 0.5
+* feature10: libera correctamente TODA la memoria reservada y cerrar todos 
+  los archivos abiertos.
 
 Trabajo autónomo 6
 *********************
 (Tiempo estimado: 2 horas 50 minutos)
 
-La próxima semana será la evaluación la evaluación 1 de la unidad 1. 
-Recuerda que tienes 9 horas para resolver el problema y documentarlo.
-
-Te recomiendo que termines los retos. En la primera sesión de la semana 
-entrante:
-
-* Revisaremos juntos el enunciado de a evaluación. 
-* Publicaré la solución de los retos para que las analices y preguntes.
-* Podrás preguntar dudas que tengas en general sobre la unidad.
-
-..
-  Ejercicio X: herramientas
-  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  En este ejercicio comprenderás en detalle los pasos necesarios para transformar un programa en C a 
-  lenguaje de máquina.
-
-  .. toctree::
-    :maxdepth: 3
-
-    Herramientas <./tools>
+Termina el reto de la sesión. En la sesión del lunes resolveremos dudas 
+de la unidad 1 y del reto.
