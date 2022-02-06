@@ -267,3 +267,313 @@ Trabajo autónomo 6
 
 Termina el reto de la sesión. En la sesión del lunes resolveremos dudas 
 de la unidad 1 y del reto.
+
+.. warning:: ¡ALERTA DE SPOILER!
+
+    Te muestro ahora una posible solución al reto.
+
+  
+main.c:
+
+.. code-block:: c
+
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include "student.h"
+
+  int main(int argc, char *argv[]){
+
+      if(argc != 3){
+          printf("number of arguments is not 3\n");
+          return(EXIT_FAILURE);
+      }
+
+      FILE *fin = fopen(argv[1],"r");
+      if (fin == NULL){
+          perror("open fin file fails: ");
+          return(EXIT_FAILURE);
+      }
+
+      FILE *fout = fopen(argv[2],"w");
+      if (fout == NULL){
+          perror("open fout file fails: ");
+          return(EXIT_FAILURE);
+      }
+
+      feature1(fin,fout);
+      feature2(fin,fout);
+      feature3(fin,fout);
+
+      int *parr = NULL;
+      int length = 0;
+      char *op = NULL;
+      feature4(fin,&parr,&length,&op);
+      feature5(fout, parr, length, op);
+
+      struct Obj_t obj = {"test",123};
+      feature6(fin, &obj);
+      feature7(fout,&obj);
+
+      struct _courseInfo_t *pobj;
+      int objArrSize = 0;
+      feature8(fin, &pobj, &objArrSize);
+
+      for(int i= 0;i<objArrSize;i++){
+          printf("%s,%d,%.1f\n",pobj[i].name, pobj[i].credits, pobj[i].grade);
+      }
+      feature9(fout, pobj,objArrSize);
+      // feature10: release memory
+      free(parr);
+      free(op);
+      free(obj.nombre);
+      free(pobj);
+
+      fclose(fin);
+      fclose(fout);
+      return EXIT_SUCCESS;
+  }
+
+student.c:
+
+.. code-block:: c
+
+  #include <stdlib.h>
+  #include "student.h"
+  #include "string.h"
+
+  void feature1(FILE *fin, FILE *fout){
+      char dataBuffer[1024];
+      char *status = fgets(dataBuffer,sizeof(dataBuffer),fin);
+      if(status == NULL){
+          printf("Fails to read fin file\n");
+          return;
+      }
+      fprintf(fout, "%s",dataBuffer);
+  }
+
+  void feature2(FILE *fin, FILE *fout){
+      char dataBuffer[1024];
+      char *status = fgets(dataBuffer,sizeof(dataBuffer),fin);
+      if(status == NULL){
+          printf("Fails to read fin file\n");
+          return;
+      }
+
+      if(dataBuffer[strlen(dataBuffer) - 1 ]  == '\n'){
+          dataBuffer[strlen(dataBuffer) - 1] = 0;
+
+          for(int i = strlen(dataBuffer)-1; i>= 0; i--){
+              fputc(dataBuffer[i],fout);
+          }
+          fputc('\n',fout);
+      }
+      else{
+          printf("Fails to read fin file. The line does not end with enter\n");
+      }
+  }
+
+
+
+  void feature3(FILE *fin, FILE *fout){
+      char dataBuffer[128];
+      
+      char *status = fgets(dataBuffer,sizeof(dataBuffer),fin);
+      if(status == NULL){
+          printf("Fails to read fin file\n");
+          return;
+      }
+
+      if(dataBuffer[strlen(dataBuffer) - 1 ]  == '\n'){
+          dataBuffer[strlen(dataBuffer) - 1] = 0;
+
+          char *token;
+          int counter = 0;
+          token = strtok(dataBuffer," ");
+          int arr[64];
+          
+          while( token != NULL ) {
+              int status = sscanf(token,"%d",&arr[counter]);
+              counter++;
+              token = strtok(NULL," ");
+          }
+          int sum = 0;
+          for(int i= 0; i < counter;i++){
+              sum = sum + arr[i];
+          }
+          fprintf(fout, "%d\n",sum);
+      }
+      else{
+          printf("Fails to read fin file. The line does not end with enter\n");
+      }
+  }
+
+  void feature4(FILE *fin, int **parr, int *length, char **op){
+      char dataBuffer[128];
+      char *status = fgets(dataBuffer,sizeof(dataBuffer),fin);
+      if(status == NULL){
+          printf("Fails to read fin file\n");
+          return;
+      }
+
+      if(dataBuffer[strlen(dataBuffer) - 1 ]  == '\n'){
+          dataBuffer[strlen(dataBuffer) - 1] = 0;
+
+          char *token;
+          int counter = 0;
+          token = strtok(dataBuffer," ");
+
+          // CLAVE: crear el objeto
+          int *pint = malloc(sizeof(int)*64);
+          char *operation = malloc(sizeof(char)*8);
+  
+
+          while( token != NULL ) {
+              int status = sscanf(token,"%d", (pint+counter) );
+              if(status == 1){
+                  counter++;
+              }
+              else{
+                  sscanf(token,"%s",operation);    
+              }
+              token = strtok(NULL," ");
+          }
+          
+          *parr = pint;
+          *length = counter;
+          *op = operation;
+      }
+      else{
+          printf("Fails to read fin file. The line does not end with enter\n");
+      }
+  }
+
+  void feature5(FILE *fout, int *parr, int length, char *op){
+
+      int result = 0;
+
+      if(strncmp("avg", op, sizeof("avg")) == 0){
+          int avg = 0;
+          for(int i = 0; i < length;i++){
+              avg = avg + parr[i];
+          }
+          result = avg/length;
+      }
+      else if(strncmp("max", op, sizeof("max")) == 0){
+          int max = parr[0];
+          for(int i = 0; i < length;i++){
+              if(parr[i] > max) max = parr[i];
+          }
+          result = max;
+      }
+      else if(strncmp("min", op, sizeof("min")) == 0){
+          int min = parr[0];
+          for(int i = 0; i < length;i++){
+              if(parr[i] < min) min = parr[i];
+          }
+          result = min;
+      }
+
+      fprintf(fout,"%d\n", result); 
+  }
+
+  void feature6(FILE *fin, struct Obj_t *pobj){
+      char dataBuffer[128];
+
+      char *status = fgets(dataBuffer,sizeof(dataBuffer),fin);
+      if(status == NULL){
+          printf("Fails to read fin file\n");
+          return;
+      }
+
+      if(dataBuffer[strlen(dataBuffer) - 1 ]  == '\n'){
+          dataBuffer[strlen(dataBuffer) - 1] = 0;
+
+          // CLAVE: crear el objeto
+          //char *nombre = malloc(sizeof(int)*64);
+          char *nombre = calloc(64,sizeof(int));
+
+          char *token = NULL;
+          token = strtok(dataBuffer,",");
+          if(token != NULL){
+              strncpy(nombre, token, strlen(token) );
+              token = strtok(NULL,",");
+              if(token != NULL){
+                  int res = sscanf(token,"%d",&(pobj->cedula));
+                  if(res != 1){
+                      printf("sscanf cedula fails");
+                  }
+                  else{
+                      pobj->nombre = nombre;
+                  }
+              }
+              else{
+                  printf("strtok fails in cedula");
+              }
+          }
+          else{
+              printf("strtok fails in name");
+          }
+      }
+      else{
+          printf("Fails to read fin file. The line does not end with enter\n");
+      }
+  }
+
+  void feature7(FILE *fout, struct Obj_t *pobj){
+      fprintf(fout, "%d,%s\n",pobj->cedula,pobj->nombre);
+  }
+
+  void feature8(FILE *fin, struct _courseInfo_t **pobj,int *length){
+
+      int numberOfCourse = 0;
+      int status = fscanf(fin, "%d",&numberOfCourse);
+
+      if(status == 1){
+          struct _courseInfo_t *pcourse = malloc(sizeof(struct _courseInfo_t)*numberOfCourse);
+          printf("Enter the information of your %d course like this: course,credits,grade\n",numberOfCourse);
+
+          int i = 0;
+
+          while(i < numberOfCourse){
+              printf("Enter the course %d: ",i+1);
+                  
+              int status = scanf("%[^,],%d,%f%*c", pcourse[i].name, &pcourse[i].credits, &pcourse[i].grade);
+              if(status != 3){
+                  printf("(%d)(%s)fscanf fails to read course,credits,grade\n",status,pcourse[i].name);
+              }
+              else{
+                  i++;
+              }           
+          }
+          *pobj = pcourse;
+          *length = numberOfCourse;
+      }
+      else{
+          printf("fscanf fails to read number of courses\n");
+      }
+  }
+
+
+  void feature9(FILE *fout, struct _courseInfo_t *pobj,int length){
+      float avgGrade = 0;
+      int totalCredits = 0;
+
+      for(int i = 0; i < length; i++){
+          avgGrade = avgGrade + pobj[i].grade*pobj[i].credits;
+          totalCredits = totalCredits + pobj[i].credits;
+      }
+      avgGrade = avgGrade/totalCredits;
+      printf("Save info? (y) (n): ");
+      int answare = fgetc(stdin);
+      if(answare == 'y'){
+          for(int i = 0; i < length; i++){
+              fprintf(fout,"%s,%d,%.1f\n", pobj[i].name,pobj[i].credits,pobj[i].grade);
+          }
+      }
+      fprintf(fout,"%.1f",avgGrade);
+  }
+
+Evaluación 1 de la unidad 1
+----------------------------
+
+Regresa aquí al inicio de la semana 4.
