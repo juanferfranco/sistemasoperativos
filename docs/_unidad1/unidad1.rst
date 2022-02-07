@@ -576,6 +576,12 @@ student.c:
 Evaluación 1 de la unidad 1
 ----------------------------
 
+.. warning:: AÚN NO COMIENCES
+
+    Aún no comiences. Estoy en el proceso de editado y configuración de la evaluación.
+    Puedes iniciar cuando esta alerta ya no esté. Recuerda presionar la tecla F5 para 
+    actualizar la página.
+
 La evaluación consiste de dos partes:
 
 * Parte 1: solución a un problema.
