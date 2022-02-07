@@ -586,7 +586,8 @@ Enunciado del problema
 
 Para el desarrollo de una aplicación de comunicación se usará el esquema cliente-servidor. Cada servidor 
 tendrá que mantener una lista enlazada con los eventos que podrá emitir. Esta lista es configurable y 
-por tanto podrás adicionar, eliminar y buscar eventos en la lista. Se pide entonces que completes 
+por tanto podrás adicionar, eliminar y buscar eventos en la lista. ``LA LISTA NO DEBE TENER EVENTOS 
+REPETIDOS``. Se pide entonces que completes 
 el código del proyecto que encontrarás `aquí <https://classroom.github.com/a/EkllvpwV>`__.
 
 Consideraciones
