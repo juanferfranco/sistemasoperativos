@@ -576,12 +576,6 @@ student.c:
 Evaluación 1 de la unidad 1
 ----------------------------
 
-.. warning:: AÚN NO COMIENCES
-
-    Aún no comiences. Estoy en el proceso de editado y configuración de la evaluación.
-    Puedes iniciar cuando esta alerta ya no esté. Recuerda presionar la tecla F5 para 
-    actualizar la página.
-
 La evaluación consiste de dos partes:
 
 * Parte 1: solución a un problema.
@@ -600,9 +594,55 @@ Consideraciones
 
 * Tanto la solución como la sustentación las realizarás usando GitHub tal como los ejercicio 19 y 20 
   de la guía ``Introducción a Git y GitHub`` que hiciste al comienzo de la unidad.
+* No olvides realizar constantemente commits y push al repositorio remoto. Estos commits deben 
+  reflejar tu trabajo en el tiempo.
 * No uses ninguna función para imprimir en pantalla a menos que sean las que ya están en el código 
   que debes completar. La razón de esto es que tu programa será verificado automáticamente y por tanto, 
   si envías información no esperada a la pantalla es posible que las pruebas automáticas fallen.
+* Para compilar, cámbiate el directorio donde están los archivos ``.c`` y ejecuta el comando ``make``. 
+  Ten en cuanta que con el commando ``make clean`` puedes limpiar todos los archivos compilados y luego 
+  con ``make`` volver a generarlos.
+* Para hacer las pruebas localmente puedes correr todos los vectores de prueba así:
+
+  .. code-block:: bash
+
+    ./test-main.sh
+  
+  O si quiere correr solo un vector, por ejemplo, el 10, lo haces así:
+
+  .. code-block:: bash
+
+    ./test-main.sh -t 10
+
+* Verifica que estás usando correctamente la memoria dinámica. Para ello instala valgrind y luego 
+  realiza la verificación. Te dejo los comandos, primero para instalar valgrind y luego para verificar.
+
+  .. code-block:: bash 
+
+        sudo apt update
+        sudo apt install valgrind
+
+  .. code-block:: bash 
+
+        valgrind ./main < ./tests/12.in
+  
+  Si la memoria está bien verás algo así en el resumen:
+
+  .. code-block:: bash
+  
+        ==17813== 
+        ==17813== HEAP SUMMARY:
+        ==17813==     in use at exit: 0 bytes in 0 blocks
+        ==17813==   total heap usage: 12 allocs, 12 frees, 5,360 bytes allocated
+        ==17813== 
+        ==17813== All heap blocks were freed -- no leaks are possible
+        ==17813== 
+        ==17813== For lists of detected and suppressed errors, rerun with: -s
+        ==17813== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+   
+  La salida anterior se consigue ejecutando el programa con el vector de prueba 12.in. Con este 
+  vector de prueba, el programa realiza 12 reservas con malloc y detecta 12 liberaciones con free. 
+  Por tanto, al final indica que no hay errores.
 
 Enunciado de la sustentación
 *******************************
@@ -612,8 +652,17 @@ explicar cómo se comporta la lista y los eventos en memoria cada que se realiza
 Muestra en diagramas qué cosas están en el stack y qué cosas estarían en el heap y cuál es la relación entre 
 estos elementos.
 
+Coloca en la wiki la salida que obtienes al ejecutar valgrind como te comentó en las consideraciones.
+
 Criterios de evaluación
 **************************
 
 * Solución del problema: 3 unidades (pasa todos los vectores de prueba).
 * Sustentación de la solución: 2 unidades.
+
+..
+ .. warning:: AÚN NO COMIENCES
+
+        Aún no comiences. Estoy en el proceso de editado y configuración de la evaluación.
+        Puedes iniciar cuando esta alerta ya no esté. Recuerda presionar la tecla F5 para 
+        actualizar la página.
