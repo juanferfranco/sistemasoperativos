@@ -576,4 +576,38 @@ student.c:
 Evaluación 1 de la unidad 1
 ----------------------------
 
-Regresa aquí al inicio de la semana 4.
+La evaluación consiste de dos partes:
+
+* Parte 1: solución a un problema.
+* Parte 2: sustentación de la solución al problema.
+
+Enunciado del problema
+************************
+
+Para el desarrollo de una aplicación de comunicación se usará el esquema cliente-servidor. Cada servidor 
+tendrá que mantener una lista enlazada con los eventos que podrá emitir. Esta lista es configurable y 
+por tanto podrás adicionar, eliminar y buscar eventos en la lista. Se pide entonces que completes 
+el código del proyecto que encontrarás aquí (pendiente por actualizar).
+
+Consideraciones
+****************
+
+* Tanto la solución como la sustentación las realizarás usando GitHub tal como los ejercicio 19 y 20 
+  de la guía ``Introducción a Git y GitHub`` que hiciste al comienzo de la unidad.
+* No uses ninguna función para imprimir en pantalla a menos que sean las que ya están en el código 
+  que debes completar. La razón de esto es que tu programa será verificado automáticamente y por tanto, 
+  si envías información no esperada a la pantalla es posible que las pruebas automáticas fallen.
+
+Enunciado de la sustentación
+*******************************
+
+En la wiki del repositorio de la evaluación (recuerda, ejercicio 20 de la introducción a Git y GitHub) vas a 
+explicar cómo se comporta la lista y los eventos en memoria cada que se realiza una operación sobre estas. 
+Muestra en diagramas qué cosas están en el stack y qué cosas estarían en el heap y cuál es la relación entre 
+estos elementos.
+
+Criterios de evaluación
+**************************
+
+* Solución del problema: 3 unidades (pasa todos los vectores de prueba).
+* Sustentación de la solución: 2 unidades.
