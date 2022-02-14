@@ -573,6 +573,57 @@ student.c:
       fprintf(fout,"%.1f",avgGrade);
   }
 
+Sesión 7
+*************
+(Tiempo estimado: 1 hora 40 minutos)
+
+Vas a realizar la evaluación 1 de la Unidad 1.
+
+Trabajo autónomo 7 
+*******************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Continua trabajando en la evaluación 1
+
+Sesión 8 
+**********
+(Tiempo estimado: 1 hora 40 minutos)
+
+Continua trabajando en la evaluación 1
+
+Trabajo autónomo 8 
+********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Termina la evaluación 1.
+
+Sesión 9
+*********
+(Tiempo estimado: 1 hora 40 minutos)
+
+Ejercicio 8: revisión de la evaluación 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Te dejaré en `este <https://github.com/juanferfranco/osev1-u1-2022-10-feedback.git>`__ enlace una posible 
+solución a la evaluación 1 de la Unidad 1. Tómate un momento para revisar y preguntar si tienes dudas.
+
+Ejercicio 9: herramientas
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+En este ejercicio comprenderás en detalle los pasos necesarios para transformar un programa 
+escrito en lenguaje C a lenguaje de máquina.
+
+.. toctree::
+  :maxdepth: 3
+
+  Herramientas <./tools>
+
+Trabajo autónomo 9 
+*******************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Termina el ejercicio 9.
+
 Evaluación 1 de la unidad 1
 ----------------------------
 
@@ -582,7 +633,7 @@ La evaluación consiste de dos partes:
 * Parte 2: sustentación de la solución al problema.
 
 Enunciado del problema
-************************
+**************************
 
 Para el desarrollo de una aplicación de comunicación se usará el esquema cliente-servidor. Cada servidor 
 tendrá que mantener una lista enlazada con los eventos que podrá emitir. Esta lista es configurable y 
@@ -591,7 +642,7 @@ REPETIDOS``. Se pide entonces que completes
 el código del proyecto que encontrarás `aquí <https://classroom.github.com/a/EkllvpwV>`__.
 
 Consideraciones
-****************
+**************************
 
 * Tanto la solución como la sustentación las realizarás usando GitHub tal como los ejercicio 19 y 20 
   de la guía ``Introducción a Git y GitHub`` que hiciste al comienzo de la unidad.
@@ -646,7 +697,7 @@ Consideraciones
   Por tanto, al final indica que no hay errores.
 
 Enunciado de la sustentación
-*******************************
+*********************************
 
 En la wiki del repositorio de la evaluación (recuerda, ejercicio 20 de la introducción a Git y GitHub) vas a 
 explicar cómo se comporta la lista y los eventos en memoria cada que se realiza una operación sobre estas. 
@@ -661,9 +712,3 @@ Criterios de evaluación
 * Solución del problema: 3 unidades (pasa todos los vectores de prueba).
 * Sustentación de la solución: 2 unidades.
 
-..
- .. warning:: AÚN NO COMIENCES
-
-        Aún no comiences. Estoy en el proceso de editado y configuración de la evaluación.
-        Puedes iniciar cuando esta alerta ya no esté. Recuerda presionar la tecla F5 para 
-        actualizar la página.
