@@ -1353,17 +1353,21 @@ main.c:
 
 Para compilar este ejemplo sigue los siguientes pasos:
 
-gcc -c -g -Wall queue.c -o queue.o
+.. code-block:: bash
 
-gcc -c -g -Wall main.c -o main.o
+    gcc -c -g -Wall queue.c -o queue.o
 
-gcc -g -Wall queue.o main.o -o exe
+    gcc -c -g -Wall main.c -o main.o
+
+    gcc -g -Wall queue.o main.o -o exe
 
 Ejecuta el código y verifica con valgrind el manejo de la memoria
 
-./exe
+.. code-block:: bash
 
-valgrind ./exe
+    ./exe
+
+    valgrind ./exe
 
 ¿Qué resultado obtienes?
 ¿En qué parte de la memoria está almacenada la variable q?
