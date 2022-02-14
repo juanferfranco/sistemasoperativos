@@ -2765,3 +2765,7 @@ Criterios de evaluación
 * Solución del problema: 3 unidades (pasa todos los vectores de prueba).
 * Sustentación de la solución: 2 unidades.
 
+Evaluación 2 de la unidad 1
+----------------------------
+
+REGRESA AQUÍ LA SEMANA 7. No olvides presionar F5.
