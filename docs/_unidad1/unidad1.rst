@@ -1769,7 +1769,7 @@ Trabajo autónomo 11
 Termina los ejercicios de la sesión 11. 
 
 Vuelve a leer el material de esta sección y asegúrate de analizar con 
-detenimiento los ejercicios 20 y 21.
+detenimiento los ejercicios 28 y 29.
 
 Sesión 12
 ***********
