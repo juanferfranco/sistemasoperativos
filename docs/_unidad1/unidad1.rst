@@ -2729,7 +2729,7 @@ Consideraciones
   
   Si la memoria está bien verás algo así en el resumen:
 
-  .. code-block:: bash
+  .. code-block:: none
   
         ==17813== 
         ==17813== HEAP SUMMARY:
