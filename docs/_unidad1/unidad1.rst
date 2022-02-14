@@ -2643,13 +2643,13 @@ orientados a objetos que puedan extenderse al máximo y con la menor cantidad
 de dependencias entre sus componentes. ¿Te suena que vale la pena?
 
 Mira este problema: tienes que construir una biblioteca que te permita comunicar,
-por un puerto serial, a Unity con un sensor. Las responsabilidades del código
-son: gestionar el puerto serial, gestionar la comunicación con el hilo
-principal o hilo del motor y enviar-recibir datos siguiendo un protocolo específico.
+un dispositivo periférico con una aplicación interactiva. Las responsabilidades del código
+son: gestionar el puerto de comunicación, gestionar la comunicación con la interfaz de 
+usuario y enviar-recibir datos siguiendo un ``protocolo específico``.
 En este escenario podrías escribir una biblioteca que resuelva este problema solo
-para el sensor particular o escribirla de tal manera que puedas reutilizar
-casi todo el código y solo cambiar el protocolo de comunicación si a futuro
-cambias de sensor.
+para un dispositivo en particular o escribirla de tal manera que puedas reutilizar
+casi todo el código y solo tengas que cambiar el protocolo de comunicación si a futuro
+cambias de dispositivo.
 
 ¿Cuál de las dos opciones de suena más?
 
