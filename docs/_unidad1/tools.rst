@@ -140,7 +140,7 @@ Compilamos primero ``min.c``:
     main.c:(.text+0x31): undefined reference to printf
 
 Este resultado indica que no fue posible generar el ejecutable 
-(`` main.c:(.text+0x31): undefined reference to printf``). Pero ¿Por qué?
+(``main.c:(.text+0x31): undefined reference to printf``). Pero ¿Por qué?
 la razón es que nos falta el archivo con el código de máquina de la función ``printf``.
 Esta función está prototipada en el archivo de cabecera (``stdio.h``), pero el archivo
 no contiene el código fuente de ``printf``. ¿Y dónde está el código entonces? este
@@ -170,7 +170,7 @@ Un compilador también funciona por fases. Así:
   Por tanto, a esta fase se le conoce como análisis sintáctico. El PARSER toma la gramática formal
   del lenguaje y trata de hacer un match con el texto del programa. En términos simples, la gramática
   formal del lenguaje es el conjunto de reglas que se deben seguir para usar correctamente las
-  'palabras' definidas por el lenguaje. El PARSER valida si el programa que escribiste cumple las
+  ``palabras`` definidas por el lenguaje. El PARSER valida si el programa que escribiste cumple las
   reglas definidas en la gramática y si todo está bien produce una representación intermedia 
   del programa conocida como AST o Abstract Syntax Tree.
 
@@ -200,10 +200,7 @@ Vamos a utilizar otro compilador, clang. Compila así:
 
 ``clang -Xclang -ast-dump -fsyntax-only main.c``
 
-observa el resultado. Esa será el AST generado. ¿Por qué te hablo de clang en este ejercicio? porque
-cuando estés estudiando el nuevo framework de Unity conocido como ``DOTs`` te darás cuanta que ellos
-están utilizando clang como frontend. Estudiar en detalle estos asuntos desborda las posibilidades
-de este curso; sin embargo, al menos tendrás los conceptos básicos para no estar perdido.
+Observa el resultado. Esa será el AST generado.
 
 Lectura 3: fase de ensamblado
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -275,10 +272,10 @@ Lectura 8: fase de ensamblado
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Y cómo funciona un enlazador? ya sabes que un enlazador toma varios relocatable object files
-y los combina para generar un ejecutable. pero ¿Cómo los combina? para responder esta pregunta
+y los combina para generar un ejecutable, pero ¿Cómo los combina? Para responder esta pregunta
 debemos indagar al interior de un relocatable object file. Ya sabes que estos archivos tienen
 instrucciones de máquina, pero organizadas en secciones denominadas SÍMBOLOS. Para entender mejor
-hagamos un ejemplo. Escribo los siguientes códigos:
+hagamos un ejemplo. Escribe los siguientes códigos:
 
 
 functions.c:
@@ -1213,7 +1210,7 @@ main.c:
 Finalmente genera el ejecutable con ``gcc main.o -L./ -lstatic -o exe`` y
 ejecuta el programa. En este caso:
 
-* Con la opción ``-L./`` estás indicando una posible donde donde tendrás
+* Con la opción ``-L./`` estás indicando la ruta donde donde tendrás
   almacenadas bibliotecas estáticas y/o dinámicas.
 * Con la opción ``-lstatic`` estás indicando que se debe utilizar la bilioteca
   libstatic.a o libstatic.so. Nota que en este caso se tiene en cuenta la
