@@ -848,7 +848,7 @@ una entrada para el proceso identificada con el pid del mismo.
 
 Ejecuta el comando ``ls -al /proc/295236``:
 
-.. code-block:: c 
+.. code-block:: bash
 
     total 0
     dr-xr-xr-x   9 juanfranco juanfranco 0 Sep 21 14:17 .
@@ -910,7 +910,7 @@ Cada una de estas entradas corresponde a una característica del proceso.
 
 Para preguntar por el mapa de memoria del proceso ejecuta: ``cat /proc/295236/maps``:
 
-.. code-block:: c
+.. code-block:: bash
 
     563fa1aeb000-563fa1aec000 r--p 00000000 08:03 8393449                    /tmp/linker/main
     563fa1aec000-563fa1aed000 r-xp 00001000 08:03 8393449                    /tmp/linker/main
@@ -1004,7 +1004,7 @@ Considera el siguiente código:
 
 Compila y ejecuta:
 
-.. code-block:: c
+.. code-block:: bash
 
     ./main &
     [2] 321982
@@ -1013,7 +1013,7 @@ Compila y ejecuta:
 Ahora ejecuta de nuevo ``cat /proc/321982/maps`` (nota que estamos usando el pid del nuevo
 proceso):
 
-.. code-block:: c
+.. code-block:: bash
 
     55f054ece000-55f054ecf000 r--p 00000000 08:03 8394826                    /tmp/linker/main
     55f054ecf000-55f054ed0000 r-xp 00001000 08:03 8394826                    /tmp/linker/main
@@ -1133,13 +1133,13 @@ Ejecuta ``valgrind --leak-check=full  ./main``
 
 Puedes ver que el error ocurrió en la línea 5 del programa ``main.c``. ¡Genial!
 
-Ejercicio 12: corrección del memory leak
+Ejercicio 20: corrección del memory leak
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Te animas a corregir el error del ejercicio anterior y verificar con valgrind que
 todo esté bien?
 
-Ejercicio 13: el debugger
+Ejercicio 21: el debugger
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Recuerdas que para poder ver el contenido del stack necesitas un debugger? Pues
@@ -1248,18 +1248,21 @@ Cambia el contenido del stack:
     0x7fffffffdb92:	100 'd'	111 'o'	114 'r'	97 'a'	115 's'	0 '\000'	0 '\000'	-51 '\315'
     (gdb)
 
-Trabajo autónomo 1: memoria
-********************************
-(Tiempo estimado: 1 hora 20 minutos)
+Trabajo autónomo 10 
+********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Termina los ejercicios de la sesión 10.
 
 Construye un programa que te permite visualizar cada uno de los segmentos 
 de memoria de un proceso. Experimenta, adiciona más variables. NO OLVIDES 
 usar GDB y valgrind.
 
-Sesión 2: encapsulamiento
-****************************
+Sesión 11
+***********
+(Tiempo estimado: 1 hora 40 minutos)
 
-Ejercicio 14: el concepto de clase en C
+Ejercicio 22: el concepto de clase en C
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El siguiente ejemplo te mostrará una técnica para el manejo de la memoria dinámica
@@ -1366,7 +1369,7 @@ valgrind ./exe
 ¿En qué parte de la memoria está almacenada la variable q?
 ¿Explica cuánta memoria y dónde se está creando con la función create(10)?
 
-Ejercicio 15: el concepto de objeto
+Ejercicio 23: el concepto de objeto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora que conocemos más detalles de la memoria de un proceso y luego
@@ -1403,7 +1406,7 @@ cuando DISEÑAS un programa orientado a objetos te tienes qué imaginar cómo se
 OBJETOS, cuándo se crearán y cuáles serán las relaciones entre ellos cuando 
 ejecutes el programa.
 
-Ejercicio 16: concepto de mutabilidad e inmutabilidad
+Ejercicio 24: concepto de mutabilidad e inmutabilidad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Profe, si yo pudiera ir a ver un objeto en memoria ¿Cómo se vería?
@@ -1417,7 +1420,7 @@ corre se dice que el objeto es MUTABLE. Pero también el objeto puede ser INMUTA
 es decir, que una vez creado el objeto e inicializados sus atributos, no podrás cambiar
 sus valores o su estado.
 
-Ejercicio 17: concepto de relación entre objetos
+Ejercicio 25: concepto de relación entre objetos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ya te comenté que los objetos (colecciones de bytes) pueden estar relacionados entre
@@ -1428,7 +1431,7 @@ el estado de uno de ellos se afecte el estado del otro. Ya en términos más con
 decir que un objeto está relacionado con otro cuando uno de sus atributos contiene la dirección
 de memoria del otro objeto.
 
-Ejercicio 18: el concepto de método
+Ejercicio 26: el concepto de método
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 No lo olvides, un objeto son bytes en memoria. Pero entonces, ¿Qué pasa con el código?
@@ -1439,7 +1442,7 @@ OPERACIONES vas a realizar para crear los objetos (asignarles memoria), iniciar 
 no lo olvides, cuando estás escribiendo el programa estás MODELANDO tu solución,
 tu programa es un PLAN que DESCRIBE lo que ocurrirá cuando sea ejecutado.
 
-Ejercicio 19: relación estado-comportamiento
+Ejercicio 27: relación estado-comportamiento
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Cómo puedes definir la construcción de un objeto?
@@ -1465,7 +1468,7 @@ en el conceptos de CLASE los DATOS y el CÓDIGO. Ten en cuenta que al código ta
 se le conoce cómo el COMPORTAMIENTO de los objetos, es decir, las acciones que se realizarán
 sobre los datos.  
 
-Ejercicio 20: implementación del concepto de clase
+Ejercicio 28: implementación del concepto de clase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Cómo hacemos para implementar las ideas anteriores en C? Ya sabes que C no soporta 
@@ -1610,7 +1613,7 @@ en heap para el objeto y adicionalmente inicializa sus atributos:
         return(q);
     }
 
-Ejercicio 21: comparación con C#
+Ejercicio 29: comparación con C#
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora compara el programa anterior con una implementación en C#:
@@ -1759,17 +1762,20 @@ reservada ``this``. Esta variable contiene la dirección en memoria del
 objecto a través del cual llamamos el método. Observa de nuevo el código
 en C. Notas ¿Cómo están relacionados los conceptos?
 
-Trabajo autónomo 2: encapsulamiento
-***************************************
-(Tiempo estimado: 1 hora 20 minutos)
+Trabajo autónomo 11
+********************
+(Tiempo estimado: 2 horas 50 minutos)
+
+Termina los ejercicios de la sesión 11. 
 
 Vuelve a leer el material de esta sección y asegúrate de analizar con 
 detenimiento los ejercicios 20 y 21.
 
-Sesión 3: relaciones entre objetos
-**************************************
+Sesión 12
+***********
+(Tiempo estimado: 1 hora 40 minutos)
 
-Ejercicio 22: relación de composición entre objetos
+Ejercicio 30: relación de composición entre objetos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Cuando DISEÑAS un programa orientado a objetos
@@ -1837,7 +1843,7 @@ destruye el objeto contenido:
         free(this);
     }
 
-Ejercicio 23: relación de agregación
+Ejercicio 31: relación de agregación
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Qué es la agregación?
@@ -1847,7 +1853,7 @@ gran diferencia con la composición es que la vida del objeto contenido no depen
 de la vida del objeto contenedor. El objeto contenido puede ser construido incluso
 antes de que el objeto contenedor sea construido.
 
-Ejercicio 24: MINI-RETO
+Ejercicio 32: MINI-RETO
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Con todo lo anterior en mente y esta nueva definición, te tengo un mini RETO:
@@ -2060,7 +2066,7 @@ Para compilar:
     gcc -Wall main.o player.o gun.o -o app
 
 
-Ejercicio 25: representación UML de las relaciones
+Ejercicio 33: representación UML de las relaciones
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Recuerdas que en tu curso de programación y diseño orientado a objetos
@@ -2077,13 +2083,13 @@ una imagen:
 .. image:: ../_static/UMLasoc.png
     :alt: relaciones en UML
 
-Ejercicio 26: ejericio de modelado UML
+Ejercicio 34: ejericio de modelado UML
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Te animas a realizar un modelo UML para nuestros dos ejemplos de composición
 y agregación?
 
-Ejercicio 27: relación de herencia
+Ejercicio 35: relación de herencia
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El otro tipo de relación que podemos tener entre dos objetos es la relación TO-BE, 
@@ -2162,7 +2168,7 @@ aquí:
         return 0;
     }
 
-Ejercicio 28: para reflexionar
+Ejercicio 36: para reflexionar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 En este punto te pido que te pongas cómodo. Lo que viene será alucinante...
@@ -2173,7 +2179,7 @@ person_t también le puedes pasar un puntero a un student_t (para manipular
 sus atributos correspondiente a person_t). SEÑORES y SEÑORAS, estamos
 reutilizando código.
 
-Ejercicio 29: implementación de herencia simple
+Ejercicio 37: implementación de herencia simple
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora te voy a mostrar una técnica para implementar herencia simple en C.
@@ -2363,17 +2369,7 @@ Para compilar y generar la aplicación:
     gcc -Wall -c main.c -o main.o      
     gcc -Wall main.o person.o student.o -o app
 
-
-Trabajo autónomo 3: herencia
-*******************************
-(Tiempo estimado: 1 hora 20 minutos)
-
-Revisa de nuevo todo el material de esta sesión en particular el ejercicio 29.
-
-Sesión 4: polimorfismo
-**************************
-
-Ejercicio 30: POLIMORFISMO en tiempo de ejecución
+Ejercicio 38: POLIMORFISMO en tiempo de ejecución
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ahora te voy a mostrar una técnica para implementar polimorfismo en tiempo de 
@@ -2633,7 +2629,7 @@ Para ejecutar el código realizas las siguientes operaciones:
     gcc -Wall -c main.c -o main.o    
     gcc -Wall main.o cat.o duck.o animal.o -o app
 
-Ejercicio 31: clases abstractas
+Ejercicio 39: clases abstractas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ¿Qué son las clases abstractas? Son un tipo de clases de las cuales no puedes
@@ -2669,17 +2665,12 @@ Ten presente que en la medida que llevas al extremo este concepto de abstracció
 llegar a clases que no tengan atributos sino SOLO métodos virtuales. En este punto habrás
 llegado a las INTERFACES, de las cuales tampoco podrás crear objetos.
 
-Trabajo autónomo 4: polimorfismo
-**********************************
-(Tiempo estimado: 1 hora 20 minutos)
-
-Analiza de nuevo el ejercicio 30 y trata de 
-realizar diagramas donde visualices la relación entre los diferentes objetos.
-
-
-Trabajo autónomo 10 
+Trabajo autónomo 12
 ********************
 (Tiempo estimado: 2 horas 50 minutos)
+
+Termina y repasa el material de la sesión 12. Tendremos la segunda evaluación de la 
+Unidad 1 la próxima semana.
 
 
 Evaluación 1 de la unidad 1
