@@ -2120,7 +2120,7 @@ objeto.
         unsigned int passed_credits; // Extra attribute
     } student_t;
 
-En el ejemplo anterior (tomado del de `aquí <https://www.packtpub.com/free-ebook/extreme-c/9781789343625>`__
+En el ejemplo anterior, tomado de `aquí <https://www.packtpub.com/free-ebook/extreme-c/9781789343625>`__,
 nota los atributos de la estructura person_t y student_t. ¿Ves alguna relación entre ellos?
 
 student_t ``extiende`` los atributos de person_t. Por tanto, podemos decir que student_t también
