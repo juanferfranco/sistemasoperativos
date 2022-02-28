@@ -737,7 +737,7 @@ Resuelve el siguiente problema usando ``HILOS``:
 
 * En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
   capítulos a tu video.
-* En `este <https://github.com/cirocosta/observer-c>`__ otro enlace pueden encontrar 
+* En `este <https://github.com/cirocosta/observer-c>`__ otro enlace puedes encontrar 
   la implementación en C y un ejemplo.
 
 Criterios de evaluación
