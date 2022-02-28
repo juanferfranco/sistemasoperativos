@@ -2122,7 +2122,7 @@ objeto.
 
 En el ejemplo anterior, tomado de `aquí <https://www.packtpub.com/free-ebook/extreme-c/9781789343625>`__,
 nota los atributos de la estructura person_t y student_t. ¿Ves alguna relación entre ellos?
-
+    
 student_t ``extiende`` los atributos de person_t. Por tanto, podemos decir que student_t también
 ES UNA (IS-A) person_t.
 
@@ -2768,4 +2768,37 @@ Criterios de evaluación
 Evaluación 2 de la unidad 1
 ----------------------------
 
-REGRESA AQUÍ LA SEMANA 7. No olvides presionar F5.
+Para esta segunda evaluación te voy a proponer un ejercicio muy diferente al anterior PERO 
+muy intersante que te permitirá ``conectar lo que has estudiado hasta ahora con varios cursos 
+de tu carrera``.
+
+Enunciado del problema (ev2)
+******************************
+
+Considera uno de los patrones de diseño más populares y útiles, el patrón de diseño 
+``OBSERVER``. El problema consiste en analizar detenidamente el patrón que puedes 
+encontrar `aquí <https://refactoring.guru/design-patterns/observer>`__ y un ejemplo 
+`aquí <https://refactoring.guru/design-patterns/observer/csharp/example#example-0--Program-cs>`__. 
+Luego de analizar con detenimiento realiza una implementación equivalente en C usando lo 
+que has aprendido hasta este punto del curso.
+
+Consideraciones (ev2)
+**************************
+
+* Entrega tu evaluación `aquí <https://classroom.github.com/a/b25X_IkE>`__.
+* Debes guardar en el respositorio la implementación del patrón y un ejemplo. Puedes implementar 
+  el patrón y el ejemplo a la vez o separados.
+* En la Wiki del repositorio realiza un tutorial compuesto por tres partes:
+  
+  * Explicación conceptual del patrón. 
+  * Explicación de la implementación del patrón.
+  * Tutorial que muestre cómo usar el patrón mediante un ejemplo. No olvides indicarle al usuario cómo 
+    compilar el código, cómo probarlo y si desea adicionar más subjects y/o observer cómo lo podría hacer.
+* Además del material que puedes encontrar en esta unidad, puedes complementar con el material de 
+  `este <https://www.state-machine.com/oop>`__ otro sitio.
+
+Criterios de evaluación (ev2)
+******************************
+
+* Implementación del patrón y el ejemplo: 2 unidades.
+* Tutorial con explicación conceptual, explicación del patrón y tutorial del ejemplo: 3 unidades.
