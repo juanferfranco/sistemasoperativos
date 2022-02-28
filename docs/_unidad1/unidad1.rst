@@ -2796,6 +2796,8 @@ Consideraciones (ev2)
     compilar el código, cómo probarlo y si desea adicionar más subjects y/o observer cómo lo podría hacer.
 * Además del material que puedes encontrar en esta unidad, puedes complementar con el material de 
   `este <https://www.state-machine.com/oop>`__ otro sitio.
+* En `este <https://github.com/cirocosta/observer-c>`__ otro enlace puedes encontrar 
+  la implementación en C y un ejemplo.
 
 Criterios de evaluación (ev2)
 ******************************
