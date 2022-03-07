@@ -14,11 +14,11 @@ Propósito de aprendizaje
 Comprender el concepto de proceso, programa, hilo y su diferencia.
 
 
-Lecturas y ejercicios
+Trayecto de actividades
 ------------------------
 
-Sesión 1: concepto de proceso
-********************************
+Sesión 1
+**********
 
 Ejercicio 1: concepto de proceso
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,8 +81,8 @@ puedes crear procesos:
         exit(EXIT_SUCCESS);
     }
 
-Trabajo autónomo 1: crear procesos
-***********************************
+Trabajo autónomo 1
+***********************
 
 Realiza los siguientes ejercicios para la próxima sesión:
 
@@ -127,8 +127,8 @@ el llamado al sistema `WAIT <https://man7.org/linux/man-pages/man2/wait.2.html>`
 
 (Tiempo estimado 1 hora 25 minutos)
 
-Sesión 2: imagen de un proceso
-*********************************
+Sesión 2
+**********
 
 Ejercicio 6: imagen de un proceso
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -204,8 +204,8 @@ Ejercicio 8: analiza el ejercicio anterior
   un proceso y un programa? En el ejercicio ¿Cuál es el programa? ¿Cuál es el proceso?
   ¿Cuáles son las imágenes que el proceso ejecutó?
 
-Trabajo autónomo 2: familia exec
-************************************
+Trabajo autónomo 2
+*****************************
 
 Ejercicio 9: reto procesos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -396,8 +396,8 @@ que el terminar.
     pthread_join(threadID1,NULL);
     pthread_join(threadID2,NULL);
 
-Trabajo autónomo 3: hilos
-************************************
+Trabajo autónomo 3
+***********************
 
 
 Ejercicio 15: condiciones de carrera
@@ -480,8 +480,8 @@ que edad representa valores numéricos. Se tendrán máximo 100 líneas y
 
 
 
-Sesión 4: concepto de hilo en C# y temas relacionados
-********************************************************
+Sesión 4
+************
 
 En esta sesión vamos a revisar el concepto de hilo en otro lenguaje de 
 programación popular: C#. Adicionalmente vamos refinar un poco más 
@@ -582,8 +582,8 @@ claro, a menos que quieras).
 * ¿Cuál es la diferencia entre un hilo y un método estático?
 * ¿Para qué sirve un lock?
 
-Trabajo autónomo 4: REPASO
-****************************
+Trabajo autónomo 4
+*********************
 (Tiempo estimado: 2 horas 50 minutos)
 
 En este bloque de trabajo autónomo te voy a pedir que le des una 
@@ -595,162 +595,4 @@ Evaluación de la Unidad
 ---------------------------
 (Tiempo total estimado: 9 horas).
 
-Enunciado
-*************
-Te voy a proponer una serie de problemas para que evidencies 
-en su solución lo que aprendiste en esta unidad.
-
-Para darle variedad a las formas de evaluar te voy a proponer que 
-``armes un equipo de trabajo de 2 o 3 persona incluyéndote``. La idea es 
-que entre todos construyan la solución a cada uno de los problemas.
-
-Problema 1: analisis y relación 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Lo que has aprendido en este curso está relacionado con otras áreas 
-del conocimiento de tu carrera. En este problema te voy a pedir que analices 
-y luego relaciones. 
-
-Considera el siguiente programa:
-
-.. code-block:: c 
-
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <string.h>
-
-    typedef struct IntArray{
-        int *parr;
-        int length;
-    }IntArray;
-
-
-    IntArray *createIntArray(int size);
-    void initIntArray(IntArray *);
-    void destroyIntArray(IntArray *);
-    void printArray(IntArray *);
-
-    int main(){
-        IntArray * pIntArray = createIntArray(100);
-        initIntArray(pIntArray);
-        printArray(pIntArray);
-        destroyIntArray(pIntArray);
-    }
-
-    IntArray *createIntArray(int size){
-            IntArray *pIntArray = malloc(sizeof(IntArray));
-            pIntArray->parr =   malloc( sizeof(int) * size);      
-            pIntArray->length = size;
-            return pIntArray;
-    }
-
-    void initIntArray(IntArray *this){
-        for(int i = 0; i < 100; i++){
-            this->parr[i] = i;
-        }
-    }
-
-    void printArray(IntArray *this){
-        for(int i = 0; i < this->length; i++){
-            printf("parr[%d]: %d\n", i, this->parr[i]);
-        }
-    }
-
-    void destroyIntArray(IntArray *this){
-        free(this->parr);
-        free(this);
-    }
-
-* Explica cómo funciona el programa.
-* Explica en que parte del MAPA DE MEMORIA del proceso se 
-  almacena CADA variable usada.
-* Construye una programa similar a este usando Java o C#. 
-* Explica en qué parte de la memoria se almacena cada 
-  variable de tu programa.
-* Compara ambos programas e indica qué conceptos del programa 
-  propuesto se ven reflejados en tu programa.
-
-Problema 2: procesos
-^^^^^^^^^^^^^^^^^^^^^
-Piensa con tus compañeros y construye una aplicación con las siguientes 
-consideraciones:
-
-* La aplicación DEBE recibir argumentos por la línea de comandos usando 
-  los argumentos de ``main argc y argv``.
-* El proceso inicial debe crear un segundo proceso.
-* El proceso inicial debe comunicar al segundo proceso los argumentos 
-  pasados por línea de comandos.
-* El primer proceso debe cambiar su imagen inicial.
-* Una vez cambie la imagen inicial debe esperar a que el segundo 
-  proceso termine.
-* El primer proceso debe mostrar el resultado del procesamiento realizado 
-  por el segundo.
-
-Problema 3: hilos
-^^^^^^^^^^^^^^^^^^
-
-Resuelve el siguiente problema usando ``HILOS``:
-
-* Construye o consigue un archivo de texto que tenga al menos 100 líneas y con 
-  frases completas.
-* Realiza un programa al cual le pasarás por medio de los argumentos de main 
-  el nombre del archivo anterior.
-* Cada segundo el programa debe imprimir en la terminal una línea del archivo y 
-  su versión procesada: EL PROGRAMA debe correr fluido a 1 frame por segundo, 
-  la impresión no se debe bloquear. Usada el llamado al sistema ``sleep``.
-* Tu programa debe ser capaz de recibir comandos mientras procesa cada línea.
-* Todas las líneas serán procesadas con el último comando recibido.
-* Los comandos a recibir son
-
-  * "upper": todas las letras en mayúscula.
-  * "words": contar palabras.
-  * "vowels": contar cuántas vocales aparecen en la línea.
-  * "none": no procesa la línea
-
-* Para este programa debes apagar el ECHO de caracteres al escribir en terminal.
-  Usa como referencia `este código <https://man7.org/tlpi/code/online/book/tty/no_echo.c.html>`__ 
-  (PERO úsalo con sabiduría, es decir, toma solo lo que necesites). 
-
-¿Qué debes entregar?
-***************************
-
-* Subir a `este <https://www.dropbox.com/request/K1mHBImEESXF9Fq6ceo5>`__ 
-  enlace un ``.pdf`` con:
-
-  #. Los nombres y IDs.
-  #. Enlace al repositorio GitHub con la solución a los problemas 
-  #. La URL del video en youtube.
-  #. Reportar si algún compañero del equipo no trabajó. 
-
-* El video DEBE TENER una duración ``MÁXIMA`` de 15 minutos.
-* El video debe tener los siguientes capítulos en este mismo orden:
-
-  * Integrantes y las tareas que realizó cada uno.
-  * Problema 1: demostración de la solución.
-  * Problema 1: explicación de la solución.
-  * Problema 1: explicación de la implementación en código de la solución.
-  * Problema 2: demostración de la solución.
-  * Problema 2: explicación de la solución.
-  * Problema 2: explicación de la implementación en código de la solución.
-  * Problema 3: demostración de la solución.
-  * Problema 3: explicación de la solución.
-  * Problema 3: explicación de la implementación en código de la solución.
-
-* En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
-  capítulos a tu video.
-
-Criterios de evaluación
-****************************
-
-Cada problema se evalua completo, es decir, no se reciben problemas 
-con solución incompleta. Un problema se soluciona completamente si tiene TODO lo 
-solicitado incluyendo el video con la demostración y la explicación de su solución.
-
-* Calidad y duración máxima del video y repositorio en Github: 0.5
-* Problema 1: 1 unidad.
-* Problema 2: 1.75 unidades.
-* Problema 3: 1.75 unidades.
-
-.. note:: Sobre las personas reportadas en el pdf
-
-    Las personas que aparezcan reportadas en el pdf obtendrán automáticamente 
-    una calificación de 0.
+Regresa aquí en la semana 10 para descubrir tu sorpresa.
