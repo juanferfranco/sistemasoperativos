@@ -629,7 +629,7 @@ Consideraciones
    NO OLVIDES comparar pzip con wzip.
 #. Criterio de evaluación: 
 
-   * whish: 2 unidades.
+   * wish: 2 unidades.
    * pzip: 2 unidades.
    * Sustentación: 0.5 unidades cada problema.
 
