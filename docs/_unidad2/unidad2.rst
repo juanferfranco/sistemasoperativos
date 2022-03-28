@@ -608,9 +608,15 @@ Evaluación de la Unidad
 Te voy a proponer para esta evaluación dos proyectos para realizar. 
 Uno de los proyectos se enfoca en procesos y el otro en hilos. 
 
+.. warning:: ESCOGE ENTRE pzip y wish
+
+    Vas a seleccionar uno de los dos problemas wish (PROCESOS) o pzip (hilos)
+
+
 .. note:: LOS PROYECTOS SON TOMADOS DEL LIBRO Operating Systems: Three Easy Pieces
 
     Los proyectos se pueden ver `aquí <https://github.com/remzi-arpacidusseau/ostep-projects>`__. 
+
 
 Consideraciones
 *****************
