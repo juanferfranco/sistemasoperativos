@@ -68,17 +68,17 @@ Cronograma
 * Introducción al curso
 * Unidad 1-1: semanas 2 a 4
 * Unidad 1-2: semanas 5 a 7
-* Unidad 2: semanas 8 a 10
-* Unidad 3: semanas 11 a 13
-* Unidad 4: semanas 14 a 16
+* Unidad 2: semanas 8 a 11
+* Unidad 3: semanas 12 a 14
+* Unidad 4: semanas 15 a 16
 
 Evaluación
 -----------
 
 * Evaluación unidad 1-1: 20%. Semana 4
 * Evaluación unidad 1-2: 20%. Semana 7 
-* Evaluación unidad 2: 20%. Semana 10
-* Evaluación unidad 3: 20%. Semana 13
+* Evaluación unidad 2: 20%. Semana 11
+* Evaluación unidad 3: 20%. Semana 14
 * Evaluación unidad 4: 20%. Semana 16
 
 Textos de referencia
