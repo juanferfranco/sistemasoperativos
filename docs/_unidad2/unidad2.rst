@@ -605,4 +605,27 @@ Evaluación de la Unidad
 ---------------------------
 (Tiempo total estimado: 9 horas).
 
-Regresa aquí en la semana 10 para descubrir tu sorpresa.
+Te voy a proponer para esta evaluación dos proyectos para realizar. 
+Uno de los proyectos se enfoca en procesos y el otro en hilos. 
+
+Consideraciones
+*****************
+
+#. Ingresa a tu repositorio privado para esta evaluación 
+   `aquí <https://classroom.github.com/a/DDbCG7wQ>`__.
+#. En el repositorio encontrarás realmente tres proyectos: process-shell (wish), 
+   concurrency-pzip (pzip) y wzip. Los que nos ocupan son process-shell y 
+   pzip; sin embargo, pzip es una versión concurrente, usando hilos, de 
+   wzip. Por tanto, tendrás que solucionar wzip para luego pasar a 
+   paralelizarlo Y COMPARAR la ganancia.
+#. En esta evaluación, como los repositorios son privados, no vas a correr 
+   la solución en GitHub. La solución y los vectores de prueba se realizarán 
+   localmente. 
+#. En el archivo README.md vas a explicar cómo solucionaste el cada problema. 
+   NO OLVIDES comparar pzip con wzip.
+#. Criterio de evaluación: 
+
+   * whish: 2 unidades.
+   * pzip: 2 unidades.
+   * Sustentación: 0.5 unidades cada problema.
+
