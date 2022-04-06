@@ -15,11 +15,11 @@ Comprender y aplicar estrategias de comunicación y sincronización
 entre diferentes flujos de instrucciones.
 
 
-Lecturas y ejercicios
+Trayecto de actividades
 ------------------------
 
-Sesión 1: sincronización y comunicación (introducción)
-***********************************************************************
+Sesión 1 
+**********
 
 Ejercicio 1: taxonomía de servicios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -96,7 +96,7 @@ En la transferencia por flujo de mensajes:
   más de lo que hay :) )
 * SOLO los sockets permiten la comunicación entre dos procesos corriendo 
   en dos computadores diferentes conectados por una red de datos.
-* Las lecturas son destructivas → los datos se consumen.
+* ``Las lecturas son destructivas → los datos se consumen.``
 * ``La sincronización entre procesos es automática → Si no hay datos para leer, 
   el proceso se bloquea (por defecto)``.
 
@@ -205,7 +205,7 @@ Ejercicio 7: comunicación entre procesos con pipes
    :align: center
    :alt: pipe con fork 
 
-En la pare de ``a`` de la figura el proceso padre crea la 
+En la figura ``a`` el proceso padre crea la 
 tubería. Luego hace un fork. Por tanto el proceso hija hereda
 los descriptores.
 
@@ -337,7 +337,6 @@ resultados.
 Trabajo autónomo 1: experimenta y practica con pipes
 **********************************************************
 (Tiempo estimado: 2 horas 50 minutos)
-
 
 Antes de realizar el siguiente ejercicio te invito a que leas de nuevo 
 todo el material hasta este punto. Analiza una vez más los ejemplos, 
@@ -669,7 +668,6 @@ Analiza la documentación y el ejemplo de
 `este <https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm>`__ 
 sitio.
 
-
 Trabajo autónomo 3: Colas
 *******************************
 (Tiempo estimado: 2 horas 50 minutos)
@@ -883,11 +881,6 @@ Evaluación de la Unidad 3
 
 Enunciado
 *************
-Te voy a proponer un RETO interesante para esta evaluación que podrás 
-resolver en equipo máximo de 3 de personas.
-
-Problema 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vas a construir dos aplicaciones que llamaremos servidor y cliente. Solo 
 tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
@@ -930,70 +923,10 @@ Estas son las características a implementar en el cliente:
 ¿Qué debes entregar?
 ***************************
 
-Diligencia y entrega en este `enlace <https://forms.office.com/r/Bib1V63rB6>`__.
-
-En el formulario anterior te voy a solicitar evidenciar el código con la solución 
-y un video con la sustentación.
-
-Con respecto al código:
-  
-#. Debe estar bajo control de versión en GitHub
-#. SOLO debes tener tres archivos: server.c, client.c, readme.txt.
-#. El archivo readme.txt debe indicar cómo compilar cada archivo y
-   cómo se debe lanzar cada programa.
-
-Con respecto al video:
-
-#. El video DEBE TENER una duración ``MÁXIMA`` de 15 minutos.
-#. En `este video <https://youtu.be/6-0cERIVsFg>`__ puedes aprender a adicionar 
-   capítulos a tu video.
-#. El video debe tener los siguientes capítulos en este mismo orden:
-
-   * Imagen con los integrantes y qué aportes realizó cada uno.
-   * Demostración de la solución.
-   * Explicación conceptual de la solución.
-   * Explicación del código con la implementación.
-
-Con respecto a la demostración:
-
-* Demostrar add event_name.
-* Demostrar remove event_name.
-* Demostrar trigger event_name.
-* Demostrar list event_name.
-* Demostrar sub event_name.
-* Demostrar unsub event_name.
-* Demostrar list
-* Demostrar ask
-* Demostrar exit. 
-
-Con respecto a la explicación conceptual responde 
-estas preguntas:
-
-* ¿Cómo es la arquitectura de cada aplicación?
-* ¿Cómo resolviste el problema de escuchar comandos y a la vez estar 
-  pendiente de las comunicaciones en cada proceso?
-* ¿Cómo le comunicas a cada cliente interesado acerca de un evento?
-* ¿Cómo solucionaste el problema de tener una cantidad arbitraria de clientes 
-  que se suscriben y desuscriben a un evento?
-* ¿Qué estructura de datos usaste para mantener la lista de interesados? ¿Por qué?
-* Si en el servidor remueve un evento y el cliente ejecuta el comando list 
-  ¿Cómo soluciones una posible inconsistencia?
-* ¿Qué mecanismo de comunicación estás utilizando y por qué?
-* ¿Qué ventaja tiene el mecanismo de comunicación seleccionado sobre otras 
-  opciones?
-* Cuando el cliente ejecuta el comando ask ¿Cómo haces para preguntarle 
-  al server? 
-
+.. warning:: EN CONSTRUCCIÓN
 
 Criterios de evaluación
 ****************************
 
-* Calidad y duración máxima del video y repositorio en Github: 0.5
-* Demostración del funcionamiento solicitado: 0.5
-* Explicación conceptual de la solución: 2
-* Explicación del código con la solución: 2
+.. warning:: EN CONSTRUCCIÓN
 
-.. note:: Sobre las personas reportadas
-
-    Las personas que aparezcan reportadas indicando que no trabajaron obtendrán automáticamente 
-    una calificación de 0.
