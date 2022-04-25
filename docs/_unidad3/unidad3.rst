@@ -879,6 +879,10 @@ Evaluación de la Unidad 3
 
 (Tiempo total estimado: 9 horas).
 
+.. warning:: FECHA MÁXIMA DE ENTREGA
+
+    La fecha máxima será el domingo 1 de mayo de 2022 a las 11:59 p.m.
+
 Enunciado
 *************
 
@@ -930,7 +934,7 @@ Ten presente:
 
 * La sustentación va en el archivo README.md con ESTAS secciones:
   
-  #. Explicación del funcionamiento de la aplicación.
+  #. Explicación: cómo resolviste cada requisito de la aplicación
   #. Cómo se compila y ejecuta tu aplicación.
   #. Indica cuántos y el número de los vectores de prueba que estás cumpliendo.
   #. Una ``URL a YOUTUBE`` con un video corto de menos de 3 minutos que muestre 
@@ -944,7 +948,7 @@ Criterios de evaluación
 
 La sustentación tendrá el siguiente peso:
 
-#. Explicación del funcionamiento de la aplicación: 0.5
+#. Explicación: cómo resolviste cada requisito de la aplicación: 0.5
 #. Cómo se compila y ejecuta tu aplicación: 0.1
 #. Indica cuántos y el número de los vectores de prueba que estás cumpliendo: 0.1
 #. Una ``URL a YOUTUBE`` con un video corto de menos de 3 minutos que muestre 
@@ -957,9 +961,6 @@ La evaluación tendrá los siguientes vectores cada uno con igual valor:
 #. El servidor muestra cada petición que realiza un cliente mostrando en la terminal  
    la ``identificación del cliente y el contenido de la petición``.
 #. El servidor soporta ``concurrencia`` (escuchar peticiones y comandos locales al mismo tiempo).
-#. El comando ``exit`` funciona correctamente. Los clientes terminan
-   al igual que el servidor. TODOS los recursos creados en el sistema operativo
-   son liberados.
 #. El servidor ``crea`` correctamente eventos con su lista de interesados.
 #. El servidor ``destruye`` correctamente eventos y sus recursos asociados.
 #. El servidor recibe la orden de ``publicar`` un evento y lo publica correctamente 
@@ -973,6 +974,9 @@ La evaluación tendrá los siguientes vectores cada uno con igual valor:
 #. El cliente ``lista`` todos los eventos a los cuales está suscrito.
 #. El cliente se ``suscribe`` a un evento.
 #. El cliente se ``desuscribe`` a un evento.
+#. En el server el comando ``exit`` funciona correctamente. Los clientes terminan
+   al igual que el servidor. TODOS los recursos creados en el sistema operativo
+   son liberados.
 #. El cliente gestiona correctamente el comando ``exit`` en el servidor.
 
 La calificación estará dada por: `Nota = VectoresQueFuncionan*Sustentacion/TotalVectores`.
