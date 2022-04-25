@@ -901,7 +901,7 @@ El servidor :
 * Debe recibir commandos desde la línea de comandos y al mismo tiempo debe 
   ser capaz de escuchar las peticiones de los clientes.
 * Cada petición de un cliente será visualizada con un mensaje 
-  en la terminal.
+  en la terminal que incluirá el identificador del cliente y el mensaje de la petición.
 * Los comandos que recibirá el servidor son: 
 
   * exit: termina el servidor y deberá publicar este evento a TODOS los clientes.
@@ -923,10 +923,59 @@ Estas son las características a implementar en el cliente:
 ¿Qué debes entregar?
 ***************************
 
-.. warning:: EN CONSTRUCCIÓN
+La entrega de tu evaluación debe estar en `este <https://classroom.github.com/a/VlRxHiC->`__ 
+repositorio privado. Debes entregar el código del proyecto y la sustentación.
+
+Ten presente:
+
+* La sustentación va en el archivo README.md con ESTAS secciones:
+  
+  #. Explicación del funcionamiento de la aplicación.
+  #. Cómo se compila y ejecuta tu aplicación.
+  #. Indica cuántos y el número de los vectores de prueba que estás cumpliendo.
+  #. Una ``URL a YOUTUBE`` con un video corto de menos de 3 minutos que muestre 
+     todos los vectores de prueba que funcionan. Debes mostrar PRIMERO una imagen 
+     que indique el número del vector y luego el funcionamiento. 
+
+* Código completo del proyecto con TODAS sus dependencias.
 
 Criterios de evaluación
 ****************************
 
-.. warning:: EN CONSTRUCCIÓN
+La sustentación tendrá el siguiente peso:
+
+#. Explicación del funcionamiento de la aplicación: 0.5
+#. Cómo se compila y ejecuta tu aplicación: 0.1
+#. Indica cuántos y el número de los vectores de prueba que estás cumpliendo: 0.1
+#. Una ``URL a YOUTUBE`` con un video corto de menos de 3 minutos que muestre 
+   todos los vectores de prueba que funcionan. Debes mostrar PRIMERO una imagen 
+   que indique el número del vector y luego el funcionamiento: 0.3 
+
+La evaluación tendrá los siguientes vectores cada uno con igual valor:
+
+#. El servidor atiende una ``cantidad arbitraria`` de clientes.
+#. El servidor muestra cada petición que realiza un cliente mostrando en la terminal  
+   la ``identificación del cliente y el contenido de la petición``.
+#. El servidor soporta ``concurrencia`` (escuchar peticiones y comandos locales al mismo tiempo).
+#. El comando ``exit`` funciona correctamente. Los clientes terminan
+   al igual que el servidor. TODOS los recursos creados en el sistema operativo
+   son liberados.
+#. El servidor ``crea`` correctamente eventos con su lista de interesados.
+#. El servidor ``destruye`` correctamente eventos y sus recursos asociados.
+#. El servidor recibe la orden de ``publicar`` un evento y lo publica correctamente 
+   a todos los interesados.
+#. El servidor ``lista`` todos los clientes suscritos a un evento.
+#. El cliente soporta ``concurrencia`` 
+   (escuchar notificaciones y comandos locales al mismo tiempo).
+#. El cliente muestra en la terminal la ``notificación`` de los eventos.
+#. El cliente le ``pregunta`` al servidor y muestra en la terminal todos 
+   los eventos disponibles en el servidor.
+#. El cliente ``lista`` todos los eventos a los cuales está suscrito.
+#. El cliente se ``suscribe`` a un evento.
+#. El cliente se ``desuscribe`` a un evento.
+#. El cliente gestiona correctamente el comando ``exit`` en el servidor.
+
+La calificación estará dada por: `Nota = VectoresQueFuncionan*Sustentacion/TotalVectores`.
+
+
 
