@@ -4,10 +4,10 @@ Unidad 4: Entrada-Salida
 Introducción
 --------------
 
-Hasta es punto en el curso hemos estudiado dos abstracciones
+Hasta es punto delcurso hemos estudiado dos abstracciones
 fundamentales que brinda el sistema operativo: PROCESOS y MEMORIA
 VIRTUAL. La primera permite utilizar los recursos de procesamiento y
-la segunda memoria temporal para los programas. Ahora, vamos a presentar
+la segunda la memoria temporal para los programas. Ahora, vamos a presentar
 un nuevo servicio del sistema operativo: ENTRADA-SALIDA. Los servicios 
 de entrada-salida le permiten al sistemas operativo comunicarse con el 
 mundo exterior, ya sea para adquirir información o para producirla. 
@@ -21,10 +21,10 @@ Comprender y aplicar los conceptos de entrada-salida para persistir información
 y para comunicar procesos que no necesariamente se encuentra en la misma máquina.
 
 
-Lecturas y ejercicios
-------------------------
+Trayecto de actividades
+--------------------------
 
-Sesión 1: persistencia
+Sesión 1
 ***************************
 
 Ejercicio 1: persistencia 
@@ -45,11 +45,11 @@ Realizar un programa que:
   el directorio y los subdirectorios.
 * La idea es recorrer toda la jerarquía imprimiendo los nombres de subdirectorios y archivos.
 
-Sesión 2: introducción a los sockets
-***************************************
+Sesión 2
+**********
 
-En esta sesión vamos a resolver dudas del RETO anterior y a introducir el mecanismo 
-de sockets para comunicar procesos.
+Ahora vamos a introducir el mecanismo de sockets para comunicar procesos que pueden estar 
+en la misma máquina o en máquinas diferentes.
 
 Ejercicio 2: sockets
 ^^^^^^^^^^^^^^^^^^^^^
@@ -349,96 +349,16 @@ Client.c:
 Sesión 3: análisis del ejercicio anterior
 **********************************************
 
-En esta sesión vamos a analizar juntos el ejercicio anterior.
+En esta sesión vamos a analizar juntos el ejercicio anterior, presentar la evaluación 
+y resolver dudas generales para esta.
 
 
 Evaluación de la Unidad 4
 ---------------------------
 
-Consideraciones
-****************
+.. warning:: REGRESA AQUÍ EN LA SEMANA 16
 
-* Conforma un equipo de mínimo de 2 personas y máximo de 3 personas.
-* Vas a dedicar 14 horas 40 minutos para solucionar 
-  el problema y elaborar una presentación.
-* Tendrás un espacio de 10 minutos para presentar, con tu equipo, en la última 
-  sesión de clase en la semana 16.
-* Antes de la presentación, sube a `este <https://forms.office.com/r/KPmfnvFpfn>`__ 
-  enlace la información necesaria para entregar tu trabajo.
-* Para la comunicación entre los diferentes procesos ES OBLIGATORIO utilizar sockets TCP.
-* En la presentación realizarás la demostración y explicación de cada uno de los Criterios
-  de evaluación señalados.
-
-Problema
-************
-
-Vas a construir dos aplicaciones que llamaremos servidor y cliente. Solo 
-tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
-El servidor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
-al servidor su interés en algunos eventos específicos; sin embargo, en un momento dado,
-también podrán indicarle que ya no están interesados en algunos en particular. 
-Por cada evento, el servidor mantendrá una lista de interesados que irá cambiando 
-a medida que entran y salen interesados. Al generarse un evento en el servidor, 
-este publicará a todos los interesados. 
-
-Para desplegar las aplicaciones, lanzarás el servidor y cada cliente en una terminal 
-para cada uno. No olvides hacer pruebas con VARIOS clientes.
-
-Estas son las características a implementar en el servidor:
-
-El servidor :
-
-* Debe recibir commandos desde la línea de comandos y al mismo tiempo debe 
-  ser capaz de escuchar las peticiones de los clientes.
-* Cada petición de un cliente será visualizada con un mensaje 
-  en la terminal.
-* Los comandos que recibirá el servidor son: 
-
-  * exit: termina el servidor y deberá publicar este evento a TODOS los clientes.
-  * add event_name: adiciona el evento event_name.
-  * remove event_name: elimina el evento event_name.
-  * trigger event_name: publica el evento event_name.
-  * list event_name: lista todos los clientes suscritos a event_name.
-  * all: visualiza todos los eventos y clientes de cada evento.
-  * save file_name: salva en file_name todos los eventos.
-  * load file_name: carga todos los eventos almacenados en file_name.
-
-* El servidor debe ser capaz de detectar si un cliente se desconecta y 
-  en consecuencia debe purgar los eventos a los cuales este estaba suscrito.
-
-Estas son las características a implementar en el cliente:
-
-* El cliente debe visualizar en la terminal cada que sea notificado de un evento.
-* El cliente debe soportar los siguientes comandos:
-
-  * sub event_name: se suscribe al evento event_name
-  * unsub event_name: se desuscribe del evento event_name
-  * list: lista todos los eventos a los cuales está suscrito.
-  * ask: le pregunta al servidor cuáles eventos hay disponibles.
-  * save file_name: salva en file_name todos los eventos.
-  * load file_name: carga todos los eventos almacenados en file_name.
-
-Criterios de evaluación
-*************************
-
-#. Orden y coherencia en la presentación: 0.5
-#. Implementación del mecanismo de comunicación: 1
-#. Implementación de la concurrencia: 0.5
-#. Comando exit en el server: 0.1
-#. Comando add en el server: 0.1
-#. Comando remove en el server: 0.2
-#. Comando trigger en el server: 0.4
-#. Comando list en el server: 0.2
-#. Comando all en el server: 0.2
-#. Comando save en el server: 0.2
-#. Comando load en el server: 0.2
-#. Comando sub en el cliente: 0.3
-#. Comando unsub en el cliente: 0.3
-#. Comando list en el cliente: 0.2
-#. Comando ask en el cliente: 0.2
-#. Comando save en el cliente: 0.2
-#. Comando load en el cliente: 0.2
-
+    Recuerda presionar F5 la semana 16 para observar el enunciado.
  
 
 
