@@ -356,10 +356,94 @@ y resolver dudas generales para esta.
 Evaluación de la Unidad 4
 ---------------------------
 
-.. warning:: REGRESA AQUÍ EN LA SEMANA 16
+Para esta evaluación te pido que revises la el problema anterior y lo ajustes para que funcione con 
+un mecanismo de comunicación basado en sockets TCP.
 
-    Recuerda presionar F5 la semana 16 para observar el enunciado.
- 
+.. warning:: FECHA MÁXIMA DE ENTREGA
+
+    Viernes 13 de mayo en CLASE. Debes ir a clase a mostrar y sustentar.
+
+.. warning:: TRABAJO EN EQUIPO
+
+    Puedes realizar este trabajo máximo entre dos personas.
+
+
+Enunciado
+*************
+
+Vas a construir dos aplicaciones que llamaremos servidor y cliente. Solo 
+tendrás una instancia del servidor, pero una cantidad ARBITRARIA de clientes.
+El servidor publicará EVENTOS. Los clientes le manifestarán de manera explícita 
+al servidor su interés en algunos eventos específicos; sin embargo, en un momento dado,
+también podrán indicarle que ya no están interesados en algunos en particular. 
+Por cada evento, el servidor mantendrá una lista de interesados que irá cambiando 
+a medida que entran y salen interesados. Al generarse un evento en el servidor, 
+este publicará a todos los interesados. 
+
+Para desplegar las aplicaciones, lanzarás el servidor y cada cliente en una terminal 
+para cada uno. No olvides hacer pruebas con VARIOS clientes.
+
+Estas son las características a implementar en el servidor:
+
+El servidor :
+
+* Debe recibir commandos desde la línea de comandos y al mismo tiempo debe 
+  ser capaz de escuchar las peticiones de los clientes.
+* Cada petición de un cliente será visualizada con un mensaje 
+  en la terminal que incluirá el identificador del cliente y el mensaje de la petición.
+* Los comandos que recibirá el servidor son: 
+
+  * exit: termina el servidor y deberá publicar este evento a TODOS los clientes.
+  * add event_name: adiciona el evento event_name.
+  * remove event_name: elimina el evento event_name.
+  * trigger event_name: publica el evento event_name.
+  * list event_name: lista todos los clientes suscritos a event_name.
+
+Estas son las características a implementar en el cliente:
+
+* El cliente debe visualizar en la terminal cada que sea notificado de un evento.
+* El cliente debe soportar los siguientes comandos:
+
+  * sub event_name: se suscribe al evento event_name
+  * unsub event_name: se desuscribe del evento event_name
+  * list: lista todos los eventos a los cuales está suscrito.
+  * ask: le pregunta al servidor cuáles eventos hay disponibles.
+
+¿Qué debes entregar?
+***************************
+
+Muestra tu aplicación funcionando en las sesiones de clase de la SEMANA 16.
+
+Criterios de evaluación
+****************************
+
+La evaluación tendrá los siguientes vectores cada uno con igual valor:
+
+#. El servidor atiende una ``cantidad arbitraria`` de clientes.
+#. El servidor muestra cada petición que realiza un cliente mostrando en la terminal  
+   la ``identificación del cliente y el contenido de la petición``.
+#. El servidor soporta ``concurrencia`` (escuchar peticiones y comandos locales al mismo tiempo).
+#. El servidor ``crea`` correctamente eventos con su lista de interesados.
+#. El servidor ``destruye`` correctamente eventos y sus recursos asociados.
+#. El servidor recibe la orden de ``publicar`` un evento y lo publica correctamente 
+   a todos los interesados.
+#. El servidor ``lista`` todos los clientes suscritos a un evento.
+#. El cliente soporta ``concurrencia`` 
+   (escuchar notificaciones y comandos locales al mismo tiempo).
+#. El cliente muestra en la terminal la ``notificación`` de los eventos.
+#. El cliente le ``pregunta`` al servidor y muestra en la terminal todos 
+   los eventos disponibles en el servidor.
+#. El cliente ``lista`` todos los eventos a los cuales está suscrito.
+#. El cliente se ``suscribe`` a un evento.
+#. El cliente se ``desuscribe`` a un evento.
+#. En el server el comando ``exit`` funciona correctamente. Los clientes terminan
+   al igual que el servidor. TODOS los recursos creados en el sistema operativo
+   son liberados.
+#. El cliente gestiona correctamente el comando ``exit`` en el servidor.
+
+La calificación estará dada por: `Nota = 5*(VectoresQueFuncionan*Sustentacion/TotalVectores)`.
+
+
 
 
 
